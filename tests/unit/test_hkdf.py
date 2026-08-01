@@ -1,10 +1,12 @@
-"""
-Unit tests for HKDF-SHA256 implementation.
-Includes verification against official RFC 5869 Test Vectors.
+"""Unit tests for HKDF-SHA256 implementation.
+
+Includes verification against official RFC 5869 Test Vectors 1, 2, and 3,
+plus edge case and exception handling tests.
 """
 
 import unittest
 from crypto.primitives.hkdf import hkdf, hkdf_extract, hkdf_expand
+from crypto.models.exceptions import KeyDerivationError
 
 
 class TestHKDF(unittest.TestCase):
@@ -51,16 +53,22 @@ class TestHKDF(unittest.TestCase):
         full_okm = hkdf(ikm, length, salt, info)
         self.assertEqual(full_okm, expected_okm)
 
-    def test_empty_ikm_raises(self):
-        with self.assertRaises(ValueError):
+    def test_empty_ikm_raises_key_derivation_error(self):
+        with self.assertRaises(KeyDerivationError):
             hkdf_extract(b"", b"")
 
-    def test_invalid_length_raises(self):
+    def test_invalid_length_raises_key_derivation_error(self):
         prk = b"\x00" * 32
-        with self.assertRaises(ValueError):
+        with self.assertRaises(KeyDerivationError):
             hkdf_expand(prk, b"", 0)
-        with self.assertRaises(ValueError):
+        with self.assertRaises(KeyDerivationError):
             hkdf_expand(prk, b"", 255 * 32 + 1)
+
+    def test_type_validation(self):
+        with self.assertRaises(KeyDerivationError):
+            hkdf_extract(b"salt", "string_ikm")  # type: ignore
+        with self.assertRaises(TypeError):
+            hkdf_extract("string_salt", b"ikm")  # type: ignore
 
 
 if __name__ == "__main__":
