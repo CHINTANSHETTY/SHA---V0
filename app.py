@@ -8,11 +8,14 @@ from database import (
     showAllRecords,
     getRecord,
     updateRecord,
-    deleteRecord
+    deleteRecord,
 )
 
-from encrypt import encryptRecord
-from decrypt import decryptRecord
+from crypto.engine.encrypt import encrypt_payload
+from crypto.engine.decrypt import decrypt_payload
+from crypto.models.package import EncryptedPackage
+from crypto.models.exceptions import CryptoError, AuthenticationError
+from decrypt import decryptRecord as legacy_decryptRecord
 
 
 # =========================================================
@@ -37,7 +40,6 @@ createDefaultDoctor()
 
 @app.route("/")
 def home():
-
     if "doctor" in session:
         return redirect(url_for("dashboard"))
 
@@ -50,7 +52,6 @@ def home():
 
 @app.route("/login", methods=["POST"])
 def login():
-
     doctorId = request.form.get("doctorId", "").strip()
     password = request.form.get("password", "")
 
@@ -58,9 +59,7 @@ def login():
         return "Please enter Doctor ID and Password."
 
     if validateDoctor(doctorId, password):
-
         session["doctor"] = doctorId
-
         return redirect(url_for("dashboard"))
 
     return "Invalid Doctor ID or Password"
@@ -72,12 +71,10 @@ def login():
 
 @app.route("/dashboard")
 def dashboard():
-
     if "doctor" not in session:
         return redirect(url_for("home"))
 
     records = showAllRecords()
-
     totalRecords = len(records)
 
     return render_template(
@@ -93,7 +90,6 @@ def dashboard():
 
 @app.route("/encrypt", methods=["GET", "POST"])
 def encryptPage():
-
     if "doctor" not in session:
         return redirect(url_for("home"))
 
@@ -101,7 +97,6 @@ def encryptPage():
     message = None
 
     if request.method == "POST":
-
         patientId = request.form.get("patientId", "").strip()
         name = request.form.get("name", "").strip()
         age = request.form.get("age", "").strip()
@@ -121,7 +116,6 @@ def encryptPage():
             prescription,
             password
         ]):
-
             return render_template(
                 "encrypt.html",
                 cipherText=None,
@@ -129,14 +123,10 @@ def encryptPage():
             )
 
         try:
-
             ageNumber = int(age)
-
             if ageNumber <= 0 or ageNumber > 150:
                 raise ValueError
-
         except ValueError:
-
             return render_template(
                 "encrypt.html",
                 cipherText=None,
@@ -154,11 +144,9 @@ def encryptPage():
         )
 
         try:
-
-            cipherText = encryptRecord(
-                patientData,
-                password
-            )
+            # Encrypt using KDR-CA-AEAD Authenticated Cipher
+            pkg = encrypt_payload(patientData, password)
+            cipherText = pkg.to_json()
 
             saveRecord(
                 patientId,
@@ -166,12 +154,10 @@ def encryptPage():
                 cipherText
             )
 
-            message = "Patient record encrypted and saved successfully."
+            message = "Patient record encrypted and saved successfully with KDR-CA-AEAD."
 
         except Exception as error:
-
             print("Encryption Error:", error)
-
             message = "Unable to encrypt the patient record."
 
     return render_template(
@@ -187,12 +173,10 @@ def encryptPage():
 
 @app.route("/records")
 def recordsPage():
-
     if "doctor" not in session:
         return redirect(url_for("home"))
 
     records = showAllRecords()
-
     return render_template(
         "records.html",
         records=records
@@ -205,7 +189,6 @@ def recordsPage():
 
 @app.route("/record/<int:recordId>")
 def patientPage(recordId):
-
     if "doctor" not in session:
         return redirect(url_for("home"))
 
@@ -226,7 +209,6 @@ def patientPage(recordId):
 
 @app.route("/decrypt/<int:recordId>", methods=["POST"])
 def decryptPage(recordId):
-
     if "doctor" not in session:
         return redirect(url_for("home"))
 
@@ -238,7 +220,6 @@ def decryptPage(recordId):
     password = request.form.get("password", "")
 
     if not password:
-
         return render_template(
             "patient.html",
             record=record,
@@ -246,18 +227,18 @@ def decryptPage(recordId):
         )
 
     try:
-
         cipherText = record[3]
 
-        originalData = decryptRecord(
-            cipherText,
-            password
-        )
+        if cipherText.startswith("{") and "KDR-CA-AEAD" in cipherText:
+            pkg = EncryptedPackage.from_json(cipherText)
+            originalData = decrypt_payload(pkg, password)
+        else:
+            # Fallback for legacy V0 unauthenticated records
+            originalData = legacy_decryptRecord(cipherText, password)
 
         data = originalData.split("|")
 
         if len(data) != 7:
-
             return render_template(
                 "patient.html",
                 record=record,
@@ -265,7 +246,6 @@ def decryptPage(recordId):
             )
 
         if data[0] != str(record[1]):
-
             return render_template(
                 "patient.html",
                 record=record,
@@ -283,10 +263,14 @@ def decryptPage(recordId):
             prescription=data[6]
         )
 
+    except AuthenticationError:
+        return render_template(
+            "patient.html",
+            record=record,
+            error="Authentication failed: Invalid password or payload tampered with."
+        )
     except Exception as error:
-
         print("Decryption Error:", error)
-
         return render_template(
             "patient.html",
             record=record,
@@ -300,7 +284,6 @@ def decryptPage(recordId):
 
 @app.route("/edit/<int:recordId>", methods=["GET", "POST"])
 def editPage(recordId):
-
     if "doctor" not in session:
         return redirect(url_for("home"))
 
@@ -311,43 +294,28 @@ def editPage(recordId):
 
     error = None
 
-    # -----------------------------------------------------
-    # User entered password
-    # -----------------------------------------------------
-
     if request.method == "POST":
-
         password = request.form.get("password", "")
 
         if not password:
-
             error = "Please enter the encryption password."
-
         else:
-
             try:
+                cipherText = record[3]
 
-                originalData = decryptRecord(
-                    record[3],
-                    password
-                )
+                if cipherText.startswith("{") and "KDR-CA-AEAD" in cipherText:
+                    pkg = EncryptedPackage.from_json(cipherText)
+                    originalData = decrypt_payload(pkg, password)
+                else:
+                    originalData = legacy_decryptRecord(cipherText, password)
 
                 data = originalData.split("|")
 
                 if len(data) != 7:
-
                     error = "Invalid password or unsupported patient record."
-
                 elif data[0] != str(record[1]):
-
                     error = "Invalid password."
-
                 else:
-
-                    # Password was correct.
-                    # Save temporarily so we can re-encrypt
-                    # after editing.
-
                     session["editPassword"] = password
                     session["editRecordId"] = recordId
 
@@ -363,16 +331,11 @@ def editPage(recordId):
                         prescription=data[6]
                     )
 
+            except AuthenticationError:
+                error = "Invalid password or payload tag mismatch."
             except Exception as errorMessage:
-
-                print(
-                    "Edit Decryption Error:",
-                    errorMessage
-                )
-
+                print("Edit Decryption Error:", errorMessage)
                 error = "Invalid password or unable to decrypt record."
-
-    # GET request shows password page
 
     return render_template(
         "editPassword.html",
@@ -387,75 +350,29 @@ def editPage(recordId):
 
 @app.route("/update/<int:recordId>", methods=["POST"])
 def updatePatient(recordId):
-
     if "doctor" not in session:
         return redirect(url_for("home"))
 
-    # Make sure this is the record that was unlocked
     if session.get("editRecordId") != recordId:
-
-        return redirect(
-            url_for("recordsPage")
-        )
+        return redirect(url_for("recordsPage"))
 
     password = session.get("editPassword")
 
     if not password:
-
-        return redirect(
-            url_for(
-                "editPage",
-                recordId=recordId
-            )
-        )
+        return redirect(url_for("editPage", recordId=recordId))
 
     record = getRecord(recordId)
 
     if record is None:
         return "Patient Record Not Found", 404
 
-    # -----------------------------------------------------
-    # Get updated values
-    # -----------------------------------------------------
-
-    patientId = request.form.get(
-        "patientId",
-        ""
-    ).strip()
-
-    name = request.form.get(
-        "name",
-        ""
-    ).strip()
-
-    age = request.form.get(
-        "age",
-        ""
-    ).strip()
-
-    gender = request.form.get(
-        "gender",
-        ""
-    ).strip()
-
-    disease = request.form.get(
-        "disease",
-        ""
-    ).strip()
-
-    diagnosis = request.form.get(
-        "diagnosis",
-        ""
-    ).strip()
-
-    prescription = request.form.get(
-        "prescription",
-        ""
-    ).strip()
-
-    # -----------------------------------------------------
-    # Validate fields
-    # -----------------------------------------------------
+    patientId = request.form.get("patientId", "").strip()
+    name = request.form.get("name", "").strip()
+    age = request.form.get("age", "").strip()
+    gender = request.form.get("gender", "").strip()
+    disease = request.form.get("disease", "").strip()
+    diagnosis = request.form.get("diagnosis", "").strip()
+    prescription = request.form.get("prescription", "").strip()
 
     if not all([
         patientId,
@@ -466,28 +383,17 @@ def updatePatient(recordId):
         diagnosis,
         prescription
     ]):
-
         return "Please fill in all patient fields."
 
-    # Do not allow Patient ID to be changed
     if patientId != str(record[1]):
-
         return "Patient ID cannot be changed."
 
     try:
-
         ageNumber = int(age)
-
         if ageNumber <= 0 or ageNumber > 150:
             raise ValueError
-
     except ValueError:
-
         return "Please enter a valid age."
-
-    # -----------------------------------------------------
-    # Build updated patient data
-    # -----------------------------------------------------
 
     patientData = (
         patientId + "|" +
@@ -500,42 +406,18 @@ def updatePatient(recordId):
     )
 
     try:
+        pkg = encrypt_payload(patientData, password)
+        newCipherText = pkg.to_json()
 
-        # Encrypt updated information
-        newCipherText = encryptRecord(
-            patientData,
-            password
-        )
+        updateRecord(recordId, name, newCipherText)
 
-        # Update SAME database row
-        updateRecord(
-            recordId,
-            name,
-            newCipherText
-        )
+        session.pop("editPassword", None)
+        session.pop("editRecordId", None)
 
-        # Remove password from session
-        session.pop(
-            "editPassword",
-            None
-        )
-
-        session.pop(
-            "editRecordId",
-            None
-        )
-
-        return redirect(
-            url_for("recordsPage")
-        )
+        return redirect(url_for("recordsPage"))
 
     except Exception as error:
-
-        print(
-            "Update Error:",
-            error
-        )
-
+        print("Update Error:", error)
         return "Unable to update patient record."
 
 
@@ -545,7 +427,6 @@ def updatePatient(recordId):
 
 @app.route("/delete/<int:recordId>", methods=["POST"])
 def deletePatient(recordId):
-
     if "doctor" not in session:
         return redirect(url_for("home"))
 
@@ -555,10 +436,8 @@ def deletePatient(recordId):
         return "Patient Record Not Found", 404
 
     try:
-
         deleteRecord(recordId)
 
-        # Remove edit session if this record was unlocked
         if session.get("editRecordId") == recordId:
             session.pop("editRecordId", None)
             session.pop("editPassword", None)
@@ -566,10 +445,9 @@ def deletePatient(recordId):
         return redirect(url_for("recordsPage"))
 
     except Exception as error:
-
         print("Delete Error:", error)
-
         return "Unable to delete patient record."
+
 
 # =========================================================
 # LOGOUT
@@ -577,12 +455,8 @@ def deletePatient(recordId):
 
 @app.route("/logout")
 def logout():
-
     session.clear()
-
-    return redirect(
-        url_for("home")
-    )
+    return redirect(url_for("home"))
 
 
 # =========================================================
@@ -590,7 +464,6 @@ def logout():
 # =========================================================
 
 if __name__ == "__main__":
-
     app.run(
         host="127.0.0.1",
         port=5000,
