@@ -3,53 +3,73 @@ Unit tests for Rule Mapping module (crypto/scheduler/mapping.py).
 """
 
 import pytest
-from crypto.scheduler.mapping import map_byte_to_rule, map_bytes_to_rules, validate_rule
+from crypto.scheduler import (
+    InvalidRuleError,
+    bytes_to_rules,
+    map_byte_to_rule,
+    map_bytes_to_rules,
+    rule_from_byte,
+    validate_rule,
+)
 
 
 class TestRuleMapping:
     """Test suite for mapping functions in crypto/scheduler/mapping.py."""
 
-    def test_map_byte_to_rule_valid(self):
+    def test_rule_from_byte_valid(self):
         """Verify byte values map to identical Wolfram rule numbers in [0, 255]."""
-        assert map_byte_to_rule(0) == 0
-        assert map_byte_to_rule(30) == 30
-        assert map_byte_to_rule(128) == 128
-        assert map_byte_to_rule(255) == 255
+        assert rule_from_byte(0) == 0
+        assert rule_from_byte(30) == 30
+        assert rule_from_byte(90) == 90
+        assert rule_from_byte(110) == 110
+        assert rule_from_byte(150) == 150
+        assert rule_from_byte(255) == 255
 
-    def test_map_byte_to_rule_out_of_bounds(self):
-        """Verify values outside [0, 255] raise ValueError."""
-        with pytest.raises(ValueError, match="must be in range"):
-            map_byte_to_rule(-1)
+    def test_rule_from_byte_out_of_bounds(self):
+        """Verify values outside [0, 255] raise InvalidRuleError."""
+        with pytest.raises(InvalidRuleError, match="must be in range"):
+            rule_from_byte(-1)
 
-        with pytest.raises(ValueError, match="must be in range"):
-            map_byte_to_rule(256)
+        with pytest.raises(InvalidRuleError, match="must be in range"):
+            rule_from_byte(256)
 
-    def test_map_byte_to_rule_invalid_types(self):
+    def test_rule_from_byte_invalid_types(self):
         """Verify non-integer inputs raise TypeError."""
         with pytest.raises(TypeError, match="must be an integer"):
-            map_byte_to_rule("30")  # type: ignore
+            rule_from_byte("30")  # type: ignore
 
         with pytest.raises(TypeError, match="must be an integer"):
-            map_byte_to_rule(30.5)  # type: ignore
+            rule_from_byte(30.5)  # type: ignore
 
         with pytest.raises(TypeError, match="must be an integer"):
-            map_byte_to_rule(True)  # type: ignore
+            rule_from_byte(True)  # type: ignore
 
-    def test_map_bytes_to_rules_valid(self):
+    def test_map_byte_to_rule_alias(self):
+        """Verify map_byte_to_rule alias behaves identically."""
+        assert map_byte_to_rule(30) == 30
+        with pytest.raises(InvalidRuleError):
+            map_byte_to_rule(300)
+
+    def test_bytes_to_rules_valid(self):
         """Verify mapping byte sequences into lists of rule numbers."""
         data = b"\x00\x1e\x5a\x6e\x96"  # 0, 30, 90, 110, 150
-        rules = map_bytes_to_rules(data)
+        rules = bytes_to_rules(data)
         assert rules == [0, 30, 90, 110, 150]
 
-    def test_map_bytes_to_rules_empty(self):
+    def test_map_bytes_to_rules_alias(self):
+        """Verify map_bytes_to_rules alias behaves identically."""
+        data = b"\x1e\x5a"
+        assert map_bytes_to_rules(data) == [30, 90]
+
+    def test_bytes_to_rules_empty(self):
         """Verify empty byte sequence raises ValueError."""
         with pytest.raises(ValueError, match="cannot be empty"):
-            map_bytes_to_rules(b"")
+            bytes_to_rules(b"")
 
-    def test_map_bytes_to_rules_invalid_type(self):
+    def test_bytes_to_rules_invalid_type(self):
         """Verify non-bytes input raises TypeError."""
         with pytest.raises(TypeError, match="must be bytes or bytearray"):
-            map_bytes_to_rules([0, 30, 90])  # type: ignore
+            bytes_to_rules([0, 30, 90])  # type: ignore
 
     def test_validate_rule(self):
         """Verify validate_rule boolean checks."""
