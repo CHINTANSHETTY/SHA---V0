@@ -1,85 +1,154 @@
 """
 Key Expansion Module for KDR-CA-AEAD.
 
-Derives a sequence of cryptographically strong 512-bit (64-byte) round keys
-from a user-provided master key using iterative SHA-512 digest chaining.
+Derives a sequence of cryptographically strong round keys from a user-provided secret
+key using master key SHA-512 digest creation and iterative chained SHA-512 hashing.
 """
 
 import hashlib
-from typing import List, Union
+from typing import Any, Dict, List, Union
+
+from crypto.key.derivation import (
+    derive_bytes,
+    split_round_keys,
+    validate_key_size,
+)
+from crypto.key.exceptions import (
+    InvalidKeyError,
+    InvalidKeySizeError,
+    KeyExpansionError,
+)
 
 
 class KeyExpansion:
     """
     Deterministic Key Expansion Engine.
 
-    Expands variable-length master key material into 64-byte (512-bit) round keys
-    via iterative SHA-512 hashing:
-    Digest_1 = SHA512(master_key)
-    Digest_k = SHA512(Digest_{k-1})
+    Transforms secret master keys (string, bytes, hex) into SHA-512 master material
+    and derives arbitrary length round key schedules using chained SHA-512 hashing.
     """
 
-    ROUND_KEY_BYTES = 64  # 512 bits per round key
-
-    def __init__(self, master_key: Union[bytes, bytearray], rounds: int = 64) -> None:
+    def __init__(
+        self,
+        key: Union[str, bytes, bytearray],
+        encoding: str = "utf-8",
+        rounds: int = 20,
+        key_size: int = 32,
+    ) -> None:
         """
         Initializes the Key Expansion engine.
 
         Args:
-            master_key: Secret master key material as bytes or bytearray.
-            rounds: Number of 64-byte round keys to derive (must be > 0). Default is 64.
+            key: Secret master key material as str, bytes, or bytearray.
+            encoding: Encoding format if key is string ('utf-8', 'raw', 'bytes', 'hex'). Default is 'utf-8'.
+            rounds: Default number of round keys to derive. Default is 20.
+            key_size: Default byte length per round key. Default is 32.
 
         Raises:
-            TypeError: If master_key is not bytes/bytearray or rounds is not an integer.
-            ValueError: If master_key is empty or rounds <= 0.
+            TypeError: If key or encoding is invalid type.
+            InvalidKeyError: If key is empty, hex string invalid, or encoding unsupported.
+            InvalidKeySizeError: If key_size or rounds <= 0.
         """
-        if not isinstance(master_key, (bytes, bytearray)):
-            raise TypeError(f"Master key must be bytes or bytearray, got {type(master_key).__name__}")
-        if len(master_key) == 0:
-            raise ValueError("Master key cannot be empty")
-
-        if isinstance(rounds, bool) or not isinstance(rounds, int):
-            raise TypeError(f"Rounds must be an integer, got {type(rounds).__name__}")
-        if rounds <= 0:
-            raise ValueError(f"Rounds must be greater than 0, got {rounds}")
-
-        self._master_key = bytes(master_key)
-        self._rounds = rounds
+        self._canonical_key = self._process_key(key, encoding)
+        self._master_digest = hashlib.sha512(self._canonical_key).digest()
         self._round_keys: List[bytes] = []
+        self._rounds = rounds
+        self._key_size = key_size
 
-        self.generate_round_keys()
+        if rounds > 0 and key_size > 0:
+            self.generate_round_keys(rounds=rounds, key_size=key_size)
 
-    @property
+    def _process_key(self, key: Union[str, bytes, bytearray], encoding: str) -> bytes:
+        """Helper to process and validate key input in various formats."""
+        if not isinstance(encoding, str):
+            raise TypeError(f"Encoding must be a string, got {type(encoding).__name__}")
+
+        enc = encoding.strip().lower()
+        if enc not in ("utf-8", "utf8", "hex", "raw", "bytes"):
+            raise InvalidKeyError(f"Unsupported key encoding: '{encoding}'")
+
+        if key is None:
+            raise InvalidKeyError("Secret key cannot be None")
+
+        if isinstance(key, (bytes, bytearray)):
+            key_bytes = bytes(key)
+        elif isinstance(key, str):
+            if enc == "hex":
+                clean_hex = key.strip()
+                if clean_hex.startswith("0x") or clean_hex.startswith("0X"):
+                    clean_hex = clean_hex[2:]
+                try:
+                    key_bytes = bytes.fromhex(clean_hex)
+                except ValueError as e:
+                    raise InvalidKeyError(f"Invalid hexadecimal key string: {e}")
+            else:
+                try:
+                    key_bytes = key.encode("utf-8")
+                except UnicodeEncodeError as e:
+                    raise InvalidKeyError(f"Invalid UTF-8 key string: {e}")
+        else:
+            raise TypeError(f"Secret key must be str, bytes, or bytearray, got {type(key).__name__}")
+
+        if len(key_bytes) == 0:
+            raise InvalidKeyError("Secret key cannot be empty")
+
+        return key_bytes
+
     def master_key(self) -> bytes:
-        """Returns the master key material."""
-        return self._master_key
+        """Returns the 64-byte SHA-512 master key digest."""
+        return self._master_digest
 
     def key_size(self) -> int:
-        """Returns the byte length of the input master key."""
-        return len(self._master_key)
+        """Returns the byte length of individual stored round keys (or master key length if 0)."""
+        return self._key_size if self._key_size > 0 else len(self._master_digest)
 
     def round_key_size(self) -> int:
-        """Returns the byte length of individual round keys (64 bytes)."""
-        return self.ROUND_KEY_BYTES
+        """Returns the byte length of individual stored round keys."""
+        return self._key_size
 
     def total_rounds(self) -> int:
         """Returns the total number of round keys generated."""
         return len(self._round_keys)
 
-    def generate_round_keys(self) -> List[bytes]:
+    def key_count(self) -> int:
+        """Returns the total number of round keys generated."""
+        return len(self._round_keys)
+
+    def expand_key(self, length: int = 64) -> bytes:
         """
-        Generates the deterministic round key schedule using iterative SHA-512 hashing.
+        Derives an expanded key byte sequence of exact length from the master key.
+
+        Args:
+            length: Number of expanded key bytes to generate (must be > 0).
 
         Returns:
-            List of 64-byte round keys.
+            Derived byte stream.
         """
-        self._round_keys.clear()
-        previous_digest = self._master_key
+        return derive_bytes(self._master_digest, length)
 
-        for _ in range(self._rounds):
-            digest = hashlib.sha512(previous_digest).digest()
-            self._round_keys.append(digest)
-            previous_digest = digest
+    def generate_round_keys(self, rounds: int = 20, key_size: int = 32) -> List[bytes]:
+        """
+        Generates deterministic round keys using chained SHA-512 key expansion.
+
+        Args:
+            rounds: Number of round keys to derive (must be > 0).
+            key_size: Byte length of each round key (must be > 0).
+
+        Returns:
+            List of derived round key bytes objects.
+        """
+        if isinstance(rounds, bool) or not isinstance(rounds, int):
+            raise TypeError(f"Rounds must be an integer, got {type(rounds).__name__}")
+        if rounds <= 0:
+            raise InvalidKeySizeError(f"Rounds must be greater than 0, got {rounds}")
+
+        key_size = validate_key_size(key_size)
+
+        total_bytes_needed = rounds * key_size
+        derived_stream = self.expand_key(total_bytes_needed)
+        self._round_keys = split_round_keys(derived_stream, key_size)
+        self._rounds = rounds
+        self._key_size = key_size
 
         return list(self._round_keys)
 
@@ -88,14 +157,10 @@ class KeyExpansion:
         Retrieves a specific round key by index.
 
         Args:
-            index: Zero-based round key index (0 <= index < rounds).
+            index: Zero-based round key index.
 
         Returns:
-            64-byte round key bytes.
-
-        Raises:
-            TypeError: If index is not an integer.
-            IndexError: If index is out of bounds.
+            Round key bytes object.
         """
         if isinstance(index, bool) or not isinstance(index, int):
             raise TypeError(f"Round index must be an integer, got {type(index).__name__}")
@@ -106,56 +171,70 @@ class KeyExpansion:
         return self._round_keys[index]
 
     def all_round_keys(self) -> List[bytes]:
-        """
-        Returns a copy of all generated round keys.
-
-        Returns:
-            List of 64-byte round keys.
-        """
+        """Returns a copy of all generated round keys."""
         return list(self._round_keys)
 
-    def export_hex(self) -> List[str]:
+    def reset(self) -> None:
+        """Clears all generated round keys while preserving the master key material."""
+        self._round_keys.clear()
+        self._rounds = 0
+
+    def export(self) -> Dict[str, Any]:
         """
-        Exports all round keys as hexadecimal strings.
+        Exports the key expansion schedule into a dictionary format.
 
         Returns:
-            List of 128-character hex strings representing 64-byte round keys.
+            Dictionary containing master_key hex digest, round_keys hex list, rounds count, and key_size.
         """
-        return [rk.hex() for rk in self._round_keys]
+        return {
+            "master_key": self._master_digest.hex(),
+            "round_keys": [rk.hex() for rk in self._round_keys],
+            "rounds": len(self._round_keys),
+            "key_size": self._key_size,
+        }
 
-    @staticmethod
-    def import_hex(hex_keys: List[str]) -> List[bytes]:
+    def import_keys(self, data: Dict[str, Any]) -> None:
         """
-        Imports hexadecimal string representations back into binary round keys.
+        Imports and restores a key schedule from an exported dictionary.
 
         Args:
-            hex_keys: List of hexadecimal strings (each 128 hex chars = 64 bytes).
-
-        Returns:
-            List of 64-byte round key bytes objects.
-
-        Raises:
-            TypeError: If hex_keys is not a list/tuple of strings.
-            ValueError: If hex_keys is empty or contains malformed hex strings.
+            data: Exported dictionary containing 'round_keys', 'key_size', etc.
         """
-        if not isinstance(hex_keys, (list, tuple)):
-            raise TypeError(f"Hex keys must be a list or tuple of strings, got {type(hex_keys).__name__}")
-        if len(hex_keys) == 0:
-            raise ValueError("Hex keys list cannot be empty")
+        if not isinstance(data, dict):
+            raise TypeError(f"Exported data must be a dict, got {type(data).__name__}")
+        if "round_keys" not in data or not isinstance(data["round_keys"], list):
+            raise InvalidKeyError("Exported data must contain a 'round_keys' list")
+        if len(data["round_keys"]) == 0:
+            raise InvalidKeyError("Imported round_keys list cannot be empty")
 
+        key_size = data.get("key_size", len(data["round_keys"][0]) // 2 if data["round_keys"] else 32)
         imported_keys = []
-        for i, hex_str in enumerate(hex_keys):
+        for i, hex_str in enumerate(data["round_keys"]):
             if not isinstance(hex_str, str):
-                raise TypeError(f"Hex key at index {i} must be a string, got {type(hex_str).__name__}")
+                raise TypeError(f"Round key hex at index {i} must be a string")
             clean_hex = hex_str.strip()
-            if len(clean_hex) != KeyExpansion.ROUND_KEY_BYTES * 2:
-                raise ValueError(
-                    f"Hex key at index {i} must be {KeyExpansion.ROUND_KEY_BYTES * 2} hex characters, got {len(clean_hex)}"
-                )
             try:
-                key_bytes = bytes.fromhex(clean_hex)
+                rk_bytes = bytes.fromhex(clean_hex)
             except ValueError as e:
-                raise ValueError(f"Invalid hexadecimal key string at index {i}: {e}")
-            imported_keys.append(key_bytes)
+                raise InvalidKeyError(f"Invalid hexadecimal round key at index {i}: {e}")
+            if len(rk_bytes) != key_size:
+                raise InvalidKeySizeError(
+                    f"Round key at index {i} byte length ({len(rk_bytes)}) does not match key_size ({key_size})"
+                )
+            imported_keys.append(rk_bytes)
 
-        return imported_keys
+        self._round_keys = imported_keys
+        self._rounds = len(imported_keys)
+        self._key_size = key_size
+
+    @classmethod
+    def from_export(cls, data: Dict[str, Any]) -> "KeyExpansion":
+        """Creates a KeyExpansion instance from exported dictionary structure."""
+        instance = cls(key=b"placeholder_master_key", rounds=0, key_size=0)
+        instance.import_keys(data)
+        if "master_key" in data and isinstance(data["master_key"], str):
+            try:
+                instance._master_digest = bytes.fromhex(data["master_key"])
+            except ValueError:
+                pass
+        return instance

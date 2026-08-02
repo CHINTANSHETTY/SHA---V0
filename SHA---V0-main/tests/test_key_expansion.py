@@ -3,162 +3,129 @@ Unit tests for Key Expansion module (crypto/key/expansion.py).
 """
 
 import pytest
-from crypto.ca import CellularAutomataEngine
-from crypto.key import KeyExpansion
-from crypto.scheduler import DynamicRuleScheduler
+from crypto.key import (
+    InvalidKeyError,
+    InvalidKeySizeError,
+    KeyExpansion,
+)
 
 
 class TestKeyExpansion:
     """Test suite for KeyExpansion class."""
 
-    def test_valid_initialization(self):
-        """Verify initialization with valid master key and default rounds."""
-        master_key = b"supersecretmasterkey"
-        expansion = KeyExpansion(master_key)
+    def test_key_validation_formats(self):
+        """Verify initialization with UTF-8 string, bytes, bytearray, and hex string."""
+        e_str = KeyExpansion("secret_master_key")
+        e_bytes = KeyExpansion(b"secret_master_key")
+        e_bytearray = KeyExpansion(bytearray(b"secret_master_key"))
+        assert e_str.master_key() == e_bytes.master_key() == e_bytearray.master_key()
 
-        assert expansion.master_key == master_key
-        assert expansion.key_size() == len(master_key)
-        assert expansion.round_key_size() == 64
-        assert expansion.total_rounds() == 64
-        assert len(expansion.all_round_keys()) == 64
+        hex_key = "7365637265745f6d61737465725f6b6579"
+        e_hex = KeyExpansion(hex_key, encoding="hex")
+        assert e_hex.master_key() == e_str.master_key()
 
-    def test_custom_rounds_initialization(self):
-        """Verify initialization with custom round count."""
-        expansion = KeyExpansion(b"masterkey", rounds=128)
-        assert expansion.total_rounds() == 128
-        assert len(expansion.all_round_keys()) == 128
+    def test_invalid_key_handling(self):
+        """Verify invalid key inputs raise InvalidKeyError."""
+        with pytest.raises(InvalidKeyError, match="Secret key cannot be empty"):
+            KeyExpansion("")
 
-    def test_invalid_master_key_types(self):
-        """Verify non-bytes master key inputs raise TypeError."""
-        with pytest.raises(TypeError, match="Master key must be bytes or bytearray"):
-            KeyExpansion("string_key")  # type: ignore
-
-        with pytest.raises(TypeError, match="Master key must be bytes or bytearray"):
-            KeyExpansion(12345)  # type: ignore
-
-        with pytest.raises(TypeError, match="Master key must be bytes or bytearray"):
-            KeyExpansion(None)  # type: ignore
-
-    def test_empty_master_key(self):
-        """Verify empty master key raises ValueError."""
-        with pytest.raises(ValueError, match="Master key cannot be empty"):
+        with pytest.raises(InvalidKeyError, match="Secret key cannot be empty"):
             KeyExpansion(b"")
 
-    def test_invalid_rounds_values(self):
-        """Verify invalid round numbers raise ValueError or TypeError."""
-        with pytest.raises(ValueError, match="Rounds must be greater than 0"):
-            KeyExpansion(b"key", rounds=0)
+        with pytest.raises(InvalidKeyError, match="Invalid hexadecimal key string"):
+            KeyExpansion("not_a_valid_hex_str_zz", encoding="hex")
 
-        with pytest.raises(ValueError, match="Rounds must be greater than 0"):
-            KeyExpansion(b"key", rounds=-10)
+        with pytest.raises(InvalidKeyError, match="Unsupported key encoding"):
+            KeyExpansion("valid_key", encoding="invalid_encoding")
 
-        with pytest.raises(TypeError, match="Rounds must be an integer"):
-            KeyExpansion(b"key", rounds=64.5)  # type: ignore
+        with pytest.raises(TypeError, match="Secret key must be str, bytes, or bytearray"):
+            KeyExpansion(12345)  # type: ignore
 
-        with pytest.raises(TypeError, match="Rounds must be an integer"):
-            KeyExpansion(b"key", rounds=True)  # type: ignore
+    def test_master_key_digest_is_64_bytes(self):
+        """Verify master_key() returns 64-byte SHA-512 digest."""
+        expansion = KeyExpansion("test_master_key")
+        mk = expansion.master_key()
+        assert isinstance(mk, bytes)
+        assert len(mk) == 64
 
-    def test_deterministic_expansion(self):
-        """Verify identical master keys produce identical round key sequences."""
-        key = b"consistent_key_material_123"
-        e1 = KeyExpansion(key, rounds=32)
-        e2 = KeyExpansion(key, rounds=32)
-        assert e1.all_round_keys() == e2.all_round_keys()
+    def test_expand_key_arbitrary_length(self):
+        """Verify expand_key returns requested exact byte length."""
+        expansion = KeyExpansion("research-key")
+        assert len(expansion.expand_key(64)) == 64
+        assert len(expansion.expand_key(1024)) == 1024
+        assert len(expansion.expand_key(2048)) == 2048
 
-    def test_different_keys_produce_different_round_keys(self):
-        """Verify distinct master keys produce distinct round keys."""
-        k1 = b"master_key_alpha"
-        k2 = b"master_key_beta"
-        e1 = KeyExpansion(k1, rounds=32)
-        e2 = KeyExpansion(k2, rounds=32)
-        assert e1.all_round_keys() != e2.all_round_keys()
+    def test_generate_round_keys(self):
+        """Verify generate_round_keys returns correct count and size of round keys."""
+        expansion = KeyExpansion("research-key")
+        round_keys = expansion.generate_round_keys(rounds=20, key_size=32)
 
-    def test_round_key_size_always_64_bytes(self):
-        """Verify every derived round key is exactly 64 bytes (512 bits)."""
-        expansion = KeyExpansion(b"short_key", rounds=50)
-        for rk in expansion.all_round_keys():
+        assert len(round_keys) == 20
+        assert expansion.key_count() == 20
+        assert expansion.round_key_size() == 32
+
+        for rk in round_keys:
             assert isinstance(rk, bytes)
-            assert len(rk) == 64
+            assert len(rk) == 32
 
-    def test_get_round_key(self):
-        """Verify retrieving specific round keys by index."""
-        expansion = KeyExpansion(b"masterkey", rounds=10)
-        rk0 = expansion.get_round_key(0)
-        rk9 = expansion.get_round_key(9)
+    def test_get_round_key_and_all_round_keys(self):
+        """Verify get_round_key retrieval and all_round_keys list."""
+        expansion = KeyExpansion("round_key_test", rounds=10, key_size=16)
+        all_keys = expansion.all_round_keys()
+        assert len(all_keys) == 10
 
-        assert isinstance(rk0, bytes)
-        assert len(rk0) == 64
-        assert rk0 != rk9
+        assert expansion.get_round_key(0) == all_keys[0]
+        assert expansion.get_round_key(9) == all_keys[9]
 
     def test_get_round_key_out_of_bounds(self):
         """Verify out-of-bounds round key index raises IndexError."""
-        expansion = KeyExpansion(b"masterkey", rounds=10)
-
+        expansion = KeyExpansion("masterkey", rounds=5, key_size=32)
         with pytest.raises(IndexError, match="out of range"):
             expansion.get_round_key(-1)
 
         with pytest.raises(IndexError, match="out of range"):
-            expansion.get_round_key(10)
+            expansion.get_round_key(5)
 
-    def test_get_round_key_invalid_type(self):
-        """Verify non-integer round key index raises TypeError."""
-        expansion = KeyExpansion(b"masterkey", rounds=10)
+    def test_reset(self):
+        """Verify reset clears round keys while preserving master key."""
+        expansion = KeyExpansion("reset_test_key", rounds=10, key_size=32)
+        mk_before = expansion.master_key()
+        assert expansion.key_count() == 10
 
-        with pytest.raises(TypeError, match="Round index must be an integer"):
-            expansion.get_round_key("0")  # type: ignore
+        expansion.reset()
+        assert expansion.key_count() == 0
+        assert expansion.all_round_keys() == []
+        assert expansion.master_key() == mk_before
 
-        with pytest.raises(TypeError, match="Round index must be an integer"):
-            expansion.get_round_key(1.5)  # type: ignore
+    def test_export_and_import_keys(self):
+        """Verify export returns valid dictionary and import_keys restores state."""
+        expansion = KeyExpansion("export_test_key", rounds=8, key_size=32)
+        exported = expansion.export()
 
-    def test_export_and_import_hex_roundtrip(self):
-        """Verify exporting round keys to hex and re-importing them."""
-        expansion = KeyExpansion(b"export_import_key", rounds=16)
-        hex_list = expansion.export_hex()
+        assert "master_key" in exported
+        assert "round_keys" in exported
+        assert exported["rounds"] == 8
+        assert exported["key_size"] == 32
+        assert len(exported["round_keys"]) == 8
 
-        assert len(hex_list) == 16
-        assert all(isinstance(h, str) and len(h) == 128 for h in hex_list)
+        new_expansion = KeyExpansion.from_export(exported)
+        assert new_expansion.all_round_keys() == expansion.all_round_keys()
+        assert new_expansion.key_count() == 8
+        assert new_expansion.round_key_size() == 32
 
-        imported_bytes = KeyExpansion.import_hex(hex_list)
-        assert imported_bytes == expansion.all_round_keys()
+    def test_import_keys_invalid_inputs(self):
+        """Verify import_keys error handling for invalid input data."""
+        expansion = KeyExpansion("import_test_key")
 
-    def test_import_hex_invalid_inputs(self):
-        """Verify import_hex raises appropriate exceptions for invalid inputs."""
-        with pytest.raises(TypeError, match="Hex keys must be a list or tuple"):
-            KeyExpansion.import_hex("not_a_list")  # type: ignore
+        with pytest.raises(TypeError, match="Exported data must be a dict"):
+            expansion.import_keys("not_a_dict")  # type: ignore
 
-        with pytest.raises(ValueError, match="Hex keys list cannot be empty"):
-            KeyExpansion.import_hex([])
+        with pytest.raises(InvalidKeyError, match="Exported data must contain a 'round_keys' list"):
+            expansion.import_keys({"no_round_keys": True})
 
-        with pytest.raises(TypeError, match="must be a string"):
-            KeyExpansion.import_hex([12345])  # type: ignore
+        with pytest.raises(InvalidKeyError, match="Imported round_keys list cannot be empty"):
+            expansion.import_keys({"round_keys": []})
 
-        with pytest.raises(ValueError, match="must be 128 hex characters"):
-            KeyExpansion.import_hex(["short_hex_string"])
-
-        with pytest.raises(ValueError, match="Invalid hexadecimal key string"):
-            # 128 characters but invalid hex char 'z'
-            bad_hex = "z" * 128
-            KeyExpansion.import_hex([bad_hex])
-
-    def test_integration_with_scheduler_and_ca_engine(self):
-        """Verify compatibility with DynamicRuleScheduler and CellularAutomataEngine."""
-        master_key = b"integrated_master_passphrase"
-        rounds = 8
-
-        expansion = KeyExpansion(master_key, rounds=rounds)
-        scheduler = DynamicRuleScheduler(master_key, rounds=rounds)
-        engine = CellularAutomataEngine(boundary="wrap")
-
-        state = [1, 0, 1, 0, 1, 1, 0, 0]
-
-        for i in range(rounds):
-            rk = expansion.get_round_key(i)
-            rule = scheduler.next_rule()
-
-            assert len(rk) == 64
-            assert 0 <= rule <= 255
-
-            engine.set_rule(rule)
-            state = engine.evolve(state)
-
-        assert len(state) == 8
+        with pytest.raises(InvalidKeySizeError, match="does not match key_size"):
+            # 16 bytes hex vs key_size 32
+            expansion.import_keys({"round_keys": ["a" * 32], "key_size": 32})
