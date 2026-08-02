@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dashboard</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='style.css') }}">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#eef2f7;
+}
+
+.sidebar{
+
+width:250px;
+
+height:100vh;
+
+background:#0f172a;
+
+position:fixed;
+
+left:0;
+
+top:0;
+
+padding:30px;
+
+color:white;
+
+}
+
+.sidebar h2{
+
+text-align:center;
+
+margin-bottom:40px;
+
+color:#38bdf8;
+
+}
+
+.sidebar a{
+
+display:block;
+
+padding:15px;
+
+margin-bottom:15px;
+
+text-decoration:none;
+
+color:white;
+
+border-radius:8px;
+
+transition:.3s;
+
+}
+
+.sidebar a:hover{
+
+background:#2563eb;
+
+}
+
+.main{
+
+margin-left:250px;
+
+padding:40px;
+
+}
+
+.header{
+
+background:white;
+
+padding:25px;
+
+border-radius:12px;
+
+box-shadow:0 0 10px rgba(0,0,0,.1);
+
+margin-bottom:30px;
+
+}
+
+.header h1{
+
+color:#2563eb;
+
+}
+
+.cards{
+
+display:flex;
+
+gap:30px;
+
+flex-wrap:wrap;
+
+}
+
+.card{
+
+background:white;
+
+width:330px;
+
+padding:30px;
+
+border-radius:12px;
+
+box-shadow:0 0 10px rgba(0,0,0,.1);
+
+transition:.3s;
+
+}
+
+.card:hover{
+
+transform:translateY(-5px);
+
+}
+
+.card h2{
+
+color:#2563eb;
+
+margin-bottom:15px;
+
+}
+
+.card p{
+
+line-height:1.7;
+
+color:#666;
+
+margin-bottom:20px;
+
+}
+
+.btn{
+
+display:inline-block;
+
+padding:12px 20px;
+
+background:#2563eb;
+
+color:white;
+
+text-decoration:none;
+
+border-radius:8px;
+
+}
+
+.btn:hover{
+
+background:#1d4ed8;
+
+}
+
+.footer{
+
+margin-top:60px;
+
+text-align:center;
+
+color:gray;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<h2>SHA Healthcare</h2>
+
+<a href="/dashboard">🏠 Dashboard</a>
+
+<a href="/encrypt">🔒 Encrypt Record</a>
+
+<a href="/records">📋 View Records</a>
+
+<a href="/logout">🚪 Logout</a>
+
+</div>
+
+<div class="main">
+
+<div class="header">
+
+<h1>Welcome Doctor</h1>
+
+<p>
+
+SHA-512 Based 256-Bit Block Cellular Automata
+Cryptosystem for Secure Healthcare Systems
+
+</p>
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+
+<h2>🔒 Encrypt Patient Record</h2>
+
+<p>
+
+Encrypt patient information securely using
+SHA-512 and 256-Bit Block Cellular Automata
+before storing it in the database.
+
+</p>
+
+<a href="/encrypt" class="btn">
+
+Open
+
+</a>
+
+</div>
+
+<div class="card">
+
+<h2>📋 View Patient Records</h2>
+
+<p>
+
+View encrypted patient records and select a
+patient to decrypt the record using the
+correct password.
+
+</p>
+
+<a href="/records" class="btn">
+
+Open
+
+</a>
+
+</div>
+
+</div>
+
+<div class="footer">
+
+Healthcare Data Security System
+
+</div>
+
+</div>
+
+</body>
+
+</html>

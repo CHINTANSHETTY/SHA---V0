@@ -1,0 +1,43 @@
+/* EDIT BUTTON */
+
+.editBtn {
+    display: inline-block;
+    background: #f59e0b;
+    color: white;
+    padding: 10px 18px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.editBtn:hover {
+    background: #d97706;
+}
+
+
+/* DELETE FORM */
+
+.deleteForm {
+    display: inline;
+    margin: 0;
+}
+
+
+/* DELETE BUTTON */
+
+.deleteBtn {
+    display: inline-block;
+    background: #dc2626;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.deleteBtn:hover {
+    background: #b91c1c;
+}
