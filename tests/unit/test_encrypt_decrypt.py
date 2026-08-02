@@ -3,8 +3,8 @@ End-to-End Encryption & Decryption Integration Tests.
 """
 
 import unittest
-from crypto.engine.encrypt import encrypt_payload
-from crypto.engine.decrypt import decrypt_payload
+from crypto.engine.encrypt import encrypt_payload, encrypt_bytes
+from crypto.engine.decrypt import decrypt_payload, decrypt_bytes
 from crypto.models.package import EncryptedPackage
 from crypto.models.exceptions import AuthenticationError, CryptoError
 
@@ -26,6 +26,17 @@ class TestEncryptDecryptIntegration(unittest.TestCase):
 
         decrypted = decrypt_payload(pkg, password)
         self.assertEqual(plaintext, decrypted)
+
+    def test_bytes_encryption_decryption_roundtrip(self):
+        """Test raw binary bytes encryption and decryption."""
+        raw_bytes = bytes(range(256)) * 4
+        master_key = b"raw_master_key_bytes_123"
+
+        pkg = encrypt_bytes(raw_bytes, master_key)
+        self.assertEqual(len(pkg.ciphertext), len(raw_bytes))
+
+        recovered_bytes = decrypt_bytes(pkg, master_key)
+        self.assertEqual(raw_bytes, recovered_bytes)
 
     def test_json_serialization_roundtrip(self):
         plaintext = "EHR Payload: 05|Rahul|21|Male|Fever|Viral Fever|Paracetamol"
@@ -54,7 +65,6 @@ class TestEncryptDecryptIntegration(unittest.TestCase):
 
         pkg = encrypt_payload(plaintext, password)
 
-        # Alter single bit in ciphertext
         tampered_bytes = bytearray(pkg.ciphertext)
         tampered_bytes[0] ^= 0x01
 
