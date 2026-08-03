@@ -71,9 +71,22 @@ class KeyEvolutionEngine:
         Args:
             default_key_length: Default output length for derived keys in bytes (defaults to 32).
         """
-        self._validate_length(default_key_length)
-        self.default_key_length: int = default_key_length
+        self.default_key_length: int = self._validate_length(default_key_length)
+        self._evolution_step: int = 0
         self._derivation_count: int = 0
+        self._prk_cache: Dict[Tuple[bytes, bytes], bytes] = {}
+
+    def _extract_prk(self, salt: bytes, ikm: bytes) -> bytes:
+        """Extract PRK with caching for identical (salt, ikm) pairs."""
+        cache_key = (salt, ikm)
+        if cache_key in self._prk_cache:
+            return self._prk_cache[cache_key]
+
+        prk = hkdf_extract(salt=salt, ikm=ikm)
+        if len(self._prk_cache) > 256:
+            self._prk_cache.clear()
+        self._prk_cache[cache_key] = prk
+        return prk
 
     def _validate_master_key(self, master_key: Any) -> bytes:
         """Validate input master key bytes.
@@ -209,7 +222,7 @@ class KeyEvolutionEngine:
             raise InvalidContextError("context must be a bytes-like object")
         length = self._validate_length(key_length if key_length is not None else self.default_key_length)
 
-        prk = hkdf_extract(salt=CONTEXT_KEY_LABEL, ikm=key_bytes)
+        prk = self._extract_prk(salt=CONTEXT_KEY_LABEL, ikm=key_bytes)
         info = CONTEXT_KEY_LABEL + b"|" + bytes(context)
         self._derivation_count += 1
         return hkdf_expand(prk=prk, info=info, length=length)
@@ -230,7 +243,7 @@ class KeyEvolutionEngine:
             raise InvalidContextError("ca_id must be an int or str")
         length = self._validate_length(key_length if key_length is not None else self.default_key_length)
 
-        prk = hkdf_extract(salt=CA_KEY_LABEL, ikm=key_bytes)
+        prk = self._extract_prk(salt=CA_KEY_LABEL, ikm=key_bytes)
         info = CA_KEY_LABEL + b"|" + str(ca_id).encode("utf-8")
         self._derivation_count += 1
         return hkdf_expand(prk=prk, info=info, length=length)
@@ -248,7 +261,7 @@ class KeyEvolutionEngine:
         key_bytes = self._validate_master_key(master_key)
         length = self._validate_length(key_length if key_length is not None else self.default_key_length)
 
-        prk = hkdf_extract(salt=AUTH_KEY_LABEL, ikm=key_bytes)
+        prk = self._extract_prk(salt=AUTH_KEY_LABEL, ikm=key_bytes)
         self._derivation_count += 1
         return hkdf_expand(prk=prk, info=AUTH_KEY_LABEL, length=length)
 
@@ -265,7 +278,7 @@ class KeyEvolutionEngine:
         key_bytes = self._validate_master_key(master_key)
         length = self._validate_length(key_length if key_length is not None else self.default_key_length)
 
-        prk = hkdf_extract(salt=ENC_KEY_LABEL, ikm=key_bytes)
+        prk = self._extract_prk(salt=ENC_KEY_LABEL, ikm=key_bytes)
         self._derivation_count += 1
         return hkdf_expand(prk=prk, info=ENC_KEY_LABEL, length=length)
 
@@ -282,7 +295,7 @@ class KeyEvolutionEngine:
         key_bytes = self._validate_master_key(master_key)
         length = self._validate_length(key_length if key_length is not None else self.default_key_length)
 
-        prk = hkdf_extract(salt=NONCE_KEY_LABEL, ikm=key_bytes)
+        prk = self._extract_prk(salt=NONCE_KEY_LABEL, ikm=key_bytes)
         self._derivation_count += 1
         return hkdf_expand(prk=prk, info=NONCE_KEY_LABEL, length=length)
 

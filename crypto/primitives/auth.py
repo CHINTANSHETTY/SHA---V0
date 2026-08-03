@@ -14,6 +14,7 @@ Security Principles:
 
 import hmac
 import hashlib
+import struct
 from typing import Any, Optional, Union
 
 from .nonce import AEADError, InvalidNonceError
@@ -79,16 +80,18 @@ class AuthenticationTag:
         n_bytes = bytes(nonce) if nonce else b""
         aad_bytes = bytes(aad) if aad else b""
 
-        frame = bytearray()
-        frame.extend(version[:2])
-        frame.extend(len(n_bytes).to_bytes(2, byteorder="big"))
-        frame.extend(n_bytes)
-        frame.extend(len(aad_bytes).to_bytes(4, byteorder="big"))
-        frame.extend(aad_bytes)
-        frame.extend(len(ct_bytes).to_bytes(8, byteorder="big"))
-        frame.extend(ct_bytes)
-
-        return bytes(frame)
+        # Structural header encoding: Version (2B) || NonceLen (2B) || Nonce || AADLen (4B) || AAD || CTLen (8B) || Ciphertext
+        header = struct.pack(">HH", len(n_bytes), len(aad_bytes) >> 16) + len(aad_bytes).to_bytes(4, byteorder="big")
+        # Pack canonical frame using fast byte joining
+        return (
+            version[:2]
+            + len(n_bytes).to_bytes(2, byteorder="big")
+            + n_bytes
+            + len(aad_bytes).to_bytes(4, byteorder="big")
+            + aad_bytes
+            + len(ct_bytes).to_bytes(8, byteorder="big")
+            + ct_bytes
+        )
 
     @classmethod
     def generate(

@@ -1,9 +1,11 @@
-"""Unit tests for BenchmarkRunner (research/benchmark.py)."""
+"""Unit tests for BenchmarkRunner (research/benchmark.py) and LargeScaleBenchmarkRunner (crypto/benchmark/runner.py)."""
 
 import json
 import os
 import tempfile
 import pytest
+from crypto.benchmark.benchmark import BenchmarkConfig
+from crypto.benchmark.runner import LargeScaleBenchmarkRunner
 from research.benchmark import BenchmarkRunner, get_system_metadata
 
 
@@ -49,3 +51,18 @@ class TestBenchmarkRunner:
         finally:
             if os.path.exists(tmp_path):
                 os.remove(tmp_path)
+
+    def test_large_scale_benchmark_runner(self):
+        """Verify LargeScaleBenchmarkRunner payload scalability execution."""
+        config = BenchmarkConfig(sizes=[1024, 10240], iterations=3, warmup_iterations=1, include_comparisons=True)
+        runner = LargeScaleBenchmarkRunner(config=config)
+        suite = runner.run_suite()
+
+        assert suite.config.sizes == [1024, 10240]
+        assert len(suite.results) == 2
+        assert "algorithm" in suite.metadata
+
+        res0 = suite.results[0]
+        assert res0.message_size_bytes == 1024
+        assert res0.encryption_stats["mean"] > 0.0
+        assert res0.throughput_mbps_stats["mean"] > 0.0

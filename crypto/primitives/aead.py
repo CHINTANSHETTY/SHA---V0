@@ -119,13 +119,7 @@ class AEADEngine:
             block_info = prk_seed + block_counter.to_bytes(8, byteorder="big")
             block_seed = hashlib.sha256(block_info).digest()
             # Fast CA step evolution over 32-byte (256-bit) state vector
-            ca_state = [ (block_seed[i // 8] >> (7 - (i % 8))) & 1 for i in range(256) ]
-            evolved = self.ca_engine.evolve_fast(ca_state, rule=30, generations=5, boundary=BOUNDARY_PERIODIC)
-            # Pack evolved bits back to 32 bytes
-            block_bytes = bytearray(32)
-            for i, bit in enumerate(evolved):
-                if bit:
-                    block_bytes[i // 8] |= (1 << (7 - (i % 8)))
+            block_bytes = self.ca_engine.evolve_bytes(block_seed, rule=30, generations=5, boundary=BOUNDARY_PERIODIC)
             keystream.extend(block_bytes)
             block_counter += 1
 
