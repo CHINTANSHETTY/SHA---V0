@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: "Shetty"
+    given-names: "Chintan"
+  - family-names: "Nagamrutha"
+    given-names: "Amrutha"
+title: "Keyed Dynamically-Reconfigured Cellular Automata with Authenticated Encryption (KDR-CA-AEAD)"
+version: 1.0.0
+date-released: 2026-08-03
+url: "https://github.com/CHINTANSHETTY/SHA---V0"
+preferred-citation:
+  type: article
+  authors:
+    - family-names: "Shetty"
+      given-names: "Chintan"
+    - family-names: "Nagamrutha"
+      given-names: "Amrutha"
+  title: "Keyed Dynamically-Reconfigured Cellular Automata with Authenticated Encryption (KDR-CA-AEAD)"
+  journal: "IEEE Transactions on Information Forensics and Security"
+  year: 2026

@@ -68,7 +68,8 @@ def encrypt_bytes(
     data: BytesLike,
     master_key: BytesLike,
     salt: BytesLike | None = None,
-    nonce: BytesLike | None = None
+    nonce: BytesLike | None = None,
+    associated_data: BytesLike = b""
 ) -> EncryptedPackage:
     """Encrypts raw binary data bytes using KDR-CA-AEAD authenticated cipher.
 
@@ -77,21 +78,23 @@ def encrypt_bytes(
         master_key: Secret master key or password bytes.
         salt: Optional 16-byte salt override.
         nonce: Optional 12-byte nonce override.
+        associated_data: Optional associated authenticated data bytes.
 
     Returns:
         EncryptedPackage containing salt, nonce, ciphertext, and HMAC AEAD tag.
 
     Raises:
-        CryptoError: If payload data or master_key is empty or invalid.
+        CryptoError: If payload data is None or master_key is empty or invalid.
     """
-    if not data or not isinstance(data, (bytes, bytearray)):
-        raise CryptoError("Payload data must be a non-empty bytes-like buffer.")
+    if data is None or not isinstance(data, (bytes, bytearray)):
+        raise CryptoError("Payload data must be a bytes-like buffer.")
 
     if not master_key or not isinstance(master_key, (bytes, bytearray)):
         raise CryptoError("Master key must be a non-empty bytes-like buffer.")
 
     salt_bytes = bytes(salt) if salt is not None else generate_salt(16)
     nonce_bytes = bytes(nonce) if nonce is not None else generate_nonce(12)
+    ad_bytes = bytes(associated_data) if associated_data is not None else b""
 
     # Step 1: Sub-key expansion via KeySchedule
     ks = KeySchedule.from_master_key(master_key, salt_bytes, nonce_bytes)
@@ -106,8 +109,8 @@ def encrypt_bytes(
     # Step 4: Bitwise XOR stream encryption
     ciphertext = bytes(a ^ b for a, b in zip(transformed, keystream))
 
-    # Step 5: Generate HMAC-SHA256 AEAD tag over (Nonce || Salt || Ciphertext)
-    aad_and_ciphertext = nonce_bytes + salt_bytes + ciphertext
+    # Step 5: Generate HMAC-SHA256 AEAD tag over (Nonce || Salt || AssociatedData || Ciphertext)
+    aad_and_ciphertext = nonce_bytes + salt_bytes + ad_bytes + ciphertext
     tag = generate_hmac(km.mac_key, aad_and_ciphertext)
 
     return EncryptedPackage(

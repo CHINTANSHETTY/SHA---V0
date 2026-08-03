@@ -65,7 +65,9 @@ def plot_avalanche_effect(
     plt.tight_layout()
 
     file_path = os.path.join(output_dir, "avalanche.png")
+    file_path_svg = os.path.join(output_dir, "avalanche.svg")
     plt.savefig(file_path, dpi=300)
+    plt.savefig(file_path_svg)
     plt.close()
     return file_path
 
@@ -97,13 +99,15 @@ def plot_entropy_profile(output_dir: str, ciphertext: bytes) -> str:
     plt.tight_layout()
 
     file_path = os.path.join(output_dir, "entropy.png")
+    file_path_svg = os.path.join(output_dir, "entropy.svg")
     plt.savefig(file_path, dpi=300)
+    plt.savefig(file_path_svg)
     plt.close()
     return file_path
 
 
 def plot_byte_histogram(output_dir: str, ciphertext: bytes) -> str:
-    """Generates histogram.png: Byte Occurrence Frequency Distribution (0 to 255)."""
+    """Generates histogram.png & histogram.svg: Byte Occurrence Frequency Distribution (0 to 255)."""
     plt.figure(figsize=(8, 5))
 
     freq = [0] * 256
@@ -123,13 +127,15 @@ def plot_byte_histogram(output_dir: str, ciphertext: bytes) -> str:
     plt.tight_layout()
 
     file_path = os.path.join(output_dir, "histogram.png")
+    file_path_svg = os.path.join(output_dir, "histogram.svg")
     plt.savefig(file_path, dpi=300)
+    plt.savefig(file_path_svg)
     plt.close()
     return file_path
 
 
 def plot_correlation_scatter(output_dir: str, plaintext: bytes, ciphertext: bytes) -> str:
-    """Generates correlation.png: Plaintext vs Ciphertext Byte Value Correlation Scatter Plot."""
+    """Generates correlation.png & correlation.svg: Plaintext vs Ciphertext Byte Value Correlation Scatter Plot."""
     plt.figure(figsize=(8, 5))
 
     n = min(len(plaintext), len(ciphertext))
@@ -148,13 +154,15 @@ def plot_correlation_scatter(output_dir: str, plaintext: bytes, ciphertext: byte
     plt.tight_layout()
 
     file_path = os.path.join(output_dir, "correlation.png")
+    file_path_svg = os.path.join(output_dir, "correlation.svg")
     plt.savefig(file_path, dpi=300)
+    plt.savefig(file_path_svg)
     plt.close()
     return file_path
 
 
 def plot_comparison_chart(output_dir: str, comparison_data: Dict[str, Any]) -> str:
-    """Generates comparison.png: Bar Chart Comparing KDR-CA-AEAD vs AES-128-GCM and ChaCha20-Poly1305."""
+    """Generates comparison.png & comparison.svg: Bar Chart Comparing KDR-CA-AEAD vs AES-128-GCM and ChaCha20-Poly1305."""
     plt.figure(figsize=(8, 5))
 
     ciphers = ["KDR-CA-AEAD", "AES-128-GCM", "ChaCha20-Poly1305"]
@@ -181,7 +189,9 @@ def plot_comparison_chart(output_dir: str, comparison_data: Dict[str, Any]) -> s
     plt.tight_layout()
 
     file_path = os.path.join(output_dir, "comparison.png")
+    file_path_svg = os.path.join(output_dir, "comparison.svg")
     plt.savefig(file_path, dpi=300)
+    plt.savefig(file_path_svg)
     plt.close()
     return file_path
 
@@ -252,13 +262,15 @@ def plot_enc_dec_time(output_dir: str, master_results: Dict[str, Any]) -> str:
     plt.tight_layout()
 
     file_path = os.path.join(output_dir, "enc_dec_time.png")
+    file_path_svg = os.path.join(output_dir, "enc_dec_time.svg")
     plt.savefig(file_path, dpi=300)
+    plt.savefig(file_path_svg)
     plt.close()
     return file_path
 
 
 def plot_throughput_scaling(output_dir: str, master_results: Dict[str, Any]) -> str:
-    """Generates throughput_scaling.png: Throughput (MB/s) vs payload buffer size."""
+    """Generates throughput_scaling.png & throughput_scaling.svg: Throughput (MB/s) vs payload buffer size."""
     plt.figure(figsize=(8, 5))
 
     ciphers = master_results.get("ciphers", {})
@@ -283,13 +295,15 @@ def plot_throughput_scaling(output_dir: str, master_results: Dict[str, Any]) -> 
     plt.tight_layout()
 
     file_path = os.path.join(output_dir, "throughput_scaling.png")
+    file_path_svg = os.path.join(output_dir, "throughput_scaling.svg")
     plt.savefig(file_path, dpi=300)
+    plt.savefig(file_path_svg)
     plt.close()
     return file_path
 
 
 def plot_memory_usage(output_dir: str, master_results: Dict[str, Any]) -> str:
-    """Generates memory_usage.png: Peak memory footprint (KB) across payload buffer sizes."""
+    """Generates memory_usage.png & memory_usage.svg: Peak memory footprint (KB) across payload buffer sizes."""
     plt.figure(figsize=(8, 5))
 
     kdr_evals = master_results.get("ciphers", {}).get("kdr_ca_aead", [])
@@ -308,13 +322,15 @@ def plot_memory_usage(output_dir: str, master_results: Dict[str, Any]) -> str:
     plt.tight_layout()
 
     file_path = os.path.join(output_dir, "memory_usage.png")
+    file_path_svg = os.path.join(output_dir, "memory_usage.svg")
     plt.savefig(file_path, dpi=300)
+    plt.savefig(file_path_svg)
     plt.close()
     return file_path
 
 
 def plot_cpu_utilization(output_dir: str, master_results: Dict[str, Any]) -> str:
-    """Generates cpu_utilization.png: Microseconds per byte execution cost."""
+    """Generates cpu_utilization.png & cpu_utilization.svg: Microseconds per byte execution cost."""
     plt.figure(figsize=(8, 5))
 
     kdr_evals = master_results.get("ciphers", {}).get("kdr_ca_aead", [])
@@ -333,13 +349,15 @@ def plot_cpu_utilization(output_dir: str, master_results: Dict[str, Any]) -> str
     plt.tight_layout()
 
     file_path = os.path.join(output_dir, "cpu_utilization.png")
+    file_path_svg = os.path.join(output_dir, "cpu_utilization.svg")
     plt.savefig(file_path, dpi=300)
+    plt.savefig(file_path_svg)
     plt.close()
     return file_path
 
 
 def plot_comparative_performance(output_dir: str, master_results: Dict[str, Any]) -> str:
-    """Generates comparative_performance.png: Bar chart comparing cipher throughputs at 100 KB payload."""
+    """Generates comparative_performance.png & comparative_performance.svg: Bar chart comparing cipher throughputs."""
     plt.figure(figsize=(8, 5))
 
     ciphers = master_results.get("ciphers", {})
@@ -349,7 +367,6 @@ def plot_comparative_performance(output_dir: str, master_results: Dict[str, Any]
     throughputs = []
     for k in c_keys:
         evals = ciphers.get(k, [])
-        # Target ~100KB payload (index 5) or max available
         idx = min(5, len(evals) - 1) if evals else 0
         tp = evals[idx]["encryption"]["throughput_mb_per_sec"] if evals else 0.0
         throughputs.append(tp)
@@ -367,13 +384,15 @@ def plot_comparative_performance(output_dir: str, master_results: Dict[str, Any]
     plt.tight_layout()
 
     file_path = os.path.join(output_dir, "comparative_performance.png")
+    file_path_svg = os.path.join(output_dir, "comparative_performance.svg")
     plt.savefig(file_path, dpi=300)
+    plt.savefig(file_path_svg)
     plt.close()
     return file_path
 
 
 def plot_scalability_curve(output_dir: str, master_results: Dict[str, Any]) -> str:
-    """Generates scalability_curve.png: Execution time vs payload size illustrating linear O(N) complexity."""
+    """Generates scalability_curve.png & scalability_curve.svg: Execution time vs payload size."""
     plt.figure(figsize=(8, 5))
 
     kdr_evals = master_results.get("ciphers", {}).get("kdr_ca_aead", [])
@@ -390,7 +409,9 @@ def plot_scalability_curve(output_dir: str, master_results: Dict[str, Any]) -> s
     plt.tight_layout()
 
     file_path = os.path.join(output_dir, "scalability_curve.png")
+    file_path_svg = os.path.join(output_dir, "scalability_curve.svg")
     plt.savefig(file_path, dpi=300)
+    plt.savefig(file_path_svg)
     plt.close()
     return file_path
 

@@ -39,12 +39,17 @@ __all__ = ["decrypt_payload", "decrypt_bytes", "BytesLike"]
 BytesLike: TypeAlias = bytes | bytearray
 
 
-def decrypt_bytes(package: EncryptedPackage, master_key: BytesLike) -> bytes:
+def decrypt_bytes(
+    package: EncryptedPackage,
+    master_key: BytesLike,
+    associated_data: BytesLike = b""
+) -> bytes:
     """Decrypts and authenticates an EncryptedPackage returning raw payload bytes.
 
     Args:
         package: EncryptedPackage object.
         master_key: Master key or password bytes.
+        associated_data: Optional associated authenticated data bytes.
 
     Returns:
         Original plaintext raw bytes.
@@ -59,12 +64,14 @@ def decrypt_bytes(package: EncryptedPackage, master_key: BytesLike) -> bytes:
     if not master_key or not isinstance(master_key, (bytes, bytearray)):
         raise CryptoError("Master key must be a non-empty bytes-like buffer.")
 
+    ad_bytes = bytes(associated_data) if associated_data is not None else b""
+
     # Step 1: Sub-key expansion via KeySchedule
     ks = KeySchedule.from_master_key(master_key, package.salt, package.nonce)
     km = ks.export_key_material()
 
     # Step 2: Constant-Time HMAC-SHA256 Integrity Tag Verification (AEAD Check)
-    aad_and_ciphertext = package.nonce + package.salt + package.ciphertext
+    aad_and_ciphertext = package.nonce + package.salt + ad_bytes + package.ciphertext
     if not verify_hmac(km.mac_key, aad_and_ciphertext, package.tag):
         raise AuthenticationError(
             "Payload integrity verification failed or invalid password."

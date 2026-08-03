@@ -27,9 +27,9 @@ class TestPhase1Pipeline:
         initial_state = [0, 1, 0, 1, 1, 0, 1, 0]
 
         # 1. Initialize Key Expansion
-        expansion = KeyExpansion(master_key, rounds=rounds)
+        expansion = KeyExpansion(key=master_key, rounds=rounds, key_size=64)
         assert expansion.total_rounds() == rounds
-        assert expansion.key_size() == len(master_key)
+        assert len(expansion._canonical_key) == len(master_key)
 
         # 2. Initialize Dynamic Rule Scheduler
         scheduler = DynamicRuleScheduler(master_key, rounds=rounds)
@@ -71,7 +71,7 @@ class TestPhase1Pipeline:
         master_key = b"variable_length_test_key"
         rounds = 5
 
-        expansion = KeyExpansion(master_key, rounds=rounds)
+        expansion = KeyExpansion(key=master_key, rounds=rounds, key_size=64)
         scheduler = DynamicRuleScheduler(master_key, rounds=rounds)
         engine = CellularAutomataEngine(boundary="wrap")
 

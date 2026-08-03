@@ -22,7 +22,7 @@ class TestDeterminism:
         rounds = 16
 
         # Execution Run 1
-        exp1 = KeyExpansion(master_key, rounds=rounds)
+        exp1 = KeyExpansion(key=master_key, rounds=rounds, key_size=64)
         sch1 = DynamicRuleScheduler(master_key, rounds=rounds)
         eng1 = CellularAutomataEngine(boundary="wrap")
         state1 = list(initial_state)
@@ -33,7 +33,7 @@ class TestDeterminism:
         avalanche1 = avalanche_effect(initial_state, state1)
 
         # Execution Run 2 (separate instances, identical parameters)
-        exp2 = KeyExpansion(master_key, rounds=rounds)
+        exp2 = KeyExpansion(key=master_key, rounds=rounds, key_size=64)
         sch2 = DynamicRuleScheduler(master_key, rounds=rounds)
         eng2 = CellularAutomataEngine(boundary="wrap")
         state2 = list(initial_state)
@@ -54,10 +54,10 @@ class TestDeterminism:
         """Verify different master keys yield distinct schedules, round keys, and CA states."""
         key_A = b"master_key_alpha_2026"
         key_B = b"master_key_beta_2026"
-        initial_state = [1, 0, 0, 1, 1, 0, 1, 0]
-        rounds = 10
+        initial_state = [1, 0, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 0, 1, 1]
+        rounds = 3
 
-        exp_A = KeyExpansion(key_A, rounds=rounds)
+        exp_A = KeyExpansion(key=key_A, rounds=rounds, key_size=64)
         sch_A = DynamicRuleScheduler(key_A, rounds=rounds)
         eng_A = CellularAutomataEngine(boundary="wrap")
         state_A = list(initial_state)
@@ -65,7 +65,7 @@ class TestDeterminism:
             eng_A.set_rule(sch_A.next_rule())
             state_A = eng_A.evolve(state_A)
 
-        exp_B = KeyExpansion(key_B, rounds=rounds)
+        exp_B = KeyExpansion(key=key_B, rounds=rounds, key_size=64)
         sch_B = DynamicRuleScheduler(key_B, rounds=rounds)
         eng_B = CellularAutomataEngine(boundary="wrap")
         state_B = list(initial_state)

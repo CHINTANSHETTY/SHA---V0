@@ -6,7 +6,10 @@ IEEE Mapping: Section IV-F (Persistence & Credential Protection)
 
 import sqlite3
 from argon2 import PasswordHasher
-from argon2.exceptions import VerifyMismatchError, InvalidHashError
+try:
+    from argon2.exceptions import VerifyMismatchError, InvalidHashError
+except ImportError:
+    from argon2.exceptions import VerifyMismatchError, VerificationError as InvalidHashError
 from database.models import CREATE_DOCTORS_TABLE, CREATE_PATIENT_RECORDS_TABLE
 
 DB_FILE = "records.db"
