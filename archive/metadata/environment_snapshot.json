@@ -1,0 +1,20 @@
+{
+  "project_name": "KDR-CA-AEAD Cryptographic Research Framework",
+  "release_version": "1.0.0",
+  "documentation_version": "1.0.0",
+  "build_timestamp": "2026-08-03T17:56:06.280939+00:00",
+  "git_branch": "main",
+  "git_commit": "4369e3a",
+  "python_version": "3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 16:37:03) [MSC v.1929 64 bit (AMD64)]",
+  "python_implementation": "CPython",
+  "operating_system": "Windows-11-10.0.26200-SP0",
+  "installed_packages": {
+    "pytest": "8.3.4",
+    "reportlab": "5.0.0",
+    "fpdf2": "not installed",
+    "matplotlib": "3.10.0",
+    "pyyaml": "not installed",
+    "pillow": "not installed",
+    "jinja2": "3.1.6"
+  }
+}

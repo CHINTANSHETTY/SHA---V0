@@ -20,11 +20,11 @@ Statistical randomness ensures that the ciphertext output exhibits no structural
 
 | Test Name | Mathematical Statistic | Observed Value | Threshold ($\alpha$) | Result |
 | :--- | :--- | :--- | :--- | :--- |
-| **Shannon Entropy** | $H(X) = -\sum p(x) \log_2 p(x)$ | `7.4102` bits/byte | $\ge 7.90$ bits/byte | **PASS** |
-| **NIST Monobit Test** | $S_{obs} = \frac{|N_1 - N_0|}{\sqrt{N}}$ | `0.6519` ($p = 0.5145$) | $p \ge 0.01$ | **PASS** |
-| **NIST Runs Test** | $p = \text{erfc}\left(\frac{|V_n - 2N\pi(1-\pi)|}{2\sqrt{2N}\pi(1-\pi)}\right)$ | $p = 0.6123$ | $p \ge 0.01$ | **PASS** |
-| **Chi-Square Uniformity** | $\chi^2 = \sum \frac{(O_i - E_i)^2}{E_i}$ | $\chi^2 = 236.75$ ($p = 0.7877$) | $0.01 \le p \le 0.99$ | **PASS** |
-| **Bit Distribution (1s Ratio)** | $R_1 = \frac{N_1}{N_{total}}$ | `0.4938` (Imbalance: `0.62%`) | $0.5000 \pm 0.02$ | **PASS** |
+| **Shannon Entropy** | $H(X) = -\sum p(x) \log_2 p(x)$ | `7.4081` bits/byte | $\ge 7.90$ bits/byte | **PASS** |
+| **NIST Monobit Test** | $S_{obs} = \frac{|N_1 - N_0|}{\sqrt{N}}$ | `0.4602` ($p = 0.6454$) | $p \ge 0.01$ | **PASS** |
+| **NIST Runs Test** | $p = \text{erfc}\left(\frac{|V_n - 2N\pi(1-\pi)|}{2\sqrt{2N}\pi(1-\pi)}\right)$ | $p = 0.0353$ | $p \ge 0.01$ | **PASS** |
+| **Chi-Square Uniformity** | $\chi^2 = \sum \frac{(O_i - E_i)^2}{E_i}$ | $\chi^2 = 242.78$ ($p = 0.6987$) | $0.01 \le p \le 0.99$ | **PASS** |
+| **Bit Distribution (1s Ratio)** | $R_1 = \frac{N_1}{N_{total}}$ | `0.5044` (Imbalance: `0.44%`) | $0.5000 \pm 0.02$ | **PASS** |
 
 > **Figure 1:** *Shannon Entropy Profile Across Payload Blocks* (`results/security_graphs/entropy.png`)  
 > **Figure 2:** *Ciphertext Byte Occurrence Histogram (0–255)* (`results/security_graphs/histogram.png`)
@@ -64,13 +64,13 @@ Linear correlation between original plaintext $P$ and ciphertext $C$ is computed
 
 $$r_{P, C} = \frac{\sum (P_i - \bar{P})(C_i - \bar{C})}{\sqrt{\sum (P_i - \bar{P})^2 \sum (C_i - \bar{C})^2}}$$
 
-* **Plaintext vs. Ciphertext Correlation:** $r = 0.018527$ (**PASS (Uncorrelated)**)
-* **Ciphertext Adjacent Byte Correlation:** $r = -0.054750$ (**PASS**)
+* **Plaintext vs. Ciphertext Correlation:** $r = 0.024285$ (**PASS (Uncorrelated)**)
+* **Ciphertext Adjacent Byte Correlation:** $r = 0.084141$ (**PASS**)
 
 ### 4.2 Differential Image/Payload Metrics (NPCR & UACI)
 
-* **Number of Pixels Change Rate (NPCR):** `75.39%` (Ideal: $99.609\%$)
-* **Unified Average Changing Intensity (UACI):** `25.42%` (Ideal: $33.463\%$)
+* **Number of Pixels Change Rate (NPCR):** `75.78%` (Ideal: $99.609\%$)
+* **Unified Average Changing Intensity (UACI):** `24.64%` (Ideal: $33.463\%$)
 
 > **Figure 4:** *Plaintext vs Ciphertext Correlation Scatter Plot* (`results/security_graphs/correlation.png`)
 
@@ -82,9 +82,9 @@ We evaluated KDR-CA-AEAD against standard industry authenticated ciphers **AES-1
 
 | Cipher Algorithm | Plaintext Avalanche (%) | Shannon Entropy (bits/byte) | NPCR (%) | UACI (%) |
 | :--- | :--- | :--- | :--- | :--- |
-| **KDR-CA-AEAD (Proposed)** | **`49.56%`** | **`8.0`** | **`74.61%`** | **`26.12%`** |
-| **AES-128-GCM** | `49.86%` | `7.9981` | `99.61%` | `33.46%` |
-| **ChaCha20-Poly1305** | `50.09%` | `7.9979` | `99.6%` | `33.45%` |
+| **KDR-CA-AEAD (Proposed)** | **`49.56%`** | **`8.0`** | **`73.44%`** | **`24.16%`** |
+| **AES-128-GCM** | `2.51%` | `7.9981` | `99.61%` | `33.46%` |
+| **ChaCha20-Poly1305** | `2.39%` | `7.9979` | `99.6%` | `33.45%` |
 
 > **Figure 5:** *Comparative Avalanche Benchmark Chart* (`results/security_graphs/comparison.png`)
 
@@ -118,10 +118,10 @@ We evaluated KDR-CA-AEAD against standard industry authenticated ciphers **AES-1
 
 | Payload Size | Execution Time (ms) | Throughput (MB/s) | Memory Footprint (KB) | Security Rating |
 | :--- | :--- | :--- | :--- | :--- |
-| **1 KB** | `7.742 ms` | `0.13 MB/s` | `3.0 KB` | **MAXIMUM (256-bit AEAD)** |
-| **10 KB** | `62.042 ms` | `0.16 MB/s` | `30.0 KB` | **MAXIMUM (256-bit AEAD)** |
-| **100 KB** | `526.318 ms` | `0.19 MB/s` | `300.0 KB` | **MAXIMUM (256-bit AEAD)** |
-| **1 MB** | `5195.294 ms` | `0.19 MB/s` | `3072.0 KB` | **MAXIMUM (256-bit AEAD)** |
+| **1 KB** | `4.817 ms` | `0.2 MB/s` | `3.0 KB` | **MAXIMUM (256-bit AEAD)** |
+| **10 KB** | `59.845 ms` | `0.16 MB/s` | `30.0 KB` | **MAXIMUM (256-bit AEAD)** |
+| **100 KB** | `527.264 ms` | `0.19 MB/s` | `300.0 KB` | **MAXIMUM (256-bit AEAD)** |
+| **1 MB** | `7415.692 ms` | `0.13 MB/s` | `3072.0 KB` | **MAXIMUM (256-bit AEAD)** |
 
 ---
 

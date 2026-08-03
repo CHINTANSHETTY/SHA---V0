@@ -1,0 +1,56 @@
+{
+  "title": "KDR-CA-AEAD: Keyed Dynamically-Reconfigured Cellular Automata with Authenticated Encryption",
+  "authors": [
+    {
+      "name": "Chintan Shetty",
+      "role": "Lead Researcher & Cryptography Architect",
+      "affiliation": "Independent Cryptographic Research"
+    },
+    {
+      "name": "Amrutha Nagamrutha",
+      "role": "Co-Researcher",
+      "affiliation": "Independent Cryptographic Research"
+    },
+    {
+      "name": "Ashwitha",
+      "role": "Co-Researcher & Publication Lead",
+      "affiliation": "Independent Cryptographic Research"
+    }
+  ],
+  "version": "1.0.0",
+  "spdx_license": "MIT",
+  "keywords": [
+    "Cellular Automata",
+    "Authenticated Encryption",
+    "AEAD",
+    "HKDF",
+    "HMAC",
+    "NIST SP 800-22",
+    "Strict Avalanche Criterion"
+  ],
+  "research_area": "Computer Science / Cryptography and Security",
+  "programming_language": "Python 3.13.5",
+  "dependencies": [
+    "pytest",
+    "reportlab",
+    "fpdf2",
+    "matplotlib",
+    "pyyaml",
+    "pillow",
+    "jinja2"
+  ],
+  "operating_systems": [
+    "Windows 10/11",
+    "Linux (Ubuntu/Debian/RHEL)",
+    "macOS (12.0+)"
+  ],
+  "build_instructions": "python scripts/build_release_package.py",
+  "persistent_identifiers": {
+    "doi": null,
+    "doi_status": "Pending Repository Upload (Zenodo/Figshare/OSF)",
+    "swh_id": null,
+    "swh_status": "Pending Archival Submission (save.softwareheritage.org)"
+  },
+  "citation": "C. Shetty, A. Nagamrutha, and Ashwitha, KDR-CA-AEAD: Keyed Dynamically-Reconfigured Cellular Automata with Authenticated Encryption, IEEE TIFS, 2026.",
+  "archival_timestamp": "2026-08-03T17:56:07.207644+00:00"
+}
