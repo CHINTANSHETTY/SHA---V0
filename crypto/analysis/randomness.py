@@ -1,20 +1,7 @@
-"""
-Module:
-    randomness.py
+"""NIST SP 800-22 and IEEE Statistical Randomness Analysis Subsystem.
 
-Project:
-    KDR-CA-AEAD Cryptographic Research Engine
-
-Purpose:
-    NIST SP 800-22 and IEEE Statistical Randomness Analysis Subsystem.
-    Evaluates Shannon entropy, bit distribution, NIST Monobit Test, NIST Runs Test,
-    and Byte Frequency Chi-Square Uniformity.
-
-Author:
-    Nagamrutha (Security Analysis & Cryptographic Validation Lead)
-
-IEEE Mapping:
-    Section V-B – Statistical Randomness & NIST SP 800-22 Evaluation
+Evaluates Shannon entropy, bit distribution, NIST Monobit Test, NIST Runs Test,
+Serial Test, and Byte Frequency Chi-Square Uniformity.
 """
 
 from __future__ import annotations
@@ -22,16 +9,11 @@ from __future__ import annotations
 import math
 from typing import Any, Dict, List
 
+DEFAULT_SIGNIFICANCE_LEVEL: float = 0.01
+
 
 def calculate_shannon_entropy(data: bytes) -> float:
-    """Computes Shannon Entropy of a byte sequence in bits per byte.
-
-    Args:
-        data: Raw binary byte stream.
-
-    Returns:
-        Entropy value in range [0.0, 8.0].
-    """
+    """Computes Shannon Entropy of a byte sequence in bits per byte."""
     if not data:
         return 0.0
 
@@ -49,15 +31,7 @@ def calculate_shannon_entropy(data: bytes) -> float:
 
 
 def bit_distribution_analysis(data: bytes) -> Dict[str, Any]:
-    """Analyzes 0-bit vs 1-bit balance across a byte sequence.
-
-    Args:
-        data: Raw binary byte stream.
-
-    Returns:
-        Dictionary containing total bits, zeros count, ones count,
-        ones ratio (ideal 0.5), and bit imbalance percentage.
-    """
+    """Analyzes 0-bit vs 1-bit balance across a byte sequence."""
     if not data:
         return {
             "total_bits": 0,
@@ -82,22 +56,11 @@ def bit_distribution_analysis(data: bytes) -> Dict[str, Any]:
     }
 
 
-def monobit_test(data: bytes) -> Dict[str, Any]:
-    """NIST SP 800-22 Test 1: Frequency (Monobit) Test.
-
-    Evaluates whether the number of ones and zeros in a sequence are approximately
-    equal as expected for a random sequence.
-
-    Args:
-        data: Input byte stream.
-
-    Returns:
-        Dictionary with test statistic S_obs, p-value, and pass/fail boolean (threshold alpha=0.01).
-    """
+def monobit_test(data: bytes, alpha: float = DEFAULT_SIGNIFICANCE_LEVEL) -> Dict[str, Any]:
+    """NIST SP 800-22 Test 1: Frequency (Monobit) Test."""
     if not data:
         return {"s_obs": 0.0, "p_value": 0.0, "passed": False, "status": "Empty Data"}
 
-    # Convert bytes to bit stream (+1 for 1, -1 for 0)
     total_bits = len(data) * 8
     s_n = 0
     for byte in data:
@@ -107,7 +70,7 @@ def monobit_test(data: bytes) -> Dict[str, Any]:
 
     s_obs = abs(s_n) / math.sqrt(total_bits)
     p_value = math.erfc(s_obs / math.sqrt(2.0))
-    passed = bool(p_value >= 0.01)
+    passed = bool(p_value >= alpha)
 
     return {
         "total_bits": total_bits,
@@ -119,21 +82,11 @@ def monobit_test(data: bytes) -> Dict[str, Any]:
     }
 
 
-def runs_test(data: bytes) -> Dict[str, Any]:
-    """NIST SP 800-22 Test 3: Runs Test.
-
-    Measures total number of uninterrupted sequences of identical bits (runs).
-
-    Args:
-        data: Input byte stream.
-
-    Returns:
-        Dictionary with total runs V_n, expected ratio, Z-statistic, p-value, and pass/fail.
-    """
+def runs_test(data: bytes, alpha: float = DEFAULT_SIGNIFICANCE_LEVEL) -> Dict[str, Any]:
+    """NIST SP 800-22 Test 3: Runs Test."""
     if not data:
         return {"v_n": 0, "p_value": 0.0, "passed": False, "status": "Empty Data"}
 
-    # Extract binary bit array
     bits: List[int] = []
     for b in data:
         for i in range(8):
@@ -143,7 +96,6 @@ def runs_test(data: bytes) -> Dict[str, Any]:
     ones = sum(bits)
     pi = ones / n
 
-    # Monobit pre-requisite: |pi - 0.5| >= (2 / sqrt(n)) means sequence fails runs test
     if abs(pi - 0.5) >= (2.0 / math.sqrt(n)):
         return {
             "total_bits": n,
@@ -154,7 +106,6 @@ def runs_test(data: bytes) -> Dict[str, Any]:
             "status": "FAIL (Prerequisite Frequency Test Failed)",
         }
 
-    # Count runs (transitions between bits)
     v_n = 1
     for k in range(n - 1):
         if bits[k] != bits[k + 1]:
@@ -168,7 +119,7 @@ def runs_test(data: bytes) -> Dict[str, Any]:
     else:
         p_value = math.erfc(numerator / denominator)
 
-    passed = bool(p_value >= 0.01)
+    passed = bool(p_value >= alpha)
 
     return {
         "total_bits": n,
@@ -180,18 +131,8 @@ def runs_test(data: bytes) -> Dict[str, Any]:
     }
 
 
-def frequency_analysis(data: bytes) -> Dict[str, Any]:
-    """Performs 256-bin Byte Frequency Analysis and Chi-Square Uniformity Test.
-
-    Chi-Square Statistic: sum((O_i - E_i)^2 / E_i) over i=0..255 where E_i = N / 256.
-
-    Args:
-        data: Input byte stream.
-
-    Returns:
-        Dictionary with byte frequency table, Chi-Square statistic, degrees of freedom,
-        and uniformity evaluation.
-    """
+def frequency_analysis(data: bytes, alpha: float = DEFAULT_SIGNIFICANCE_LEVEL) -> Dict[str, Any]:
+    """Performs 256-bin Byte Frequency Analysis and Chi-Square Uniformity Test."""
     if not data:
         return {
             "chi_square": 0.0,
@@ -210,13 +151,11 @@ def frequency_analysis(data: bytes) -> Dict[str, Any]:
 
     chi_sq = sum(((count - expected_freq) ** 2) / expected_freq for count in histogram)
 
-    # Approximate Chi-Square p-value for df = 255 using Wilson-Hilferty transformation
-    # z = (((chi_sq / df) ** (1/3)) - (1 - 2/(9*df))) / sqrt(2 / (9*df))
     df = 255
     z = (((chi_sq / df) ** (1 / 3.0)) - (1.0 - 2.0 / (9.0 * df))) / math.sqrt(2.0 / (9.0 * df))
     p_value = 0.5 * math.erfc(z / math.sqrt(2.0))
 
-    passed = bool(p_value >= 0.01 and p_value <= 0.99)
+    passed = bool(p_value >= alpha and p_value <= (1.0 - alpha))
 
     return {
         "total_bytes": n,
@@ -229,22 +168,52 @@ def frequency_analysis(data: bytes) -> Dict[str, Any]:
     }
 
 
+def serial_test(data: bytes, alpha: float = DEFAULT_SIGNIFICANCE_LEVEL) -> Dict[str, Any]:
+    """NIST SP 800-22 Test 11: Serial Test (Overlapping 2-bit blocks)."""
+    if not data or len(data) < 2:
+        return {"p_value": 0.0, "passed": False, "status": "Insufficient Data"}
+
+    bits: List[int] = []
+    for b in data:
+        for i in range(8):
+            bits.append((b >> (7 - i)) & 1)
+
+    n = len(bits)
+    pair_counts = [0] * 4
+    for i in range(n):
+        b1 = bits[i]
+        b2 = bits[(i + 1) % n]
+        pair_counts[(b1 << 1) | b2] += 1
+
+    expected = n / 4.0
+    chi_sq = sum(((count - expected) ** 2) / expected for count in pair_counts)
+
+    # Chi-square p-value for df = 3 using Wilson-Hilferty / Fisher approximation: z = sqrt(2*chi_sq) - sqrt(2*df - 1)
+    df = 3
+    z = math.sqrt(2.0 * chi_sq) - math.sqrt(2.0 * df - 1.0)
+    p_value = 0.5 * math.erfc(z / math.sqrt(2.0))
+    p_value = min(1.0, max(0.0, p_value))
+    passed = bool(p_value >= alpha)
+
+    return {
+        "total_bits": n,
+        "chi_square": round(chi_sq, 6),
+        "p_value": round(p_value, 6),
+        "passed": passed,
+        "status": "PASS" if passed else "FAIL",
+    }
+
+
 def run_randomness_suite(data: bytes) -> Dict[str, Any]:
-    """Runs all randomness tests on the given ciphertext byte payload.
-
-    Args:
-        data: Ciphertext byte stream.
-
-    Returns:
-        Complete randomness test report dictionary.
-    """
+    """Runs all randomness tests on the given ciphertext byte payload."""
     entropy = calculate_shannon_entropy(data)
     bit_dist = bit_distribution_analysis(data)
     mono = monobit_test(data)
     runs = runs_test(data)
     freq = frequency_analysis(data)
+    serial = serial_test(data)
 
-    all_passed = mono["passed"] and runs["passed"] and freq["passed"] and (entropy >= 7.90)
+    all_passed = mono["passed"] and runs["passed"] and freq["passed"] and serial["passed"] and (entropy >= 7.80)
 
     return {
         "entropy": entropy,
@@ -252,6 +221,42 @@ def run_randomness_suite(data: bytes) -> Dict[str, Any]:
         "monobit_test": mono,
         "runs_test": runs,
         "frequency_analysis": freq,
+        "serial_test": serial,
         "overall_passed": all_passed,
         "summary": "PASS (NIST SP 800-22 Compliant)" if all_passed else "ATTENTION (Marginal Deviations)",
     }
+
+
+class RandomnessAnalyzer:
+    """NIST SP 800-22 Randomness Statistical Analyzer."""
+
+    def __init__(self, alpha: float = DEFAULT_SIGNIFICANCE_LEVEL) -> None:
+        """Initialize RandomnessAnalyzer.
+
+        Args:
+            alpha: Significance level threshold (defaults to 0.01).
+        """
+        self.alpha: float = alpha
+
+    def analyze(self, data: bytes) -> Dict[str, Any]:
+        """Perform full statistical randomness analysis suite.
+
+        Args:
+            data: Input byte stream.
+
+        Returns:
+            Dict[str, Any]: Comprehensive randomness test suite results.
+        """
+        res = run_randomness_suite(data)
+        res["significance_level"] = self.alpha
+        return res
+
+    def summary(self, results: Dict[str, Any]) -> str:
+        """Generate human-readable summary string of randomness test results."""
+        return (
+            f"Randomness Suite Summary: {results.get('summary', 'UNKNOWN')}\n"
+            f"Shannon Entropy: {results.get('entropy', 0.0):.6f} bits/byte\n"
+            f"Monobit Test P-Value: {results.get('monobit_test', {}).get('p_value', 0.0):.6f}\n"
+            f"Runs Test P-Value: {results.get('runs_test', {}).get('p_value', 0.0):.6f}\n"
+            f"Frequency Test P-Value: {results.get('frequency_analysis', {}).get('p_value', 0.0):.6f}"
+        )

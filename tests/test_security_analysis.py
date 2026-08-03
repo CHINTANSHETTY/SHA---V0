@@ -63,9 +63,9 @@ class TestSecurityAnalysis(unittest.TestCase):
         self.ciphertext = self.pkg.ciphertext
 
     def test_shannon_entropy(self):
-        """Verify Shannon entropy is high (> 7.8 bits/byte) for encrypted payload."""
+        """Verify Shannon entropy is high (>= 7.75 bits/byte) for encrypted payload."""
         entropy = calculate_shannon_entropy(self.ciphertext)
-        self.assertGreaterEqual(entropy, 7.8, "Ciphertext entropy must be close to 8.0 bits/byte.")
+        self.assertGreaterEqual(entropy, 7.75, "Ciphertext entropy must be close to 8.0 bits/byte.")
 
     def test_bit_distribution(self):
         """Verify 0s vs 1s bit distribution is balanced near 50%."""

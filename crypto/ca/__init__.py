@@ -1,63 +1,44 @@
 """Keyed Dynamically-Reconfigured Cellular Automata with Authenticated Encryption (KDR-CA-AEAD)
 Cellular Automata Subsystem (`crypto.ca`).
 
-This package establishes the deterministic 1D Elementary Cellular Automata (ECA) foundation
-used for key scheduling, state transformations, and authenticated encryption across the
-KDR-CA-AEAD cryptographic research engine.
+This package establishes the deterministic 1D Elementary Cellular Automata (ECA) and Dynamic
+Evolution Engine foundation used across the KDR-CA-AEAD cryptographic research system.
 
 Subsystems:
     1. Rule Engine (`crypto.ca.rules`):
-       Parses, validates, and memoizes Wolfram rules (0–255) into immutable 8-bit binary
-       lookup tables mapping 3-cell neighborhoods (111 to 000) to output bits.
+       Parses, validates, and memoizes Wolfram rules (0–255) into immutable binary lookup tables.
 
     2. Evolution Engine (`crypto.ca.engine`):
-       Executes deterministic 1D cellular automata evolution supporting arbitrary binary state
-       lengths, configurable boundary conditions ("periodic" wrap-around and "null" zero-padded),
-       and multi-generation step iteration.
+       Executes deterministic 1D cellular automata evolution with periodic/null boundary conditions.
 
-    3. Utility Module (`crypto.ca.utils`):
-       Provides binary state conversions (string, int, list), state initializations (zero, one,
-       reproducible seeded random), distance/population metrics (Hamming distance, population count),
-       state transformations (invert, XOR), matrix generation, and slicing operations.
+    3. Dynamic Rule Engine (`crypto.ca.dynamic_rules`):
+       Provides `RuleDefinition` abstraction, dynamic rule switching, custom rule registration,
+       and unified CA exception hierarchy (`CAError`).
 
-    4. Dynamic Rule Mapping (`crypto.ca.mapping`):
-       Manages rule sequence lookups, bijective rule set mappings, 1-to-1 inverse transformations,
-       sequence rotation/cycling, schema-versioned configuration loading/export ("version": 1),
-       and deterministic JSON serialization.
+    4. Dynamic Evolution & Schedulers (`crypto.ca.evolution`):
+       Implements `RuleEvolutionScheduler` (fixed, cyclic, seeded random, key-dependent, user-defined),
+       adaptive neighborhood models (Radius 1 & 2; periodic, null, reflective, fixed boundaries),
+       and `DynamicEvolutionEngine` with hybrid multi-rule transitions.
 
-Wolfram Rule Representation:
-    Neighborhood:  111  110  101  100  011  010  001  000
-    Rule Bit:        7    6    5    4    3    2    1    0
+    5. Optimized Evolution Engine (`crypto.ca.optimizer`):
+       High-performance bitwise and buffer-reusing evolution routines (`OptimizedCAEngine`),
+       and bit packing utilities (`pack_bits`, `unpack_bits`).
 
-Boundary Conditions:
-    - "periodic": Wraps cell array ends (cell 0 left neighbor = cell N-1).
-    - "null": Zero-pads cell array boundaries (cell 0 left neighbor = 0).
+    6. Performance Benchmark Framework (`crypto.ca.benchmark`):
+       Standalone benchmark suite (`CABenchmark`) measuring timing, peak memory, throughput, and system metadata.
 
-Determinism & Security:
-    All functions are strictly pure and deterministic. Random state generation uses isolated
-    `random.Random(seed)` instances to ensure 100% reproducibility without modifying Python's
-    global `random` state.
+    7. Utility Module (`crypto.ca.utils`):
+       Binary state conversions, state initializations, distance/population metrics, and transformations.
 
-Example Usage:
-    >>> import crypto.ca as ca
-    >>> initial_state = ca.state_from_string("0001000")
-    >>> evolved = ca.evolve(initial_state, rule=30, generations=2, boundary="periodic")
-    >>> ca.state_to_string(evolved)
-    '0110010'
-    >>> dist = ca.hamming_distance(initial_state, evolved)
-    >>> dist
-    4
-
-References:
-    Wolfram, S. (1983). "Statistical mechanics of cellular automata". Reviews of Modern Physics, 55(3), 601.
-    Wolfram, S. (2002). "A New Kind of Science". Wolfram Media.
+    8. Dynamic Rule Mapping (`crypto.ca.mapping`):
+       Rule sequence lookups, bijective mappings, inverse transformations, and configuration exports.
 """
 
 __version__: str = "1.0.0"
 __author__: str = "KDR-CA-AEAD Project"
 
 # =========================================================
-# RE-EXPORTS: RULE ENGINE
+# RE-EXPORTS: RULE ENGINE (PHASE 1)
 # =========================================================
 from .rules import (
     MAX_RULE,
@@ -73,7 +54,7 @@ from .rules import (
 )
 
 # =========================================================
-# RE-EXPORTS: EVOLUTION ENGINE
+# RE-EXPORTS: EVOLUTION ENGINE (PHASE 1)
 # =========================================================
 from .engine import (
     BOUNDARY_NULL,
@@ -84,6 +65,51 @@ from .engine import (
     validate_boundary,
     validate_generations,
     validate_state,
+)
+
+# =========================================================
+# RE-EXPORTS: DYNAMIC RULE ENGINE & EXCEPTIONS (PHASE 2.1)
+# =========================================================
+from .dynamic_rules import (
+    CAError,
+    DynamicRuleEngine,
+    EvolutionError,
+    InvalidNeighborhoodError,
+    InvalidRuleError,
+    InvalidSchedulerError,
+    RuleDefinition,
+    RuleNotFoundError,
+)
+
+# =========================================================
+# RE-EXPORTS: DYNAMIC EVOLUTION & SCHEDULERS (PHASE 2.1)
+# =========================================================
+from .evolution import (
+    BOUNDARY_FIXED,
+    BOUNDARY_REFLECTIVE,
+    VALID_RADII,
+    DynamicEvolutionEngine,
+    RuleEvolutionScheduler,
+    get_neighborhood,
+    validate_radius,
+)
+
+# =========================================================
+# RE-EXPORTS: OPTIMIZER (PHASE 2.1)
+# =========================================================
+from .optimizer import (
+    OptimizedCAEngine,
+    pack_bits,
+    unpack_bits,
+)
+
+# =========================================================
+# RE-EXPORTS: BENCHMARK (PHASE 2.1)
+# =========================================================
+from .benchmark import (
+    BenchmarkMetadata,
+    BenchmarkResult,
+    CABenchmark,
 )
 
 # =========================================================
@@ -154,26 +180,50 @@ __all__ = [
     # Package Metadata
     "__version__",
     "__author__",
-    # Rule Engine
+    # Exceptions
+    "CAError",
+    "InvalidRuleError",
+    "RuleNotFoundError",
+    "InvalidNeighborhoodError",
+    "InvalidSchedulerError",
+    "EvolutionError",
+    # Rule Engine & Definitions
     "MIN_RULE",
     "MAX_RULE",
     "VALID_BITS",
     "Neighborhood",
     "LookupTable",
     "State",
+    "RuleDefinition",
+    "DynamicRuleEngine",
     "validate_rule",
     "parse_rule",
     "rule_to_binary",
     "get_neighborhood_output",
-    # Evolution Engine
+    # Evolution Engine & Dynamic Evolution
     "BOUNDARY_PERIODIC",
     "BOUNDARY_NULL",
+    "BOUNDARY_REFLECTIVE",
+    "BOUNDARY_FIXED",
     "VALID_BOUNDARIES",
+    "VALID_RADII",
     "validate_boundary",
+    "validate_radius",
     "validate_generations",
     "validate_state",
+    "get_neighborhood",
     "evolve_step",
     "evolve",
+    "RuleEvolutionScheduler",
+    "DynamicEvolutionEngine",
+    # Optimizer
+    "OptimizedCAEngine",
+    "pack_bits",
+    "unpack_bits",
+    # Benchmark
+    "CABenchmark",
+    "BenchmarkResult",
+    "BenchmarkMetadata",
     # Utilities & Metrics
     "Bit",
     "StateLike",
