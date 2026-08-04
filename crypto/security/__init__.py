@@ -6,8 +6,8 @@ Project:
     KDR-CA-AEAD Cryptographic Research Engine
 
 Purpose:
-    Cryptographic Security Evaluation, Threat Modeling, Formal Verification & Security Compliance Subsystem
-    (Phases 3.1, 3.2, and 3.3).
+    Cryptographic Security Evaluation, Threat Modeling, Formal Verification, Security Compliance,
+    and Programmatic Security Audit Subsystem (Phases 3.1, 3.2, 3.3, 4.1, and 4.2).
 
 Author:
     Nagamrutha (Security Analysis & Cryptographic Validation Lead)
@@ -54,6 +54,18 @@ from crypto.security.compliance import (
     generate_consolidated_compliance_matrix,
     run_full_compliance_suite,
 )
+from crypto.security.security_audit import (
+    audit_static_code_security,
+    audit_cryptographic_primitives,
+    audit_threat_mitigations,
+    audit_security_checklist,
+    run_full_security_audit,
+)
+from crypto.security.audit_report import (
+    SecurityFinding,
+    get_default_audit_findings,
+    generate_audit_report,
+)
 
 __all__ = [
     "analyze_key_space",
@@ -87,4 +99,12 @@ __all__ = [
     "generate_vulnerability_assessment",
     "generate_consolidated_compliance_matrix",
     "run_full_compliance_suite",
+    "audit_static_code_security",
+    "audit_cryptographic_primitives",
+    "audit_threat_mitigations",
+    "audit_security_checklist",
+    "run_full_security_audit",
+    "SecurityFinding",
+    "get_default_audit_findings",
+    "generate_audit_report",
 ]
