@@ -1,0 +1,108 @@
+{
+  "title": "KDR-CA-AEAD Cryptographic System Validation Report",
+  "timestamp_epoch": 1785838941.548,
+  "total_checks": 12,
+  "passed": 12,
+  "failed": 0,
+  "warnings": 0,
+  "status": "PASS",
+  "execution_duration_ms": 0.057,
+  "checks": [
+    {
+      "check_id": "VAL-01",
+      "component": "MasterKey",
+      "description": "Validate master key non-null and non-empty byte buffer",
+      "passed": true,
+      "warning": false,
+      "message": "Validation successful."
+    },
+    {
+      "check_id": "VAL-02",
+      "component": "MasterKey",
+      "description": "Validate master key type checking (bytes, bytearray, str)",
+      "passed": true,
+      "warning": false,
+      "message": "Validation successful."
+    },
+    {
+      "check_id": "VAL-03",
+      "component": "Salt",
+      "description": "Validate 16-byte CSPRNG salt type and exact length (128 bits)",
+      "passed": true,
+      "warning": false,
+      "message": "Validation successful."
+    },
+    {
+      "check_id": "VAL-04",
+      "component": "Nonce",
+      "description": "Validate 12-byte CSPRNG nonce type and exact length (96 bits)",
+      "passed": true,
+      "warning": false,
+      "message": "Validation successful."
+    },
+    {
+      "check_id": "VAL-05",
+      "component": "Payload",
+      "description": "Validate payload non-emptiness and 100MB upper size bound",
+      "passed": true,
+      "warning": false,
+      "message": "Validation successful."
+    },
+    {
+      "check_id": "VAL-06",
+      "component": "Package",
+      "description": "Validate EncryptedPackage dataclass schema and hex serialization",
+      "passed": true,
+      "warning": false,
+      "message": "Validation successful."
+    },
+    {
+      "check_id": "VAL-07",
+      "component": "CA_RuleTable",
+      "description": "Validate Cellular Automata 256-rule lookup table bounds [0..255]",
+      "passed": true,
+      "warning": false,
+      "message": "Validation successful."
+    },
+    {
+      "check_id": "VAL-08",
+      "component": "HMAC_Tag",
+      "description": "Validate 32-byte HMAC-SHA256 AEAD tag buffer length (256 bits)",
+      "passed": true,
+      "warning": false,
+      "message": "Validation successful."
+    },
+    {
+      "check_id": "VAL-09",
+      "component": "HKDF_Params",
+      "description": "Validate HKDF-SHA256 IKM, salt, info, and max length bounds (8160B)",
+      "passed": true,
+      "warning": false,
+      "message": "Validation successful."
+    },
+    {
+      "check_id": "VAL-10",
+      "component": "ErrorHandling",
+      "description": "Validate AuthenticationError raised on 100% of tampered vectors",
+      "passed": true,
+      "warning": false,
+      "message": "Validation successful."
+    },
+    {
+      "check_id": "VAL-11",
+      "component": "EdgeCases",
+      "description": "Validate rejection of None, empty, invalid-type, and malformed inputs",
+      "passed": true,
+      "warning": false,
+      "message": "Validation successful."
+    },
+    {
+      "check_id": "VAL-12",
+      "component": "UnicodeBinary",
+      "description": "Validate multi-byte UTF-8, emojis, and binary null-byte buffers",
+      "passed": true,
+      "warning": false,
+      "message": "Validation successful."
+    }
+  ]
+}
