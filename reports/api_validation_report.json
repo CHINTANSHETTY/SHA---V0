@@ -1,6 +1,6 @@
 {
   "title": "KDR-CA-AEAD Cryptographic API Validation & Docstring Quality Report",
-  "timestamp_epoch": 1785840874.01,
+  "timestamp_epoch": 1785859883.278,
   "api_validation": {
     "docstring_validation": {
       "modules_evaluated_count": 13,
@@ -643,8 +643,8 @@
     "summary": "API Validation PASSED: Docstring Coverage 100.0% across 59 symbols; 100% code examples executed successfully."
   },
   "documentation_review": {
-    "files_audited_count": 93,
-    "files_passed_count": 93,
+    "files_audited_count": 97,
+    "files_passed_count": 97,
     "broken_links_count": 0,
     "broken_links": [],
     "audited_files": [
@@ -1049,6 +1049,34 @@
       },
       {
         "file": "docs\\phase3\\vulnerability_assessment.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": true,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\phase5\\compatibility_matrix.md",
+        "has_h1_title": true,
+        "has_code_blocks": false,
+        "parameter_consistency": false,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\phase5\\compatibility_report.md",
+        "has_h1_title": true,
+        "has_code_blocks": false,
+        "parameter_consistency": true,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\phase5\\regression_summary.md",
+        "has_h1_title": true,
+        "has_code_blocks": false,
+        "parameter_consistency": false,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\phase5\\regression_testing_report.md",
         "has_h1_title": true,
         "has_code_blocks": true,
         "parameter_consistency": true,

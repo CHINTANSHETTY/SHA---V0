@@ -14,7 +14,7 @@ authors:
     role: "Co-Researcher & Publication Lead"
 version: "1.0.0"
 date-released: "2026-08-03"
-license: "MIT"
+license: "Apache-2.0"
 repository-code: "https://github.com/CHINTANSHETTY/SHA---V0"
 keywords:
   - "Cellular Automata"

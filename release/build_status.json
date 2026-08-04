@@ -1,15 +1,15 @@
 {
   "release_version": "1.0.0",
-  "build_start_utc": "2026-08-04T08:06:45.707093+00:00",
-  "build_finish_utc": "2026-08-04T08:06:52.480922+00:00",
-  "elapsed_duration_seconds": 6.774,
-  "archive_generation_seconds": 3.791,
-  "verification_seconds": 1.928,
+  "build_start_utc": "2026-08-04T16:20:08.069313+00:00",
+  "build_finish_utc": "2026-08-04T16:20:15.556279+00:00",
+  "elapsed_duration_seconds": 7.487,
+  "archive_generation_seconds": 4.233,
+  "verification_seconds": 2.113,
   "archive_count": 6,
   "success": true,
   "warnings": [],
   "tool_versions": {
-    "python": "3.13.5",
+    "python": "3.14.4",
     "os": "Windows-11-10.0.26200-SP0"
   }
 }

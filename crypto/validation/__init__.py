@@ -12,6 +12,8 @@ Author:
     Nagamrutha (Security Analysis & Cryptographic Validation Lead)
 """
 
+from crypto.validation.validation import ValidationRunner
+from crypto.validation.report import ValidationReport
 from crypto.validation.advanced_validation import (
     validate_master_key,
     validate_salt,
@@ -30,6 +32,8 @@ from crypto.validation.validation_report import (
 )
 
 __all__ = [
+    "ValidationRunner",
+    "ValidationReport",
     "validate_master_key",
     "validate_salt",
     "validate_nonce",
@@ -43,3 +47,4 @@ __all__ = [
     "ValidationReportBuilder",
     "generate_validation_report",
 ]
+

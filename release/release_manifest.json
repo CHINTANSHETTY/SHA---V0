@@ -1,61 +1,61 @@
 {
   "release_version": "1.0.0",
-  "generated_at": "2026-08-04T08:06:50.679503+00:00",
+  "generated_at": "2026-08-04T16:20:13.641785+00:00",
   "total_archives": 6,
   "artifacts": [
     {
       "filename": "kdr-ca-aead-v1.0.0.zip",
-      "size_bytes": 7738145,
-      "size_kb": "7556.78 KB",
-      "sha256": "07dc6d0855f0e38d43d20161570c59afc0d21a73dba466ea0dfdbbfb40e4a42c",
-      "sha512": "bda73468367367854bc1ae4d255ad6c6042245d0952b2934a8ac2355d9df7e13c2f0f6193b8cc5a382aeaa6a32d6b5e1a413b461e30831838c2558fbbaae9a84",
+      "size_bytes": 7954462,
+      "size_kb": "7768.03 KB",
+      "sha256": "ad3944c003e26c36bda53d5034716f10511d6e34bc3b8c8101a233b2238f017d",
+      "sha512": "2ffe987105abc673e41b7bf71011a3472949609a2d20ebf4ec8bce3b494fd0247852d758da80df11f66e2f6929abee1496e13a418ac7deda7b40af79144fd321",
       "category": "Distribution Archive",
-      "created_at": "2026-08-04T08:06:50.679400+00:00"
+      "created_at": "2026-08-04T16:20:13.641609+00:00"
     },
     {
       "filename": "kdr-ca-aead-v1.0.0.tar.gz",
-      "size_bytes": 7673622,
-      "size_kb": "7493.77 KB",
-      "sha256": "f3d845de721c71dade9ea0447e9634ea5c9d36323f3e512a40b34bb187aa2b77",
-      "sha512": "9fd7a29154d6fc9542bb22c2d32bbe6d756330d40661a7843d0ba72ac59c55d7bab10c0ece2f70dc777d4d1c05773235dfb8b2f99b35ccd1db1ff55aa9fa4786",
+      "size_bytes": 7706144,
+      "size_kb": "7525.53 KB",
+      "sha256": "8e5a42d0951dbdadc9d920d16f428b9346ad1a13d0ef81c5ceb55ddc19edf22d",
+      "sha512": "2faeaa87f8be7549760ad314eb388e90ffca833db812731e5d60dfd4138532253bd0defa667d47c889e86f338123b8a6efacf43930a63fe1acbc5172ed4325ed",
       "category": "Distribution Archive",
-      "created_at": "2026-08-04T08:06:50.679440+00:00"
+      "created_at": "2026-08-04T16:20:13.641665+00:00"
     },
     {
       "filename": "documentation-v1.0.0.zip",
-      "size_bytes": 6489064,
-      "size_kb": "6336.98 KB",
-      "sha256": "b26e6903d0f576492f7d33546a57dcc7f74e5259edecfbbb37fb0cbbd503966e",
-      "sha512": "b1c56e36868275730491e1564a8583447bae27795c2eb9d33b92fc96d628cae1175026df8beb3a1d47e25e57d89f23862001daee3420e2f2ab0852d7faf1b734",
+      "size_bytes": 6595786,
+      "size_kb": "6441.20 KB",
+      "sha256": "073830d4f4a40a2da77e65b8dceeb82319defc3c51d82a2d2783b6f81f99222d",
+      "sha512": "1a082d91d4940bb059a426ae35ea8ff5688c10a3746505bf5b96dae4587db3d2fc8aab0b7214f6cfc2450835d5f8292548a079cde2934cfd69fc535087a4f49f",
       "category": "Distribution Archive",
-      "created_at": "2026-08-04T08:06:50.679458+00:00"
+      "created_at": "2026-08-04T16:20:13.641700+00:00"
     },
     {
       "filename": "paper-v1.0.0.zip",
-      "size_bytes": 997115,
-      "size_kb": "973.75 KB",
-      "sha256": "f81ba4a242d826a4155dccf6f2d3dfd2f8ccd3e16c576b555dc46ecfd91aa31c",
-      "sha512": "fa15467a76f26917e670a08c7455cb25282324b45ea5f46d9e77b5dea7782ced4b904afee32b17fff42da4c926bb171c25c883dc5ee396a4168ab2201dbd7d0a",
+      "size_bytes": 1014831,
+      "size_kb": "991.05 KB",
+      "sha256": "c867226f6d13d04c9e6aba1dddaa803951b2f71bad7441bb32485d4f2e8b65da",
+      "sha512": "e5568384419c9e8dbd410aab19b67763be661717589f3d322c578f177a0e9ac063e7067ebfbba94bbc475f0370ec463ae5bb799dc3e39824a25c3d53af788252",
       "category": "Distribution Archive",
-      "created_at": "2026-08-04T08:06:50.679474+00:00"
+      "created_at": "2026-08-04T16:20:13.641727+00:00"
     },
     {
       "filename": "benchmarks-v1.0.0.zip",
-      "size_bytes": 1012057,
-      "size_kb": "988.34 KB",
-      "sha256": "4dbf9b17546f3e0686edfc11dc8ae9d3691e1b727fa6666159bb4d9e9ebe42a3",
-      "sha512": "d830ac03236b4b6ae8968e47a65c6f39357c7a8b99f90293e58422e8b1209ce4ba18cf78b34234d9686d6ce1b09450ca78645b5f52b83805e31aced478e1f49c",
+      "size_bytes": 1029626,
+      "size_kb": "1005.49 KB",
+      "sha256": "505c59a41e1fde180494cfc57eceb78aa92e2b2fe9a7d781073a973489c2aa98",
+      "sha512": "da9c1c0e4821aa541f9d2773fe5956451b81d147a1564ed4f4040d60bcdc1d4a4f7be387d5c165e9a3e41c792ab4883823effb76da46240ed58c78afe70a64e6",
       "category": "Distribution Archive",
-      "created_at": "2026-08-04T08:06:50.679487+00:00"
+      "created_at": "2026-08-04T16:20:13.641752+00:00"
     },
     {
       "filename": "complete-release-v1.0.0.zip",
-      "size_bytes": 8686044,
-      "size_kb": "8482.46 KB",
-      "sha256": "64fea7ea731db0b1da5160bc9210b9a7e248661622ded3de92a2722247d292a5",
-      "sha512": "fd1bbf81683bce99b02da6ab78e84c0d19769689426edc31aef7d81b20e71b33b1bf79635160dd31eef17507d467f363acf9120ef24648bb571d01f7e4ad1cab",
+      "size_bytes": 8919858,
+      "size_kb": "8710.80 KB",
+      "sha256": "36a827b16c20554966b6822978c827c62472ff6cba8cf51fb2a3bb7a4dc0b0be",
+      "sha512": "3e0bf2b0a2a2ed57867eac5ec305f0eb76d405074b5d43df06d4ec46359023df2f35e7fe988bf07985229fc71b610761e014fa0f88764a26cdfc6e9fe72869a0",
       "category": "Distribution Archive",
-      "created_at": "2026-08-04T08:06:50.679500+00:00"
+      "created_at": "2026-08-04T16:20:13.641779+00:00"
     }
   ]
 }

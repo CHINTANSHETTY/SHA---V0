@@ -2,7 +2,7 @@
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
-[![Test Suite: 100% Pass](https://img.shields.io/badge/tests-400%2B%20passed-brightgreen.svg)](tests/)
+[![Test Suite: 100% Pass](https://img.shields.io/badge/tests-465%20passed-brightgreen.svg)](tests/)
 [![IEEE Quality](https://img.shields.io/badge/IEEE-Publication%20Ready-gold.svg)](docs/research/ieee_paper_draft_phase2_6.md)
 [![Documentation Hub](https://img.shields.io/badge/docs-v1.0.0-blue.svg)](docs/index.md)
 

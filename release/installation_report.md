@@ -2,7 +2,7 @@
 
 **Overall Status:** PASS  
 **Date:** 2026-08-04  
-**Python Executable:** `C:\Users\shett\OneDrive\python\python.exe` (`3.13.5`)  
+**Python Executable:** `C:\Users\amrut\AppData\Local\Python\pythoncore-3.14-64\python.exe` (`3.14.4`)  
 
 ---
 
