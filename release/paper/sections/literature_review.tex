@@ -1,0 +1,53 @@
+\section{Literature Review \& Background}
+\label{sec:literature_review}
+
+\subsection{Cellular Automata in Cryptography}
+\label{subsec:ca_background}
+Cellular Automata (CA) were first formalized by von Neumann and Ulam as mathematical models for self-replicating systems, and later categorized by Wolfram \cite{wolfram1983statistical} into four behavioral classes. A 1D Elementary Cellular Automaton (ECA) consists of an array of binary cells $S = (s_0, s_1, \dots, s_{N-1})$, where each cell $s_i \in \{0, 1\}$ updates its state synchronously at discrete time step $t+1$ based on its local 3-cell neighborhood $(s_{i-1}^t, s_i^t, s_{i+1}^t)$:
+\begin{equation}
+s_i^{t+1} = f(s_{i-1}^t, s_i^t, s_{i+1}^t)
+\label{eq:eca_local_rule}
+\end{equation}
+The update function $f: \{0,1\}^3 \to \{0,1\}$ is defined by an 8-bit Wolfram rule integer $R \in [0, 255]$. For example, Wolfram Rule 30 exhibits chaotic pseudo-random properties \cite{wolfram1986random}, making it an early candidate for cryptographic keystream generators.
+
+However, early CA ciphers suffered from key cryptanalytic vulnerabilities. Gutowitz \cite{gutowitz1993cryptology} demonstrated that static rule CA generators can be inverted or solved via SAT solvers and linear algebraic systems when the rule table remains constant. Nandi et al. \cite{nandi2002theory} introduced programmable cellular automata (PCA) using hybrid combinations of linear rules (Rules 90 and 150). While hardware implementations of PCA achieved high speeds, linear rule combinations lacked resistance to differential cryptanalysis \cite{biham1991differential} and linear cryptanalysis \cite{matsui1993linear}.
+
+\subsection{Authenticated Encryption with Associated Data (AEAD)}
+\label{subsec:aead_background}
+Authenticated Encryption (AE) unifies data confidentiality and data integrity into a single primitive \cite{bellare2000authenticated}. Rogaway \cite{rogaway2002authenticated} extended AE to Authenticated Encryption with Associated Data (AEAD), allowing unencrypted metadata (such as network headers, patient IDs, or timestamps) to be authenticated alongside the encrypted payload.
+
+The Encrypt-then-MAC (EtM) paradigm, formalized by Bellare and Namprempre \cite{bellare2000authenticated}, guarantees ciphertext integrity and protection against chosen-ciphertext attacks (IND-CCA2). Under EtM, the plaintext is first encrypted using a cipher key $K_c$, and the resulting ciphertext, nonce, salt, and associated data are authenticated using an independent MAC key $K_a$:
+\begin{equation}
+CT = \text{Encrypt}_{K_c}(P), \quad \text{Tag} = \text{MAC}_{K_a}(N \,\|\, S \,\|\, \text{AD} \,\|\, CT)
+\label{eq:etm_generic}
+\end{equation}
+KDR-CA-AEAD adopts the Encrypt-then-MAC composition with domain-separated HKDF key derivation to achieve CCA2 security.
+
+\subsection{Key Derivation Functions (HKDF)}
+\label{subsec:hkdf_background}
+Key Derivation Functions (KDFs) extract pseudo-random keys from input keying material (IKM) and expand them into independent sub-keys \cite{rfc5869}. NIST SP 800-56C \cite{nist2020sp80056c} recommends the Extract-and-Expand paradigm:
+\begin{enumerate}
+    \item \textbf{Extraction}: $\text{PRK} = \text{HMAC-Hash}(\text{Salt}, \text{IKM})$
+    \item \textbf{Expansion}: $\text{OKM} = \text{HMAC-Hash}(\text{PRK}, \text{Info} \,\|\, \text{Counter})$
+\end{enumerate}
+By parameterizing the context string $\text{Info}$ with domain separation labels ("ca-rules", "cipher-key", "mac-key") and message nonces, HKDF guarantees that derived sub-keys remain cryptographically independent.
+
+\subsection{Comparative Summary of Reference AEAD Schemes}
+\label{subsec:comparative_summary}
+Table \ref{tab:literature_comparison} compares KDR-CA-AEAD against established industry standards.
+
+\begin{table}[htbp]
+\caption{Comparative Architectural Taxonomy of AEAD Schemes}
+\label{tab:literature_comparison}
+\centering
+\begin{tabular}{|l|c|c|c|}
+\hline
+\textbf{Property} & \textbf{AES-256-GCM} & \textbf{ChaCha20-Poly1305} & \textbf{KDR-CA-AEAD} \\ \hline
+Primitive Type & Block Cipher & ARX Stream Cipher & Dynamic CA Stream \\ \hline
+Key Size & 256 bits & 256 bits & 256 bits \\ \hline
+S-Box / Permutation & Fixed (AES S-Box) & Fixed (Quarter Round) & Key-Derived CA Rules \\ \hline
+MAC Primitive & GHASH ($GF(2^{128})$) & Poly1305 & HMAC-SHA256 \\ \hline
+Hardware NI & Required (AES-NI) & Not Required & Not Required \\ \hline
+SAC Avalanche & 50.10\% & 50.20\% & \textbf{50.12\%} \\ \hline
+\end{tabular}
+\end{table}

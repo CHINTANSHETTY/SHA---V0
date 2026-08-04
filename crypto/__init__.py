@@ -22,6 +22,8 @@ from crypto.models.exceptions import (
 from crypto.models.package import EncryptedPackage
 from crypto.primitives.hkdf import hkdf
 from crypto.primitives.hmac import generate_hmac, verify_hmac
+from crypto.primitives.streaming import StreamingAEAD
+from crypto.validation import ValidationReport, ValidationRunner
 
 __all__ = [
     "__version__",
@@ -31,6 +33,7 @@ __all__ = [
     "decrypt_bytes",
     "decrypt_payload",
     "EncryptedPackage",
+    "StreamingAEAD",
     # Dynamic Key Schedule & CA Permutation Engine
     "KeySchedule",
     "KeyMaterial",
@@ -48,4 +51,6 @@ __all__ = [
     "run_full_security_analysis",
     "run_full_benchmark_suite",
     "verify_end_to_end_pipeline",
+    "ValidationRunner",
+    "ValidationReport",
 ]

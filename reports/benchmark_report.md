@@ -18,7 +18,7 @@ The results confirm that KDR-CA-AEAD exhibits **linear O(N) execution scaling**,
 ## 2. Test Environment Specifications
 
 - **Operating System:** `Windows-11-10.0.26200-SP0`
-- **Python Version:** `3.14.4`
+- **Python Version:** `3.13.14`
 - **Processor:** `AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD`
 - **Benchmark Iterations:** Core ops: 30 runs; Payload scaling: 5 runs per buffer.
 
