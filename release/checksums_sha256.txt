@@ -1,0 +1,6 @@
+50c6ecf35887c8254e2e7574dad2eb8792225df141bbc55f229ba8e4203098ce  kdr-ca-aead-v1.0.0.zip
+e18d8efc41fecf87f93e34531b2ebc7ef31c41a825e7c4d3ecb19ef83bbead99  kdr-ca-aead-v1.0.0.tar.gz
+b26e6903d0f576492f7d33546a57dcc7f74e5259edecfbbb37fb0cbbd503966e  documentation-v1.0.0.zip
+f81ba4a242d826a4155dccf6f2d3dfd2f8ccd3e16c576b555dc46ecfd91aa31c  paper-v1.0.0.zip
+4dbf9b17546f3e0686edfc11dc8ae9d3691e1b727fa6666159bb4d9e9ebe42a3  benchmarks-v1.0.0.zip
+9dedd20a560b87a5eb4239963c4702afdb027200a8e10ba94e6e001fceca8e42  complete-release-v1.0.0.zip
