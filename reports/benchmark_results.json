@@ -4,7 +4,7 @@
     "os_platform": "Windows-11-10.0.26200-SP0",
     "python_version": "3.14.4",
     "processor": "AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD",
-    "benchmark_timestamp_epoch": 1785840189.636
+    "benchmark_timestamp_epoch": 1785840903.802
   },
   "results": {
     "core_operations_benchmarks": [
@@ -12,65 +12,65 @@
         "operation_name": "HKDF Key Derivation",
         "iterations": 10,
         "payload_size_bytes": 1216,
-        "mean_time_ms": 0.0988,
-        "median_time_ms": 0.0966,
-        "min_time_ms": 0.093,
-        "max_time_ms": 0.1099,
-        "std_dev_ms": 0.0064,
-        "variance_ms2": 4.1e-05,
-        "throughput_mbps": 11.74,
+        "mean_time_ms": 0.0751,
+        "median_time_ms": 0.0605,
+        "min_time_ms": 0.0496,
+        "max_time_ms": 0.1179,
+        "std_dev_ms": 0.0264,
+        "variance_ms2": 0.000698,
+        "throughput_mbps": 15.45,
         "estimated_memory_kb": 3.56
       },
       {
         "operation_name": "Encryption (Payload)",
         "iterations": 10,
         "payload_size_bytes": 1216,
-        "mean_time_ms": 7.9067,
-        "median_time_ms": 7.2854,
-        "min_time_ms": 6.1295,
-        "max_time_ms": 10.167,
-        "std_dev_ms": 1.4998,
-        "variance_ms2": 2.249459,
-        "throughput_mbps": 0.15,
+        "mean_time_ms": 6.6325,
+        "median_time_ms": 6.6019,
+        "min_time_ms": 5.9397,
+        "max_time_ms": 7.5081,
+        "std_dev_ms": 0.479,
+        "variance_ms2": 0.229459,
+        "throughput_mbps": 0.17,
         "estimated_memory_kb": 3.56
       },
       {
         "operation_name": "Decryption (Payload)",
         "iterations": 10,
         "payload_size_bytes": 1216,
-        "mean_time_ms": 7.4314,
-        "median_time_ms": 7.1729,
-        "min_time_ms": 5.9784,
-        "max_time_ms": 10.1601,
-        "std_dev_ms": 1.1922,
-        "variance_ms2": 1.4213,
-        "throughput_mbps": 0.16,
+        "mean_time_ms": 6.1469,
+        "median_time_ms": 6.0247,
+        "min_time_ms": 5.8304,
+        "max_time_ms": 7.2182,
+        "std_dev_ms": 0.4011,
+        "variance_ms2": 0.160871,
+        "throughput_mbps": 0.19,
         "estimated_memory_kb": 3.56
       },
       {
         "operation_name": "Authentication Tag Verification",
         "iterations": 10,
         "payload_size_bytes": 1244,
-        "mean_time_ms": 0.0101,
-        "median_time_ms": 0.0072,
-        "min_time_ms": 0.007,
-        "max_time_ms": 0.0333,
-        "std_dev_ms": 0.0082,
-        "variance_ms2": 6.7e-05,
-        "throughput_mbps": 117.35,
+        "mean_time_ms": 0.0084,
+        "median_time_ms": 0.0075,
+        "min_time_ms": 0.0074,
+        "max_time_ms": 0.0147,
+        "std_dev_ms": 0.0022,
+        "variance_ms2": 5e-06,
+        "throughput_mbps": 141.07,
         "estimated_memory_kb": 3.64
       },
       {
         "operation_name": "Nonce Generation (CSPRNG)",
         "iterations": 10,
         "payload_size_bytes": 12,
-        "mean_time_ms": 0.0015,
-        "median_time_ms": 0.0006,
+        "mean_time_ms": 0.0014,
+        "median_time_ms": 0.0005,
         "min_time_ms": 0.0004,
-        "max_time_ms": 0.0083,
+        "max_time_ms": 0.0082,
         "std_dev_ms": 0.0024,
         "variance_ms2": 6e-06,
-        "throughput_mbps": 7.68,
+        "throughput_mbps": 7.95,
         "estimated_memory_kb": 0.04
       },
       {
@@ -80,23 +80,23 @@
         "mean_time_ms": 0.0006,
         "median_time_ms": 0.0005,
         "min_time_ms": 0.0004,
-        "max_time_ms": 0.0012,
-        "std_dev_ms": 0.0003,
+        "max_time_ms": 0.0011,
+        "std_dev_ms": 0.0002,
         "variance_ms2": 0.0,
-        "throughput_mbps": 23.84,
+        "throughput_mbps": 25.86,
         "estimated_memory_kb": 0.05
       },
       {
         "operation_name": "Full Encrypt-Decrypt Cycle",
         "iterations": 10,
         "payload_size_bytes": 1216,
-        "mean_time_ms": 16.9497,
-        "median_time_ms": 17.1114,
-        "min_time_ms": 13.6679,
-        "max_time_ms": 20.5308,
-        "std_dev_ms": 2.5108,
-        "variance_ms2": 6.304201,
-        "throughput_mbps": 0.07,
+        "mean_time_ms": 13.5081,
+        "median_time_ms": 13.5115,
+        "min_time_ms": 12.3737,
+        "max_time_ms": 15.4463,
+        "std_dev_ms": 0.8596,
+        "variance_ms2": 0.738853,
+        "throughput_mbps": 0.09,
         "estimated_memory_kb": 3.56
       }
     ],
@@ -104,39 +104,39 @@
       {
         "payload_size_bytes": 1024,
         "payload_label": "1 KB",
-        "encryption_mean_time_ms": 6.5614,
-        "encryption_throughput_mbps": 0.15,
-        "decryption_mean_time_ms": 7.8814,
-        "decryption_throughput_mbps": 0.12,
+        "encryption_mean_time_ms": 5.5569,
+        "encryption_throughput_mbps": 0.18,
+        "decryption_mean_time_ms": 5.25,
+        "decryption_throughput_mbps": 0.19,
         "estimated_memory_kb": 3.0,
         "scaling_linearity": "Linear O(N) Complexity Verified"
       },
       {
         "payload_size_bytes": 10240,
         "payload_label": "10 KB",
-        "encryption_mean_time_ms": 72.1661,
-        "encryption_throughput_mbps": 0.14,
-        "decryption_mean_time_ms": 65.0672,
-        "decryption_throughput_mbps": 0.15,
+        "encryption_mean_time_ms": 59.7892,
+        "encryption_throughput_mbps": 0.16,
+        "decryption_mean_time_ms": 59.1797,
+        "decryption_throughput_mbps": 0.17,
         "estimated_memory_kb": 30.0,
         "scaling_linearity": "Linear O(N) Complexity Verified"
       },
       {
         "payload_size_bytes": 102400,
         "payload_label": "100 KB",
-        "encryption_mean_time_ms": 610.8717,
+        "encryption_mean_time_ms": 609.8089,
         "encryption_throughput_mbps": 0.16,
-        "decryption_mean_time_ms": 648.8145,
-        "decryption_throughput_mbps": 0.15,
+        "decryption_mean_time_ms": 586.485,
+        "decryption_throughput_mbps": 0.17,
         "estimated_memory_kb": 300.0,
         "scaling_linearity": "Linear O(N) Complexity Verified"
       },
       {
         "payload_size_bytes": 1048576,
         "payload_label": "1 MB",
-        "encryption_mean_time_ms": 5992.2776,
+        "encryption_mean_time_ms": 5963.0229,
         "encryption_throughput_mbps": 0.17,
-        "decryption_mean_time_ms": 6031.0672,
+        "decryption_mean_time_ms": 5894.2489,
         "decryption_throughput_mbps": 0.17,
         "estimated_memory_kb": 3072.0,
         "scaling_linearity": "Linear O(N) Complexity Verified"
@@ -151,32 +151,32 @@
         {
           "operation": "HKDF Key Derivation",
           "baseline_mean_time_ms": 1.0,
-          "current_mean_time_ms": 0.0988,
-          "change_percent": -90.12
+          "current_mean_time_ms": 0.0751,
+          "change_percent": -92.49
         },
         {
           "operation": "Encryption (Payload)",
           "baseline_mean_time_ms": 15.0,
-          "current_mean_time_ms": 7.9067,
-          "change_percent": -47.29
+          "current_mean_time_ms": 6.6325,
+          "change_percent": -55.78
         },
         {
           "operation": "Decryption (Payload)",
           "baseline_mean_time_ms": 15.0,
-          "current_mean_time_ms": 7.4314,
-          "change_percent": -50.46
+          "current_mean_time_ms": 6.1469,
+          "change_percent": -59.02
         },
         {
           "operation": "Authentication Tag Verification",
           "baseline_mean_time_ms": 0.5,
-          "current_mean_time_ms": 0.0101,
-          "change_percent": -97.98
+          "current_mean_time_ms": 0.0084,
+          "change_percent": -98.32
         },
         {
           "operation": "Nonce Generation (CSPRNG)",
           "baseline_mean_time_ms": 0.1,
-          "current_mean_time_ms": 0.0015,
-          "change_percent": -98.5
+          "current_mean_time_ms": 0.0014,
+          "change_percent": -98.6
         },
         {
           "operation": "Salt Generation (CSPRNG)",
@@ -187,8 +187,8 @@
         {
           "operation": "Full Encrypt-Decrypt Cycle",
           "baseline_mean_time_ms": 30.0,
-          "current_mean_time_ms": 16.9497,
-          "change_percent": -43.5
+          "current_mean_time_ms": 13.5081,
+          "change_percent": -54.97
         }
       ],
       "regression_status": "NO_REGRESSION",

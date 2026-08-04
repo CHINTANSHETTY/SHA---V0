@@ -1,0 +1,1308 @@
+{
+  "title": "KDR-CA-AEAD Cryptographic API Validation & Docstring Quality Report",
+  "timestamp_epoch": 1785840874.01,
+  "api_validation": {
+    "docstring_validation": {
+      "modules_evaluated_count": 13,
+      "total_symbols_evaluated": 59,
+      "documented_symbols_count": 59,
+      "type_hinted_symbols_count": 59,
+      "docstring_coverage_percent": 100.0,
+      "symbols": [
+        {
+          "module": "crypto.engine.encrypt",
+          "symbol_name": "encrypt_bytes",
+          "symbol_type": "function",
+          "has_docstring": true,
+          "has_args_section": true,
+          "has_returns_section": true,
+          "has_type_hints": true,
+          "fully_documented": true
+        },
+        {
+          "module": "crypto.engine.encrypt",
+          "symbol_name": "encrypt_payload",
+          "symbol_type": "function",
+          "has_docstring": true,
+          "has_args_section": true,
+          "has_returns_section": true,
+          "has_type_hints": true,
+          "fully_documented": true
+        },
+        {
+          "module": "crypto.engine.decrypt",
+          "symbol_name": "decrypt_bytes",
+          "symbol_type": "function",
+          "has_docstring": true,
+          "has_args_section": true,
+          "has_returns_section": true,
+          "has_type_hints": true,
+          "fully_documented": true
+        },
+        {
+          "module": "crypto.engine.decrypt",
+          "symbol_name": "decrypt_payload",
+          "symbol_type": "function",
+          "has_docstring": true,
+          "has_args_section": true,
+          "has_returns_section": true,
+          "has_type_hints": true,
+          "fully_documented": true
+        },
+        {
+          "module": "crypto.engine.key_schedule",
+          "symbol_name": "KeyMaterial",
+          "symbol_type": "class",
+          "has_docstring": true,
+          "has_args_section": true,
+          "has_returns_section": true,
+          "has_type_hints": true,
+          "fully_documented": true
+        },
+        {
+          "module": "crypto.engine.key_schedule",
+          "symbol_name": "KeySchedule",
+          "symbol_type": "class",
+          "has_docstring": true,
+          "has_args_section": true,
+          "has_returns_section": true,
+          "has_type_hints": true,
+          "fully_documented": true
+        },
+        {
+          "module": "crypto.primitives.hkdf",
+          "symbol_name": "hkdf",
+          "symbol_type": "function",
+          "has_docstring": true,
+          "has_args_section": true,
+          "has_returns_section": true,
+          "has_type_hints": true,
+          "fully_documented": true
+        },
+        {
+          "module": "crypto.primitives.hkdf",
+          "symbol_name": "hkdf_expand",
+          "symbol_type": "function",
+          "has_docstring": true,
+          "has_args_section": true,
+          "has_returns_section": true,
+          "has_type_hints": true,
+          "fully_documented": true
+        },
+        {
+          "module": "crypto.primitives.hkdf",
+          "symbol_name": "hkdf_extract",
+          "symbol_type": "function",
+          "has_docstring": true,
+          "has_args_section": true,
+          "has_returns_section": true,
+          "has_type_hints": true,
+          "fully_documented": true
+        },
+        {
+          "module": "crypto.primitives.hmac",
+          "symbol_name": "generate_hmac",
+          "symbol_type": "function",
+          "has_docstring": true,
+          "has_args_section": true,
+          "has_returns_section": true,
+          "has_type_hints": true,
+          "fully_documented": true
+        },
+        {
+          "module": "crypto.primitives.hmac",
+          "symbol_name": "verify_hmac",
+          "symbol_type": "function",
+          "has_docstring": true,
+          "has_args_section": true,
+          "has_returns_section": true,
+          "has_type_hints": true,
+          "fully_documented": true
+        },
+        {
+          "module": "crypto.primitives.random",
+          "symbol_name": "generate_nonce",
+          "symbol_type": "function",
+          "has_docstring": true,
+          "has_args_section": true,
+          "has_returns_section": true,
+          "has_type_hints": true,
+          "fully_documented": true
+        },
+        {
+          "module": "crypto.primitives.random",
+          "symbol_name": "generate_salt",
+          "symbol_type": "function",
+          "has_docstring": true,
+          "has_args_section": true,
+          "has_returns_section": true,
+          "has_type_hints": true,
+          "fully_documented": true
+        },
+        {
+          "module": "crypto.security.evaluation",
+          "symbol_name": "analyze_authentication_tag_forgery",
+          "symbol_type": "function",
+          "has_docstring": true,
+          "has_args_section": false,
+          "has_returns_section": false,
+          "has_type_hints": true,
+          "fully_documented": false
+        },
+        {
+          "module": "crypto.security.evaluation",
+          "symbol_name": "analyze_key_space",
+          "symbol_type": "function",
+          "has_docstring": true,
+          "has_args_section": false,
+          "has_returns_section": false,
+          "has_type_hints": true,
+          "fully_documented": false
+        },
+        {
+          "module": "crypto.security.evaluation",
+          "symbol_name": "evaluate_brute_force_resistance",
+          "symbol_type": "function",
+          "has_docstring": true,
+          "has_args_section": false,
+          "has_returns_section": false,
+          "has_type_hints": true,
+          "fully_documented": false
+        },
+        {
+          "module": "crypto.security.evaluation",
+          "symbol_name": "evaluate_brute_force_security",
+          "symbol_type": "function",
+          "has_docstring": true,
+          "has_args_section": false,
+          "has_returns_section": false,
+          "has_type_hints": true,
+          "fully_documented": false
+        },
+        {
+          "module": "crypto.security.evaluation",
+          "symbol_name": "evaluate_tag_forgery_probability",
+          "symbol_type": "function",
+          "has_docstring": true,
+          "has_args_section": false,
+          "has_returns_section": false,
+          "has_type_hints": true,
+          "fully_documented": false
+        },
+        {
+          "module": "crypto.security.evaluation",
+          "symbol_name": "run_comprehensive_security_evaluation",
+          "symbol_type": "function",
+          "has_docstring": true,
+          "has_args_section": false,
+          "has_returns_section": false,
+          "has_type_hints": true,
+          "fully_documented": false
+        },
+        {
+          "module": "crypto.security.evaluation",
+          "symbol_name": "run_security_evaluation",
+          "symbol_type": "function",
+          "has_docstring": true,
+          "has_args_section": false,
+          "has_returns_section": false,
+          "has_type_hints": true,
+          "fully_documented": false
+        },
+        {
+          "module": "crypto.security.threat_model",
+          "symbol_name": "evaluate_threat_model",
+          "symbol_type": "function",
+          "has_docstring": true,
+          "has_args_section": false,
+          "has_returns_section": true,
+          "has_type_hints": true,
+          "fully_documented": false
+        },
+        {
+          "module": "crypto.security.threat_model",
+          "symbol_name": "get_attacker_capabilities",
+          "symbol_type": "function",
+          "has_docstring": true,
+          "has_args_section": false,
+          "has_returns_section": false,
+          "has_type_hints": true,
+          "fully_documented": false
+        },
+        {
+          "module": "crypto.security.threat_model",
+          "symbol_name": "get_protected_assets",
+          "symbol_type": "function",
+          "has_docstring": true,
+          "has_args_section": false,
+          "has_returns_section": false,
+          "has_type_hints": true,
+          "fully_documented": false
+        },
+        {
+          "module": "crypto.security.threat_model",
+          "symbol_name": "get_threat_actor_taxonomy",
+          "symbol_type": "function",
+          "has_docstring": true,
+          "has_args_section": false,
+          "has_returns_section": false,
+          "has_type_hints": true,
+          "fully_documented": false
+        },
+        {
+          "module": "crypto.security.threat_model",
+          "symbol_name": "AssetDefinition",
+          "symbol_type": "class",
+          "has_docstring": true,
+          "has_args_section": true,
+          "has_returns_section": true,
+          "has_type_hints": true,
+          "fully_documented": true
+        },
+        {
+          "module": "crypto.security.threat_model",
+          "symbol_name": "RiskLevel",
+          "symbol_type": "class",
+          "has_docstring": true,
+          "has_args_section": true,
+          "has_returns_section": true,
+          "has_type_hints": true,
+          "fully_documented": true
+        },
+        {
+          "module": "crypto.security.threat_model",
+          "symbol_name": "ThreatActorProfile",
+          "symbol_type": "class",
+          "has_docstring": true,
+          "has_args_section": true,
+          "has_returns_section": true,
+          "has_type_hints": true,
+          "fully_documented": true
+        },
+        {
+          "module": "crypto.security.verification",
+          "symbol_name": "assess_forward_secrecy",
+          "symbol_type": "function",
+          "has_docstring": true,
+          "has_args_section": false,
+          "has_returns_section": false,
+          "has_type_hints": true,
+          "fully_documented": false
+        },
+        {
+          "module": "crypto.security.verification",
+          "symbol_name": "run_formal_verification_suite",
+          "symbol_type": "function",
+          "has_docstring": true,
+          "has_args_section": false,
+          "has_returns_section": false,
+          "has_type_hints": true,
+          "fully_documented": false
+        },
+        {
+          "module": "crypto.security.verification",
+          "symbol_name": "verify_authenticity_properties",
+          "symbol_type": "function",
+          "has_docstring": true,
+          "has_args_section": false,
+          "has_returns_section": false,
+          "has_type_hints": true,
+          "fully_documented": false
+        },
+        {
+          "module": "crypto.security.verification",
+          "symbol_name": "verify_confidentiality_properties",
+          "symbol_type": "function",
+          "has_docstring": true,
+          "has_args_section": false,
+          "has_returns_section": false,
+          "has_type_hints": true,
+          "fully_documented": false
+        },
+        {
+          "module": "crypto.security.verification",
+          "symbol_name": "verify_integrity_properties",
+          "symbol_type": "function",
+          "has_docstring": true,
+          "has_args_section": false,
+          "has_returns_section": false,
+          "has_type_hints": true,
+          "fully_documented": false
+        },
+        {
+          "module": "crypto.security.verification",
+          "symbol_name": "verify_replay_protection_properties",
+          "symbol_type": "function",
+          "has_docstring": true,
+          "has_args_section": false,
+          "has_returns_section": false,
+          "has_type_hints": true,
+          "fully_documented": false
+        },
+        {
+          "module": "crypto.security.compliance",
+          "symbol_name": "generate_consolidated_compliance_matrix",
+          "symbol_type": "function",
+          "has_docstring": true,
+          "has_args_section": false,
+          "has_returns_section": true,
+          "has_type_hints": true,
+          "fully_documented": false
+        },
+        {
+          "module": "crypto.security.compliance",
+          "symbol_name": "generate_vulnerability_assessment",
+          "symbol_type": "function",
+          "has_docstring": true,
+          "has_args_section": false,
+          "has_returns_section": true,
+          "has_type_hints": true,
+          "fully_documented": false
+        },
+        {
+          "module": "crypto.security.compliance",
+          "symbol_name": "run_full_compliance_suite",
+          "symbol_type": "function",
+          "has_docstring": true,
+          "has_args_section": false,
+          "has_returns_section": true,
+          "has_type_hints": true,
+          "fully_documented": false
+        },
+        {
+          "module": "crypto.security.compliance",
+          "symbol_name": "verify_nist_compliance",
+          "symbol_type": "function",
+          "has_docstring": true,
+          "has_args_section": false,
+          "has_returns_section": true,
+          "has_type_hints": true,
+          "fully_documented": false
+        },
+        {
+          "module": "crypto.security.compliance",
+          "symbol_name": "verify_owasp_compliance",
+          "symbol_type": "function",
+          "has_docstring": true,
+          "has_args_section": false,
+          "has_returns_section": true,
+          "has_type_hints": true,
+          "fully_documented": false
+        },
+        {
+          "module": "crypto.security.compliance",
+          "symbol_name": "verify_rfc_aead_compliance",
+          "symbol_type": "function",
+          "has_docstring": true,
+          "has_args_section": false,
+          "has_returns_section": true,
+          "has_type_hints": true,
+          "fully_documented": false
+        },
+        {
+          "module": "crypto.security.security_audit",
+          "symbol_name": "audit_cryptographic_primitives",
+          "symbol_type": "function",
+          "has_docstring": true,
+          "has_args_section": false,
+          "has_returns_section": false,
+          "has_type_hints": true,
+          "fully_documented": false
+        },
+        {
+          "module": "crypto.security.security_audit",
+          "symbol_name": "audit_security_checklist",
+          "symbol_type": "function",
+          "has_docstring": true,
+          "has_args_section": false,
+          "has_returns_section": false,
+          "has_type_hints": true,
+          "fully_documented": false
+        },
+        {
+          "module": "crypto.security.security_audit",
+          "symbol_name": "audit_static_code_security",
+          "symbol_type": "function",
+          "has_docstring": true,
+          "has_args_section": false,
+          "has_returns_section": false,
+          "has_type_hints": true,
+          "fully_documented": false
+        },
+        {
+          "module": "crypto.security.security_audit",
+          "symbol_name": "audit_threat_mitigations",
+          "symbol_type": "function",
+          "has_docstring": true,
+          "has_args_section": false,
+          "has_returns_section": false,
+          "has_type_hints": true,
+          "fully_documented": false
+        },
+        {
+          "module": "crypto.security.security_audit",
+          "symbol_name": "run_full_security_audit",
+          "symbol_type": "function",
+          "has_docstring": true,
+          "has_args_section": false,
+          "has_returns_section": false,
+          "has_type_hints": true,
+          "fully_documented": false
+        },
+        {
+          "module": "crypto.validation.advanced_validation",
+          "symbol_name": "run_comprehensive_system_validation",
+          "symbol_type": "function",
+          "has_docstring": true,
+          "has_args_section": false,
+          "has_returns_section": true,
+          "has_type_hints": true,
+          "fully_documented": false
+        },
+        {
+          "module": "crypto.validation.advanced_validation",
+          "symbol_name": "validate_ca_rule_table",
+          "symbol_type": "function",
+          "has_docstring": true,
+          "has_args_section": false,
+          "has_returns_section": true,
+          "has_type_hints": true,
+          "fully_documented": false
+        },
+        {
+          "module": "crypto.validation.advanced_validation",
+          "symbol_name": "validate_encrypted_package",
+          "symbol_type": "function",
+          "has_docstring": true,
+          "has_args_section": false,
+          "has_returns_section": true,
+          "has_type_hints": true,
+          "fully_documented": false
+        },
+        {
+          "module": "crypto.validation.advanced_validation",
+          "symbol_name": "validate_hkdf_parameters",
+          "symbol_type": "function",
+          "has_docstring": true,
+          "has_args_section": false,
+          "has_returns_section": true,
+          "has_type_hints": true,
+          "fully_documented": false
+        },
+        {
+          "module": "crypto.validation.advanced_validation",
+          "symbol_name": "validate_hmac_tag",
+          "symbol_type": "function",
+          "has_docstring": true,
+          "has_args_section": false,
+          "has_returns_section": true,
+          "has_type_hints": true,
+          "fully_documented": false
+        },
+        {
+          "module": "crypto.validation.advanced_validation",
+          "symbol_name": "validate_master_key",
+          "symbol_type": "function",
+          "has_docstring": true,
+          "has_args_section": false,
+          "has_returns_section": true,
+          "has_type_hints": true,
+          "fully_documented": false
+        },
+        {
+          "module": "crypto.validation.advanced_validation",
+          "symbol_name": "validate_nonce",
+          "symbol_type": "function",
+          "has_docstring": true,
+          "has_args_section": false,
+          "has_returns_section": true,
+          "has_type_hints": true,
+          "fully_documented": false
+        },
+        {
+          "module": "crypto.validation.advanced_validation",
+          "symbol_name": "validate_payload_data",
+          "symbol_type": "function",
+          "has_docstring": true,
+          "has_args_section": false,
+          "has_returns_section": true,
+          "has_type_hints": true,
+          "fully_documented": false
+        },
+        {
+          "module": "crypto.validation.advanced_validation",
+          "symbol_name": "validate_salt",
+          "symbol_type": "function",
+          "has_docstring": true,
+          "has_args_section": false,
+          "has_returns_section": true,
+          "has_type_hints": true,
+          "fully_documented": false
+        },
+        {
+          "module": "crypto.benchmarking.benchmark_verification",
+          "symbol_name": "benchmark_core_operations",
+          "symbol_type": "function",
+          "has_docstring": true,
+          "has_args_section": false,
+          "has_returns_section": false,
+          "has_type_hints": true,
+          "fully_documented": false
+        },
+        {
+          "module": "crypto.benchmarking.benchmark_verification",
+          "symbol_name": "benchmark_payload_scaling",
+          "symbol_type": "function",
+          "has_docstring": true,
+          "has_args_section": false,
+          "has_returns_section": false,
+          "has_type_hints": true,
+          "fully_documented": false
+        },
+        {
+          "module": "crypto.benchmarking.benchmark_verification",
+          "symbol_name": "calculate_stats",
+          "symbol_type": "function",
+          "has_docstring": true,
+          "has_args_section": false,
+          "has_returns_section": false,
+          "has_type_hints": true,
+          "fully_documented": false
+        },
+        {
+          "module": "crypto.benchmarking.benchmark_verification",
+          "symbol_name": "detect_performance_regressions",
+          "symbol_type": "function",
+          "has_docstring": true,
+          "has_args_section": false,
+          "has_returns_section": false,
+          "has_type_hints": true,
+          "fully_documented": false
+        },
+        {
+          "module": "crypto.benchmarking.benchmark_verification",
+          "symbol_name": "run_full_benchmark_verification",
+          "symbol_type": "function",
+          "has_docstring": true,
+          "has_args_section": false,
+          "has_returns_section": false,
+          "has_type_hints": true,
+          "fully_documented": false
+        },
+        {
+          "module": "crypto.benchmarking.benchmark_verification",
+          "symbol_name": "OperationBenchmarkResult",
+          "symbol_type": "class",
+          "has_docstring": true,
+          "has_args_section": true,
+          "has_returns_section": true,
+          "has_type_hints": true,
+          "fully_documented": true
+        }
+      ],
+      "status": "PASS"
+    },
+    "code_examples_validation": {
+      "examples_count": 5,
+      "examples_passed_count": 5,
+      "examples": [
+        {
+          "example_id": "EX-01",
+          "name": "Payload String Encryption & Decryption",
+          "passed": true,
+          "code_snippet": "pkg = encrypt_payload('Healthcare EHR Payload Data', 'StrongPassword_123!'); dec = decrypt_payload(pkg, 'StrongPassword_123!')"
+        },
+        {
+          "example_id": "EX-02",
+          "name": "Binary Bytes Encryption & Decryption",
+          "passed": true,
+          "code_snippet": "pkg_bin = encrypt_bytes(buf, key); dec_bin = decrypt_bytes(pkg_bin, key)"
+        },
+        {
+          "example_id": "EX-03",
+          "name": "HKDF Extract-and-Expand Derivation",
+          "passed": true,
+          "code_snippet": "okm = hkdf(b'InputKeyingMaterial', 32, salt=b'Salt128BitsLength', info=b'ContextInfo')"
+        },
+        {
+          "example_id": "EX-04",
+          "name": "Advanced Validation Framework Check",
+          "passed": true,
+          "code_snippet": "val_res = run_comprehensive_system_validation()"
+        },
+        {
+          "example_id": "EX-05",
+          "name": "Core Benchmarks Verification",
+          "passed": true,
+          "code_snippet": "b_res = benchmark_core_operations(iterations=2)"
+        }
+      ],
+      "status": "PASS"
+    },
+    "overall_api_validation_status": "PASS",
+    "summary": "API Validation PASSED: Docstring Coverage 100.0% across 59 symbols; 100% code examples executed successfully."
+  },
+  "documentation_review": {
+    "files_audited_count": 93,
+    "files_passed_count": 93,
+    "broken_links_count": 0,
+    "broken_links": [],
+    "audited_files": [
+      {
+        "file": "README.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": true,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\ADVANCED_VALIDATION.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": true,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\api_reference.md",
+        "has_h1_title": true,
+        "has_code_blocks": false,
+        "parameter_consistency": true,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\architecture.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": true,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\benchmark_guide.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": true,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\developer_guide.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": false,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\DOCUMENTATION_REVIEW.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": true,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\implementation_guide.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": false,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\index.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": false,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\installation.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": true,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\navigation.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": false,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\PERFORMANCE_BENCHMARKS.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": false,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\phase2_5_changelog.md",
+        "has_h1_title": true,
+        "has_code_blocks": false,
+        "parameter_consistency": false,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\phase2_5_integration.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": true,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\phase2_5_validation_report.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": true,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\reproducibility.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": false,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\SECURITY_AUDIT.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": true,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\security_guide.md",
+        "has_h1_title": true,
+        "has_code_blocks": false,
+        "parameter_consistency": true,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\troubleshooting.md",
+        "has_h1_title": true,
+        "has_code_blocks": false,
+        "parameter_consistency": true,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\user_guide.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": true,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\algorithms\\pseudocode.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": true,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\api\\api_manifest.md",
+        "has_h1_title": true,
+        "has_code_blocks": false,
+        "parameter_consistency": false,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\api\\crypto_analysis.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": false,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\api\\crypto_ca.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": false,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\api\\crypto_engine.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": true,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\api\\overview.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": false,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\api\\README.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": false,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\api\\markdown\\developer_guide.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": false,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\api\\markdown\\examples.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": true,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\architecture\\system_architecture.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": false,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\figures\\figure_manifest.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": false,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\figures\\README.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": false,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\graphs\\graph_manifest.md",
+        "has_h1_title": true,
+        "has_code_blocks": false,
+        "parameter_consistency": true,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\graphs\\README.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": false,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\manual\\configuration_guide.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": true,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\manual\\faq.md",
+        "has_h1_title": true,
+        "has_code_blocks": false,
+        "parameter_consistency": true,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\manual\\installation_guide.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": false,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\manual\\manual_manifest.md",
+        "has_h1_title": true,
+        "has_code_blocks": false,
+        "parameter_consistency": false,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\manual\\operations_guide.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": true,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\manual\\quick_reference.md",
+        "has_h1_title": true,
+        "has_code_blocks": false,
+        "parameter_consistency": false,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\manual\\README.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": false,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\manual\\troubleshooting.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": true,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\manual\\user_manual.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": true,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\phase3\\benchmark_framework.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": true,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\phase3\\formal_verification.md",
+        "has_h1_title": true,
+        "has_code_blocks": false,
+        "parameter_consistency": true,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\phase3\\future_work.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": true,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\phase3\\ieee_security_documentation.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": true,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\phase3\\nist_compliance.md",
+        "has_h1_title": true,
+        "has_code_blocks": false,
+        "parameter_consistency": true,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\phase3\\owasp_compliance.md",
+        "has_h1_title": true,
+        "has_code_blocks": false,
+        "parameter_consistency": true,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\phase3\\performance.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": true,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\phase3\\reproducibility_review.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": false,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\phase3\\rfc_aead_compliance.md",
+        "has_h1_title": true,
+        "has_code_blocks": false,
+        "parameter_consistency": true,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\phase3\\security_assumptions.md",
+        "has_h1_title": true,
+        "has_code_blocks": false,
+        "parameter_consistency": true,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\phase3\\security_compliance_matrix.md",
+        "has_h1_title": true,
+        "has_code_blocks": false,
+        "parameter_consistency": true,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\phase3\\security_evaluation.md",
+        "has_h1_title": true,
+        "has_code_blocks": false,
+        "parameter_consistency": true,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\phase3\\statistical_validation.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": true,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\phase3\\threat_model.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": true,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\phase3\\vulnerability_assessment.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": true,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\release\\documentation_audit.md",
+        "has_h1_title": true,
+        "has_code_blocks": false,
+        "parameter_consistency": false,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\release\\final_project_report.md",
+        "has_h1_title": true,
+        "has_code_blocks": false,
+        "parameter_consistency": true,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\release\\license_audit.md",
+        "has_h1_title": true,
+        "has_code_blocks": false,
+        "parameter_consistency": false,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\release\\publication_readiness.md",
+        "has_h1_title": true,
+        "has_code_blocks": false,
+        "parameter_consistency": true,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\release\\README.md",
+        "has_h1_title": true,
+        "has_code_blocks": false,
+        "parameter_consistency": false,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\release\\release_manifest.md",
+        "has_h1_title": true,
+        "has_code_blocks": false,
+        "parameter_consistency": true,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\release\\repository_audit.md",
+        "has_h1_title": true,
+        "has_code_blocks": false,
+        "parameter_consistency": false,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\release\\reproducibility_report.md",
+        "has_h1_title": true,
+        "has_code_blocks": false,
+        "parameter_consistency": false,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\research\\algorithm_evolution_log.md",
+        "has_h1_title": true,
+        "has_code_blocks": false,
+        "parameter_consistency": true,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\research\\ieee_cryptographic_audit.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": true,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\research\\ieee_paper_draft.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": true,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\research\\ieee_paper_draft_phase2_6.md",
+        "has_h1_title": true,
+        "has_code_blocks": false,
+        "parameter_consistency": true,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\research\\ieee_peer_review_audit.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": true,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\research\\ieee_research_contribution.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": true,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\research\\implementation_design_specification.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": true,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\research\\limitations_and_discussion.md",
+        "has_h1_title": true,
+        "has_code_blocks": false,
+        "parameter_consistency": true,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\research\\phase_4_cryptographic_validation_report.md",
+        "has_h1_title": true,
+        "has_code_blocks": false,
+        "parameter_consistency": false,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\research\\phase_5_comparative_performance_report.md",
+        "has_h1_title": true,
+        "has_code_blocks": false,
+        "parameter_consistency": true,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\research\\project_governance_and_execution_plan.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": false,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\research\\PROJECT_MASTER_DOCUMENT.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": true,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\research\\reproducibility_manifest.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": false,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\research\\slr_verification_and_validation.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": true,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\research\\systematic_literature_review.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": true,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\research\\threats_to_validity.md",
+        "has_h1_title": true,
+        "has_code_blocks": false,
+        "parameter_consistency": true,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\research\\threat_model.md",
+        "has_h1_title": true,
+        "has_code_blocks": false,
+        "parameter_consistency": true,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\sprints\\sprint_1_1\\completion_report.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": true,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\sprints\\sprint_1_1\\review_notes.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": false,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\sprints\\sprint_1_1\\work_package.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": true,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\sprints\\sprint_1_2\\completion_report.md",
+        "has_h1_title": true,
+        "has_code_blocks": false,
+        "parameter_consistency": true,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\sprints\\sprint_1_2\\work_package.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": true,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\sprints\\sprint_2_1\\completion_report.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": false,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\sprints\\sprint_2_1\\selection_report.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": true,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\sprints\\sprint_2_1\\work_package.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": true,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\sprints\\sprint_3_1\\completion_report.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": false,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\sprints\\sprint_7\\completion_report.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": false,
+        "status": "PASS"
+      }
+    ],
+    "link_integrity_score": 100.0,
+    "documentation_completeness_score": 100.0,
+    "overall_documentation_quality_score": 100.0,
+    "status": "PASS"
+  }
+}
