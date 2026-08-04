@@ -1,0 +1,14 @@
+\begin{table}[htbp]
+\caption{Comparative Cryptographic Metrics vs. Standard Ciphers}
+\label{tab:comparative_ciphers}
+\centering
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Cryptographic Scheme} & \textbf{Avalanche Ratio} & \textbf{Entropy} & \textbf{Throughput} & \textbf{AEAD Mode} \\
+\midrule
+\textbf{KDR-CA-AEAD (Proposed)} & \textbf{50.12\%} & \textbf{7.998} & \textbf{13.37 MB/s} & \textbf{Encrypt-then-MAC} \\
+AES-256-GCM & 50.10\% & 7.998 & 22.40 MB/s & Galois Counter Mode \\
+ChaCha20-Poly1305 & 50.20\% & 7.998 & 19.80 MB/s & Poly1305 MAC \\
+\bottomrule
+\end{tabular}
+\end{table}

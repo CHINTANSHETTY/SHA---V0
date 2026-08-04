@@ -1,16 +1,16 @@
 Category,Name,Payload_Size_Bytes,Mean_Time_MS,Median_Time_MS,Min_Time_MS,Max_Time_MS,Std_Dev_MS,Throughput_MBps
-Core Operation,HKDF Key Derivation,1216,0.0751,0.0605,0.0496,0.1179,0.0264,15.45
-Core Operation,Encryption (Payload),1216,6.6325,6.6019,5.9397,7.5081,0.479,0.17
-Core Operation,Decryption (Payload),1216,6.1469,6.0247,5.8304,7.2182,0.4011,0.19
-Core Operation,Authentication Tag Verification,1244,0.0084,0.0075,0.0074,0.0147,0.0022,141.07
-Core Operation,Nonce Generation (CSPRNG),12,0.0014,0.0005,0.0004,0.0082,0.0024,7.95
-Core Operation,Salt Generation (CSPRNG),16,0.0006,0.0005,0.0004,0.0011,0.0002,25.86
-Core Operation,Full Encrypt-Decrypt Cycle,1216,13.5081,13.5115,12.3737,15.4463,0.8596,0.09
-Payload Scaling (Encrypt),1 KB,1024,5.5569,-,-,-,-,0.18
-Payload Scaling (Decrypt),1 KB,1024,5.25,-,-,-,-,0.19
-Payload Scaling (Encrypt),10 KB,10240,59.7892,-,-,-,-,0.16
-Payload Scaling (Decrypt),10 KB,10240,59.1797,-,-,-,-,0.17
-Payload Scaling (Encrypt),100 KB,102400,609.8089,-,-,-,-,0.16
-Payload Scaling (Decrypt),100 KB,102400,586.485,-,-,-,-,0.17
-Payload Scaling (Encrypt),1 MB,1048576,5963.0229,-,-,-,-,0.17
-Payload Scaling (Decrypt),1 MB,1048576,5894.2489,-,-,-,-,0.17
+Core Operation,HKDF Key Derivation,1216,0.052,0.0466,0.0442,0.0799,0.0122,22.29
+Core Operation,Encryption (Payload),1216,9.374,8.6683,7.1862,12.3099,1.888,0.12
+Core Operation,Decryption (Payload),1216,8.3862,7.6744,7.0111,12.085,1.6232,0.14
+Core Operation,Authentication Tag Verification,1244,0.0108,0.0069,0.0067,0.0278,0.0078,110.05
+Core Operation,Nonce Generation (CSPRNG),12,0.0015,0.0005,0.0004,0.0082,0.0024,7.79
+Core Operation,Salt Generation (CSPRNG),16,0.0006,0.0005,0.0004,0.0013,0.0003,23.48
+Core Operation,Full Encrypt-Decrypt Cycle,1216,17.2111,16.2321,15.1339,22.6596,2.3353,0.07
+Payload Scaling (Encrypt),1 KB,1024,7.362,-,-,-,-,0.13
+Payload Scaling (Decrypt),1 KB,1024,8.8828,-,-,-,-,0.11
+Payload Scaling (Encrypt),10 KB,10240,74.9599,-,-,-,-,0.13
+Payload Scaling (Decrypt),10 KB,10240,75.9886,-,-,-,-,0.13
+Payload Scaling (Encrypt),100 KB,102400,794.3851,-,-,-,-,0.12
+Payload Scaling (Decrypt),100 KB,102400,876.991,-,-,-,-,0.11
+Payload Scaling (Encrypt),1 MB,1048576,8978.9687,-,-,-,-,0.11
+Payload Scaling (Decrypt),1 MB,1048576,8595.5785,-,-,-,-,0.12

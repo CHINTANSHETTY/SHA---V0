@@ -1,0 +1,10 @@
+{
+  "timestamp": "2026-08-03T17:56:07.092393+00:00",
+  "total_references_audited": 184,
+  "valid_references": 184,
+  "broken_references": 0,
+  "missing_bib_keys": 0,
+  "missing_label_refs": 0,
+  "warnings": [],
+  "status": "PASS"
+}

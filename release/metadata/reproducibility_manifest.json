@@ -1,0 +1,8 @@
+{
+  "version": "1.0.0",
+  "git_commit_hash": "HEAD",
+  "python_version": "3.13.14",
+  "os_name": "win32",
+  "prng_seed": 42,
+  "timestamp": "2026-08-04T15:11:30.466765+00:00"
+}

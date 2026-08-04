@@ -1,0 +1,16 @@
+\section*{Supplementary Material: Reproducibility \& FAIR Data Protocol}
+\label{sec:supplementary}
+
+\subsection{A. Experimental Testbed Configuration}
+- **Processor**: Intel Core i7 / AMD Ryzen 7 (64-bit x86\_64 architecture)
+- **RAM**: 16 GB DDR4
+- **Operating System**: Windows 11 / Ubuntu 22.04 LTS
+- **Python Environment**: Python 3.10+ (Tested through 3.13.5)
+- **Deterministic Seed**: Seed = 42 for pseudo-random test suites
+
+\subsection{B. FAIR Data Compliance}
+All benchmark outputs, raw evaluation logs, and graph plotting scripts are structured in standard formats:
+- Master JSON dataset: \texttt{results/master\_results.json}
+- Vector SVG graphs: \texttt{paper/figures/*.svg}
+- High-resolution PNG figures: \texttt{paper/figures/*.png} (300 DPI)
+- Master evaluation runner: \texttt{python scripts/run\_phase2\_5\_reproducibility.py}

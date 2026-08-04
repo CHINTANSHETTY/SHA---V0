@@ -1,61 +1,2610 @@
 {
-  "release_version": "1.0.0",
-  "generated_at": "2026-08-04T08:06:50.679503+00:00",
-  "total_archives": 6,
+  "project_name": "KDR-CA-AEAD",
+  "version": "1.0.0",
+  "release_title": "IEEE Transactions Publication & Final Release Package",
+  "build_date": "2026-08-04T15:11:30.974063+00:00",
+  "total_files": 289,
   "artifacts": [
     {
-      "filename": "kdr-ca-aead-v1.0.0.zip",
-      "size_bytes": 7738145,
-      "size_kb": "7556.78 KB",
-      "sha256": "07dc6d0855f0e38d43d20161570c59afc0d21a73dba466ea0dfdbbfb40e4a42c",
-      "sha512": "bda73468367367854bc1ae4d255ad6c6042245d0952b2934a8ac2355d9df7e13c2f0f6193b8cc5a382aeaa6a32d6b5e1a413b461e30831838c2558fbbaae9a84",
-      "category": "Distribution Archive",
-      "created_at": "2026-08-04T08:06:50.679400+00:00"
-    },
-    {
-      "filename": "kdr-ca-aead-v1.0.0.tar.gz",
-      "size_bytes": 7673622,
-      "size_kb": "7493.77 KB",
-      "sha256": "f3d845de721c71dade9ea0447e9634ea5c9d36323f3e512a40b34bb187aa2b77",
-      "sha512": "9fd7a29154d6fc9542bb22c2d32bbe6d756330d40661a7843d0ba72ac59c55d7bab10c0ece2f70dc777d4d1c05773235dfb8b2f99b35ccd1db1ff55aa9fa4786",
-      "category": "Distribution Archive",
-      "created_at": "2026-08-04T08:06:50.679440+00:00"
-    },
-    {
-      "filename": "documentation-v1.0.0.zip",
-      "size_bytes": 6489064,
-      "size_kb": "6336.98 KB",
-      "sha256": "b26e6903d0f576492f7d33546a57dcc7f74e5259edecfbbb37fb0cbbd503966e",
-      "sha512": "b1c56e36868275730491e1564a8583447bae27795c2eb9d33b92fc96d628cae1175026df8beb3a1d47e25e57d89f23862001daee3420e2f2ab0852d7faf1b734",
-      "category": "Distribution Archive",
-      "created_at": "2026-08-04T08:06:50.679458+00:00"
-    },
-    {
-      "filename": "paper-v1.0.0.zip",
-      "size_bytes": 997115,
-      "size_kb": "973.75 KB",
-      "sha256": "f81ba4a242d826a4155dccf6f2d3dfd2f8ccd3e16c576b555dc46ecfd91aa31c",
-      "sha512": "fa15467a76f26917e670a08c7455cb25282324b45ea5f46d9e77b5dea7782ced4b904afee32b17fff42da4c926bb171c25c883dc5ee396a4168ab2201dbd7d0a",
-      "category": "Distribution Archive",
-      "created_at": "2026-08-04T08:06:50.679474+00:00"
-    },
-    {
-      "filename": "benchmarks-v1.0.0.zip",
-      "size_bytes": 1012057,
-      "size_kb": "988.34 KB",
+      "relative_path": "benchmarks-v1.0.0.zip",
+      "file_size_bytes": 1012057,
       "sha256": "4dbf9b17546f3e0686edfc11dc8ae9d3691e1b727fa6666159bb4d9e9ebe42a3",
       "sha512": "d830ac03236b4b6ae8968e47a65c6f39357c7a8b99f90293e58422e8b1209ce4ba18cf78b34234d9686d6ce1b09450ca78645b5f52b83805e31aced478e1f49c",
-      "category": "Distribution Archive",
-      "created_at": "2026-08-04T08:06:50.679487+00:00"
+      "created_at": "2026-08-04T15:11:30.474409+00:00",
+      "version": "1.0.0",
+      "category": "root"
     },
     {
-      "filename": "complete-release-v1.0.0.zip",
-      "size_bytes": 8686044,
-      "size_kb": "8482.46 KB",
+      "relative_path": "build_status.json",
+      "file_size_bytes": 417,
+      "sha256": "4c3cd535ed4e08288d40d9169aee3236eee43246edddcda53ded717ffdcbbe77",
+      "sha512": "2fc9ec07a56c9bdedb854580e163ceed4208c258d424c3c869e1e1b371d86ad7b4a0d1b1a1bcf40ef8334c0db66924683c85764d121c0ba7f8c6d4a396cc31b9",
+      "created_at": "2026-08-04T15:11:30.475106+00:00",
+      "version": "1.0.0",
+      "category": "root"
+    },
+    {
+      "relative_path": "CHANGELOG.md",
+      "file_size_bytes": 4597,
+      "sha256": "10abca4f80785dce8cfbb38b76e4a6c09eddf7e2ceb576525330ba91ef145c70",
+      "sha512": "dd64aceed172c8423a1516bc24d5c561c6b40462ecd5b455e5a8a9e91de38ecba67308300146afc2867939b14baad3959e7a1723b4b3111894f6a0d4d8cddeb8",
+      "created_at": "2026-08-04T15:11:30.475795+00:00",
+      "version": "1.0.0",
+      "category": "root"
+    },
+    {
+      "relative_path": "complete-release-v1.0.0.zip",
+      "file_size_bytes": 8686044,
       "sha256": "64fea7ea731db0b1da5160bc9210b9a7e248661622ded3de92a2722247d292a5",
       "sha512": "fd1bbf81683bce99b02da6ab78e84c0d19769689426edc31aef7d81b20e71b33b1bf79635160dd31eef17507d467f363acf9120ef24648bb571d01f7e4ad1cab",
-      "category": "Distribution Archive",
-      "created_at": "2026-08-04T08:06:50.679500+00:00"
+      "created_at": "2026-08-04T15:11:30.514612+00:00",
+      "version": "1.0.0",
+      "category": "root"
+    },
+    {
+      "relative_path": "distribution_report.md",
+      "file_size_bytes": 1610,
+      "sha256": "370ee4e8b4606227aae18074a8b0268be7067a0dcddf4e2f9ec2974fa74dc679",
+      "sha512": "bc3efe775b1b234afe1e60dee32eb29e51069d7a9c1bad5bc60046f964e2d63b4e828a8622a54f756e09e230d35501bc0479e3d0165ab8289b8503f0e1430bf1",
+      "created_at": "2026-08-04T15:11:30.515486+00:00",
+      "version": "1.0.0",
+      "category": "root"
+    },
+    {
+      "relative_path": "documentation-v1.0.0.zip",
+      "file_size_bytes": 6489064,
+      "sha256": "b26e6903d0f576492f7d33546a57dcc7f74e5259edecfbbb37fb0cbbd503966e",
+      "sha512": "b1c56e36868275730491e1564a8583447bae27795c2eb9d33b92fc96d628cae1175026df8beb3a1d47e25e57d89f23862001daee3420e2f2ab0852d7faf1b734",
+      "created_at": "2026-08-04T15:11:30.549547+00:00",
+      "version": "1.0.0",
+      "category": "root"
+    },
+    {
+      "relative_path": "environment_snapshot.json",
+      "file_size_bytes": 754,
+      "sha256": "2922316b8900c1e273bc081b9c3354738240aec2ae814983456ef5e7b8e7896f",
+      "sha512": "0aa9cb801312fa74a6fff72fff7c363d1a3b91f573862b851242e6f9de7e9c1cb39b8b3644ad1797ba036eb4a862ca8339f73df70dde0537942da18bf8185e30",
+      "created_at": "2026-08-04T15:11:30.550395+00:00",
+      "version": "1.0.0",
+      "category": "root"
+    },
+    {
+      "relative_path": "installation_report.md",
+      "file_size_bytes": 479,
+      "sha256": "dfd0706b53992aa4f4efeac5f707600ed73dc5c9ac8b6ca290c3038cbdc9f3b2",
+      "sha512": "b518f018eba06aaae838c90382cfd158cc1845f3b22b1f08f2d2c06b78d12ada350c36f6f9cdfc20876516dbdd35cfd060c38b89144ece568b6257cf64bcc9fe",
+      "created_at": "2026-08-04T15:11:30.551098+00:00",
+      "version": "1.0.0",
+      "category": "root"
+    },
+    {
+      "relative_path": "integrity_report.json",
+      "file_size_bytes": 1126,
+      "sha256": "2220ad0fa27fbf9a0ddae7a00b5764be32e0d8e2cc8441776c47fd0bdea532f3",
+      "sha512": "3037d4cc6e69c780b7cf6f57aecc363936cf8fc8cbd7b9768b8d3fe601ba382da9cc26d6bc4bbe5c8d79465bd2db369e47781ab7cd9fc61ae7f9e9f26fd8edc1",
+      "created_at": "2026-08-04T15:11:30.551762+00:00",
+      "version": "1.0.0",
+      "category": "root"
+    },
+    {
+      "relative_path": "kdr-ca-aead-v1.0.0.tar.gz",
+      "file_size_bytes": 7673622,
+      "sha256": "f3d845de721c71dade9ea0447e9634ea5c9d36323f3e512a40b34bb187aa2b77",
+      "sha512": "9fd7a29154d6fc9542bb22c2d32bbe6d756330d40661a7843d0ba72ac59c55d7bab10c0ece2f70dc777d4d1c05773235dfb8b2f99b35ccd1db1ff55aa9fa4786",
+      "created_at": "2026-08-04T15:11:30.585373+00:00",
+      "version": "1.0.0",
+      "category": "root"
+    },
+    {
+      "relative_path": "kdr-ca-aead-v1.0.0.zip",
+      "file_size_bytes": 7738145,
+      "sha256": "07dc6d0855f0e38d43d20161570c59afc0d21a73dba466ea0dfdbbfb40e4a42c",
+      "sha512": "bda73468367367854bc1ae4d255ad6c6042245d0952b2934a8ac2355d9df7e13c2f0f6193b8cc5a382aeaa6a32d6b5e1a413b461e30831838c2558fbbaae9a84",
+      "created_at": "2026-08-04T15:11:30.622520+00:00",
+      "version": "1.0.0",
+      "category": "root"
+    },
+    {
+      "relative_path": "paper-v1.0.0.zip",
+      "file_size_bytes": 997115,
+      "sha256": "f81ba4a242d826a4155dccf6f2d3dfd2f8ccd3e16c576b555dc46ecfd91aa31c",
+      "sha512": "fa15467a76f26917e670a08c7455cb25282324b45ea5f46d9e77b5dea7782ced4b904afee32b17fff42da4c926bb171c25c883dc5ee396a4168ab2201dbd7d0a",
+      "created_at": "2026-08-04T15:11:30.629400+00:00",
+      "version": "1.0.0",
+      "category": "root"
+    },
+    {
+      "relative_path": "publication_summary.md",
+      "file_size_bytes": 330,
+      "sha256": "9acd38c5086cdbbd51ff4bf46b6e576c4770112cf619bcc6b1aeecca16266a53",
+      "sha512": "401ed07f23f9901528286c907d5a21b9b294663cf0032659436cef13bd0865849d2a4b73785bdd81c0e6a9dfb19ee2d36ef0dd88f87cbb7f0695c0b55456b0a1",
+      "created_at": "2026-08-04T15:11:30.630441+00:00",
+      "version": "1.0.0",
+      "category": "root"
+    },
+    {
+      "relative_path": "public_release_checklist.md",
+      "file_size_bytes": 664,
+      "sha256": "b3c9df220b686eea40bde241c9a968467f42546c0ba0a28f892a8d572ec07505",
+      "sha512": "c7abe0ac93506b37764438e44d7c2e79356bf942ba51f78114955817cda64b356c1d4de4ee270fae290938aa8059290abea5b2d4433f5492b2c6d68842bc09df",
+      "created_at": "2026-08-04T15:11:30.631328+00:00",
+      "version": "1.0.0",
+      "category": "root"
+    },
+    {
+      "relative_path": "release_manifest.md",
+      "file_size_bytes": 741,
+      "sha256": "6a945337a824f19ec5d872392e2cb9e538e12cdbfad4a21500801397b81da5a6",
+      "sha512": "f2c9d99d55e29a5793ea92ecb775db404fc51200ea4323634da0c63a7a33311bb4721b2b457bb7a036efdcaf00c61af4fa041eaa72d88a5901161d189f7dcf64",
+      "created_at": "2026-08-04T15:11:30.632338+00:00",
+      "version": "1.0.0",
+      "category": "root"
+    },
+    {
+      "relative_path": "RELEASE_NOTES.md",
+      "file_size_bytes": 2084,
+      "sha256": "88fb12cc841b59333b2fe97a5129e58ddf0f812e6e004919dfafe0c6138ed571",
+      "sha512": "7c63b2c1c6b616ea431f45c2e45a8c0e1b47fe33a260af7719676a9ff55d5779f9e90894e5dcefb78e5e81b053631c01894615e8faaee229feef315777170fce",
+      "created_at": "2026-08-04T15:11:30.633361+00:00",
+      "version": "1.0.0",
+      "category": "root"
+    },
+    {
+      "relative_path": "VERSION",
+      "file_size_bytes": 7,
+      "sha256": "4ca8bbd3c595ee306226c6996b32b8d47a900217c55a7ed0cfc868ee444f34f1",
+      "sha512": "d890bf4f7c929a811fbd3cb693be1fc775edf9e5a5b9a03e589618763fe0a0ac71e03a6aac32b43e6247753d19a5937f4d198a5ecae00c574625f400bb2aae22",
+      "created_at": "2026-08-04T15:11:30.634387+00:00",
+      "version": "1.0.0",
+      "category": "root"
+    },
+    {
+      "relative_path": "benchmark_results/security_report.md",
+      "file_size_bytes": 7185,
+      "sha256": "7bd6d7e0099e5632871d4a62c5bd3114058cf5a4134b95ab7b9d8c2222edee11",
+      "sha512": "2e0d6e312e4bc0fd45c8a770c5a4624732d1703612dac7501203ec6fb44b628d3fdb494f7bf10c9c49592d075fcdbb6238a231bfe312866a02a9de7dd970df55",
+      "created_at": "2026-08-04T15:11:30.637108+00:00",
+      "version": "1.0.0",
+      "category": "benchmark_results"
+    },
+    {
+      "relative_path": "benchmark_results/security_graphs/avalanche.png",
+      "file_size_bytes": 251253,
+      "sha256": "45eb80280ed4c9d955df3a1ad3dfd89902de996c91200c2108f1b43b53c659ff",
+      "sha512": "3583b796eb1cd9d1bc1019757d9583fbb9bb9bba41fda6f2874bb2b7009cd09742906207ea354976ededd9e0fccbc80d819a4418754807f072d59c158ee4b61a",
+      "created_at": "2026-08-04T15:11:30.639859+00:00",
+      "version": "1.0.0",
+      "category": "benchmark_results"
+    },
+    {
+      "relative_path": "benchmark_results/security_graphs/avalanche.svg",
+      "file_size_bytes": 64076,
+      "sha256": "4edbaf3792d3771063e78e96ce670ec0df175ad9b7aee209432b5bf87d7b70e6",
+      "sha512": "4f0502dfc733c65862d9ae56c58d26d350391683495209fab4faa7252dbf83e041e93a6c9c091e7ff13d72441ef4534fd96544d920d8ad3b9ea276397b14f6e6",
+      "created_at": "2026-08-04T15:11:30.641153+00:00",
+      "version": "1.0.0",
+      "category": "benchmark_results"
+    },
+    {
+      "relative_path": "benchmark_results/security_graphs/comparison.png",
+      "file_size_bytes": 118700,
+      "sha256": "56e18317bf94f8c5041a3b4609a7073a82b5aa49e4564009bbef3ffa390cdaa9",
+      "sha512": "4217283a3b53b83501b596c8fefc993aa0287610416861d6c3d203b24de4aca2baed48edb4e98a3de216624232f3763dfaa307e4d0d026f326c1df850b5b7a5f",
+      "created_at": "2026-08-04T15:11:30.642758+00:00",
+      "version": "1.0.0",
+      "category": "benchmark_results"
+    },
+    {
+      "relative_path": "benchmark_results/security_graphs/comparison.svg",
+      "file_size_bytes": 52511,
+      "sha256": "573e3489d1b730b939349eef8ec4d3661ca0dbca5cafa86785afbbeaa7e10871",
+      "sha512": "89dfe582a1890108f7b8b3f89c6bd46e78c7e22240003f8fc0bdd2aebf3eb52e49485601dd3570d3dc87577ceec91fb94416d60b35aa00449a42cd6ad228efaa",
+      "created_at": "2026-08-04T15:11:30.643991+00:00",
+      "version": "1.0.0",
+      "category": "benchmark_results"
+    },
+    {
+      "relative_path": "benchmark_results/security_graphs/correlation.png",
+      "file_size_bytes": 367782,
+      "sha256": "520f0a0d441aaa9ad5786797e4f711d500d070d7ce8aec0693afb6001ce8cb87",
+      "sha512": "bbc828b0c8bb187c8bdc62d6a1dc08a62b0047f81c1c208168c08df258d7b4bee06637137e75bad66fa148ce5d27a5d0c9714809e6875f0c3cd1df6e037ac51c",
+      "created_at": "2026-08-04T15:11:30.647396+00:00",
+      "version": "1.0.0",
+      "category": "benchmark_results"
+    },
+    {
+      "relative_path": "benchmark_results/security_graphs/correlation.svg",
+      "file_size_bytes": 153595,
+      "sha256": "51f6ac70901a1f20f9f74a859f510896653814505bc2939a3d8e0c4189852335",
+      "sha512": "e9a851a68c4b75eeb751ea8fb383dd9e63186f34d52cffbb2ca5fb070f3f69929695c6552499b50dc1d0b401439d81e8831d15bb596e4734262575ce7e833e3d",
+      "created_at": "2026-08-04T15:11:30.649304+00:00",
+      "version": "1.0.0",
+      "category": "benchmark_results"
+    },
+    {
+      "relative_path": "benchmark_results/security_graphs/entropy.png",
+      "file_size_bytes": 150577,
+      "sha256": "1565c0544bccab0f002e9cbd10b664f0786291c71b706ecbbc8e4b74dc7979b4",
+      "sha512": "4d090bcd0dd1d9891205b78fe6e9b63c137426069bd31a7145daec5f5398862cee90597757b71f15677a4399f6cb4f29c5b8a895ec3ee599314efbcfa7e7e45a",
+      "created_at": "2026-08-04T15:11:30.651054+00:00",
+      "version": "1.0.0",
+      "category": "benchmark_results"
+    },
+    {
+      "relative_path": "benchmark_results/security_graphs/entropy.svg",
+      "file_size_bytes": 62889,
+      "sha256": "22def9332c7d3d92206300029980736e34b3c18cebc5a1ed9cf207748154b764",
+      "sha512": "ed04d2dcdc8a8a37cc4bcf49e6a9f112aebea0284b98a4803092481a1dc24fcf7b9198a63226f1303362988d91924ae04415782075b84169eb8594ce3a7b07b6",
+      "created_at": "2026-08-04T15:11:30.652320+00:00",
+      "version": "1.0.0",
+      "category": "benchmark_results"
+    },
+    {
+      "relative_path": "benchmark_results/security_graphs/histogram.png",
+      "file_size_bytes": 126822,
+      "sha256": "d19a465e601749124c1214cc83aa064d62608fbfdc6af108cc51c2dc41faf86b",
+      "sha512": "9bf57c932a4c4c123c07f85301de1492168acef555fa00abfaca560bcdb36dffd3a534275e629a3eb1dead1e188e8185a7ac59912dbcf84576b772b5cc0e8480",
+      "created_at": "2026-08-04T15:11:30.653866+00:00",
+      "version": "1.0.0",
+      "category": "benchmark_results"
+    },
+    {
+      "relative_path": "benchmark_results/security_graphs/histogram.svg",
+      "file_size_bytes": 106773,
+      "sha256": "cfcde7f955640460dcb15b77a4cab4242cde2ca2d6d2dde3762bb4ddc80c96c7",
+      "sha512": "104b006cb6060c2cc8c7ebfd30fb61a4fbcefc8b98caa3447f9939685c95d3056018837fdae46ef54eca788050c1d69bf0b2b0086e83ae5047e4c4156892f85b",
+      "created_at": "2026-08-04T15:11:30.655272+00:00",
+      "version": "1.0.0",
+      "category": "benchmark_results"
+    },
+    {
+      "relative_path": "docs/ADVANCED_VALIDATION.md",
+      "file_size_bytes": 5457,
+      "sha256": "179e2a188bdf2bedfd3dc342e573adcdfae7d27c00d0235ade85dd2e843effb8",
+      "sha512": "2613581d5fb0be4e4b58f52510de4988b549c09695c8096b0d04aade994a5a8599dfd5d3012bafcc4bf74000ee4a54c3b479b1ff86fb8cbf9fc23ae8d3a966dc",
+      "created_at": "2026-08-04T15:11:30.657054+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/api_reference.md",
+      "file_size_bytes": 4013,
+      "sha256": "a2865fa70ad8192ee4c7f5d13d428f41ca0582475353f993f587319779e05646",
+      "sha512": "9b8db3fce87906036516f97cf9e95af20f63f49b2a92d1b48389fdb9ab46b08d5caa87d91a2288bb1ee23ec374596e7ad9654d7da1433b153956c30ea326f8ab",
+      "created_at": "2026-08-04T15:11:30.658567+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/architecture.md",
+      "file_size_bytes": 4898,
+      "sha256": "dbbde483e4d745688d5c49fd74b3f93e5e90d338974e9c3c1d63250a845072c1",
+      "sha512": "6de92a4949d461dfcfd529b50596acf46472eb82c0a0f36e6e1852d5b185a86a277bb03bf670afcee4a508e4236ada5af3e74d4cc61f62782b473ce6def2ce22",
+      "created_at": "2026-08-04T15:11:30.659418+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/benchmark_guide.md",
+      "file_size_bytes": 2643,
+      "sha256": "1f858099a6d8ff721a86b0483dbe6822b0957c12087c7866016578d8ffa6c496",
+      "sha512": "92ac48a9f56e290dd4804bd46972fb50c8814bee7885eea9cda6a95ff6aaa5aa434a9ef04e0fafac42553a81b497354c12d4dd423aae9f5c9682cb9a3b431778",
+      "created_at": "2026-08-04T15:11:30.660274+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/developer_guide.md",
+      "file_size_bytes": 4340,
+      "sha256": "73fa533d9fcd996d5d6221923919b12f644116f85b6ac164541e189c882f5b12",
+      "sha512": "06226f772928f4f78d7e2cf4cd6d314ff45e6c91c6ba542d3dbb2ddd9062d499d855f2104debdb5bf2c07ded5a6452bbf05a4355b00f590e88275f1cbdb80f51",
+      "created_at": "2026-08-04T15:11:30.661113+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/DOCUMENTATION_REVIEW.md",
+      "file_size_bytes": 3558,
+      "sha256": "a23f733d552cefd0ab87191e479a75499316b133e074917809590a5c7a3e31a3",
+      "sha512": "094ab7f9dabf809ad2b0bfc2da8c0a53d57149248e703e07c21f38688f7117d06c1d98097440900d174abc4b77cbe2955356d0827e6b69f4b3f8ec808ed49759",
+      "created_at": "2026-08-04T15:11:30.661943+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/implementation_guide.md",
+      "file_size_bytes": 3888,
+      "sha256": "014c5314a015faf71b8c33a0d97633dec731f8fef2345523d41ab9a51a009844",
+      "sha512": "4db6b3cd38c1059c1d0699ecccfb98f75eac1fb40a4aa8ce231e02626291c19cb76cd28a510d5102cd26edf2d7b3289fc91c7ecddb4641fa8a30de378cdfaeca",
+      "created_at": "2026-08-04T15:11:30.662820+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/index.md",
+      "file_size_bytes": 3926,
+      "sha256": "a46ba057b40121fc6bc1d9adaa3d63c15c601e37586afe0cb2eae1c5cfe2d2ea",
+      "sha512": "28d85874574acf2eaf8030a93cadd5713cc31df5d698ba0d1c7aad365e76e73a0a04df77a3b73864211b8fec5982f6940db6e9cc6d5cfb2d2eb37e5a23941040",
+      "created_at": "2026-08-04T15:11:30.663961+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/installation.md",
+      "file_size_bytes": 2791,
+      "sha256": "17507039a4f6d999f911f82f1fc3f10997a118b74d13534c23496c7cb974b1b0",
+      "sha512": "0335aa07d57c7bbfc29d0ed4f869e45274b7ea037e7a62cda386c6680d6850642c3cc73683b393352454425874337c903efab3f81d3cb293aae70291997b6ab0",
+      "created_at": "2026-08-04T15:11:30.664987+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/navigation.md",
+      "file_size_bytes": 5850,
+      "sha256": "a6db296d955626e6c0ef1f41453f96ac6bfa1db6c8ef7ab4b8213630d01833ba",
+      "sha512": "fd480ed10bda132ccfb98efe8d0dc56a2e57901c1496e7219996bc4fc12ea110d215c85a6a24ad8b0cc9739f7722e476837f49fa25beb0a5a4abdd789d37c2ee",
+      "created_at": "2026-08-04T15:11:30.665849+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/PERFORMANCE_BENCHMARKS.md",
+      "file_size_bytes": 4548,
+      "sha256": "a888bab3a9fc5d7c144db311132707d2651457c1d81ce218339a696347d1404f",
+      "sha512": "1310eea42ae9030ded977d2401ff9a37d996ce5d5c00d7346eea01635fef38f7348aad1f620f980a40cf8eddb523307d47362b3c39aa87e3928db5987d53957b",
+      "created_at": "2026-08-04T15:11:30.666667+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/phase2_5_changelog.md",
+      "file_size_bytes": 2203,
+      "sha256": "e3a9a47aeb05a6e60ad1d84bb5f724d4ed28126b12028ffc2ce29e3a16981aab",
+      "sha512": "d0e1b3d1db81b62d964e5e96be21a595935173c43331056df11224693434ebef5f14c43ef232588aff2c6ad313d809b62abc5b860952cfa432d6c91dfef9cbd4",
+      "created_at": "2026-08-04T15:11:30.667518+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/phase2_5_integration.md",
+      "file_size_bytes": 3809,
+      "sha256": "69889e3a5d2bbc7b8aa5da92d443f72062156422907e87613f5af5536c26e4ac",
+      "sha512": "22a64651d301459c66f941f824f646937bf3d9abf0feda40fedd21d3844b8dffb5f6eae849265980ff9b495499c0214573778c315adde20eda0583ffd362b978",
+      "created_at": "2026-08-04T15:11:30.668374+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/phase2_5_validation_report.md",
+      "file_size_bytes": 7688,
+      "sha256": "bab7041912bd148f598af6196db5b699222ecf0a25ea26aebe7d3c404bb4e762",
+      "sha512": "80a21373cc55681e29811dce6fe37f09c5c4fafab6ed0f6e31d42e35ff5a6aac76065878f5b12b1b190486a460fbc4f1dee68d3234c050318b3c80d72f50a398",
+      "created_at": "2026-08-04T15:11:30.669231+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/reproducibility.md",
+      "file_size_bytes": 3010,
+      "sha256": "217aa90eef7b7db9c1e68e92460a707876e13e47cd7649a3e9aeab767f05204b",
+      "sha512": "2d8f5d384a58b71cc62c71fe5aceeeea56a80fac81d2d67e32b1d4ba2f2a96ccdb5cb59a73aac2cd76fe3018b0b4d6d09ac8033c32dfbff1f9557bc5aa38b5ea",
+      "created_at": "2026-08-04T15:11:30.670034+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/SECURITY_AUDIT.md",
+      "file_size_bytes": 4893,
+      "sha256": "2421ecdd55dd5fc11850170889971c7e0f887e28f3d178866f1d93698128b2d6",
+      "sha512": "527c27ac407313f727b280bb892e56e8aa84bc4ef76f0273c1467077aaf3b0139860bc09893f157d2d0afa68efab49c442102ba40ae947e17c74539a9f5bb0c6",
+      "created_at": "2026-08-04T15:11:30.670832+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/security_guide.md",
+      "file_size_bytes": 2953,
+      "sha256": "035a91826612ea277aa80c6ec594e0496f7a352b877cdec868ef5b153c424477",
+      "sha512": "3a8fb8d6fa1cdcad6ee6cecac8f16f1ec25e7e14e03d13cbdb46123ac8f4911dc6983195621c4284b57ca6d300f9faa6206df0f3040e73f57159bf732206b196",
+      "created_at": "2026-08-04T15:11:30.671631+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/troubleshooting.md",
+      "file_size_bytes": 3187,
+      "sha256": "25abaadf92cb22958c4ca55eba7e5ce9e8cf8ddc01e71faef9e64826fc58e281",
+      "sha512": "68226767a6af28e264274cde4510c393f59c606cce7ebe3d5809a225170d0400b8ecfb0bc1f4e675664f2e1925673019e649742c5845bb06fe0d0f7ececa40d4",
+      "created_at": "2026-08-04T15:11:30.672452+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/user_guide.md",
+      "file_size_bytes": 3016,
+      "sha256": "8fb6b641089a4b6fd6ef02717875d2aa79d59018de73b7b361b8eac04d34e08f",
+      "sha512": "8117c2772a816ff1aee778689897145ed33aba096636403cd1fd4a4042f7aaecbab4a950964a48a0e065102cb5096cd7ce0af9d5fbd78aa688a9cac297fe51f6",
+      "created_at": "2026-08-04T15:11:30.673267+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/algorithms/pseudocode.md",
+      "file_size_bytes": 5436,
+      "sha256": "2a1e454308cf23093fd4cb85d08759489e8fd586ed4a4c28b17623e78c7d6ae7",
+      "sha512": "19b0b59502dbcc872881ba7f57018c3d32083a754a64b386aefb5b7592e29c016a8ffef62d177606ff454baa5462559b226ffd90d4fc2299c5a80863db23731c",
+      "created_at": "2026-08-04T15:11:30.675936+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/api/api_manifest.md",
+      "file_size_bytes": 2943,
+      "sha256": "e4229a6b28a8f8ee5767269d21fc9b241f2987211fc8184f6bf44e188916c573",
+      "sha512": "860df500dd33840e862fe1c6a5538285b869a5326a06903a4fe6379625c88b89191e049f152219232e5d583a028f0f627d5cd8d21fa402b5be700be3773f7c45",
+      "created_at": "2026-08-04T15:11:30.677128+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/api/build_api_docs.py",
+      "file_size_bytes": 16562,
+      "sha256": "903c9f22d9b62b366987eced5475d9b819ca1bb57145f342c63430e4f17ddd4a",
+      "sha512": "cc2651de1b7478987e7b4ad03d7d1ffafe9067a44a2968262e14c376e99c036d6b281137c66c0ab51378d107b9909b11f4ffe40d85e2d0a8b0e17527b7759f5a",
+      "created_at": "2026-08-04T15:11:30.682872+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/api/coverage_report.json",
+      "file_size_bytes": 231,
+      "sha256": "f9b391db3b416be0a325938f2ad1a9cc3bfa28ce5365793db11ea1d5144a4faf",
+      "sha512": "182f2085c8554168cd7782cf5f243128f7f47844b7370ad8f18054902d46aa713bfe3928abc8eb1bb9a05a04db9dedf4c41b66470cfc24154be8a298f73d060a",
+      "created_at": "2026-08-04T15:11:30.683830+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/api/crypto_analysis.md",
+      "file_size_bytes": 2615,
+      "sha256": "853d42469677bbffb2e15eaf6b39438b653f08f946c38c2b76136fde88bd2663",
+      "sha512": "91542df37401c9db8f06a82d4430dbd6693593686bdf12e46c991f36e15109a912b237675bd194060460393a13104cebc2e732551f1c03ec3feaa7c7f8b99d32",
+      "created_at": "2026-08-04T15:11:30.684792+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/api/crypto_ca.md",
+      "file_size_bytes": 2957,
+      "sha256": "b342c3bac45ec6f5c0fafe93399bfffa7b31f52b349b22e83adef892594781c5",
+      "sha512": "93973af8523ecafb91f5efba7c949045ac2c7c4c7905d28501c0abc92df25de8aa125b1b5d216a7e0e3f7ca7879d8f73e4b3d2be418284210a0a327e471a8419",
+      "created_at": "2026-08-04T15:11:30.685689+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/api/crypto_engine.md",
+      "file_size_bytes": 3103,
+      "sha256": "85ff11a0e0ef7e4e18c542ca519ef86aa2445507ed29e6b55e9e2703873081ed",
+      "sha512": "9e2157af25f36674adbeccf124eafdfae8ba596d987c9c6c025d1c6e9aa4e3e7a5fccbc994ca8473d62482c75d84edfc71ad9d6a7b799d3e84554710a5d65d9d",
+      "created_at": "2026-08-04T15:11:30.686661+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/api/overview.md",
+      "file_size_bytes": 4063,
+      "sha256": "e4aac1bdbad99e8b2055accdce6649e5b22247e387b0b1be42f19b8f90c34f0e",
+      "sha512": "f6f0364cd7a86fefccfd8b9f050f519d3dc136ea317613726dd57f1750c76ad2baa0bb01292dc3e7c8cf038d35b4d4f2c025e33e642672dc187f371e3e8ba718",
+      "created_at": "2026-08-04T15:11:30.687575+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/api/README.md",
+      "file_size_bytes": 625,
+      "sha256": "4d58ed1413e53ae3ab7175bbfc7983e2f11baa5963e266deb42668ef53e9ce0d",
+      "sha512": "a616b1bbcfaa3ed07150fbf77219333b224286f2f9cc8bf56d1aed571b1f48f604caf05eb3ccd562f736fd8de387b3488e4249c3831a2732da78134ea6791bcd",
+      "created_at": "2026-08-04T15:11:30.688428+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/api/config/docs_config.json",
+      "file_size_bytes": 980,
+      "sha256": "c1b83687ba995d5a2f55d94c72ba36f8cd8e92e2072f0e9488c9f7478b5f514d",
+      "sha512": "feaef295191ee5585779a2e2ae4ca47370f7c46b4624e6fb75887a5555c1ac1c2bc5f33f47e8bf920265ba67b882538467bcfa59da256101151eb3860f34fe98",
+      "created_at": "2026-08-04T15:11:30.690444+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/api/html/index.html",
+      "file_size_bytes": 27908,
+      "sha256": "f4664336a7208da166110e05b2439745031b8cd65ffb0a54117202a1f471f68d",
+      "sha512": "ed8b6751d1c06cde8e691d78d4591217d4dde139049b0013f2fd788e30eedd2c04a6e6547774f3fa3ec53f617acb9318e3e4c7895efd72b5d59fad59c49b9ccf",
+      "created_at": "2026-08-04T15:11:30.691600+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/api/markdown/developer_guide.md",
+      "file_size_bytes": 2980,
+      "sha256": "9aa8e8e8cdc2dbcc8e41088c12f28c214438b5919403e622107f0d38b562b36f",
+      "sha512": "2c210cf661643f81ba631723d7f0101ab1932b088ae1354e9930d4dbae612527113f4f9e85f13a947e9bdd817a7e76f960dfd83ac70ceefdc9bf3e67d6c89223",
+      "created_at": "2026-08-04T15:11:30.692659+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/api/markdown/examples.md",
+      "file_size_bytes": 2939,
+      "sha256": "030db5edbcbd9a3e905ae2ac04283e8b7eb8bcd89dc85c66aaa35383a0c7c931",
+      "sha512": "ec25495968cc41f201930fb5a3a041175b4caac165c0c879e6b9d181d6b03744686cc0c4ef6e8b22c7fa796f95bf8727f8606dbe218f6215ee438ba3408a2409",
+      "created_at": "2026-08-04T15:11:30.693458+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/api/pdf/kdr_ca_aead_developer_reference.pdf",
+      "file_size_bytes": 3016,
+      "sha256": "ba00de91d4964c39646d01e3a5c39e7bd2b02e421432a830b57abf2f5a4db329",
+      "sha512": "ccc1f1edd17a581d5c81aa4c19d7f3bf094fa7097956b4ecd5657dcf99c8c4f11a469783643a7fc93547edcfe7dc4054d032319f68439b863ed05e4cce80364b",
+      "created_at": "2026-08-04T15:11:30.694637+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/architecture/system_architecture.md",
+      "file_size_bytes": 6622,
+      "sha256": "1752764856cbeb14ecde189135c4c1e4ec4e5ceffbed39fa47927123833da0cd",
+      "sha512": "a57cc271ef2fb4faa6b2dd7fcae063f87e6027c9cd7ee66c992a40dd2751223c92ce540e19f2ff859314b5c68bbb720a58d3d69abf2b6f967e044bbbdf1f238d",
+      "created_at": "2026-08-04T15:11:30.695815+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/figures/authenticated_encryption_pipeline.pdf",
+      "file_size_bytes": 18936,
+      "sha256": "0ab5ad5757f4e9bd9c23af8405508988e1bfb64d121cbaa60c6caf2f2cfd148c",
+      "sha512": "4be931ebdb29796d210755638082fca42fb548dbfe3cadb91da57dc4270a2cab518a5f555cc9a7105633bad40d07c475c43e6f02afa1944b1c547bc7627a0ccb",
+      "created_at": "2026-08-04T15:11:30.697205+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/figures/authenticated_encryption_pipeline.png",
+      "file_size_bytes": 165171,
+      "sha256": "4249e07583fe714398a284ba03da00be84b1dd43b75613248a42f0954c1b204c",
+      "sha512": "f9eb4791e4ff17444be3b2387a6d9ab351fb46609e39a01ecf0acd19acdd5ed7d56a2321eb366f5fe2dbb65ee0004579283e49aaacd7b875e7740bd60d728615",
+      "created_at": "2026-08-04T15:11:30.698974+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/figures/authenticated_encryption_pipeline.svg",
+      "file_size_bytes": 55883,
+      "sha256": "78f8fb2d6ea9d7d5eacf0ccc8a27321c0363db02d2e816835e6ac922cf33a391",
+      "sha512": "7195fea057edd3f2f79bd3a37bda6a56f8708c3507cd4ff50f9033e1ab9e8da8645077ce0365267bacf67b98ae30ee23b1095fa8324718b2548b348de3bd3cd8",
+      "created_at": "2026-08-04T15:11:30.700118+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/figures/benchmark_pipeline.pdf",
+      "file_size_bytes": 19781,
+      "sha256": "84f534fd286af9b331146c3c0d140d36252196dd7129abc5e1909fee9b87b9d8",
+      "sha512": "2f3b5de5496ae7cdcda5ca23afcf2f6f6f16dd5ad03353161189545497acffffcb73b3057ff852e4cd9acec87521673e6b583aaee4522b2191226be25398833d",
+      "created_at": "2026-08-04T15:11:30.700976+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/figures/benchmark_pipeline.png",
+      "file_size_bytes": 199979,
+      "sha256": "7733e3edf04ff98ccf25f065b3e47688e43feb04fc08e9034849a3ee2676c5ec",
+      "sha512": "8f17bdae513592a6a5a15cab5e4965305504cb64788e0c8e1b5fb0cbf65e2a4e991f8ce51f3b415dc95e0541b453979ff3d26626c280827f7ad8ca4775604263",
+      "created_at": "2026-08-04T15:11:30.702942+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/figures/benchmark_pipeline.svg",
+      "file_size_bytes": 63411,
+      "sha256": "2a61a7e89421a8ffa50f8b178ea4e9dac75ccb1e3b7ae1c28acd703ef2661255",
+      "sha512": "108214700389705db9a4f1a0d4de052b60dcbc4e1ba314f090f3f15c3a100bdef3c8da0f1a65fdd4a86b3519bb8730cabb222893fc09b9328668f3d6344e4dc2",
+      "created_at": "2026-08-04T15:11:30.704072+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/figures/decryption_workflow.pdf",
+      "file_size_bytes": 19622,
+      "sha256": "cd19a0236e1cf52dd55feb0c6c66294867e1663ebf971454cadb3bd864dd4f85",
+      "sha512": "1674d5f2e2c733e6340b8be2656b3f73523299aa9c6ea4e5f6e04dfd237b8aa3e1f5a43543adb3f6d298aceed469ac904047862169885335cd5992b0b157c794",
+      "created_at": "2026-08-04T15:11:30.704943+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/figures/decryption_workflow.png",
+      "file_size_bytes": 190146,
+      "sha256": "7b2169daf223b7609a0cdd1c22a3fe3edb06726ed0fbb07c00bcf9d88c492a6f",
+      "sha512": "0dfa08c6bd1fde3b2e18d2fd446d8a7335ad959c240a28ac191f0b0a2860e6bda7f8b9b0c6128db5b966aea402353dde76cea56696ea322b86f0a12b6e1cbf9f",
+      "created_at": "2026-08-04T15:11:30.706812+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/figures/decryption_workflow.svg",
+      "file_size_bytes": 60581,
+      "sha256": "0a9a26b8a8df516ce667507c91105837d13e94f8b6a45ca78edb7c31976292e0",
+      "sha512": "8a13a7bb10ed60cbaa2ce74cf099c0cdf688405ff1270023d033c6aa6a233394bd2868070300766a015843447500438ea9f00bb1f96d51b412a8330c0c24f2f9",
+      "created_at": "2026-08-04T15:11:30.707931+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/figures/dynamic_ca_engine.pdf",
+      "file_size_bytes": 22244,
+      "sha256": "0da1fe42235e036c1c7e854796f2467227bb317e4aa7ba613a164651ef2f98c3",
+      "sha512": "cbc59ffb90230177ec515338b122b09c4b309753a7f0218a4dddd5cba54a1d254b5d8231fc66c8755622071aab9d504cdb6e68ae81caeb579301e41fffb21b8e",
+      "created_at": "2026-08-04T15:11:30.708782+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/figures/dynamic_ca_engine.png",
+      "file_size_bytes": 191782,
+      "sha256": "114c1862758755ccd9650ce34e20dbda796e0ac412975b0bdffff3783f1ab31d",
+      "sha512": "6180c4a0bdf07ed5e064e30a81ad516de0caf92023c4b731258d48e661393b34ca6b0c52111a0edaef8f2bf3cb8380a445cba05b88da6e9a89415f0e3f04c2e8",
+      "created_at": "2026-08-04T15:11:30.710653+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/figures/dynamic_ca_engine.svg",
+      "file_size_bytes": 69878,
+      "sha256": "8443d11ea7096b82c62a8ad242147b9953a749c0f25076d7313a4348c062cff2",
+      "sha512": "4b9498fe6fefbf2564d8e6b9a56fc6ef2c98bec40395f9b4e0a248502cfaef694cb3faea2cc15b1a572e73680360bc34ca0464750a918bbcf2e371555bf130bb",
+      "created_at": "2026-08-04T15:11:30.711831+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/figures/encryption_workflow.pdf",
+      "file_size_bytes": 19921,
+      "sha256": "643047943ef4a3f84bd560fe0a188989a604c76fc4e7453030187b272ac8999f",
+      "sha512": "0f94ac5f6753ae9b6ffdfd83747fb112398f691a389dfee4a220607e2257a2a8feafc0d895cb740f61d3f62a5119f5ff191f436163ff00011ef35bda2ac3126c",
+      "created_at": "2026-08-04T15:11:30.712704+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/figures/encryption_workflow.png",
+      "file_size_bytes": 192737,
+      "sha256": "72f2729abeb2505db5e74f6f1b4cac5e07041df65d39ef97ecaa538359d5f2f0",
+      "sha512": "7b8c1772c0edfe223f721bef89bd746f9ea8b20785fbf14f7b1339ea7cbe69be28407d0a5b776c84807e95cf1d7d695cd10a739305b8bbefa371f8e846990182",
+      "created_at": "2026-08-04T15:11:30.714747+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/figures/encryption_workflow.svg",
+      "file_size_bytes": 61201,
+      "sha256": "772d6044b6e0bc8d9eea87a35b6be547d914cf5b3cc946f0b28e09a609d9574d",
+      "sha512": "7d6be06b9b01e89273315b29a4ec762a71a842ba0bbdd428e06764251cfe963749898e221af1b68aa35ee3ec3e319f9afa9d3f47e926a503d93d18ef4f58bdaf",
+      "created_at": "2026-08-04T15:11:30.715898+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/figures/figure_manifest.md",
+      "file_size_bytes": 3208,
+      "sha256": "dcd45c54bb651c229217ca25e1759d21b6b1121b2bc0d457f1b0c055a5bfc952",
+      "sha512": "668cff03c782f03a89a51bfa311d1326d8b0a550dc604ea0fdb8f1c98e97f2553171cd77935bb19a26fddd250ee80d36fa7c63bd08cdff078fbfa02488551e03",
+      "created_at": "2026-08-04T15:11:30.716781+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/figures/key_schedule.pdf",
+      "file_size_bytes": 19828,
+      "sha256": "851a1ff3cda73208e6a84bceb8499fcbde44314d24cb1433a60aecdbfc8c44fa",
+      "sha512": "50e6a2917b1dd328386738a99afe9a4f5b77f7cb6e50c0977d05b150258d39ead1d14c0e2437a87e889cca4c37c29d94cd1c1564ca8aa172745397427d221e91",
+      "created_at": "2026-08-04T15:11:30.717651+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/figures/key_schedule.png",
+      "file_size_bytes": 249826,
+      "sha256": "bface70faf9f33e49d2163406b7939fb5ea23c6eef84b35ef6ca0217da18f83e",
+      "sha512": "28645440f4a546639a323e9322e501217e226aebb89101f4b260cd424208b5a402f8741ec115f0207bccab7902097d91262f5f801741093310bbb72f82f4e519",
+      "created_at": "2026-08-04T15:11:30.719904+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/figures/key_schedule.svg",
+      "file_size_bytes": 69934,
+      "sha256": "fd1a72ca9fa0f9b0dd49c8c7d07c8afd98cfcbd7cb590c5baa31ddc8296fc3ff",
+      "sha512": "ab5f736ca7909c323c1be7ad788a9818f862089024616e0077711f0983eefe33654999cf2f7b59fb9542e52d478ac2b33f0e3085a38d2caaae5c5ef8f1026a2e",
+      "created_at": "2026-08-04T15:11:30.721093+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/figures/README.md",
+      "file_size_bytes": 1394,
+      "sha256": "4197df8a745ffd0070a05dadf6296ed3c031075595d7ad10f7bb1b39a0045a56",
+      "sha512": "15b9a06b3944f83ef9e0888ffe5e18853f7f742452e99145e1d9e6f2d6745962dcf8d597b9081dfc39582ebe0c8db94fe5366581efde3b293b809d69fe9501e7",
+      "created_at": "2026-08-04T15:11:30.721948+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/figures/security_validation_flow.pdf",
+      "file_size_bytes": 21856,
+      "sha256": "b63e1b94a76b7d6abe1c153e2d785d9e19a8ef91ae3743039eae92c61af85fae",
+      "sha512": "872e019c99e61bafefb8cb9b95a68be56f4d8d91d216952ad9a5dce246f74962cf20f28b46bfeeb1f386b8830b9331e88f06e5f081a4fe6d7b47739ea3c7efd5",
+      "created_at": "2026-08-04T15:11:30.722859+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/figures/security_validation_flow.png",
+      "file_size_bytes": 212253,
+      "sha256": "1b8f0ee15d6e10e4f01ba65979efb9271f10c5bde3858342ce785a49978f41b2",
+      "sha512": "8cdeabe8727561f21ac49f6d8e251ddc8e59952e8d96dbfbfdac6e3ab7ada780480a6d66af737ac9920582bb4b082128b84a2a75031dfdb6bebca5cebff57e15",
+      "created_at": "2026-08-04T15:11:30.724461+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/figures/security_validation_flow.svg",
+      "file_size_bytes": 67743,
+      "sha256": "e250be5c66625d567e5f216fbda4b56a45d5af55cb12486334caaceb6bf8d493",
+      "sha512": "f5ea76574c1c1cd29ff8fa2b050d7a454a0b4e58f54f63c5c6ef156939649deddb8d0c046e80b98d7b258f7293d80c88912baab489e9f697d1d477b30cd46469",
+      "created_at": "2026-08-04T15:11:30.725842+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/figures/system_architecture.pdf",
+      "file_size_bytes": 20649,
+      "sha256": "05184fb6e411646d3c63dabe43121e5e3dbca335810b57660a76fa703f61e7e8",
+      "sha512": "9ac5ee52f492bb22235181fa21f06135ece7024b19440b15b257fc05bf14660d3a416e694e712305d62aff9a4ce39a0eb780a3e0b7b5871063309673bb52bdb4",
+      "created_at": "2026-08-04T15:11:30.726898+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/figures/system_architecture.png",
+      "file_size_bytes": 244733,
+      "sha256": "cff0abd83c13e6b92269b75b001d1198ae3a36de49d8d6f98d518f77bbf6224f",
+      "sha512": "0c4e9ce5b2842aaba069c92c7913bd9d3a3b1147317044a63b680e5539602d4302f641972df5cb2bc11fcef57e8a4a704fbb4a01aabb98628c442657db357987",
+      "created_at": "2026-08-04T15:11:30.729243+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/figures/system_architecture.svg",
+      "file_size_bytes": 73704,
+      "sha256": "dff513c673109d146297fc6f722877af27324729dc581c43da375923398d22a9",
+      "sha512": "ebd3a52498572d736adc0db54b8176687c6a7aa22a7e2f2bcb56c40ae3f9f3b0c12d42d28690f86811645befd7a6eb7c22a9a4bf200f3b5a28f62d53a3fb43e9",
+      "created_at": "2026-08-04T15:11:30.730506+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/approximate_entropy.pdf",
+      "file_size_bytes": 22920,
+      "sha256": "b512cab4057f2de2687feab6c33a2eb075759b2cae81ea507512e6c682484595",
+      "sha512": "5f6600aac3376f14b25a94123dd1339e95c7af7c52825ee0ef05fba84f6fd51f3bc326d5098e96653a0d5e9e0b1938960c2a7dc5cf3b8e227f5857252df571f9",
+      "created_at": "2026-08-04T15:11:30.733150+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/approximate_entropy.png",
+      "file_size_bytes": 105548,
+      "sha256": "9e8dbdcc21578dff27d92eba816f0378889aaf04090a6a01073a0a0d5869f23c",
+      "sha512": "baf1e33b30e798e069a7aeb9731c848c49deb057a9bf51d6e0fb329c5f13acb7cc701f8ef8d25a9f5d1d85855b8dde685ce565424ae8f8b9e3592ee0870a81a2",
+      "created_at": "2026-08-04T15:11:30.734627+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/approximate_entropy.svg",
+      "file_size_bytes": 47158,
+      "sha256": "6ca23cda61069b8baaba86863e6e711805e61c7886f1719826ac3bf9548aecd4",
+      "sha512": "91ef9199926db822d7bb460d765827c4d68a1a9a8870ea13b38934e69283ee47d8b7f9987095353e5f31260c746f0e856e9dc9eb2f08638e6d5cd820d54cbd24",
+      "created_at": "2026-08-04T15:11:30.735697+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/avalanche_effect.pdf",
+      "file_size_bytes": 27529,
+      "sha256": "41ad592e59b9ea7d76ea35dbf3ec82dd2130771b9f1fece82a2fc17de9f5dc6e",
+      "sha512": "a105a530871046250ea7961136fa79c25590fec595a493ed3a7cc4277331d9ee321948dc205de40221e978b102d23c25f2d8a2a82efc5cba763946b3b3a66d0c",
+      "created_at": "2026-08-04T15:11:30.736623+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/avalanche_effect.png",
+      "file_size_bytes": 300229,
+      "sha256": "cd4737ec08c83eb98efecda93391a37a4d6724db76016f0800e6aee8b9b02601",
+      "sha512": "d0874ffe0009f7fc458b33ad33501790f418aaed2a5eb25ff1a5d880edaf2310b578aa6b7f0ec3a35a5c0c6129986e752b1f41258502c050181c0504e9a22e41",
+      "created_at": "2026-08-04T15:11:30.739084+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/avalanche_effect.svg",
+      "file_size_bytes": 62664,
+      "sha256": "4598de5704149c03634036a33de110f952870dcae497ee88f38df59e5aecf4b8",
+      "sha512": "c411cf7f3f35b4486f880a53348e1d955c45dc10955ffc9938e5f07dff8779d1d84e13bbd28fd5282a346f1b69270e4b500ebcb354251b805d7c9207ad2268cd",
+      "created_at": "2026-08-04T15:11:30.740350+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/benchmark_statistical_summary.csv",
+      "file_size_bytes": 1135,
+      "sha256": "6559043f9cf4b413003edfb93fec99bb8b39bc891a34f57914ffc40982e8d1fe",
+      "sha512": "0a1068dde8de63a3825af639263fe43780d2fb0cd1582e72d43ed95f728a5570b6aa87e9beb518afdfe5c8970f943a28c36e742ab8e4b83d3bfa47fc1febdcc3",
+      "created_at": "2026-08-04T15:11:30.741360+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/bit_independence.pdf",
+      "file_size_bytes": 22537,
+      "sha256": "4b5003991cc801548f210b31999796e5fb44fe19eb7523b22caf69dcc8c7cf9e",
+      "sha512": "9596cb88e14c72a57d217afa7c2558767ec109594045c34e7d9bd80c5628c844886d3e40dd1df8b57407e646877bd209a47396e53cd36c66125de5658bd3aa20",
+      "created_at": "2026-08-04T15:11:30.742351+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/bit_independence.png",
+      "file_size_bytes": 106443,
+      "sha256": "9f9359df5e623c7f1b759bca6682504be630613859ad1429b55e044091dc1539",
+      "sha512": "87965466ebc9e167dc7ed20af144b53ad12f725f96b13b9e3a8b5e316b850423429b588d5e2cfe723a775986ce50a157fc01825b88fde1ec49c5f8965ae3dfd2",
+      "created_at": "2026-08-04T15:11:30.743790+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/bit_independence.svg",
+      "file_size_bytes": 53589,
+      "sha256": "a73b5d3fc14dcd7812d7b3bf2853516d9866923219d097cf8cf76eeaad58b060",
+      "sha512": "3227bed39860d209d54ad3f88a116fcaa51d748f04712d8b72a3294557aa8878b843a638d55d0554bc869d67175d04050e400c064b9098ef89056160df2db0ea",
+      "created_at": "2026-08-04T15:11:30.745033+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/comparative_latency.pdf",
+      "file_size_bytes": 24021,
+      "sha256": "50bc6a617f12a5bae993f8a895bc198a82748c6226924e4da3b18ab86bd97a7a",
+      "sha512": "e0752c128b1d2a8161c8d12a6850627b2d989da438658691fd30defb8b074f899bd1547e321f3bbe66e2c947baef02f36684b64d8445387dfbec9e55c9a8cccb",
+      "created_at": "2026-08-04T15:11:30.746376+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/comparative_latency.png",
+      "file_size_bytes": 115953,
+      "sha256": "87f8acd25cee17ffb6562133aa70dcb6726931688adbf22bc7133741eed14d7a",
+      "sha512": "91e7dce0cafca188ffa34bca8fd21fd53fd702d03e1b3ddf99be6aa4f632d195a741e397fa2ea9abb9c3eaa6a98f1840ad289d2e2a548070f51b73b04eaf2f67",
+      "created_at": "2026-08-04T15:11:30.747739+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/comparative_latency.svg",
+      "file_size_bytes": 49007,
+      "sha256": "0ee85a77b302d5c46aa1330ce047b9f7fa751160f74574e2fcbca4af30cb1017",
+      "sha512": "28a2563fccab495acb1552144d4e58fa9317a0ddcca9437a412ef42a823dfb1eccda8e27237d9a7d7b9f1d0603d101765e72ee664a1693623757d27115b5ff97",
+      "created_at": "2026-08-04T15:11:30.748610+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/comparative_resources.pdf",
+      "file_size_bytes": 22912,
+      "sha256": "710cf1c403417ac53020741fd43364e2706787ce422c08fceb70c916bf4dab34",
+      "sha512": "95895847d834225201526b6e41bac94444b4ffcb306a2811e2d35282e16627620d1ca321b46c15fe5133b1ad166224602ef6418e071b73dd49e0897a96aa0e4c",
+      "created_at": "2026-08-04T15:11:30.749298+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/comparative_resources.png",
+      "file_size_bytes": 110534,
+      "sha256": "c8bed7b7eb7174b9273ab37e8a577cf1d63a94649fc5314dd6a996cacab4f48b",
+      "sha512": "614e487fae50cbb45fed95725ff11c000b850aecce586a271d800046a0b94c6089bbdf446beb676272bfc030836535ede929b83bfab1f034badd31f309453257",
+      "created_at": "2026-08-04T15:11:30.750330+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/comparative_resources.svg",
+      "file_size_bytes": 48485,
+      "sha256": "7dbc7f4f73297304617d0c2b39366c68ce49ddc7cd2a7f451565c81ae17c1c65",
+      "sha512": "562065e5fd9ffcbb073b315e738bc2bd1a8b60ba6331b7bdb1db970ff17dda1ec3c6d6ce491a79459a7d7aeb62a43fdd7e9a06bc471cf04e3cc0c82abe37383c",
+      "created_at": "2026-08-04T15:11:30.751277+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/comparative_security.pdf",
+      "file_size_bytes": 25305,
+      "sha256": "054f4c4b95f44411192b5cd82a641c557d213e1a8aac9c58bf155c28d642a50b",
+      "sha512": "41c070f6113a582f2428a21984545723300e2672b188d8c537042712ed394660c54728d70712df21d0e73e92d68fb419500aa330398e6a5d0c6da9e22ab2964d",
+      "created_at": "2026-08-04T15:11:30.751992+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/comparative_security.png",
+      "file_size_bytes": 127970,
+      "sha256": "fd0617be8d3c0bca2cbf9ab6982c5f5f0adad4f0af9c12d20229d21824ff1635",
+      "sha512": "921c626a87a822ff170247d350824620ad477ac76da235eff43bfd134ee8af04fd8c544b6542861a9b7f16feadedd87c12e2b59889dd15bb8e5a6426019790c4",
+      "created_at": "2026-08-04T15:11:30.753105+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/comparative_security.svg",
+      "file_size_bytes": 51546,
+      "sha256": "9f7cd73ab2e145c5a4a155fe2de10edf1df5089263c260b064ff0dca54c50694",
+      "sha512": "a2938ebd05fe4ca691992a56bea014b50a56a837cf87bc8a569e520144fd216913e4f198087eab92497831bfaca1d8293129b51428277ff4a4578ccf19c025a3",
+      "created_at": "2026-08-04T15:11:30.754525+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/comparative_throughput.pdf",
+      "file_size_bytes": 24844,
+      "sha256": "f3f78bb998648f402654fd6948956753171fc59bb52b7982b8eef05727ee3b4b",
+      "sha512": "fccbdf96e39503ba249d85e0dc3658954362f54bb1e78df47d632f28f8f1f306ca87549d89e1240e8f8973818e30413c517675ecf83f4753d982d4302eb0e8c5",
+      "created_at": "2026-08-04T15:11:30.755418+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/comparative_throughput.png",
+      "file_size_bytes": 134822,
+      "sha256": "2272580adba8c6026a16ef173ad466b50f3e177ef3f6a69e3adce738e2be2137",
+      "sha512": "ba8a5799efff3d9db50dc778e6c7e1df32cf196a6b111bae912108fcbdab2056375e3a4048a0834cf2e7c9c0b5190b1e50dab66000418843c075217eb236fd38",
+      "created_at": "2026-08-04T15:11:30.757064+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/comparative_throughput.svg",
+      "file_size_bytes": 52941,
+      "sha256": "e80b785af5447d5ee168e0cc38aba28a6d4b0f8e82ff9edd5192bc5f5dc29a0f",
+      "sha512": "6af0d804eb7cf2214d73a4b25ca73856cf14df6972eec84e0b2bdc4d2b94940a6c35c8d5325ee600f8951200553633413f891f76b6873fdacb3e9c0a0fc957d6",
+      "created_at": "2026-08-04T15:11:30.758174+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/decryption_cpu.pdf",
+      "file_size_bytes": 20148,
+      "sha256": "8b549dc2047930301aacee5a89c0eb1aef6f44cd68cf45802997d8f54d278e84",
+      "sha512": "dcf8f5e311b69dcae5588f2162a3a42eca3625f87e4e0900842a3bc2ea2c83d57e1ab998314b82a9f55ad874d914f94796b4482faf8507e63f52760b4d808725",
+      "created_at": "2026-08-04T15:11:30.759029+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/decryption_cpu.png",
+      "file_size_bytes": 117072,
+      "sha256": "638ddaa8e5c324eb155fc9f79e8152836e2dc8659fef34e0aeb719ab2f75001f",
+      "sha512": "76da336f6201ca54d1202f44ed69d2ecf2180fa04088be8962c15fd30bcda0683b65ec580d0d85445c144cc6e3ea82da9173d082ae250001fb246fad4aff1678",
+      "created_at": "2026-08-04T15:11:30.760482+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/decryption_cpu.svg",
+      "file_size_bytes": 43995,
+      "sha256": "df76f131af91befd12b9791bc55ddec02e0daebab466f57e4b1034a119c29fff",
+      "sha512": "1dc02e052c55886927aeeadd17ad233eac65fe97f6cd6a5d2251c80c9caccc6e4a30ecbd02ba4b36ced73ad3fa0671274f4c894802ab1534053abdc980cf0ed2",
+      "created_at": "2026-08-04T15:11:30.761520+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/decryption_latency.pdf",
+      "file_size_bytes": 27349,
+      "sha256": "f490a8b14456561f41cbc7427c9a66df368c6cbb74f9c85a42dbed97ae6de344",
+      "sha512": "d1e0d2e68f0590283b0eaca7ab627f4332cee1f88ccf9fefaca21e6108e24601fe60d18591a42d695281be819c3c042d80257e70247cf55aac990b2899b1c521",
+      "created_at": "2026-08-04T15:11:30.762745+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/decryption_latency.png",
+      "file_size_bytes": 164549,
+      "sha256": "b024ee6295d63d895c092776f62117fc46d892878ba135de60ab0339650fc3e4",
+      "sha512": "e910ccf73b3376ce2227f49dd4138183d94b94a49b4301e955f59c3ec7c7d0d3cb6fb9a68aae3a0998c2acad17885df23efb7d1d29121c4b0b0db32aa389434e",
+      "created_at": "2026-08-04T15:11:30.764608+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/decryption_latency.svg",
+      "file_size_bytes": 61797,
+      "sha256": "dc20db44bdbef85f94a02ca00ba2b00243b93fc1888218ef4e5a68a26d79f2dc",
+      "sha512": "4d7b472042916b7ccb5aa0823ba10b69c8eca8258a07b4b704911c56f3f8392d672ec353b3adc3004b0c729a01a90b514bec9311c1567a8e1a868b4601936ca4",
+      "created_at": "2026-08-04T15:11:30.765851+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/decryption_memory.pdf",
+      "file_size_bytes": 19351,
+      "sha256": "f204a8cbfc7bba4d49d37d63a2b337394372ed30a1e2069db2ebd1b18de0b6db",
+      "sha512": "3e0df8c2aa5c478114bbc56f9cf97ddc6d9accec5374d69b076572b7b1f87ef48d102c22319effdc3b2a2708340bddd7f189fe80fd4c0349ad12182613edb887",
+      "created_at": "2026-08-04T15:11:30.766801+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/decryption_memory.png",
+      "file_size_bytes": 116018,
+      "sha256": "28bc51be03732560fee55196a1f21f1cd888809d1e0b73c4da9a824a505066bd",
+      "sha512": "bea83fe60b404cff74383181aa5d3e46a07b6a2df11de81a31d1040f9ec69851d969734d348502f161af7e1cb497f324d88345c8b8360a7033b054cec6871e83",
+      "created_at": "2026-08-04T15:11:30.768274+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/decryption_memory.svg",
+      "file_size_bytes": 42449,
+      "sha256": "dac7e4c38df73b3dad62cd6608c7748b0b908a477a808b331fba69f6d1888647",
+      "sha512": "dc894514335c0097ae5bb6e45089a9c738cf6ae628e9b6194ff17a2bd3ee0a6476b8e8eed7f5210ee7c2d131f29db266469f22e29db06e7e85e22cf3d884a89c",
+      "created_at": "2026-08-04T15:11:30.769285+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/decryption_scalability.pdf",
+      "file_size_bytes": 19327,
+      "sha256": "d31c0b928821dfa8e2e29421c3e47dc148f1d0a2750a64804ebf2b6267a22b5a",
+      "sha512": "4b85725dc7e5bf8491513d2033aa3ec33f9c795e05f8da7d6c87a0a70676598a0eda7aeba6dafad06026293bbc7a36caf8e2197bf0ae6660c5af6ce8aab3664c",
+      "created_at": "2026-08-04T15:11:30.770458+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/decryption_scalability.png",
+      "file_size_bytes": 122876,
+      "sha256": "fb7c9b337f05df638b0eb836d96034f9423cfc07bc3a0f93835608d12f766818",
+      "sha512": "a5cb627ad279bf8694f02ce75a07ba722121cc3135b063da2cd48751797e83fed918ed48103a01d7ea19ac40474dbbf8f9d1445debc5d0c60ec2860404684e88",
+      "created_at": "2026-08-04T15:11:30.772119+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/decryption_scalability.svg",
+      "file_size_bytes": 43407,
+      "sha256": "c1652850a13f72973cfa784f6e0e07f5c442c887fafa874d2e20aa009a1283b1",
+      "sha512": "9e00f95fb108225676dabd26373eab125e01e7f9ad65d20eb3a9b23cb9d5ee8b8963ad86d3873ba2bf761da8a1ad1948a0a8c222cc459cafab927959e3796f22",
+      "created_at": "2026-08-04T15:11:30.773223+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/decryption_throughput.pdf",
+      "file_size_bytes": 20561,
+      "sha256": "e8491a5e8646e0b6d3813658be687d87a45c97fc4c8ae1c13980366de25e9457",
+      "sha512": "04b29caffa9e2e0b57a3ab3db76b5668251270d2d4171145c36a3a4190eb0d90a2dfdb888b8e3388ef2575cda0c639bcaa2b4245c678d5506606be05c5e26a5d",
+      "created_at": "2026-08-04T15:11:30.774210+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/decryption_throughput.png",
+      "file_size_bytes": 152775,
+      "sha256": "624f1c3e52a9e9b731df9ad9c6461d9d33e9c549f5ecbfa9acad7ff006d1df20",
+      "sha512": "273dd6be4e22d99e5034938a61a7e8b9b531b9be9d0005f5b98cfb9ebf344bbf8986fee7f0c8075cf1b853782ba435eee04a7c711b83da9a2001339a16384de4",
+      "created_at": "2026-08-04T15:11:30.775610+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/decryption_throughput.svg",
+      "file_size_bytes": 48369,
+      "sha256": "8d7601c542d49901107b5e44005cc800ad023159e05c17fc6750e6c3554904b1",
+      "sha512": "47aa52e1714144801e6228428c5b9611ac1ebe51da56bcc83a6582bfd8e526aee74beddfc25ae1da71137f847416c54be8444ca34df64b2e8426f9fe653e6054",
+      "created_at": "2026-08-04T15:11:30.776825+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/decryption_time_vs_input.pdf",
+      "file_size_bytes": 22501,
+      "sha256": "51f445a5186731feee15af8a151d2203ccd878fd16d8d20920d0595b4b0ce6ec",
+      "sha512": "3ca5abe3084ad11aed93ef1d5d094e5d7acbdcb13cccdfcf12a25227573104284b2e52dd48bf50886a6ae2d06984bad99ce5fd3632fcb5e671d1c3d5cee015a2",
+      "created_at": "2026-08-04T15:11:30.777752+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/decryption_time_vs_input.png",
+      "file_size_bytes": 121879,
+      "sha256": "c674fd2dafd06aaf8cd302f13af24ace767826b18bfb049ca63c5a9b18bb4cd2",
+      "sha512": "3d2dde73a5a3dc9d1475b9636fb06a073b8d1f99f4225c2d4fb73ec8a1fd5c396e25ce085c0fc2cb8140165b70bb58466abf22b7f804218c4e33fc16f2ab341b",
+      "created_at": "2026-08-04T15:11:30.779354+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/decryption_time_vs_input.svg",
+      "file_size_bytes": 47827,
+      "sha256": "c8ff53a1b2bf39bfba4e8f217d7f1555d0518c9d7a12fb0d932929593b45f63e",
+      "sha512": "4b3145a7d970f5beebb85905d5dc4cd2a488500502a72eeba3955f431ee9063db9447dcb61ed5f8dd4d42c5e3d30bbd9d812e475b95aa67e091795cdd6c74a0b",
+      "created_at": "2026-08-04T15:11:30.780812+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/diffusion_metrics.pdf",
+      "file_size_bytes": 24743,
+      "sha256": "4f2bebf812d20832ace5fab9de8fd7d9ba730cfbb107ab00b94998bf8dfcb32f",
+      "sha512": "8ceff0e2869627d688924ed2406698e6b88af1e7824f80ff92d9f6dc32bdc4f873874b89d25ed3e6d3030779184038f9c419fadb2f3ff62489efef8d25ef67f6",
+      "created_at": "2026-08-04T15:11:30.781606+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/diffusion_metrics.png",
+      "file_size_bytes": 129488,
+      "sha256": "b014fa9836c5180e80681f442fc5f0099678072a861d2eab308ee66412f11268",
+      "sha512": "bfa6a212211cd3654cdd4fd7f90018df6eed6bcc8557867d9e7280754796500ba7c4efaf158c9602cff1a4f2ec66cacf3a157b3a716dc0b45ab84fd23ce815b9",
+      "created_at": "2026-08-04T15:11:30.782849+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/diffusion_metrics.svg",
+      "file_size_bytes": 54244,
+      "sha256": "555f02a803d5e774a25f6262b70f51531e8e492c66e17c8cb0a4505c5d8e52a5",
+      "sha512": "86e2d799dd5c2134bc778d33f55f2cd297926d64f153d6c42f5345c290c782455f5442681e8b18f0b354db1e19d07ecce7058f826f788ad63aceccb1941aec80",
+      "created_at": "2026-08-04T15:11:30.783669+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/encryption_cpu.pdf",
+      "file_size_bytes": 19230,
+      "sha256": "092d3e0f6ee259a09ed424fe06cdffbb0efd46c0ef0baa49dbd9e03caf8ca69a",
+      "sha512": "e75a507bf4c04273d000e57190492877b241e9dcd2a71b3744bf250c1ff333f8afd9e60c4df742ad4c60955629463c8785782e8c018a7e1b697041bc1efef4d8",
+      "created_at": "2026-08-04T15:11:30.784342+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/encryption_cpu.png",
+      "file_size_bytes": 116292,
+      "sha256": "b63fa28e13f4100861a1216318d0eae4172232d5c0f0608e277db805023b6eec",
+      "sha512": "30ed241f1cdce35ac0c9bfa8f6433561ad50e439542444ca20401ecc7edafa850537ed2e11f43e2a40ff9137102b3492f865b02e240a065c0adaa34299fb535d",
+      "created_at": "2026-08-04T15:11:30.785687+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/encryption_cpu.svg",
+      "file_size_bytes": 42589,
+      "sha256": "f6b37b39d6782a106f4b7eb9d87b89e4aa227abc206f04947b8abd2835a8cf6d",
+      "sha512": "e2c896457bda5685c7be6133ce1f797503f6c70f9c3fcba1e9521366003622a44d403a1e2d51892e17a753653b4afca94142cca62fa859367c5a9822033cc60d",
+      "created_at": "2026-08-04T15:11:30.786633+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/encryption_latency.pdf",
+      "file_size_bytes": 27083,
+      "sha256": "d30210dc9a4b28002148ce9df1bac3669c5f9b3febe8e4655c7e2bf33b322671",
+      "sha512": "31439407f22882deec79af1e389bf667e3f3ac93c431fe1b16eb415d3b761b49ebb7dcb105162595cde7014e794a5011adf9888bb7279eee5c261b76f58db689",
+      "created_at": "2026-08-04T15:11:30.787363+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/encryption_latency.png",
+      "file_size_bytes": 160208,
+      "sha256": "7d2d4aaa3b328f9ba90821f1e3acd66eb7fd2ee9ddfce76e31c566022b0016a3",
+      "sha512": "a7dd31d7a25f2dffa961b96e8a08a6570f4621a109649c5afad000ebb72355765ca288c546e76c08f315868d6940141de98fad3d54f307f2ab7a6885e2cd4b45",
+      "created_at": "2026-08-04T15:11:30.788585+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/encryption_latency.svg",
+      "file_size_bytes": 61451,
+      "sha256": "eadcb79c3cfb6e00e27e423d4b39f9c3f21475d9bbc1655967636593e4addda9",
+      "sha512": "5f35718512b537ee036ed3944aaf0051ae76afffdffccaa1f1d4a3d2df0a8049190c42e4f8e77c5ac9d4132be7fe5020385ad2b0984ceef75e57814650309716",
+      "created_at": "2026-08-04T15:11:30.789472+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/encryption_memory.pdf",
+      "file_size_bytes": 19360,
+      "sha256": "fc04db97e42aa9d77b437e11e7360774b150c58c37884244cfaad4c29f575372",
+      "sha512": "f278fa569633911208cb6b245bde2282ac887a3ee0518c72477adb3a37e1afa751f5802db41416f22f42f952145e97d7bd9ec4450ce475be11523ee1bfe3bc34",
+      "created_at": "2026-08-04T15:11:30.790129+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/encryption_memory.png",
+      "file_size_bytes": 113650,
+      "sha256": "664698583f8f55fa0c6eb2bf3e56396fe377e158e45befc172d203ec9d0d50ab",
+      "sha512": "22388c4ffc22c30b50f74c192ebe71d4d96b443de17876ed5813b9d1c3be739fa4f22b0ce616a491afc7c576796d822be3fed9dee2e145ef722848299f44c751",
+      "created_at": "2026-08-04T15:11:30.791140+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/encryption_memory.svg",
+      "file_size_bytes": 42531,
+      "sha256": "8aed0b42659ab31e051192304f8710931c43ceb9e6980ddc48c3c97cd5439672",
+      "sha512": "7c5fac18d14a21d3706a06c58d37ab41795ae40e4cc704633920adc4a7f869e3f1c9ef75a4c4635b0c28461e2116cbfc1403fc9a58b75b2d51abede16ce2d362",
+      "created_at": "2026-08-04T15:11:30.792032+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/encryption_scalability.pdf",
+      "file_size_bytes": 19981,
+      "sha256": "788a43cf0b2c1cebc3b4ae78354232badec499efdb91357b421b6f2649aab7a6",
+      "sha512": "7bc307382898f6b06554eeaf1aff724738605a5c16617d79c2d8c0d71cf073ad2f8ac7d895098424259d7e709a6d9508d9dea0b6b0406d558b029bb1fd60fb84",
+      "created_at": "2026-08-04T15:11:30.792890+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/encryption_scalability.png",
+      "file_size_bytes": 119582,
+      "sha256": "8c0652987eb9b2f67379fc342152d1b7d84f276bb6100929add662c0185b5b0a",
+      "sha512": "99165b72145857bccf84224d073119c86e20c777b823635e30d0229f9cbde575d0a24275a319de668cc1019f2dd12f234ae9413a11b9fce20b684477f70b2640",
+      "created_at": "2026-08-04T15:11:30.794953+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/encryption_scalability.svg",
+      "file_size_bytes": 44503,
+      "sha256": "a2401d41d2c65f7c57285b8020648d9469d17de02242da3a41adea88b932aebd",
+      "sha512": "185df90566d67f3cb14b9dd06f47341274b840bb82fa8acb4659a2f2713f870f8f2526726c9ac15fff67633ea53cc8059de19cab023d1238ca9ba5c62bbbc88a",
+      "created_at": "2026-08-04T15:11:30.798102+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/encryption_throughput.pdf",
+      "file_size_bytes": 19917,
+      "sha256": "1bc47a7909a657884039e5421d78d26ffa701fa2d5d91b32e2219c40f23a897d",
+      "sha512": "13e0928e96d95cc8bc3eeac2897a63a335b5bf7be4c9b90f6051862c50f9747f521ece391aa35633f70185df655288743282ee6a54094af37226cf23d7c8aeb2",
+      "created_at": "2026-08-04T15:11:30.799230+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/encryption_throughput.png",
+      "file_size_bytes": 148102,
+      "sha256": "e0c8b87cdb685b4fe6a1783401a8109009f9b37c7c3c2a276a6d81f4dd770907",
+      "sha512": "e615139c9eef9964da503e2057a53b55796c08e26ed56e1730b457dd7e993bd4a160aa196c665b8e2a6a1c564fd8ae3cc3040819b0d0214c06f644773c5eeb0e",
+      "created_at": "2026-08-04T15:11:30.800950+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/encryption_throughput.svg",
+      "file_size_bytes": 47375,
+      "sha256": "7dfe548ed7381ada1347e0b11211315c4c8b09588be4933e1925f42d786e4c40",
+      "sha512": "a62a5b4098d27803a842a7f25c8cbba6b2f2512256c3782ab2cb4557ba7fc1e6aec782256ab0296b2cb0fc25444008579acfa31050deda55ec5855544c181f1d",
+      "created_at": "2026-08-04T15:11:30.804190+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/encryption_time_vs_input.pdf",
+      "file_size_bytes": 22184,
+      "sha256": "bfd5199326a1192e8b237a17b7d3ec37ed583808c1d77c4f9eddd262fc86586c",
+      "sha512": "fbf11e115f7d363674a47d72ff3a9b12365f2210eed9182809f1870ce04cbd0893e31d937d16df81e6fdaede4822bdf17942312f8e20f06b4876052495e7bbe5",
+      "created_at": "2026-08-04T15:11:30.805204+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/encryption_time_vs_input.png",
+      "file_size_bytes": 121384,
+      "sha256": "860efed2cf1de68add7d4042464880adc63ce69058a636d5d899caf96ad48508",
+      "sha512": "50c363561f8c54681923734f4c86c91b278b25aeab3564a6fd44b6589e9822580988fdc9b54a557c7e4dce682c4e09e73fff17a72f6b4189a908eee1832a3624",
+      "created_at": "2026-08-04T15:11:30.806754+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/encryption_time_vs_input.svg",
+      "file_size_bytes": 48137,
+      "sha256": "3be6e423041a4c9a7f5eea645d578597903f087c928db4c2f46273ec5f679492",
+      "sha512": "5fb0853c83cb566e3ff071f4c84dd4bf27790c367a805f092b2317ce04fb66172916704640ccaa6393c684acfdb825a799ac105b3d630e5ab558415ada0a151b",
+      "created_at": "2026-08-04T15:11:30.807903+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/entropy_distribution.pdf",
+      "file_size_bytes": 25139,
+      "sha256": "e2ebab612e28bf32df61d1cb9185da273e2b829f788ce95fdf29d258cf6a124f",
+      "sha512": "4ce9bc90873775c98a05287644e6b74e33217b1bf44b90a4f65c8543bee8d8696ff75705921fed925aea029450f4b8d1cc87ca4efb5a3c124d0d6b5d2a29a207",
+      "created_at": "2026-08-04T15:11:30.809027+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/entropy_distribution.png",
+      "file_size_bytes": 111630,
+      "sha256": "6595b0ae2bb3c008f78ef315af848dcb32d3fffefadab8797ad0f963bbb296b7",
+      "sha512": "5d5337f16d6c3a1b511aa33d6532f9a912a1210666330767250cfcdd2e1614f88d2d2a1434aac19c10ac7c9ab2dc08bdf75d87fb425fc1b1d68b6f9ce99e0807",
+      "created_at": "2026-08-04T15:11:30.810841+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/entropy_distribution.svg",
+      "file_size_bytes": 60610,
+      "sha256": "ec3d0fcf8aeb2def51dac64c3fbd53c4f8bbd64b8609ac9de4beff23515e5b48",
+      "sha512": "b0eb60d63b7621352a0d3982811ce7af91df6f339a2e97686d22e99f309c0dfbbc7b9ac8b5b97fc689dae27fe1c4702aad59b089c90dd65e9e365f3f1e461af3",
+      "created_at": "2026-08-04T15:11:30.811750+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/frequency_test.pdf",
+      "file_size_bytes": 25380,
+      "sha256": "45afffd7d4ed8cdac0a0245b62d60a4bd07855bdc52be27a794d47b3f40f638b",
+      "sha512": "6737cc25506b980d389b9e4b54a3ed1ce57634037053ebeb18171cbd2b01f0db8d32b70a60760f02d9d3aef20e9b703b55383039247630c4be014f7f627de4ce",
+      "created_at": "2026-08-04T15:11:30.812509+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/frequency_test.png",
+      "file_size_bytes": 231796,
+      "sha256": "2e0f9c2506f98a36bb1b8996955212383f330aa27120946c8a0e1b8fabd1bda9",
+      "sha512": "ffacccdd4c17c35c5b03d25557ae7c7bfeb091bcab48d3930a414bc9e448fc5d736ec04e3248edb4355c18e4b7a874146ac97377f8a0059026565de419907615",
+      "created_at": "2026-08-04T15:11:30.814307+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/frequency_test.svg",
+      "file_size_bytes": 62416,
+      "sha256": "789482db202ad3e3b1669ed9a96680d75cc246f763efb21ae7e6fac10d2618a0",
+      "sha512": "9a2df52b7606ed250d7dee22493e4b4e56704252fb99703655048479b970685be4949f2dd1ffb7df291c860ecf42a5e4db26f113693578ec9b2d38792e66b68a",
+      "created_at": "2026-08-04T15:11:30.815328+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/graph_manifest.md",
+      "file_size_bytes": 6782,
+      "sha256": "0ec02c2408627fff1eb81659b33d15c8c7af6b70a22c773e356b965357ce7b74",
+      "sha512": "70338a10252ce4ef227cdefa117e3541e2c1139d0aa9dc7cfa74dda9c13519ed718c2aaa86257e863239a7fdf6c016563e3606e79c08995927b284f2a748a6d7",
+      "created_at": "2026-08-04T15:11:30.816173+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/hamming_distance.pdf",
+      "file_size_bytes": 21911,
+      "sha256": "c9bc23b6f3eafac3a4214dc4e1f7ca1acb4b7896cdbdebbd7e683d0f0fd62d0c",
+      "sha512": "8cfa22b0241683a0e9350be1098c6d15b100935711db08d8d9c75854270c04e2fbc1a191edf46ce43795d0a654bb9d896306ba0ccf6e1ccdfe59e50d1e3e4ce5",
+      "created_at": "2026-08-04T15:11:30.816901+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/hamming_distance.png",
+      "file_size_bytes": 109535,
+      "sha256": "493bf6bc768b49b71cc7f6eea3a933b6e316116430480cc333a81c637d4f4f63",
+      "sha512": "a312172a3477670c4fd83b676e7a2ea83b5b93e9582d0bc91365114f1599cf57da1caf4ff26677f2d0e87c42331a76c6c6e1e8580479f2da8d8d5bede6b42984",
+      "created_at": "2026-08-04T15:11:30.818365+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/hamming_distance.svg",
+      "file_size_bytes": 51593,
+      "sha256": "cbe6f8734a79ace8af46ed5e7d388142c3f0575f99e6c8b859699ebbfed7d950",
+      "sha512": "b46e1d7061a096b7a92cd676665f905c67d44f758f281caeb5e5228a068985f2a08cdd1d35d24870372e598c2d4a7dd84f677046036bc5a29aa645e27e87cb2d",
+      "created_at": "2026-08-04T15:11:30.819461+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/linear_complexity.pdf",
+      "file_size_bytes": 24438,
+      "sha256": "70c1e774200c106839ab078a9463168af9bfe20785806f3429933723f0873265",
+      "sha512": "01ccbf62a62e1a45bfb217c26aff340254fce3acbf51340042e6d5516ef0ce557b184facaab6f99a2214fb4885c94e623fff7c9155f3af003e36bd100d58f279",
+      "created_at": "2026-08-04T15:11:30.820352+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/linear_complexity.png",
+      "file_size_bytes": 114219,
+      "sha256": "db6388bf6167c1c8cf8ad7f20c9ee67d8738e8c73c437a951a9d9648e3e92dba",
+      "sha512": "195ac360363b9588961257c9f5e7a57cd9363e496cb91e3b4f05e37c2370248e5d1c188555ac82b62a6461de12c85dd6a095ea517cdbb483b260f263ca68addc",
+      "created_at": "2026-08-04T15:11:30.821763+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/linear_complexity.svg",
+      "file_size_bytes": 58015,
+      "sha256": "d0a31af8169418b69ad986167b4da94ecd26357c6cdf1ab20840964ed2b14f98",
+      "sha512": "d97dfe2f84329cf265ab3fa1141a61b53a419daf357390c34c1279d121a3a620b6427ef59d3587da3179015ed72fdcbeded75772dc37a5a4d09a561feeb70319",
+      "created_at": "2026-08-04T15:11:30.822855+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/nist_results.pdf",
+      "file_size_bytes": 30276,
+      "sha256": "f280c766c7c04c1bd2f35e53cd4c47c4e367b35ff5ebe3a1ab479afa92964fc0",
+      "sha512": "c432d54d9dd0de7de807fbf63a92324eca4d62d19029484f05e24041a338942ecd5f51288e89931e715849119d793ea1de972351edc6db83fcdf7600795d53f6",
+      "created_at": "2026-08-04T15:11:30.823791+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/nist_results.png",
+      "file_size_bytes": 166553,
+      "sha256": "9a445dbdff9eb475a9fa760b16a782b61805d31ca7125c536f90e4fde9239547",
+      "sha512": "84f24f8933637bcdcbfff4b12ec86072d92ac2ef3f2a1060dd4e5b48925fc20908fcc9fb89f032eef26b39084d883288cedec1ba587f4a8a99ea5dab6f15312d",
+      "created_at": "2026-08-04T15:11:30.825465+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/nist_results.svg",
+      "file_size_bytes": 72907,
+      "sha256": "46c7d4b03bfcbe88b34956a658d88b355924789750b58d18d61af72285559097",
+      "sha512": "f32cc2b591262ec62829c34d11141a97d08977e1635ddcf1eab9f2f32f2d80ffa80f5cae0793fdfb1fe4365427e5bf237a7c4e12c79ac4eee87593288338ed4d",
+      "created_at": "2026-08-04T15:11:30.826455+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/pvalue_distribution.pdf",
+      "file_size_bytes": 24286,
+      "sha256": "2d813c9cc03553a361c48566b1ec287b51ed51e701824dfb525420296ef36cbe",
+      "sha512": "eae8a7ecfac8d53e9c55f5c3920a0d625aed2c53e34620d54fbfcf3c2edc350b985dcd3e06a880d05f84595d5ae2b6f6731805de7f4f5defc6ec664457239a0c",
+      "created_at": "2026-08-04T15:11:30.827139+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/pvalue_distribution.png",
+      "file_size_bytes": 112887,
+      "sha256": "9c948bc19b4508ed735c1c6a4eed79cd0cc93d90d8f4730ac77539aec9e03244",
+      "sha512": "2918149ee55b0ebf5767110fe4c30e946dd065a0141ff72eb9aceac1cf00ea21ccd6f6ae2de9f1a94cf0c683cdfa5f2577f648f4bb67e5a64ae4449ba3df64ff",
+      "created_at": "2026-08-04T15:11:30.828159+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/pvalue_distribution.svg",
+      "file_size_bytes": 53106,
+      "sha256": "f927817219a9fff6aea90b7889db2436fd80e68d779e98e1dcdc57a0a84b5060",
+      "sha512": "1f379ac161f788cd4eb90df2b3e2ddd702ad803830faad1a9a0136e5cd6a2cf25679310f2a859f33926fd82a17f3eec334a82e3fa852e4abbdccedaf8c0a0e2c",
+      "created_at": "2026-08-04T15:11:30.828963+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/randomness_distribution.pdf",
+      "file_size_bytes": 30240,
+      "sha256": "131e38c242f623f0dfc4c66af50a965e6f540659adf293a33be17967b71b6a13",
+      "sha512": "6deacee28e604e8230aee1cb7142668f7569ef3c022635ed5cf458e013eea8aa6b7a25933633a8e016e710040769b93f35e9208e1be676ff07ac4577f3c07230",
+      "created_at": "2026-08-04T15:11:30.829669+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/randomness_distribution.png",
+      "file_size_bytes": 104632,
+      "sha256": "0bfae96c664c26c3d7973572563fc7be13c7b50218dcbf9ae861b3068520e432",
+      "sha512": "62e2169e600e94c00f130241715e28948f003376439ba4bd9cfd618ba0df177cce4bc9d13abf13b90a5e061f6eee7cd324f7b1c88e004af3839ca65ac05ff93f",
+      "created_at": "2026-08-04T15:11:30.830840+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/randomness_distribution.svg",
+      "file_size_bytes": 105116,
+      "sha256": "e46cbd3b8bf9fdf21619df8b35e0ba8a21d3df77d72f9c43e50f9f78627a4262",
+      "sha512": "233af9279b29f12b34cc0cc604e3eaa3172367a58d9b6d04317c661b0b7f2a0b1e83f3786a3a68dd12ec6412a2bc1f1fcb74d9ef690f7933b770090fb2dda871",
+      "created_at": "2026-08-04T15:11:30.831864+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/README.md",
+      "file_size_bytes": 1476,
+      "sha256": "c95408dee5973813c692ef9f90a5c13169596e31262f03df6a06e768895cc53c",
+      "sha512": "ba87cefeffee31a4ab0fa3adc28b5cba5ab0079fd4724e13b98d39056bc365a9cf9ea632d4c0575bdfb88771ea073e475fad50a7ce209354f3edb2705b32d7ec",
+      "created_at": "2026-08-04T15:11:30.832549+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/resource_dashboard.pdf",
+      "file_size_bytes": 35269,
+      "sha256": "d72f36f4477b82b368e344f760171ee5073821b15a26a3ddaf370c2fa105eb54",
+      "sha512": "5d9e514a4ce802dea9275a133f919242fdf66c2ace01d459009e0d405de93dd55c537195db9f9669d05e7ad7bd5e56f9a6e2d08f74ef10b154d288f797f53664",
+      "created_at": "2026-08-04T15:11:30.833594+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/resource_dashboard.png",
+      "file_size_bytes": 327165,
+      "sha256": "b017e3f89c80d843b7237f721fab4741e4b18a7248c5d1d12fec69f58263f5f7",
+      "sha512": "b5bd26245ad48b5aa668a26c74c031514582efba18c6c87a2cc7f8a8ee4da54efb186e066ad0b21f6153e074c93118b74c2273160560d07b94de175bb4431ee0",
+      "created_at": "2026-08-04T15:11:30.835506+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/resource_dashboard.svg",
+      "file_size_bytes": 108865,
+      "sha256": "0f337f745933b1c8ca834cd00225010946d123e4f0622db60054b359776a3d04",
+      "sha512": "23d10aac6a8ac547fbfb4aa76ebe9044ce5dcd6185f63528cf13001ab48814a35b181f037cece31ae3fc4d61a3be5e340b385f7bae813db5104283ff577242a3",
+      "created_at": "2026-08-04T15:11:30.836533+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/runs_test.pdf",
+      "file_size_bytes": 20831,
+      "sha256": "d680c8602c7b08722de11414edc036b952e788a41cdec70ebd30c26d2149091d",
+      "sha512": "73a9132f4054a8b30705daa8f61d50a3564308c56ac12e34ad14eb2e57cb66abc490575909a66f40df6cca06284638eafe611445c5d2c72a212f80c44378608d",
+      "created_at": "2026-08-04T15:11:30.837228+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/runs_test.png",
+      "file_size_bytes": 161059,
+      "sha256": "d6dc12799f2a9752b4d0dc66e4d854c2f15e6eda60d4a8db9a051e5cac6be09d",
+      "sha512": "c5d30d71688b5bfc7db00c82f413d413dbe85bd2e98fb836ed1f8201e8c24f52c471922f0f293c6bd697f246dc53ea8c995e395c28f5a86a90bfbb18234953d8",
+      "created_at": "2026-08-04T15:11:30.838489+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/runs_test.svg",
+      "file_size_bytes": 55622,
+      "sha256": "b85884c445ca780a4cf6a17bd5aa53e3abf34ffe6cd657e8b5f6d7640c383785",
+      "sha512": "53cde2782118bd355a23361036b0f9c1f38567142ec5a8fa9c13d1d4c0e81d622f26a28089bb66c189efbf0416465de4d1530962affcb59b28b905ad61fd17ac",
+      "created_at": "2026-08-04T15:11:30.839305+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/serial_test.pdf",
+      "file_size_bytes": 15696,
+      "sha256": "f30ea4b948d3b0f50b4a26cd2d454f15aff7ebbbf2ce1264bc7b47d82fa847bc",
+      "sha512": "618a9869aec7f55585bae8ed3f7d4343d8af8d16c78040070b728537f73b62be9f8c0b68fbb4ab0983f766619295926e84c1e0d7d0f93aae2fe1573a77170316",
+      "created_at": "2026-08-04T15:11:30.839951+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/serial_test.png",
+      "file_size_bytes": 128715,
+      "sha256": "24f619b3627693887c89f1efe5d26141401b03f7f7bf3f5198513803458ae14f",
+      "sha512": "16c307ff1a99f9ce9f4ad5f7c8b523a195809de675d4196c789feeb03695e63330ab2f133b8e91e07cf0bc08b9deff2669f0688743894f79153c98ff19cb9159",
+      "created_at": "2026-08-04T15:11:30.841029+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/graphs/serial_test.svg",
+      "file_size_bytes": 41005,
+      "sha256": "40906428e478ad3bbd155dd785a9b31ea8a9cd5ae69f03ef44bcb1e8c699a0bc",
+      "sha512": "3365c7cdae955626cbfe996b34d4852f3df1424a087fbf54f8b5e455b8f21c5c442aad9700131b6e20c80de562813b15fd821a3d32c237deb6bf58d05e74705f",
+      "created_at": "2026-08-04T15:11:30.841846+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/manual/build_manual.py",
+      "file_size_bytes": 11284,
+      "sha256": "b855b582c0f719326a0d076a01f273039db48bd46811555a90fee6093673b274",
+      "sha512": "1aa61221fc6837fd93c8f2e44bae78168f3b392e08451b51f88090cefd1f6ad688f34e134d7f17e2805a68b0c7bd0ecfac1e1d1f55729edc497932ec2bce69d6",
+      "created_at": "2026-08-04T15:11:30.845931+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/manual/configuration_guide.md",
+      "file_size_bytes": 1838,
+      "sha256": "690f0c94720e6c447a45006124c7536301893dc884beab04713eea1b167f2d2d",
+      "sha512": "0e177f2a7b480bef44851cd2f8682e44c69bfc5ebc28c6f2bcf764650997157a2a058d15fa9472555338da16e7ab8a5bcbf9c362246cda4bf8b95019c91ff925",
+      "created_at": "2026-08-04T15:11:30.846650+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/manual/faq.md",
+      "file_size_bytes": 1850,
+      "sha256": "f31e253db706d00f8a0b4abace8d5b95e54f5c1ff7548089732b3a9cfcb9fa89",
+      "sha512": "27c33bb1e675e044da4aa8aa7a5c612c7b70752e69cd78eab1530f5f4d7a7e18ec228b59b89ffd7bd67d9ef9984996bcb06313a7e6d4eb1e61b32cd0e4ccd44d",
+      "created_at": "2026-08-04T15:11:30.847488+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/manual/installation_guide.md",
+      "file_size_bytes": 1363,
+      "sha256": "3111753ea0780e56c20dc505bdc497800da5d35dc743fa4d78cd451f4806bcbc",
+      "sha512": "140b30aea7bab224d2d05aba9b61926c34f7aa9259167745de6b31796e1a99fa9c08088081735051e710cc4112fcd93e5ca94193591d7cbd867e4a1ac003ae74",
+      "created_at": "2026-08-04T15:11:30.848398+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/manual/manual_manifest.md",
+      "file_size_bytes": 1232,
+      "sha256": "3317b1f3304cbe2f76b2b7d04a9ea312e24a36d13f7fe90c5059b2e620dae050",
+      "sha512": "56eb68e053f51404bfe25d09667b08dcb3469de91a277d34d44ce7d3cebb8525ac67501c6034cd3162f48d255d2aa1cbe9a7ce0f8c93ac6e2e6dbb412f5bc96d",
+      "created_at": "2026-08-04T15:11:30.849333+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/manual/manual_validation_report.json",
+      "file_size_bytes": 747,
+      "sha256": "c3c9ccc4143e9b398dd3dbf0f0f05a9b8b563d8ef59059f14e63609d2ffd1d18",
+      "sha512": "ef84d148280d90af7a40a54f907fe9f699d66823918b51e5bdda21f373ff4e3a341576c9f0d8d4c045841a6c323dadf8d209f99ecf0da06bc4d060f22808a7b9",
+      "created_at": "2026-08-04T15:11:30.850142+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/manual/operations_guide.md",
+      "file_size_bytes": 1980,
+      "sha256": "6da12fabbe3f58eebd8c56f6e64347ad75a0b485538da61cda6df83bdf00cd51",
+      "sha512": "be88fe01c3b7d9356d92e49bf12eb64ffb3c0b0967311d6dc46d32dd073c35f4c926d6d5cea9a836622e74ff2236959c6529c48034bcb84b8cf9186d6ddc9949",
+      "created_at": "2026-08-04T15:11:30.850945+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/manual/quick_reference.md",
+      "file_size_bytes": 1622,
+      "sha256": "ab89ea99d737c912862de67e530c1eea7dee302b293993bd3f23e536eb2f38bb",
+      "sha512": "9a513b76878f3fe3d31f47dbbdf83b8125d03c732bdc1c356a963b3540d8e8d57e8668824edeffb4de5f74606a84d926c163de9ff946c0686e1ffcc9dfd66c1c",
+      "created_at": "2026-08-04T15:11:30.851717+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/manual/README.md",
+      "file_size_bytes": 667,
+      "sha256": "82b699b3e155de82d058fb586033c3b1c26042645177c8f4eb3dedcc1e08a7b2",
+      "sha512": "e3c41e8c137ca020c2215aa139e0feda2f7e052a482ef6b11e05764464fa43c0d36ae43311278c5dd4829160825c1f72cbf02e8a440798d1e98f0f3b44717977",
+      "created_at": "2026-08-04T15:11:30.852483+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/manual/troubleshooting.md",
+      "file_size_bytes": 1321,
+      "sha256": "175390538316f16b50d0b17c5aafb019f9d400aef3740f523693ec09b7208157",
+      "sha512": "ac4f1ebd98d30c78f410e11ae632ec7f2d0de5ffec79f38f13d8286d9736571ebee7e492194907ed7bf3866037641ad87e7e0140cb69c6a3963270c2351b81b0",
+      "created_at": "2026-08-04T15:11:30.853150+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/manual/user_manual.html",
+      "file_size_bytes": 4029,
+      "sha256": "a1178aa9e8fa4137ae1d1e1ffbaa28d0b814b5165626e1a25de122918fe6062d",
+      "sha512": "f4615085ef28d43502764ec810c2ea46d22f02a50e36a0c77d7d4c90990a0c1c76f1912d9d2765d6c840bad690ac8ceec70aacf05c742b1b51efb2eb19da3aab",
+      "created_at": "2026-08-04T15:11:30.853745+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/manual/user_manual.md",
+      "file_size_bytes": 2777,
+      "sha256": "358e974ca4f51a58f79eb04f6d0189a0f8d3db92b7dca54253ffa1df483125c3",
+      "sha512": "dce949d16062659682d72225e49e453d32cc21186447f35dfbadf87bbb673b8dc0fa7892bc36fcc5c9686f3d79ec8d210ee35bd88141d2365507fbf61c7e7a45",
+      "created_at": "2026-08-04T15:11:30.854378+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/manual/user_manual.pdf",
+      "file_size_bytes": 2474,
+      "sha256": "7751137050f8a86bad69e4c890ad5e56a8ee6dfaeb71dd6a41d5d61dd010c665",
+      "sha512": "edbcb9b089d2f2ab77c1977b93f074005bc0abdfbb63f48e5e5ac669adabd004b91c18f6ae81c88c1f0c9d549eaa35175f82de7828e43fdef37d8d17c4c1ace9",
+      "created_at": "2026-08-04T15:11:30.854966+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/phase3/benchmark_framework.md",
+      "file_size_bytes": 4633,
+      "sha256": "f2f41d46184ee77d392f7643b15ef6a6e86e06d8736e7309db1f66a680f31c60",
+      "sha512": "8ec788a28502d608e94d655222e2107b5b77ada6b1bf3e4ed0b5de9bc61c184885731ecae3384093080f7ae6c6e5d765281779f126c066b734c0a75eb8029f8f",
+      "created_at": "2026-08-04T15:11:30.855878+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/phase3/formal_verification.md",
+      "file_size_bytes": 6962,
+      "sha256": "4a5af5caa9f1b35161069a401442fec2068f6db4c7c6194e2208f9ae8341acb6",
+      "sha512": "593fcd4201b3e7a5dfae3c90d5da64cca3f6e22f313b5d527e0d1fbedb57bd3d4e4c9edef168e2d51e9aa097a5941a8517efe2ff8e06a09994055e7203ee0c9b",
+      "created_at": "2026-08-04T15:11:30.856522+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/phase3/future_work.md",
+      "file_size_bytes": 4366,
+      "sha256": "4755fef3bbcc6f4dd06f95e966ebd70d29d1fa0685c9003835d1f59b35f8a126",
+      "sha512": "bdc2c2daada4cf0bd0d24e0136d08c71e5258b665c4513cd8a6c69555e06edb14355f20eae7246687b7daa735e41150cca2cc191b6933f1c2e102a45af5d5830",
+      "created_at": "2026-08-04T15:11:30.857157+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/phase3/ieee_security_documentation.md",
+      "file_size_bytes": 5140,
+      "sha256": "b5b91fc580c67c16e649af9eda00716af7bd6bd2fc91536542c774a868d894cb",
+      "sha512": "64db73ae92821bd4d241e56da8eebf128092c79787b69c5fc8347a70a487472a5a2d2e98cc2462133d0b183db1eac8cad49805b089379f1377ee91120893c89a",
+      "created_at": "2026-08-04T15:11:30.858021+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/phase3/nist_compliance.md",
+      "file_size_bytes": 3757,
+      "sha256": "d5d27d608da7cb351785cf961b83c6efe78de7351f386fdefabe4f7f818738ca",
+      "sha512": "bab08d58bda7b0660c6954ae86c48b7aeb75044894e2d17e9f1c425d67082dd648f51d566713dbc6b5d899cb2e9d923fcf15c74f421c7eced887317a7fb06a87",
+      "created_at": "2026-08-04T15:11:30.858661+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/phase3/owasp_compliance.md",
+      "file_size_bytes": 3051,
+      "sha256": "e7678d83199450cdf5e810b0f320d4c4e0e762f38297e526c8f6a353e2cfcc14",
+      "sha512": "16d09d9f87f228ab24d6a51c900c0c5a5c3ee576cef4273ef89dd3355f9dd66c1fc4a26d6ac654ba50a8f8823fd5415c774a80c2f9c122190c4a3ab6d657d80a",
+      "created_at": "2026-08-04T15:11:30.859290+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/phase3/performance.md",
+      "file_size_bytes": 4240,
+      "sha256": "3ab922fd1a8ae147e0c979cad2af8836ba2dcc4ce820abba2d191d86846e4272",
+      "sha512": "145529a583fc9be8242ba73a81a7a4c060eeefe648103701a6ff574ffe88cc8e8c7ba4cbaaaaea317cddb73bb3b4acbba214de25edf78991630156e528adddea",
+      "created_at": "2026-08-04T15:11:30.859955+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/phase3/reproducibility_review.md",
+      "file_size_bytes": 3355,
+      "sha256": "82eb4d4a24434bd8940440faeeadcdd1280d8e567a31090bd6539d70fa87f9e6",
+      "sha512": "b8673981a7375c628135a4c74ea8c3a41fba1f57f522b9cd0aaa26b83c6e2d7c12b4225d267dbb0da7ac5ca5f3676594da2c1c2ad1cba25c7d270ad93933bda3",
+      "created_at": "2026-08-04T15:11:30.860582+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/phase3/rfc_aead_compliance.md",
+      "file_size_bytes": 3225,
+      "sha256": "d0d0dafc513e68e854c41fb90fccd22e06fac1962f647684e8f311cb3ae5dc9f",
+      "sha512": "e7d903193138d732fa8ccb8c49cafd8b878aabe9491d963232708932023db7684b1ad09769ed5bd2e92592dab699d7cb892b7f77fd5ba12195de6db12acf78a2",
+      "created_at": "2026-08-04T15:11:30.861204+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/phase3/security_assumptions.md",
+      "file_size_bytes": 4741,
+      "sha256": "cfef36c3312e9ed675f22dcf2eab2ab6d38bcc4fc285b7f6faed5d76586aa706",
+      "sha512": "955b69e511a728cd32e44dce9c0f88b79774a033a14bd5ca8353f5a01746eddc846171be156ded5a1ab78c80f8ed6f73d559ff00569b0cfabfcfb4c5dfc2189b",
+      "created_at": "2026-08-04T15:11:30.861825+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/phase3/security_compliance_matrix.md",
+      "file_size_bytes": 2615,
+      "sha256": "2bb1b83b0b738344c76cdecfe28b3c5872174bb2110d233bca7333ef1bf88138",
+      "sha512": "db757adfca74e03f43b3bde526c910e8a50d3bb163d2fff879d26e806870a85d17c26a89d4fb1640c2c922894a0e6c8b3f73de83b0608f265edbf73607294195",
+      "created_at": "2026-08-04T15:11:30.862458+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/phase3/security_evaluation.md",
+      "file_size_bytes": 11437,
+      "sha256": "0ecb46e5e944d14f7689af3864e28f18f39e770e430d8702ee820607f5c4d2a7",
+      "sha512": "246e0875febce91b617c317a5faf174094c3dce865b4fa5531b8b4abfca83b130dec83b5ebae51c201089772cbe426b6f69792d529721346f99679131dead7c5",
+      "created_at": "2026-08-04T15:11:30.863365+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/phase3/statistical_validation.md",
+      "file_size_bytes": 3908,
+      "sha256": "6acf13d29d6c90b57452fe4c0962ff4de800495cd59393b59bb1dd66a067dac4",
+      "sha512": "933b9e219a8a347ea2f044bee15922f98e2aaf05c94b9962582383bbdfbf7c784b4006fd42496476cd39b9e705e603ebf0108cc923fc7f3f0806234318203caf",
+      "created_at": "2026-08-04T15:11:30.864575+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/phase3/threat_model.md",
+      "file_size_bytes": 6674,
+      "sha256": "8ece0784525da9b2954db7a3d416c4ada71b18b3117eeefda4fb5156a573b611",
+      "sha512": "d016975a84ebfc35d10fe2163c5b7130791e47789ef9cf5217122b0d84a917f6c1462c2c2c361894adb7d98a127a7adf8473aca01e2fa3d35501ad7e57878d2b",
+      "created_at": "2026-08-04T15:11:30.865518+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/phase3/vulnerability_assessment.md",
+      "file_size_bytes": 4513,
+      "sha256": "fbee1ed88a5d909729d16c35f7ab63b83feba46aeb1106bc07128eceddb56b38",
+      "sha512": "a0d39d84a2db9c2bb7903fb81d5332d41d567149f84c73e31fe651ccd86f8ae532e89069c83e41ce10d88cb6820aa36fd43243a2c2701ce96268c91f8dc079b5",
+      "created_at": "2026-08-04T15:11:30.866412+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/phase4/final_evaluation.md",
+      "file_size_bytes": 5333,
+      "sha256": "22be7c77a9c3ea0ed6463bb9f83ba03e137dd5a89a71fe4736e6987cb184331f",
+      "sha512": "d3171fda89afc960c367eba446ec47e4aea5f43411ae83d2e050628d47b92fdb76585eef3059e3b7d03e10eeaa21a5770aaa56f32af02105de6e41ad3a36af09",
+      "created_at": "2026-08-04T15:11:30.867743+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/phase4/publication_release.md",
+      "file_size_bytes": 4367,
+      "sha256": "f3cf5d50c5bc4ef2c66a6914d7444fcdd290feb3e95978b9cbb8dd18193e6e79",
+      "sha512": "76540d03769c906147348487db24544b193f5a42618269955e7456a819693c9eca9d4acacda45b3fadaada90f5a22649309d8a2fb7cb4bcfbb3135a00682320c",
+      "created_at": "2026-08-04T15:11:30.868703+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/phase4/system_integration.md",
+      "file_size_bytes": 6200,
+      "sha256": "047e8de9a6354b5a10fcf5911c0e76ebc0d66471818e066fd53f1cce724b918f",
+      "sha512": "c96acaea69cb1b8278880147afe2ba7c8581d6b34722751f832b2995d7b73719f01cbfeaa5e091949b9ca2d29ce21f49404d3f3101989a9948a9acf1d971681b",
+      "created_at": "2026-08-04T15:11:30.869597+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/release/cross_reference_report.json",
+      "file_size_bytes": 240,
+      "sha256": "1ba6c202f79d29e09a1a1b3a8f90449b321eba4d51461912aa99e49c441e84a5",
+      "sha512": "e88ad25477c2f2de6f20fbb71df6207c714949de1bada20e34a1f72f7b3e9c755d45cdfa12955704df9e197eb6281f1f02b54ea496b6676e8cc17dccadba1d66",
+      "created_at": "2026-08-04T15:11:30.870762+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/release/documentation_audit.md",
+      "file_size_bytes": 574,
+      "sha256": "5cd55e3d556d0a06087784941437c7b012168e099a781d17b861e8a0d0926cdf",
+      "sha512": "5c8fd489861dcbdf3f565f9aba7f61eb0b12cd7406a85d2307a96ea69d4839f1880bb7121107c1ecfed60c8d003e0a0e06cc046049f57d41bf076832a32b9541",
+      "created_at": "2026-08-04T15:11:30.871639+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/release/documentation_sync_report.json",
+      "file_size_bytes": 441,
+      "sha256": "b4449017358621588efe53d1f17499d2b95b33f2b445134d54c766e1871efe19",
+      "sha512": "3fd00fb3eece428bd71406f3c629fdf74ffab8713048f0e65f65024e3a4891d1e9e7bebd9d5ae4f5f12425e3e5a779bf8524737dfeeb068fca857eb99845ed5a",
+      "created_at": "2026-08-04T15:11:30.872385+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/release/final_project_report.md",
+      "file_size_bytes": 796,
+      "sha256": "d5bad4a9e335b5adcba987288c3bdaefa48f179c5e0429d7735b673a03793177",
+      "sha512": "4df0cd97d5af31a1f80469f2e7d45493a7c5937c6009d42d015c42f6767dc5e590628a61a4319d443a51be9a0180b1dbae40b03ff45f426c8e69c7e48334b49d",
+      "created_at": "2026-08-04T15:11:30.873022+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/release/final_validation_report.json",
+      "file_size_bytes": 519,
+      "sha256": "e1d54f534420ecdba165d6bf3ab61a5cc4d5a5d7237daa8c0e4a93aa27761a2c",
+      "sha512": "b499fc385d886cd85938eb564c341b56294e4e8a16a337343a17014202ed67924110b25552181ab359b9b4c5b233c4ca8bd0275fdf44e9a4381eeeebe07b2f81",
+      "created_at": "2026-08-04T15:11:30.873642+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/release/license_audit.md",
+      "file_size_bytes": 417,
+      "sha256": "e78fd52b8ce9148fe04abf6b7cd9666c70ca1fdc84c860f45a12e8ae4b84e62e",
+      "sha512": "7a1dfecfb55cd0e71bcf440f5bbf7947638af54883e0d83f441f5de0996bf15a224158470bd3de722128607ab8feb4bfc66ad4f64768eea5c91896b6102a1966",
+      "created_at": "2026-08-04T15:11:30.874264+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/release/publication_readiness.md",
+      "file_size_bytes": 1457,
+      "sha256": "73f9dced78160f535c35eefa9ad74077d94a927ed888a6eb9cfdc8ff2c8fa39e",
+      "sha512": "9f4d4abf291ebefe411d73263c3bb14bb81c302967f1e5bed2fd0d278e8ebe625bab79ae2470defb18f2bcdabb7b49d9d17d740ab7c08d2b5b59c46ff665d3e3",
+      "created_at": "2026-08-04T15:11:30.874885+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/release/README.md",
+      "file_size_bytes": 258,
+      "sha256": "7fa1ea01d60de486caaf4a4d4c68fe7abd844203efda57bd3e10db0026492843",
+      "sha512": "99fae75b84e0113488d9cb9a22b8b10506f7dabde7ae2684aa75b378b541d8c893995d29f1b1513aefff7f1554d2a431b4a72cf8125991a3cde3ae381569dbc8",
+      "created_at": "2026-08-04T15:11:30.875503+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/release/release_manifest.md",
+      "file_size_bytes": 1027,
+      "sha256": "b489d77c5d31d2861515424ec22a226fce2f79ddf4e026f51105e52ecde6d7e4",
+      "sha512": "052f39e087a5de47463de5cc4380240f28d43858d6cf3f2a6af702e7d699918ee6d78166d8eb7b1805755afffdc4c18f3cbed7f44d2fb6b17f03a6499735cd7a",
+      "created_at": "2026-08-04T15:11:30.876129+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/release/repository_audit.md",
+      "file_size_bytes": 243,
+      "sha256": "201de583affb3bf70a773fc505c2d608499edf3509ec777aad587c8ea727f8e6",
+      "sha512": "935f68cca1a8ad092e3dfb4d86922bbc3673ef41c9e27bdc411bdea66d9c62b6ef2d977a7ecfa72548ab138e708b787d37fb8570181bb1c96fc99dc64f5b4d9d",
+      "created_at": "2026-08-04T15:11:30.876742+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/release/reproducibility_report.md",
+      "file_size_bytes": 781,
+      "sha256": "a0ac7fd89dd11f57a2a9538e7cc186b68d6ce281885f88189c5b8fc2efe914db",
+      "sha512": "fab86480f016d9bd4011006ea7bfc1847e8de1433b8097c916c7927fde28d143aebcdf2be5c0112b030d6608027b721601bcfed6ac03851fbbebbd06eb53a4f7",
+      "created_at": "2026-08-04T15:11:30.877356+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/research/algorithm_evolution_log.md",
+      "file_size_bytes": 2531,
+      "sha256": "98354c1905955cd7efed1df6a988b7120ad6919738fc2cd124a7b953bc081a43",
+      "sha512": "b0b8c191b405f878239cc7dda3f23203c618ac3f727f2ac9427a57d4627ebfecab1e49ca3880bf1b79567cf0246dd2c9e4394080c18c852f32dbca0d6d31e260",
+      "created_at": "2026-08-04T15:11:30.878258+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/research/ieee_cryptographic_audit.md",
+      "file_size_bytes": 15541,
+      "sha256": "a6c308a15d5909f51d9a0d72fd29c6ffec6d1de79a95fcc15ab6bcb5713fa598",
+      "sha512": "54ab00f2a73b1d08477578b3f30820e7ba6ac1f8a0a8cf01141d17d7a33f86e04929fb5bdbc10de2b1f25b0f5a53ce1bf9b922c0c82aad412923666206fcb8c3",
+      "created_at": "2026-08-04T15:11:30.878980+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/research/ieee_paper_draft.md",
+      "file_size_bytes": 14995,
+      "sha256": "c7dc36d1d640d65ade8cfa68fdd82b91e46cf84f993e6bc596317c715dcbc727",
+      "sha512": "438d943ec6f21a6d83d11d96346e5d7d431fa3db8eaef40a5a42439b334762deba2874ab547c836c7884a4806b5caed68821e0243b200f7fc5919ad182143585",
+      "created_at": "2026-08-04T15:11:30.879837+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/research/ieee_paper_draft_phase2_6.md",
+      "file_size_bytes": 5874,
+      "sha256": "7985e912e457b2f3e977d1e7377c3ba695f8c583daa657bcdd6f9a95dc65dfd8",
+      "sha512": "9b732dcb8c1983f112104f595f029e4d224ee38ac81078e16d3862f39178fa952ab46cc27cb0d0684b926638372638b57e35be58fbb9036062be013a8f1590ba",
+      "created_at": "2026-08-04T15:11:30.880721+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/research/ieee_peer_review_audit.md",
+      "file_size_bytes": 25484,
+      "sha256": "c5223411068a0ca640cd25b5cd998daea43640c5d6559cf6b1289026127a1b36",
+      "sha512": "b8577b19c95ded25be550160438ef23531930067148148179ff51ba2c151fbbbbf02660fe6913d2066f51fde4936716f75c419b4f14cef391fd654ad075721bc",
+      "created_at": "2026-08-04T15:11:30.881780+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/research/ieee_research_contribution.md",
+      "file_size_bytes": 19320,
+      "sha256": "a507adc393846a1d00d015d2b5df9b267c824cb0a0c3cf895cf4217f9d4fad4b",
+      "sha512": "e021d8620aee5a31dfe016da0cb6a841af5652f2a0a17aae6fdfc1ae3497894b49c868a938b578e4f88a2629b1fd787e6080620ecff0b268546fb9ff1b2cede8",
+      "created_at": "2026-08-04T15:11:30.882747+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/research/implementation_design_specification.md",
+      "file_size_bytes": 15504,
+      "sha256": "e9314e80c97d25340b7027e695c4a3eb8455f27bd1f1193d40e5580973970ea5",
+      "sha512": "9aea92bc4b3d421459750511e0808d0d68321a771368ce95cf4967ee2f2c5bfa64a5aba54d8c1ae6f9f9a9b506ff420978c8b47e300fdf62ebaeace067125a18",
+      "created_at": "2026-08-04T15:11:30.883736+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/research/limitations_and_discussion.md",
+      "file_size_bytes": 4476,
+      "sha256": "5746aece64252e233ed07dfa47deb4240775585fabf9424b50932d58a6bb25fa",
+      "sha512": "7a334ffef36d5681fbabaff1376a4de2b923aaeab83bb7ed8e8e3a7509daae5f26a849060bba01cfa53756eb69e4cdff05e34d9aee3b498cc63d1e0546d1e4e1",
+      "created_at": "2026-08-04T15:11:30.884620+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/research/phase_4_cryptographic_validation_report.md",
+      "file_size_bytes": 3569,
+      "sha256": "7751be82523397ec859c6089b8e44db8fc802db1b2d9f84e949d7a3e267e1796",
+      "sha512": "00caf5de4dc027b2d945d7e73e56a3e3d41b26cbe30e1b74bd21b77e5781d9ed0004078319c7bc9fd417051ce43296e5b3fcb991e30b36a606da008d0e576ebe",
+      "created_at": "2026-08-04T15:11:30.885488+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/research/phase_5_comparative_performance_report.md",
+      "file_size_bytes": 3552,
+      "sha256": "d55a6e40fad7a6cd483264e4878c877abff4e5d867fea427891c78723851d8b9",
+      "sha512": "5c3c0ba7cac9055748ecebae8ed7a4574d7c3f882b3308ead6abf020c422f750bfa0b43b12adb5c30b238e14711c14e42248e4c228d8c6eb3578f55f69306c3f",
+      "created_at": "2026-08-04T15:11:30.886340+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/research/project_governance_and_execution_plan.md",
+      "file_size_bytes": 5126,
+      "sha256": "b10f5137e9b28bb4dceeecc9877062e5e8a98f9540d60e8121509075455d227d",
+      "sha512": "93eb3d046126cf6638e9bfec56e16f0e8e79421a66eca8c37243d5f7cc3e91537f8d917cddc0a3db6c4d3342fa1a1007efef8417dbf00a33b8ef8e6bc79c5dae",
+      "created_at": "2026-08-04T15:11:30.887203+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/research/PROJECT_MASTER_DOCUMENT.md",
+      "file_size_bytes": 14499,
+      "sha256": "85558048daed4718eea6204f8376d7dc717f16589b9da968e05706cbbb6b02cd",
+      "sha512": "a3052c7fc1bd6c699bfd2a3e2653621274e0476b73b754dafdee138b6ea59d03cbf5df09a419f50941706149f51a7318b1b305dad36abdad492512a5484542c8",
+      "created_at": "2026-08-04T15:11:30.888105+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/research/reproducibility_manifest.md",
+      "file_size_bytes": 2687,
+      "sha256": "60cdc9db541b5c122d8c0fcee9d0d3c3e680006fab805f6a682fa7aea8fa99a6",
+      "sha512": "97dc1d7bf87251bcc73fae8679066793506f548e25bcdefc4aa483d0570b49eaa810d1e11a46b2d5d80cafcae86fa9f1f0745fefafb8dfc922e59b981ab1c54f",
+      "created_at": "2026-08-04T15:11:30.888935+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/research/slr_verification_and_validation.md",
+      "file_size_bytes": 11984,
+      "sha256": "753b40d870a3677ad730f9f06624b31b19d9422ada64f618942efd725fe06ca0",
+      "sha512": "1d2a4cad14191b995593633b59966eff52956ff02edf59910d3f604df99e4b04d178952ac109a16bf18319a297d7081604a4ec1494a6eee4f8b77aa05d46d281",
+      "created_at": "2026-08-04T15:11:30.889834+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/research/systematic_literature_review.md",
+      "file_size_bytes": 15153,
+      "sha256": "67ba70df86c48a5fc39f9dc9814b6574d4a18a8620ef9d817989046f95c1fa24",
+      "sha512": "a71d4415944ba89e026547b6f02e8074b2b48990895e02f6c8ec8947acd5bcbc98a2de2a6036f6f42d2ce17b8486f41c811b1eabc4cce423b3d5f668a8ab6808",
+      "created_at": "2026-08-04T15:11:30.890760+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/research/threats_to_validity.md",
+      "file_size_bytes": 2864,
+      "sha256": "f54c1fabee7f99398056f196052afab4e368958dca1e1274468197808c3f8bda",
+      "sha512": "24ad665fe290b1c5fa3c97e29442074ba640cb482bb0b15f0247fc1ea7ca2b0aa94de39070db975cf70169992b4e02887cdc356237f10d99906881a344388b9a",
+      "created_at": "2026-08-04T15:11:30.891584+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/research/threat_model.md",
+      "file_size_bytes": 3554,
+      "sha256": "7eaec97be4ba7b5fb0d889c736533fe512bcf9d0720a8774684e7661f79a61ce",
+      "sha512": "f76679ea0b74d60dd83b5b1031c06a4bc07abcb87547f314ef4417593ca17287d4d55601c9589399a6c4c7626319f8b7a2ea1bd89018689c5c603ad07a47a5a3",
+      "created_at": "2026-08-04T15:11:30.892415+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/sprints/sprint_1_1/completion_report.md",
+      "file_size_bytes": 4436,
+      "sha256": "22c0978a9f377375a6195c90bcbd2b965637f2220335fcb2f058dcf7325f1b42",
+      "sha512": "e2813769988dfb825fd4a787833730649ff58ac725ac15ffe84cf2ab452053e2fbf55e21412c0fad9e1fb218c3fdf5f89372ed8c72a54a51425b60b4bf81b69c",
+      "created_at": "2026-08-04T15:11:30.894455+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/sprints/sprint_1_1/review_notes.md",
+      "file_size_bytes": 2185,
+      "sha256": "82175572c35696d7c8ec91fef4ac119fa22864d848f445748c29b7bec634dbe4",
+      "sha512": "5ae2472e5a8015fb9c15e7e07bb535731fb5583fb994fd4e0daa1d8e575497d57459cbb936284ec687443021a73a0d00a8d1b27d328443c0b42fa42eee7d38de",
+      "created_at": "2026-08-04T15:11:30.895275+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/sprints/sprint_1_1/work_package.md",
+      "file_size_bytes": 12188,
+      "sha256": "fc16ed42f2fd2643f9361d40dc1cae044f61c3bac6e2f32a24a75ccbf498743c",
+      "sha512": "7c3af085b6b2a4c24157641d700948702379ef59bd7f096a4e3a21b1c8946c221742bac554e19048a049b62e73381be123e4bc9eac35cf3eaddea8c28501cab8",
+      "created_at": "2026-08-04T15:11:30.896266+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/sprints/sprint_1_2/completion_report.md",
+      "file_size_bytes": 2381,
+      "sha256": "02ff9409be2f2fdd9d4cfcca5896aec669bbfa8a860aaad9e232de224c7b9889",
+      "sha512": "5122973e3454e28f29f8f255e11b2a0d5559555585fde29b1762fe7e2c282e5706bb5a82b7ebbeb285a1a8914caff2d1923b21b231269482e0fa508f2c06db39",
+      "created_at": "2026-08-04T15:11:30.897624+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/sprints/sprint_1_2/work_package.md",
+      "file_size_bytes": 10755,
+      "sha256": "c5b954a8c9c0f78192219063e7bc6b5ecbd9a873fca76de53ef32620d1fd63cc",
+      "sha512": "22afb65eeb97bb4c86ad526f63ae04e69b413407898d7aa63b0f56f2df3db006c78b8d44cfe315341a0b148528cdf41f49b01b9e8ba69cf724266872d7e2ffc1",
+      "created_at": "2026-08-04T15:11:30.898543+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/sprints/sprint_2_1/completion_report.md",
+      "file_size_bytes": 3100,
+      "sha256": "363f32256169ff7cc54b4d9e7a6c45e52b27d5811c144084331e03ccb4fe83d4",
+      "sha512": "d1e8b0043ba097348717171526e810968d75b0ac5d8fd3b98a7328e51348f9b3236e5669cc9bd01c581f7c939d8b5966262f10cb9e97331bb926688b357fa37d",
+      "created_at": "2026-08-04T15:11:30.899762+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/sprints/sprint_2_1/selection_report.md",
+      "file_size_bytes": 4892,
+      "sha256": "173f7e27129009d970882103a3627a66f5ffc07d61577b0ae71636fd9bf277e2",
+      "sha512": "9fb61fa1c043dc4db2d980087257471fc54b780d1fbb03c8a42a037719074e25a65be4fa9b89f4d9a0b8ff1f47d41c11062701874e6c044e934a944c480f5d6b",
+      "created_at": "2026-08-04T15:11:30.900641+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/sprints/sprint_2_1/work_package.md",
+      "file_size_bytes": 9740,
+      "sha256": "af88dda08f9d754a28fef4c255e7807bfad69ce8f076fda693b22ed10ba3b5c8",
+      "sha512": "2f338e50b9de901698e92bb95cdb2f41e3b11a7f48323d7a41a34d7129d9d53af90facf09245b808c67120082d630dd4210b872074d550c9663c513be34b1be5",
+      "created_at": "2026-08-04T15:11:30.901694+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/sprints/sprint_3_1/completion_report.md",
+      "file_size_bytes": 3818,
+      "sha256": "9129e933a486378ab97d6f927ce5e4f5cf762d7ee7446f0a6518df41ba1f0081",
+      "sha512": "ed1cb03c55714dde9a0159a3dcc9f26fdde417e38e6ebd89644afea6eebb90ce037abce12f3651c8db87d0b4a2de570dd3bdcadb53d829b31458bad3c963dfe1",
+      "created_at": "2026-08-04T15:11:30.902784+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "docs/sprints/sprint_7/completion_report.md",
+      "file_size_bytes": 2873,
+      "sha256": "d1260b5c1be7915df4777e378f81ee8f172ffaa107f19ca150866d9808e34b7c",
+      "sha512": "1f8abd300a3978c5af6da02d2b4755e6f8b48c859a84a27cf6cd247a53ceaabe9201b110b1df2cf97d10a1ccfd7658dc6d3568c8d3710fb2b9d6848dd3092646",
+      "created_at": "2026-08-04T15:11:30.903858+00:00",
+      "version": "1.0.0",
+      "category": "docs"
+    },
+    {
+      "relative_path": "evaluation_results/csv/benchmark_metrics.csv",
+      "file_size_bytes": 284,
+      "sha256": "425469c0b37dbabcfd261314556401ac1d54aca1762b5da061b56d2c30e5a89e",
+      "sha512": "3552111b55ea8e6927c558eb6478d01540b177eabb18146b2ccac819826f5e49ca9816886a75f3107bf1321e4ef32856ddea27a269a91bb0a2f0ad2c8e1a02ad",
+      "created_at": "2026-08-04T15:11:30.906483+00:00",
+      "version": "1.0.0",
+      "category": "evaluation_results"
+    },
+    {
+      "relative_path": "evaluation_results/json/evaluation_summary.json",
+      "file_size_bytes": 113348,
+      "sha256": "2ea340b89b9fcb04300abde533b4a9b900d55a991d5164ba8a48bb9e1b4c9a5e",
+      "sha512": "8b02e5ea9599ffd8f2432b8968c138ea1508125744c5326ec405f2cfec5e3f91f183d54958764ba606eb537fc970e6959afad2802857840cce43a4fc039fa5ef",
+      "created_at": "2026-08-04T15:11:30.908128+00:00",
+      "version": "1.0.0",
+      "category": "evaluation_results"
+    },
+    {
+      "relative_path": "evaluation_results/latex/ieee_performance_table.tex",
+      "file_size_bytes": 570,
+      "sha256": "159bf483d604e057f2e8f4ed6a07009f2be21a6e5b9de647c7bfaab8c9f39c38",
+      "sha512": "d48a239209bbcf97f2df8463f3bc3851c834eab25c0315d4a8cd3038c1d36ddcfa663383e0f38cc2353c3b65a78c722bc75e0f7c3797f94986062db5d7c35823",
+      "created_at": "2026-08-04T15:11:30.909131+00:00",
+      "version": "1.0.0",
+      "category": "evaluation_results"
+    },
+    {
+      "relative_path": "evaluation_results/metadata/reproducibility_manifest.json",
+      "file_size_bytes": 396,
+      "sha256": "1f6db656d8270d1f55ac7e2566352de82a5461f9607678091db6a7b7555ed70b",
+      "sha512": "c61622093620216779ec470860cac42eb12992dac9c3b9159b94bf25dbca64c1b5de0ba871db86ac0e96a7e75b7c5471a017cb29493684cfc0e89890ff3f2d1d",
+      "created_at": "2026-08-04T15:11:30.910137+00:00",
+      "version": "1.0.0",
+      "category": "evaluation_results"
+    },
+    {
+      "relative_path": "evaluation_results/reports/final_evaluation_report.md",
+      "file_size_bytes": 1182,
+      "sha256": "167ceee22497d1a5b5a32c98b9678f6afec9a77c818fa285a93bb99e58266f03",
+      "sha512": "8ee10a536d550b2fe03dcc62df53359f1975565022fd050a797578b92a9a251f3f07b0b84ca565df3bdee698a09882e589f0397f7d40215d9597e9e74e22205e",
+      "created_at": "2026-08-04T15:11:30.911149+00:00",
+      "version": "1.0.0",
+      "category": "evaluation_results"
+    },
+    {
+      "relative_path": "metadata/reproducibility_manifest.json",
+      "file_size_bytes": 183,
+      "sha256": "8ea61f65088a31a3397ea2065f38c35e007f99188b0ba92eff7a6c08c7d9898c",
+      "sha512": "9d1890b036d2a9ac20e038ee4075be17c5971b66a82cfbaf3ccbc92d15bd0b6c55eca607a0c58a3a62c1deffa1eb4ec303e01afba377fc56360f202d16ac45fc",
+      "created_at": "2026-08-04T15:11:30.912375+00:00",
+      "version": "1.0.0",
+      "category": "metadata"
+    },
+    {
+      "relative_path": "metadata/requirements.txt",
+      "file_size_bytes": 34,
+      "sha256": "e5de13f34260f272107db35bbf0634380284f19910f2b243234d976527ec52e5",
+      "sha512": "728a6c784fab28265d3a027577f0ced4d926bab457e203b0d51b5fc3041fba662c67c3234060b44c922d0091c4cca6242d8fc8442d963f67ec3beab138e4b02e",
+      "created_at": "2026-08-04T15:11:30.913232+00:00",
+      "version": "1.0.0",
+      "category": "metadata"
+    },
+    {
+      "relative_path": "paper/build_paper.py",
+      "file_size_bytes": 30049,
+      "sha256": "030dad850d89278505100c599e43800f4d106a45ebd68a3cd5a1cc19876808b3",
+      "sha512": "f85f1c195d749935b7076174777aabea7a7b052961bac561b6c6c654c1d516a8fb7bf99de2cd1380651165b0df952aec5c00b1670d9f00feb379ce86ba8e07c3",
+      "created_at": "2026-08-04T15:11:30.919335+00:00",
+      "version": "1.0.0",
+      "category": "paper"
+    },
+    {
+      "relative_path": "paper/final.pdf",
+      "file_size_bytes": 12294,
+      "sha256": "a9a31bb67b51a3ca0d83645bedc936881a56b7a1aadc436efcb238a7c9e535dc",
+      "sha512": "ae11a4e77f0bf658a5dea3e4640f8142256ea555a1d30c3848f047914fdbc2c58d66c34af489efb8890a818427b54f4fd9c9b7e14e810d42ea9f186d35072b22",
+      "created_at": "2026-08-04T15:11:30.920198+00:00",
+      "version": "1.0.0",
+      "category": "paper"
+    },
+    {
+      "relative_path": "paper/IEEEtran.cls",
+      "file_size_bytes": 920,
+      "sha256": "116e2059ac5e93561f8fbea1374d0a919d931c678d4b4f5d051f78893d3d2989",
+      "sha512": "805d61c88e85113a6f71b5ec113e3af7a04f84d801298e42e50c1631b8389a2eab3fe5b24e9f76be234fa5a4a7792a4d82f8c647bd2d183c689c6379847b3ec5",
+      "created_at": "2026-08-04T15:11:30.921005+00:00",
+      "version": "1.0.0",
+      "category": "paper"
+    },
+    {
+      "relative_path": "paper/IEEE_Paper.pdf",
+      "file_size_bytes": 12294,
+      "sha256": "a9a31bb67b51a3ca0d83645bedc936881a56b7a1aadc436efcb238a7c9e535dc",
+      "sha512": "ae11a4e77f0bf658a5dea3e4640f8142256ea555a1d30c3848f047914fdbc2c58d66c34af489efb8890a818427b54f4fd9c9b7e14e810d42ea9f186d35072b22",
+      "created_at": "2026-08-04T15:11:30.921815+00:00",
+      "version": "1.0.0",
+      "category": "paper"
+    },
+    {
+      "relative_path": "paper/ieee_paper.tex",
+      "file_size_bytes": 1472,
+      "sha256": "3486e395b8c5860cf8aa750eb6245f999716e9e59284df1ff8ad7fe1fcf1547f",
+      "sha512": "fca773cd5a810ceefbb216f7d185036944c0dd2d360e6b2bcd91ddf873552b1383b5b91d8d9f6b8e8faccd5d08cffebb2ac9b8ba4de68a13534a1ca6daec5949",
+      "created_at": "2026-08-04T15:11:30.922609+00:00",
+      "version": "1.0.0",
+      "category": "paper"
+    },
+    {
+      "relative_path": "paper/README.md",
+      "file_size_bytes": 4000,
+      "sha256": "5f85f4d84bcd94eb461da6689218e0b6647ccc42973380346a4478d391e9e4a1",
+      "sha512": "5139626a5f976bba5baade4c1e18b92ed8ee8c46d690ad052266be4ea8a5691fa969f33ad599a47bddb9c22c49d890b4eff21351d9beb1dcbfa7497dc01416b5",
+      "created_at": "2026-08-04T15:11:30.923407+00:00",
+      "version": "1.0.0",
+      "category": "paper"
+    },
+    {
+      "relative_path": "paper/references.bib",
+      "file_size_bytes": 6240,
+      "sha256": "7befb33f21f0c85c18f4c25f34c8637358cd7c455f9f66649aaeb817456caa49",
+      "sha512": "0365a31c7dab63f558fd9b03ca3e510d9701569abb708723f6e741e0ba81fe58113c679b9a2088ae4403b54282dc312b1b8e77150bf2b659bff120b80913922d",
+      "created_at": "2026-08-04T15:11:30.924201+00:00",
+      "version": "1.0.0",
+      "category": "paper"
+    },
+    {
+      "relative_path": "paper/appendix/appendix.tex",
+      "file_size_bytes": 1717,
+      "sha256": "deceb28675a7860c8048880bcf3a0a45d45711d10aa70f6588738b96623a7ee3",
+      "sha512": "1cfbaed19004942a824f0f9beaf38754de6216d3cf932cf03ced4a499b8b1fba5c8024aba1b5510ca2ca795c8617b55400d6bd4b1fcdfc68835a23aaebc8bd9f",
+      "created_at": "2026-08-04T15:11:30.925986+00:00",
+      "version": "1.0.0",
+      "category": "paper"
+    },
+    {
+      "relative_path": "paper/figures/avalanche.png",
+      "file_size_bytes": 251253,
+      "sha256": "45eb80280ed4c9d955df3a1ad3dfd89902de996c91200c2108f1b43b53c659ff",
+      "sha512": "3583b796eb1cd9d1bc1019757d9583fbb9bb9bba41fda6f2874bb2b7009cd09742906207ea354976ededd9e0fccbc80d819a4418754807f072d59c158ee4b61a",
+      "created_at": "2026-08-04T15:11:30.928459+00:00",
+      "version": "1.0.0",
+      "category": "paper"
+    },
+    {
+      "relative_path": "paper/figures/avalanche.svg",
+      "file_size_bytes": 64076,
+      "sha256": "4edbaf3792d3771063e78e96ce670ec0df175ad9b7aee209432b5bf87d7b70e6",
+      "sha512": "4f0502dfc733c65862d9ae56c58d26d350391683495209fab4faa7252dbf83e041e93a6c9c091e7ff13d72441ef4534fd96544d920d8ad3b9ea276397b14f6e6",
+      "created_at": "2026-08-04T15:11:30.929620+00:00",
+      "version": "1.0.0",
+      "category": "paper"
+    },
+    {
+      "relative_path": "paper/figures/comparison.png",
+      "file_size_bytes": 118700,
+      "sha256": "56e18317bf94f8c5041a3b4609a7073a82b5aa49e4564009bbef3ffa390cdaa9",
+      "sha512": "4217283a3b53b83501b596c8fefc993aa0287610416861d6c3d203b24de4aca2baed48edb4e98a3de216624232f3763dfaa307e4d0d026f326c1df850b5b7a5f",
+      "created_at": "2026-08-04T15:11:30.931447+00:00",
+      "version": "1.0.0",
+      "category": "paper"
+    },
+    {
+      "relative_path": "paper/figures/comparison.svg",
+      "file_size_bytes": 52511,
+      "sha256": "573e3489d1b730b939349eef8ec4d3661ca0dbca5cafa86785afbbeaa7e10871",
+      "sha512": "89dfe582a1890108f7b8b3f89c6bd46e78c7e22240003f8fc0bdd2aebf3eb52e49485601dd3570d3dc87577ceec91fb94416d60b35aa00449a42cd6ad228efaa",
+      "created_at": "2026-08-04T15:11:30.945726+00:00",
+      "version": "1.0.0",
+      "category": "paper"
+    },
+    {
+      "relative_path": "paper/figures/correlation.png",
+      "file_size_bytes": 367782,
+      "sha256": "520f0a0d441aaa9ad5786797e4f711d500d070d7ce8aec0693afb6001ce8cb87",
+      "sha512": "bbc828b0c8bb187c8bdc62d6a1dc08a62b0047f81c1c208168c08df258d7b4bee06637137e75bad66fa148ce5d27a5d0c9714809e6875f0c3cd1df6e037ac51c",
+      "created_at": "2026-08-04T15:11:30.950592+00:00",
+      "version": "1.0.0",
+      "category": "paper"
+    },
+    {
+      "relative_path": "paper/figures/correlation.svg",
+      "file_size_bytes": 153595,
+      "sha256": "51f6ac70901a1f20f9f74a859f510896653814505bc2939a3d8e0c4189852335",
+      "sha512": "e9a851a68c4b75eeb751ea8fb383dd9e63186f34d52cffbb2ca5fb070f3f69929695c6552499b50dc1d0b401439d81e8831d15bb596e4734262575ce7e833e3d",
+      "created_at": "2026-08-04T15:11:30.951984+00:00",
+      "version": "1.0.0",
+      "category": "paper"
+    },
+    {
+      "relative_path": "paper/figures/entropy.png",
+      "file_size_bytes": 150577,
+      "sha256": "1565c0544bccab0f002e9cbd10b664f0786291c71b706ecbbc8e4b74dc7979b4",
+      "sha512": "4d090bcd0dd1d9891205b78fe6e9b63c137426069bd31a7145daec5f5398862cee90597757b71f15677a4399f6cb4f29c5b8a895ec3ee599314efbcfa7e7e45a",
+      "created_at": "2026-08-04T15:11:30.953231+00:00",
+      "version": "1.0.0",
+      "category": "paper"
+    },
+    {
+      "relative_path": "paper/figures/entropy.svg",
+      "file_size_bytes": 62889,
+      "sha256": "22def9332c7d3d92206300029980736e34b3c18cebc5a1ed9cf207748154b764",
+      "sha512": "ed04d2dcdc8a8a37cc4bcf49e6a9f112aebea0284b98a4803092481a1dc24fcf7b9198a63226f1303362988d91924ae04415782075b84169eb8594ce3a7b07b6",
+      "created_at": "2026-08-04T15:11:30.954479+00:00",
+      "version": "1.0.0",
+      "category": "paper"
+    },
+    {
+      "relative_path": "paper/figures/histogram.png",
+      "file_size_bytes": 126822,
+      "sha256": "d19a465e601749124c1214cc83aa064d62608fbfdc6af108cc51c2dc41faf86b",
+      "sha512": "9bf57c932a4c4c123c07f85301de1492168acef555fa00abfaca560bcdb36dffd3a534275e629a3eb1dead1e188e8185a7ac59912dbcf84576b772b5cc0e8480",
+      "created_at": "2026-08-04T15:11:30.956095+00:00",
+      "version": "1.0.0",
+      "category": "paper"
+    },
+    {
+      "relative_path": "paper/figures/histogram.svg",
+      "file_size_bytes": 106773,
+      "sha256": "cfcde7f955640460dcb15b77a4cab4242cde2ca2d6d2dde3762bb4ddc80c96c7",
+      "sha512": "104b006cb6060c2cc8c7ebfd30fb61a4fbcefc8b98caa3447f9939685c95d3056018837fdae46ef54eca788050c1d69bf0b2b0086e83ae5047e4c4156892f85b",
+      "created_at": "2026-08-04T15:11:30.957663+00:00",
+      "version": "1.0.0",
+      "category": "paper"
+    },
+    {
+      "relative_path": "paper/sections/abstract.tex",
+      "file_size_bytes": 1761,
+      "sha256": "80846218b3c605079178d4b87795288158d10cc861250b3ae0143cb7416accf2",
+      "sha512": "45ce4ea2d705f784d24094c5c3a94eefe561f6a920f6d37d8da9ab636cd79aafc2621c9e50a6c1619ed7b334c0175597e8cc4473ca4b8b0c2e82ce0d71527c19",
+      "created_at": "2026-08-04T15:11:30.958839+00:00",
+      "version": "1.0.0",
+      "category": "paper"
+    },
+    {
+      "relative_path": "paper/sections/architecture.tex",
+      "file_size_bytes": 4975,
+      "sha256": "029577292300472a61bfd36255db1c3567197043ec159b1d7d2df168a56cced5",
+      "sha512": "6f7aa66a892311e4ffb68941352df1f8d129bb3b4879cb0e5574de87f5da14161c212ba385800fd39d8cf3b5ee78e5f67f959d0f86d2963d9e1bee7892f6669d",
+      "created_at": "2026-08-04T15:11:30.959862+00:00",
+      "version": "1.0.0",
+      "category": "paper"
+    },
+    {
+      "relative_path": "paper/sections/benchmarks.tex",
+      "file_size_bytes": 4487,
+      "sha256": "1948eefbde3ce76ae0ea2e7144f55cf6ec2796d791d62b9fd676f413be8bdb1b",
+      "sha512": "2ac412a23d409e406e8cd5d0a1392b47e7b38d2f5a7664d6b06f20845b0ebc1cd64047f9add19ed0104feb0710b309d1dba99f2e1db9f701d0a2941e17762ca5",
+      "created_at": "2026-08-04T15:11:30.960602+00:00",
+      "version": "1.0.0",
+      "category": "paper"
+    },
+    {
+      "relative_path": "paper/sections/conclusion.tex",
+      "file_size_bytes": 1210,
+      "sha256": "d7189d61f4465c5e98df9e80ce8489cefb291a35ad069b972ad525abce01dfd4",
+      "sha512": "a453136638152c60828fa24f2fc7de48c47dbdd22fd11aecffa2d7bb1bee52a33beb515ff3307b67fdb9921a7f16640d5823203e43e7637dd20a013f0e7f0158",
+      "created_at": "2026-08-04T15:11:30.961268+00:00",
+      "version": "1.0.0",
+      "category": "paper"
+    },
+    {
+      "relative_path": "paper/sections/discussion.tex",
+      "file_size_bytes": 2332,
+      "sha256": "053290e546f60d5e6daa6d663617e20892ebff10daddddd0a492f36ccaf0a08c",
+      "sha512": "077942812d8be48494e29c0d9979d62491a012b1a284fbedc942d54ee5e1088daf91cb177f3475c59d3f77cd023990c1a7e0a0924ea274defefa3e53ef831f49",
+      "created_at": "2026-08-04T15:11:30.962028+00:00",
+      "version": "1.0.0",
+      "category": "paper"
+    },
+    {
+      "relative_path": "paper/sections/future_work.tex",
+      "file_size_bytes": 1065,
+      "sha256": "4567265215be3fe69f537c1d5354347aa3e16befc98f5dc09d80d435862fb94d",
+      "sha512": "b2ac2cc117e361b6240a95a1cb318ed75bce41eed35af1ef1fbeebc658fd96320123b8fc9cdeb0c60582cc2fa8aff83549879a2c3eb063003371d641c5d15fee",
+      "created_at": "2026-08-04T15:11:30.962973+00:00",
+      "version": "1.0.0",
+      "category": "paper"
+    },
+    {
+      "relative_path": "paper/sections/introduction.tex",
+      "file_size_bytes": 4239,
+      "sha256": "61fd8d1f3fb05f7631e832bd1e5029baf51652e0d75bd7cabcf2c93bd11ce940",
+      "sha512": "4b246532e91decc9f2687436adaa5ccb7bc563720fc2bcb5e5cc69b88a2fb8164d040fc12ce4ca393bc1c21270ecb2b80968b902c443d511bfccd19512b1e3a6",
+      "created_at": "2026-08-04T15:11:30.963703+00:00",
+      "version": "1.0.0",
+      "category": "paper"
+    },
+    {
+      "relative_path": "paper/sections/literature_review.tex",
+      "file_size_bytes": 4523,
+      "sha256": "d06c696f90700d1db8472c65696ac906385a73156325dcd5fd354d9a40890868",
+      "sha512": "8afe25d9f1ccab385775959a40cb9b1e23ad0e6005e0ad04c706033e14545691c3d343835f1c0a9510840a215246c7316040dedbbf5e0134d876378fa98b2852",
+      "created_at": "2026-08-04T15:11:30.964535+00:00",
+      "version": "1.0.0",
+      "category": "paper"
+    },
+    {
+      "relative_path": "paper/sections/methodology.tex",
+      "file_size_bytes": 4182,
+      "sha256": "39edfae8e888e0d727643a3dea7208be33ff865c4aae1ee24e0a25bc185b35ae",
+      "sha512": "7bc2f96a6edeaaee55edceded661d7a9f20a7fff8a58432f528bd2ccc651fdd419eebd468ed16f89b0b791004447e9564281a809ad99b7fcd163e8e4a50ac09a",
+      "created_at": "2026-08-04T15:11:30.965299+00:00",
+      "version": "1.0.0",
+      "category": "paper"
+    },
+    {
+      "relative_path": "paper/sections/security_analysis.tex",
+      "file_size_bytes": 5932,
+      "sha256": "a246404f95842e39ec32216a3efbe480bdf54d95bb7eae98bb6d9e8751a6c565",
+      "sha512": "a5c093f5cf1b285b3b2e147eaba5917c5ffbe3fa5d68d049eb206a1327b8c70090267ec81138bbc8032814e22cea66956b05b489d1981bc1e89660f40f92c362",
+      "created_at": "2026-08-04T15:11:30.966045+00:00",
+      "version": "1.0.0",
+      "category": "paper"
+    },
+    {
+      "relative_path": "paper/supplementary/supplementary.tex",
+      "file_size_bytes": 860,
+      "sha256": "59bc0651c868ef8560063fe931d7e91d97cc0fe9d464277699723acbb1fe5bde",
+      "sha512": "513e5c3058ddaff008889c70a6105c250125383b02fe75ad254230b7fdb5f048fcc025d48b2c81b015c6ac38c1e1ea723c7de52239fe12f79aac5dadd4819249",
+      "created_at": "2026-08-04T15:11:30.967134+00:00",
+      "version": "1.0.0",
+      "category": "paper"
+    },
+    {
+      "relative_path": "paper/tables/comparative_table.tex",
+      "file_size_bytes": 599,
+      "sha256": "10a70960ae9a70fc751383bb61d358cd64468230ca558a9aeb17d5b167c428ea",
+      "sha512": "f2f8b45cfe69f979493d2ca1a4ba607df69f4089842c932a9f2b5930b5914c7a7f8ca0c67fdad00a80aa530350ceeac929216e21f3eb1ac0d6f9d52568db79ed",
+      "created_at": "2026-08-04T15:11:30.968318+00:00",
+      "version": "1.0.0",
+      "category": "paper"
+    },
+    {
+      "relative_path": "paper/tables/master_security_table.tex",
+      "file_size_bytes": 856,
+      "sha256": "c390e8d82cff095686a2c745f4a775a8e21d1688b183508a8ed044ae29a4084c",
+      "sha512": "574bfc295ac2885ded0eb51d363c440cb8dcec051b1258649b7794f12f1019567a684617b3442abfcdf7d3dcb5fed70f920cdbb0ca602d7bf544991163786ecf",
+      "created_at": "2026-08-04T15:11:30.969190+00:00",
+      "version": "1.0.0",
+      "category": "paper"
+    },
+    {
+      "relative_path": "paper/tables/performance_scaling_table.tex",
+      "file_size_bytes": 548,
+      "sha256": "06e18fb2a265a1564d49ed337c5e6a242e3c6698519c197d3655f688c989c8bf",
+      "sha512": "9ae4b756911e8b96a8bdb36d570198acbb4a44ca6ed9b45f02a36961d7d342d5d02482edd437736b0fb7083421c2e6b568358edd418540448889dc1b4ad0b52a",
+      "created_at": "2026-08-04T15:11:30.970145+00:00",
+      "version": "1.0.0",
+      "category": "paper"
     }
   ]
 }

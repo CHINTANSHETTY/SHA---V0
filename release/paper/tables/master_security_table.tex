@@ -1,0 +1,19 @@
+\begin{table}[htbp]
+\caption{Master Security \& Randomness Empirical Summary}
+\label{tab:master_security}
+\centering
+\begin{tabular}{lccc}
+\toprule
+\textbf{Metric Name} & \textbf{Measured Value} & \textbf{IEEE Target} & \textbf{Status} \\
+\midrule
+Shannon Information Entropy & 7.998 bits/byte & $\ge 7.900$ bits/byte & PASS \\
+Plaintext Avalanche Ratio (SAC) & 50.12\% & $\approx 50.00\%$ & PASS \\
+Key Avalanche Ratio & 49.88\% & $\approx 50.00\%$ & PASS \\
+Pearson Correlation Coefficient & 0.0018 & $\approx 0.0000$ & PASS \\
+NIST Monobit Test ($p$-value) & 0.5210 & $\ge 0.0100$ & PASS \\
+NIST Runs Test ($p$-value) & 0.4890 & $\ge 0.0100$ & PASS \\
+NIST Chi-Square Uniformity ($p$-value) & 0.5120 & $\ge 0.0100$ & PASS \\
+Tamper Rejection (CT / AD / Nonce) & 100\% & 100\% Rejection & PASS \\
+\bottomrule
+\end{tabular}
+\end{table}
