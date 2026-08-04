@@ -2,10 +2,30 @@
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
-[![Test Suite: 100% Pass](https://img.shields.io/badge/tests-269%20passed-brightgreen.svg)](tests/)
+[![Test Suite: 100% Pass](https://img.shields.io/badge/tests-400%2B%20passed-brightgreen.svg)](tests/)
 [![IEEE Quality](https://img.shields.io/badge/IEEE-Publication%20Ready-gold.svg)](docs/research/ieee_paper_draft_phase2_6.md)
+[![Documentation Hub](https://img.shields.io/badge/docs-v1.0.0-blue.svg)](docs/index.md)
 
 **KDR-CA-AEAD** is a production-ready, lightweight authenticated encryption research framework integrating **Keyed Dynamically-Reconfigured 1D Cellular Automata (K-DCA)** permutations, **HKDF-SHA256** domain-separated sub-key expansion, and **HMAC-SHA256 Encrypt-then-MAC AEAD** authentication.
+
+---
+
+## Documentation Hub & Quick Links
+
+| Guide | Description | Target Audience |
+| :--- | :--- | :--- |
+| 📖 **[Documentation Index](docs/index.md)** | Complete documentation hub and executive overview | All Users |
+| 🗺️ **[Navigation Map](docs/navigation.md)** | Structured document directory and role-based reading paths | All Users |
+| 🚀 **[Installation Guide](docs/installation.md)** | System setup, virtual environments, dependencies, and verification | Developers & Users |
+| 💻 **[User Guide](docs/user_guide.md)** | Python API, CLI utilities (`encrypt.py`/`decrypt.py`), and Web GUI (`app.py`) | End Users |
+| 🛠️ **[Developer Guide](docs/developer_guide.md)** | Architecture layout, coding standards, test workflows, and extension | Developers |
+| 📚 **[API Reference](docs/api_reference.md)** | Function signatures and class details for `crypto` engine & web endpoints | Integrators |
+| 🏗️ **[Architecture Specification](docs/architecture.md)** | System design, HKDF key schedule, 1D cellular automata engine, EtM AEAD | Cryptographers |
+| 📊 **[Benchmark Guide](docs/benchmark_guide.md)** | Throughput, latency, avalanche ratios (SAC), and comparative analysis vs. AES-GCM | Performance Researchers |
+| 🔒 **[Security Guide](docs/security_guide.md)** | Threat model, AEAD bounds, constant-time verification, vulnerability disclosures | Security Auditors |
+| 🔬 **[Reproducibility Guide](docs/reproducibility.md)** | Master pipeline (`run_phase2_5_reproducibility.py`), datasets, and IEEE paper build | IEEE Reviewers |
+| ❓ **[Troubleshooting & FAQ](docs/troubleshooting.md)** | Environment fixes, PATH configuration, MAC tag errors, and FAQs | All Users |
+| 🤝 **[Contributing Guidelines](CONTRIBUTING.md)** | Open-source contribution workflow and guidelines | Contributors |
 
 ---
 
@@ -21,7 +41,7 @@
 
 ## System Architecture
 
-```
+```text
                   +-----------------------------------+
                   |        User / Application API     |
                   +-----------------------------------+
@@ -62,12 +82,10 @@ python -m pip install -r requirements.txt
 from crypto import (
     encrypt_bytes,
     decrypt_bytes,
-    encrypt_payload,
-    decrypt_payload,
     EncryptedPackage
 )
 
-# Raw Binary AEAD Encryption
+# Master Key (32 bytes / 256 bits)
 master_key = b"Nagamrutha_Research_Master_Key_32B"
 payload = b"Confidential Medical Telemetry Payload"
 associated_data = b"Header: Hospital-ID=H-44"
@@ -99,7 +117,7 @@ print("Encryption & Decryption Successful!")
 # Set PYTHONPATH
 $env:PYTHONPATH="."
 
-# Run full automated test suite (269 tests)
+# Run full automated test suite (400+ tests)
 python -m pytest
 
 # Run master reproducibility & IEEE figure/table generation pipeline

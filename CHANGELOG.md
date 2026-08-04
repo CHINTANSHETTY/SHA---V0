@@ -4,6 +4,28 @@ All notable changes to the Keyed Dynamically-Reconfigured Cellular Automata with
 
 ---
 
+## [v1.0.0] / [Phase 4.1] - 2026-08-04
+### Added & Refined
+- **Standardized Core Documentation Directory (`docs/`)**:
+  - `docs/index.md`: Master documentation hub & project entry point.
+  - `docs/navigation.md`: Comprehensive role-based reading paths and file index.
+  - `docs/installation.md`: Prerequisites, setup instructions, virtual environment, and dependency guide.
+  - `docs/developer_guide.md`: Codebase layout, development setup, code quality standards, and pytest testing.
+  - `docs/user_guide.md`: Python API, CLI utilities (`encrypt.py`/`decrypt.py`), and Flask Web App (`app.py`).
+  - `docs/api_reference.md`: Consolidated API specifications for `crypto` engine, key schedule, CA engine, analysis suite, and HTTP REST endpoints.
+  - `docs/architecture.md`: System design, HKDF-SHA256 key schedule, reversible 1D Wolfram cellular automata engine, and Encrypt-then-MAC pipeline.
+  - `docs/benchmark_guide.md`: Benchmark methodology, throughput, latency, SAC avalanche, and comparative analysis vs. AES-GCM & ChaCha20-Poly1305.
+  - `docs/security_guide.md`: Threat model, AEAD security bounds (IND-CCA2), SAC bounds, constant-time verification, and vulnerability disclosure.
+  - `docs/reproducibility.md`: Master evaluation script execution (`scripts/run_phase2_5_reproducibility.py`), datasets, and IEEE paper build.
+  - `docs/troubleshooting.md`: Common environment errors, PATH fixes, MAC tag verification failures, database lock issues, and FAQs.
+- **Community & Open Source Standards**:
+  - `CONTRIBUTING.md`: Added contribution guidelines, code formatting rules, PR workflow, and security reporting.
+- **Documentation Verification**:
+  - Validated all relative Markdown links across repository files.
+  - Verified Python API code snippets, command line examples, and test suite execution commands.
+
+---
+
 ## [Phase 2.6] - 2026-08-03
 ### Added
 - **API Documentation (`docs/api/`)**:

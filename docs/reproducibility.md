@@ -1,62 +1,88 @@
-# IEEE Reproducibility Package & Guidelines
+# Reproducibility Guide & FAIR Archival
 
-**Framework:** Keyed Dynamically-Reconfigured Cellular Automata with Authenticated Encryption (KDR-CA-AEAD)  
-**IEEE Mapping:** Section VII – Final Experimental Validation & Reproducibility Package  
-
----
-
-## 1. Environment & Software Requirements
-
-| Environment Property | Verified Value |
-| :--- | :--- |
-| **Python Version** | Python 3.10 to Python 3.13 (Tested on 3.13.5) |
-| **Operating System** | Windows 10/11 64-bit, Ubuntu 22.04 LTS, macOS 14 |
-| **Pytest Version** | 8.3.4 |
-| **Matplotlib Version** | 3.8.0+ |
-| **Argon2-cffi Version** | 23.1.0+ |
+This document provides full instructions for independently executing the **KDR-CA-AEAD** reproducibility pipeline, generating evaluation datasets, building camera-ready 300 DPI IEEE figures, and verifying test suite execution.
 
 ---
 
-## 2. Deterministic Execution & Random Seed Policy
+## 1. Master Reproducibility Pipeline Overview
 
-- **Deterministic Mode**: When fixed `salt` (16 bytes) and `nonce` (12 bytes) parameters are provided to `encrypt_bytes(data, key, salt=..., nonce=...)`, output sub-keys, Cellular Automata rule tables, keystream, ciphertext, and HMAC tags are **100% bit-identical and reproducible** across all execution platforms.
-- **Random Mode**: In standard operation, CSPRNG nonces and salts are generated via `os.urandom()` (`crypto.primitives.random`), ensuring fresh nonces per message.
-- **Benchmarking Seeds**: Benchmark suites use static evaluation payloads and seeds to ensure consistent statistical measurements across test runs.
+The repository includes a single, fully automated master evaluation script:
+`scripts/run_phase2_5_reproducibility.py`
+
+This script executes:
+1. **Full Pytest Test Suite Verification**: Runs unit, integration, and security tests.
+2. **Benchmark Execution**: Evaluates throughput, latency, avalanche criterion (SAC), and Shannon entropy.
+3. **Dataset Generation**: Exports raw JSON metrics and comparative Markdown/CSV tables.
+4. **Publication Asset Generation**: Produces 300 DPI vector SVG and raster PNG graphs for inclusion in `paper/ieee_paper.tex`.
 
 ---
 
-## 3. Step-by-Step Reproducibility Procedure
+## 2. Step-by-Step Reproduction Instructions
 
-### Step 1: Clone Repository & Install Dependencies
+### Step 1: Environment Preparation
+
+Ensure Python 3.10+ and required dependencies are installed:
 ```powershell
-cd SHA---V0-main
+git clone https://github.com/CHINTANSHETTY/SHA---V0.git
+cd SHA---V0
 python -m pip install -r requirements.txt
 ```
 
-### Step 2: Execute Master Reproducibility Script
+Set the module path:
 ```powershell
+# Windows PowerShell
 $env:PYTHONPATH="."
+
+# Linux / macOS Bash
+export PYTHONPATH="."
+```
+
+### Step 2: Run Master Reproducibility Pipeline
+
+Execute the master evaluation pipeline:
+```powershell
 python scripts/run_phase2_5_reproducibility.py
 ```
 
-### Step 3: Verify Output Data Artifacts
-Upon successful execution, confirm the presence of generated artifacts:
+### Step 3: Verify Output Artifacts
 
-1. **Master Results JSON**: `results/master_results.json`
-2. **IEEE Tables**:
-   - `results/tables/master_results_table.csv`
-   - `results/tables/security_summary.csv`
-   - `results/tables/benchmark_summary.csv`
-   - `results/tables/cipher_comparison.csv`
-   - `results/tables/cipher_comparison.md`
-3. **Publication Figures (300 DPI PNG & Vector SVG)**:
-   - `results/security_graphs/avalanche.png` & `.svg`
-   - `results/security_graphs/entropy.png` & `.svg`
-   - `results/security_graphs/histogram.png` & `.svg`
-   - `results/security_graphs/correlation.png` & `.svg`
-   - `results/security_graphs/comparison.png` & `.svg`
-   - `results/security_graphs/throughput_scaling.png` & `.svg`
-   - `results/security_graphs/memory_usage.png` & `.svg`
-   - `results/security_graphs/cpu_utilization.png` & `.svg`
-   - `results/security_graphs/comparative_performance.png` & `.svg`
-   - `results/security_graphs/scalability_curve.png` & `.svg`
+Confirm that the following output directory structure and files are generated:
+
+```text
+results/
+├── master_results.json               # Full JSON benchmark & test dataset
+├── tables/
+│   ├── performance_summary.csv       # Throughput & latency CSV table
+│   └── comparative_metrics.md        # Comparative Markdown table
+└── security_graphs/
+    ├── avalanche_plot.png            # 300 DPI SAC Avalanche plot
+    ├── avalanche_plot.svg            # Vector SAC Avalanche plot
+    ├── throughput_bar.png            # 300 DPI Throughput comparison bar chart
+    └── throughput_bar.svg            # Vector Throughput comparison bar chart
+```
+
+---
+
+## 3. Building IEEE LaTeX Paper Package
+
+To compile the IEEE manuscript using the generated figures and data:
+
+```powershell
+cd paper
+pdflatex ieee_paper.tex
+bibtex ieee_paper
+pdflatex ieee_paper.tex
+pdflatex ieee_paper.tex
+```
+
+Output manuscript: `paper/ieee_paper.pdf`
+
+---
+
+## 4. FAIR Data Principles Compliance
+
+KDR-CA-AEAD adheres to FAIR archival standards:
+- **Findable**: Documented in `CITATION.cff`, `citation.bib`, and indexed via GitHub release v1.0.0.
+- **Accessible**: Openly licensed under Apache 2.0 with public repository access.
+- **Interoperable**: Standard JSON, CSV, and BibTeX output schemas.
+- **Reusable**: Deterministic random seeds (`seed=42`) ensure exact numerical reproducibility across independent hardware platforms.
