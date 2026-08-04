@@ -1,6 +1,6 @@
 {
   "title": "KDR-CA-AEAD Cryptographic Security Audit Findings",
-  "timestamp_epoch": 1785839587.886,
+  "timestamp_epoch": 1785840216.801,
   "overall_security_score": 99.12,
   "overall_audit_status": "PASS",
   "total_findings_evaluated": 6,

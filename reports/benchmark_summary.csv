@@ -1,0 +1,16 @@
+Category,Name,Payload_Size_Bytes,Mean_Time_MS,Median_Time_MS,Min_Time_MS,Max_Time_MS,Std_Dev_MS,Throughput_MBps
+Core Operation,HKDF Key Derivation,1216,0.0988,0.0966,0.093,0.1099,0.0064,11.74
+Core Operation,Encryption (Payload),1216,7.9067,7.2854,6.1295,10.167,1.4998,0.15
+Core Operation,Decryption (Payload),1216,7.4314,7.1729,5.9784,10.1601,1.1922,0.16
+Core Operation,Authentication Tag Verification,1244,0.0101,0.0072,0.007,0.0333,0.0082,117.35
+Core Operation,Nonce Generation (CSPRNG),12,0.0015,0.0006,0.0004,0.0083,0.0024,7.68
+Core Operation,Salt Generation (CSPRNG),16,0.0006,0.0005,0.0004,0.0012,0.0003,23.84
+Core Operation,Full Encrypt-Decrypt Cycle,1216,16.9497,17.1114,13.6679,20.5308,2.5108,0.07
+Payload Scaling (Encrypt),1 KB,1024,6.5614,-,-,-,-,0.15
+Payload Scaling (Decrypt),1 KB,1024,7.8814,-,-,-,-,0.12
+Payload Scaling (Encrypt),10 KB,10240,72.1661,-,-,-,-,0.14
+Payload Scaling (Decrypt),10 KB,10240,65.0672,-,-,-,-,0.15
+Payload Scaling (Encrypt),100 KB,102400,610.8717,-,-,-,-,0.16
+Payload Scaling (Decrypt),100 KB,102400,648.8145,-,-,-,-,0.15
+Payload Scaling (Encrypt),1 MB,1048576,5992.2776,-,-,-,-,0.17
+Payload Scaling (Decrypt),1 MB,1048576,6031.0672,-,-,-,-,0.17
