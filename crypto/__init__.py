@@ -4,6 +4,8 @@ KDR-CA-AEAD Cryptographic Package - Unified Public API Surface.
 Phase 2.5 System Integration & Final Validation.
 """
 
+__version__ = "1.0.0"
+
 from crypto.analysis.benchmark_runner import run_full_benchmark_suite
 from crypto.analysis.final_validation import verify_end_to_end_pipeline
 from crypto.analysis.security_analysis import run_full_security_analysis
@@ -22,6 +24,7 @@ from crypto.primitives.hkdf import hkdf
 from crypto.primitives.hmac import generate_hmac, verify_hmac
 
 __all__ = [
+    "__version__",
     # High-level Authenticated Encryption & Decryption
     "encrypt_bytes",
     "encrypt_payload",

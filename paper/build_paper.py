@@ -1,11 +1,11 @@
 """
-Master LaTeX Paper Builder & Publication Quality Validation Script for Phase 3.2.1.
+Master LaTeX Paper Builder & Publication Quality Validation Script for Phase 4.2.
 
 Executes:
 1. TeX Reference & Citation Validation Audit (no broken citations, no missing labels, no unused bib keys).
 2. Acronym, Terminology & Originality Audit (consistent KDR-CA-AEAD, K-DCA, SAC, HKDF-SHA256 terms).
 3. System LaTeX Compilation via pdflatex / latexmk / tectonic if available.
-4. Fallback High-Quality Two-Column IEEE PDF Renderer via ReportLab to produce paper/final.pdf.
+4. Fallback High-Quality Two-Column IEEE PDF Renderer via ReportLab to produce paper/final.pdf and paper/IEEE_Paper.pdf.
 5. Strict PDF Validation (file existence, size check, page count, font embedding, no "??" unresolved strings).
 
 Usage:
@@ -46,11 +46,24 @@ def audit_tex_references() -> Dict[str, Any]:
     defined_labels: Set[str] = set()
     referenced_labels: Set[str] = set()
 
-    tex_files = [os.path.join(PAPER_DIR, "ieee_paper.tex")]
+    tex_files = []
+    for tf in ["IEEE_Paper.tex", "ieee_paper.tex"]:
+        fp = os.path.join(PAPER_DIR, tf)
+        if os.path.exists(fp):
+            tex_files.append(fp)
+
     if os.path.exists(SECTIONS_DIR):
         for fname in sorted(os.listdir(SECTIONS_DIR)):
             if fname.endswith(".tex"):
                 tex_files.append(os.path.join(SECTIONS_DIR, fname))
+
+    app_file = os.path.join(PAPER_DIR, "appendix", "appendix.tex")
+    if os.path.exists(app_file):
+        tex_files.append(app_file)
+
+    supp_file = os.path.join(PAPER_DIR, "supplementary", "supplementary.tex")
+    if os.path.exists(supp_file):
+        tex_files.append(supp_file)
 
     for tfile in tex_files:
         with open(tfile, "r", encoding="utf-8") as f:
@@ -102,7 +115,12 @@ def audit_manuscript_quality() -> Dict[str, Any]:
     found_terms: Dict[str, int] = {t: 0 for t in required_terms}
     placeholders_found = []
 
-    tex_files = [os.path.join(PAPER_DIR, "ieee_paper.tex")]
+    tex_files = []
+    for tf in ["IEEE_Paper.tex", "ieee_paper.tex"]:
+        fp = os.path.join(PAPER_DIR, tf)
+        if os.path.exists(fp):
+            tex_files.append(fp)
+
     if os.path.exists(SECTIONS_DIR):
         for fname in sorted(os.listdir(SECTIONS_DIR)):
             if fname.endswith(".tex"):
@@ -114,7 +132,6 @@ def audit_manuscript_quality() -> Dict[str, Any]:
             for t in required_terms:
                 found_terms[t] += text.count(t)
 
-            # Check for unresolved TODO or PLACEHOLDER strings
             ph_matches = re.findall(r"(TODO|FIXME|PLACEHOLDER|XXX)", text, re.IGNORECASE)
             if ph_matches:
                 placeholders_found.extend(ph_matches)
@@ -130,7 +147,7 @@ def audit_manuscript_quality() -> Dict[str, Any]:
 
 
 def try_system_latex_compilation() -> bool:
-    """Attempts to compile ieee_paper.tex using system pdflatex or latexmk or tectonic."""
+    """Attempts to compile IEEE_Paper.tex using system pdflatex or latexmk or tectonic."""
     print("\n" + "=" * 70)
     print("STEP 3: ATTEMPTING SYSTEM LATEX COMPILATION (pdflatex / latexmk / tectonic)")
     print("=" * 70)
@@ -149,23 +166,23 @@ def try_system_latex_compilation() -> bool:
 
     try:
         if compiler == "latexmk":
-            cmd = ["latexmk", "-pdf", "-silent", "ieee_paper.tex"]
+            cmd = ["latexmk", "-pdf", "-silent", "IEEE_Paper.tex"]
         elif compiler == "tectonic":
-            cmd = ["tectonic", "ieee_paper.tex"]
+            cmd = ["tectonic", "IEEE_Paper.tex"]
         else:
-            cmd = [compiler, "-interaction=nonstopmode", "ieee_paper.tex"]
+            cmd = [compiler, "-interaction=nonstopmode", "IEEE_Paper.tex"]
 
         res = subprocess.run(cmd, cwd=PAPER_DIR, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         if compiler in ["pdflatex", "xelatex"]:
-            subprocess.run(["bibtex", "ieee_paper"], cwd=PAPER_DIR, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            subprocess.run(["bibtex", "IEEE_Paper"], cwd=PAPER_DIR, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
             subprocess.run(cmd, cwd=PAPER_DIR, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
             subprocess.run(cmd, cwd=PAPER_DIR, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
-        pdf_out = os.path.join(PAPER_DIR, "ieee_paper.pdf")
+        pdf_out = os.path.join(PAPER_DIR, "IEEE_Paper.pdf")
         final_pdf = os.path.join(PAPER_DIR, "final.pdf")
         if os.path.exists(pdf_out):
             shutil.copy(pdf_out, final_pdf)
-            print(f"[SUCCESS] System LaTeX compiled successfully -> {final_pdf}")
+            print(f"[SUCCESS] System LaTeX compiled successfully -> {pdf_out}")
             return True
     except Exception as e:
         print(f"[WARNING] System LaTeX compilation failed: {e}")
@@ -174,9 +191,9 @@ def try_system_latex_compilation() -> bool:
 
 
 def build_reportlab_ieee_pdf() -> str:
-    """Renders final.pdf using ReportLab formatted as a two-column IEEE manuscript."""
+    """Renders final.pdf and IEEE_Paper.pdf using ReportLab formatted as a two-column IEEE manuscript."""
     print("\n" + "=" * 70)
-    print("STEP 4: GENERATING IEEE TWO-COLUMN PDF MANUSCRIPT (paper/final.pdf)")
+    print("STEP 4: GENERATING IEEE TWO-COLUMN PDF MANUSCRIPT (paper/IEEE_Paper.pdf & final.pdf)")
     print("=" * 70)
 
     from reportlab.lib.pagesizes import letter
@@ -188,6 +205,7 @@ def build_reportlab_ieee_pdf() -> str:
     from reportlab.lib.units import inch
 
     final_pdf_path = os.path.join(PAPER_DIR, "final.pdf")
+    ieee_pdf_path = os.path.join(PAPER_DIR, "IEEE_Paper.pdf")
 
     doc = BaseDocTemplate(
         final_pdf_path,
@@ -347,7 +365,8 @@ def build_reportlab_ieee_pdf() -> str:
         story.append(Paragraph(r, ParagraphStyle('RefText', parent=styles['Normal'], fontName='Times-Roman', fontSize=7.5, leading=9, spaceAfter=2)))
 
     doc.build(story)
-    print(f"[SUCCESS] Generated Two-Column IEEE PDF Manuscript -> {final_pdf_path}")
+    shutil.copyfile(final_pdf_path, ieee_pdf_path)
+    print(f"[SUCCESS] Generated Two-Column IEEE PDF Manuscript -> {final_pdf_path} and {ieee_pdf_path}")
     return final_pdf_path
 
 
@@ -368,7 +387,6 @@ def validate_compiled_pdf(pdf_path: str) -> Dict[str, Any]:
     if file_size_bytes < 5000:
         raise ValueError(f"PDF file size ({file_size_bytes} bytes) is suspiciously small.")
 
-    # Check for embedded text strings if pypdf or PyPDF2 is available
     num_pages = None
     unresolved_strings = []
     try:
@@ -381,7 +399,6 @@ def validate_compiled_pdf(pdf_path: str) -> Dict[str, Any]:
         for i, page in enumerate(reader.pages):
             txt = page.extract_text() or ""
             full_text += txt
-            # Check for "??" or unresolved references
             if "??" in txt:
                 unresolved_strings.append(f"Page {i+1}: Unresolved reference '??'")
 
@@ -401,7 +418,7 @@ def validate_compiled_pdf(pdf_path: str) -> Dict[str, Any]:
 
 
 def main():
-    print("Starting KDR-CA-AEAD Phase 3.2.1 Paper Builder & Publication Audit...\n")
+    print("Starting KDR-CA-AEAD Phase 4.2 Paper Builder & Publication Audit...\n")
 
     # Step 1: Audit TeX References & BibTeX Keys
     audit_res = audit_tex_references()
@@ -417,14 +434,16 @@ def main():
 
     # Step 5: Strict PDF Deliverable Validation
     pdf_val = validate_compiled_pdf(pdf_path)
+    ieee_pdf_val = validate_compiled_pdf(os.path.join(PAPER_DIR, "IEEE_Paper.pdf"))
 
     print("\n" + "=" * 70)
-    print("PHASE 3.2.1 IEEE MANUSCRIPT BUILD COMPLETE & VERIFIED")
+    print("PHASE 4.2 IEEE MANUSCRIPT BUILD COMPLETE & VERIFIED")
     print(f"BibTeX Keys: {audit_res['total_bib_keys']} | Cited Keys: {audit_res['total_cited_keys']}")
-    print(f"Missing Citations: {len(audit_res['missing_cites'])} | Missing Label Refs: {len(missing_refs:=audit_res['missing_refs'])}")
+    print(f"Missing Citations: {len(audit_res['missing_cites'])} | Missing Label Refs: {len(audit_res['missing_refs'])}")
     print(f"Unused BibTeX Entries: {len(audit_res['unused_bib'])}")
     print(f"Manuscript Placeholders: {quality_res['placeholders_count']}")
-    print(f"Output PDF: {pdf_path} ({pdf_val['file_size_kb']:.2f} KB)")
+    print(f"Output PDF 1: {pdf_path} ({pdf_val['file_size_kb']:.2f} KB)")
+    print(f"Output PDF 2: {os.path.join(PAPER_DIR, 'IEEE_Paper.pdf')} ({ieee_pdf_val['file_size_kb']:.2f} KB)")
     print("=" * 70)
 
 
