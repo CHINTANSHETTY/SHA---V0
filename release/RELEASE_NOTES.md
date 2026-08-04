@@ -26,19 +26,6 @@
 
 ---
 
-## Release Artifacts
-
-| Artifact Name | Description | Size |
-| :--- | :--- | :--- |
-| `kdr-ca-aead-v1.0.0.zip` | Source code release package | Clean source tree |
-| `kdr-ca-aead-v1.0.0.tar.gz` | Gzipped source code tarball | Clean source archive |
-| `documentation-v1.0.0.zip` | Complete documentation suite (`docs/`) | Docs & manuals |
-| `paper-v1.0.0.zip` | IEEE publication manuscript (`paper/`) | TeX, PDF, BibTeX, figures |
-| `benchmarks-v1.0.0.zip` | Benchmarking framework & cryptanalysis suite | Benchmarks & results |
-| `complete-release-v1.0.0.zip` | Master complete distribution bundle | All repository assets |
-
----
-
 ## Quick Installation
 
 ```bash

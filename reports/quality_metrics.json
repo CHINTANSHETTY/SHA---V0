@@ -1,0 +1,15 @@
+{
+  "project": "KDR-CA-AEAD",
+  "version": "1.0.0",
+  "total_files": 594,
+  "python_modules": 239,
+  "test_files": 91,
+  "markdown_documents": 127,
+  "figure_assets": 78,
+  "table_assets": 13,
+  "lines_of_code": 30781,
+  "test_pass_rate_pct": 100.0,
+  "avalanche_ratio_sac_pct": 50.12,
+  "shannon_entropy_bits_per_byte": 7.998,
+  "throughput_mb_per_sec": 13.37
+}

@@ -1,0 +1,518 @@
+{
+  "release_version": "1.0.0",
+  "snapshot_timestamp_utc": "2026-08-04T08:16:55.211042+00:00",
+  "total_directories": 88,
+  "total_files": 637,
+  "total_size_bytes": 46651921,
+  "total_size_mb": 44.49,
+  "python_files": 241,
+  "test_files": 91,
+  "markdown_files": 163,
+  "figure_files": 138,
+  "table_files": 17,
+  "source_loc": 31818,
+  "doc_loc": 11577,
+  "doc_to_code_ratio": 0.676,
+  "files": [
+    {
+      "path": ".gitignore",
+      "size_bytes": 95,
+      "extension": ""
+    },
+    {
+      "path": "app.py",
+      "size_bytes": 13635,
+      "extension": ".py"
+    },
+    {
+      "path": "blank.txt",
+      "size_bytes": 0,
+      "extension": ".txt"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "size_bytes": 4529,
+      "extension": ".md"
+    },
+    {
+      "path": "citation.bib",
+      "size_bytes": 488,
+      "extension": ".bib"
+    },
+    {
+      "path": "CITATION.cff",
+      "size_bytes": 820,
+      "extension": ".cff"
+    },
+    {
+      "path": "citation.txt",
+      "size_bytes": 300,
+      "extension": ".txt"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "size_bytes": 2064,
+      "extension": ".md"
+    },
+    {
+      "path": "decrypt.py",
+      "size_bytes": 1709,
+      "extension": ".py"
+    },
+    {
+      "path": "encrypt.py",
+      "size_bytes": 3580,
+      "extension": ".py"
+    },
+    {
+      "path": "LICENSE",
+      "size_bytes": 10173,
+      "extension": ""
+    },
+    {
+      "path": "pytest.ini",
+      "size_bytes": 113,
+      "extension": ".ini"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 6746,
+      "extension": ".md"
+    },
+    {
+      "path": "records.db",
+      "size_bytes": 20480,
+      "extension": ".db"
+    },
+    {
+      "path": "requirements.txt",
+      "size_bytes": 35,
+      "extension": ".txt"
+    },
+    {
+      "path": "setup.py",
+      "size_bytes": 141,
+      "extension": ".py"
+    },
+    {
+      "path": "shaModule.py",
+      "size_bytes": 301,
+      "extension": ".py"
+    },
+    {
+      "path": "test.py",
+      "size_bytes": 508,
+      "extension": ".py"
+    },
+    {
+      "path": "testEncryption.py",
+      "size_bytes": 316,
+      "extension": ".py"
+    },
+    {
+      "path": "test_app_records.db",
+      "size_bytes": 20480,
+      "extension": ".db"
+    },
+    {
+      "path": "utils.py",
+      "size_bytes": 759,
+      "extension": ".py"
+    },
+    {
+      "path": "archive/archive_manifest.json",
+      "size_bytes": 4862,
+      "extension": ".json"
+    },
+    {
+      "path": "archive/ARCHIVE_MANIFEST.md",
+      "size_bytes": 2467,
+      "extension": ".md"
+    },
+    {
+      "path": "archive/archive_validation_report.json",
+      "size_bytes": 641,
+      "extension": ".json"
+    },
+    {
+      "path": "archive/artifact_inventory.md",
+      "size_bytes": 1058,
+      "extension": ".md"
+    },
+    {
+      "path": "archive/certification.md",
+      "size_bytes": 1456,
+      "extension": ".md"
+    },
+    {
+      "path": "archive/citation.bib",
+      "size_bytes": 488,
+      "extension": ".bib"
+    },
+    {
+      "path": "archive/CITATION.cff",
+      "size_bytes": 820,
+      "extension": ".cff"
+    },
+    {
+      "path": "archive/citation.txt",
+      "size_bytes": 300,
+      "extension": ".txt"
+    },
+    {
+      "path": "archive/data_management_plan.md",
+      "size_bytes": 441,
+      "extension": ".md"
+    },
+    {
+      "path": "archive/doi_package.md",
+      "size_bytes": 836,
+      "extension": ".md"
+    },
+    {
+      "path": "archive/fair_compliance_report.json",
+      "size_bytes": 723,
+      "extension": ".json"
+    },
+    {
+      "path": "archive/fair_metadata.json",
+      "size_bytes": 1616,
+      "extension": ".json"
+    },
+    {
+      "path": "archive/preservation_validation.md",
+      "size_bytes": 587,
+      "extension": ".md"
+    },
+    {
+      "path": "archive/README.md",
+      "size_bytes": 737,
+      "extension": ".md"
+    },
+    {
+      "path": "archive/reproducibility_checklist.md",
+      "size_bytes": 881,
+      "extension": ".md"
+    },
+    {
+      "path": "archive/software_heritage.md",
+      "size_bytes": 424,
+      "extension": ".md"
+    },
+    {
+      "path": "archive/checksums/dual_hash_checksums.sha256",
+      "size_bytes": 1442,
+      "extension": ".sha256"
+    },
+    {
+      "path": "archive/citations/citation.bib",
+      "size_bytes": 488,
+      "extension": ".bib"
+    },
+    {
+      "path": "archive/citations/CITATION.cff",
+      "size_bytes": 820,
+      "extension": ".cff"
+    },
+    {
+      "path": "archive/citations/citation.txt",
+      "size_bytes": 300,
+      "extension": ".txt"
+    },
+    {
+      "path": "archive/manifests/archive_manifest.json",
+      "size_bytes": 5495,
+      "extension": ".json"
+    },
+    {
+      "path": "archive/manifests/ARCHIVE_MANIFEST.md",
+      "size_bytes": 2824,
+      "extension": ".md"
+    },
+    {
+      "path": "archive/metadata/environment_snapshot.json",
+      "size_bytes": 691,
+      "extension": ".json"
+    },
+    {
+      "path": "archive/metadata/fair_metadata.json",
+      "size_bytes": 1698,
+      "extension": ".json"
+    },
+    {
+      "path": "archive/reports/artifact_inventory.md",
+      "size_bytes": 1058,
+      "extension": ".md"
+    },
+    {
+      "path": "archive/reports/data_management_plan.md",
+      "size_bytes": 441,
+      "extension": ".md"
+    },
+    {
+      "path": "archive/reports/doi_package.md",
+      "size_bytes": 642,
+      "extension": ".md"
+    },
+    {
+      "path": "archive/reports/reproducibility_checklist.md",
+      "size_bytes": 881,
+      "extension": ".md"
+    },
+    {
+      "path": "archive/reports/software_heritage.md",
+      "size_bytes": 555,
+      "extension": ".md"
+    },
+    {
+      "path": "benchmarks/avalanche_test.py",
+      "size_bytes": 2469,
+      "extension": ".py"
+    },
+    {
+      "path": "benchmarks/candidate_study.py",
+      "size_bytes": 12771,
+      "extension": ".py"
+    },
+    {
+      "path": "benchmarks/comparative_benchmark.py",
+      "size_bytes": 6186,
+      "extension": ".py"
+    },
+    {
+      "path": "benchmarks/cryptographic_validation.py",
+      "size_bytes": 10631,
+      "extension": ".py"
+    },
+    {
+      "path": "benchmarks/generate_figures.py",
+      "size_bytes": 1923,
+      "extension": ".py"
+    },
+    {
+      "path": "benchmarks/performance.py",
+      "size_bytes": 1748,
+      "extension": ".py"
+    },
+    {
+      "path": "benchmarks/__init__.py",
+      "size_bytes": 113,
+      "extension": ".py"
+    },
+    {
+      "path": "certification/certification_results.json",
+      "size_bytes": 696,
+      "extension": ".json"
+    },
+    {
+      "path": "certification/closure_results.json",
+      "size_bytes": 562,
+      "extension": ".json"
+    },
+    {
+      "path": "certification/FINAL_CERTIFICATION.md",
+      "size_bytes": 1270,
+      "extension": ".md"
+    },
+    {
+      "path": "certification/preservation_certificate.md",
+      "size_bytes": 649,
+      "extension": ".md"
+    },
+    {
+      "path": "certification/quality_certificate.md",
+      "size_bytes": 502,
+      "extension": ".md"
+    },
+    {
+      "path": "certification/release_certificate.md",
+      "size_bytes": 525,
+      "extension": ".md"
+    },
+    {
+      "path": "certification/repository_certification.md",
+      "size_bytes": 1692,
+      "extension": ".md"
+    },
+    {
+      "path": "closure/FINAL_DELIVERABLES.md",
+      "size_bytes": 1294,
+      "extension": ".md"
+    },
+    {
+      "path": "closure/FINAL_EXECUTIVE_SUMMARY.md",
+      "size_bytes": 691,
+      "extension": ".md"
+    },
+    {
+      "path": "closure/LESSONS_LEARNED.md",
+      "size_bytes": 587,
+      "extension": ".md"
+    },
+    {
+      "path": "closure/PROJECT_CLOSURE.md",
+      "size_bytes": 1762,
+      "extension": ".md"
+    },
+    {
+      "path": "closure/PROJECT_TIMELINE.md",
+      "size_bytes": 1042,
+      "extension": ".md"
+    },
+    {
+      "path": "community/CONTRIBUTOR_ONBOARDING.md",
+      "size_bytes": 413,
+      "extension": ".md"
+    },
+    {
+      "path": "community/DEVELOPMENT_SETUP.md",
+      "size_bytes": 346,
+      "extension": ".md"
+    },
+    {
+      "path": "community/FAQ.md",
+      "size_bytes": 595,
+      "extension": ".md"
+    },
+    {
+      "path": "community/FIRST_CONTRIBUTION_GUIDE.md",
+      "size_bytes": 354,
+      "extension": ".md"
+    },
+    {
+      "path": "crypto/constants.py",
+      "size_bytes": 1011,
+      "extension": ".py"
+    },
+    {
+      "path": "crypto/__init__.py",
+      "size_bytes": 1562,
+      "extension": ".py"
+    },
+    {
+      "path": "crypto/analysis/attack_analysis.py",
+      "size_bytes": 6843,
+      "extension": ".py"
+    },
+    {
+      "path": "crypto/analysis/avalanche.py",
+      "size_bytes": 12964,
+      "extension": ".py"
+    },
+    {
+      "path": "crypto/analysis/benchmark.py",
+      "size_bytes": 4895,
+      "extension": ".py"
+    },
+    {
+      "path": "crypto/analysis/benchmark_export.py",
+      "size_bytes": 3675,
+      "extension": ".py"
+    },
+    {
+      "path": "crypto/analysis/benchmark_runner.py",
+      "size_bytes": 12856,
+      "extension": ".py"
+    },
+    {
+      "path": "crypto/analysis/benchmark_utils.py",
+      "size_bytes": 4532,
+      "extension": ".py"
+    },
+    {
+      "path": "crypto/analysis/differential.py",
+      "size_bytes": 8893,
+      "extension": ".py"
+    },
+    {
+      "path": "crypto/analysis/entropy.py",
+      "size_bytes": 4081,
+      "extension": ".py"
+    },
+    {
+      "path": "crypto/analysis/final_validation.py",
+      "size_bytes": 26679,
+      "extension": ".py"
+    },
+    {
+      "path": "crypto/analysis/metrics.py",
+      "size_bytes": 4964,
+      "extension": ".py"
+    },
+    {
+      "path": "crypto/analysis/randomness.py",
+      "size_bytes": 8275,
+      "extension": ".py"
+    },
+    {
+      "path": "crypto/analysis/report.py",
+      "size_bytes": 6302,
+      "extension": ".py"
+    },
+    {
+      "path": "crypto/analysis/security_analysis.py",
+      "size_bytes": 13441,
+      "extension": ".py"
+    },
+    {
+      "path": "crypto/analysis/statistics.py",
+      "size_bytes": 14898,
+      "extension": ".py"
+    },
+    {
+      "path": "crypto/analysis/visualization.py",
+      "size_bytes": 18644,
+      "extension": ".py"
+    },
+    {
+      "path": "crypto/analysis/__init__.py",
+      "size_bytes": 4453,
+      "extension": ".py"
+    },
+    {
+      "path": "crypto/analysis/tests/test_benchmark.py",
+      "size_bytes": 6552,
+      "extension": ".py"
+    },
+    {
+      "path": "crypto/analysis/tests/test_final_validation.py",
+      "size_bytes": 5105,
+      "extension": ".py"
+    },
+    {
+      "path": "crypto/analysis/tests/__init__.py",
+      "size_bytes": 58,
+      "extension": ".py"
+    },
+    {
+      "path": "crypto/benchmark/benchmark.py",
+      "size_bytes": 6213,
+      "extension": ".py"
+    },
+    {
+      "path": "crypto/benchmark/exporter.py",
+      "size_bytes": 8302,
+      "extension": ".py"
+    },
+    {
+      "path": "crypto/benchmark/metrics.py",
+      "size_bytes": 1573,
+      "extension": ".py"
+    },
+    {
+      "path": "crypto/benchmark/performance.py",
+      "size_bytes": 5204,
+      "extension": ".py"
+    },
+    {
+      "path": "crypto/benchmark/profiler.py",
+      "size_bytes": 3041,
+      "extension": ".py"
+    },
+    {
+      "path": "crypto/benchmark/runner.py",
+      "size_bytes": 9375,
+      "extension": ".py"
+    }
+  ]
+}
