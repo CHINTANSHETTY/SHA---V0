@@ -2,75 +2,75 @@
   "project_name": "KDR-CA-AEAD",
   "version": "1.0.0",
   "release_version": "1.0.0",
-  "generated_at": "2026-08-05T16:24:57.662951+00:00",
+  "generated_at": "2026-08-05T16:28:06.288858+00:00",
   "total_archives": 6,
   "total_files": 6,
   "artifacts": [
     {
       "filename": "kdr-ca-aead-v1.0.0.zip",
       "relative_path": "kdr-ca-aead-v1.0.0.zip",
-      "size_bytes": 8092480,
-      "file_size_bytes": 8092480,
-      "size_kb": "7902.81 KB",
-      "sha256": "9af846490001cdc9a8788b8d548a3faf3eb949a5b91fb3a905c2a247a1c8aba6",
-      "sha512": "020e8deb85740f3bbb51f3e9e0bb9028fa354daeef93c0a35e4549bde3e4542e7e5a54cf817891ca7aa2d4aae0a3897bcf03341b0285a7afdf08cd407c358fe7",
+      "size_bytes": 8020606,
+      "file_size_bytes": 8020606,
+      "size_kb": "7832.62 KB",
+      "sha256": "d6631b22072b5386358e21f413e5e097ae68dd94618b0ed62af5349a12516e25",
+      "sha512": "ce388e10c53e9bb82c8b7cf1b9bd7045d09315b9f00db6cf50e75b270dbda856f9aee2f5c74957712641a84a2c322b65cc86a541d8136824167080bfdfe7ccf0",
       "category": "Distribution Archive",
-      "created_at": "2026-08-05T16:24:57.662769+00:00"
+      "created_at": "2026-08-05T16:28:06.288858+00:00"
     },
     {
       "filename": "kdr-ca-aead-v1.0.0.tar.gz",
       "relative_path": "kdr-ca-aead-v1.0.0.tar.gz",
-      "size_bytes": 7802781,
-      "file_size_bytes": 7802781,
-      "size_kb": "7619.90 KB",
-      "sha256": "2eba77c993895cdc2b92dd56b0344c8e034838b041e556b64af47c7bc224a8a9",
-      "sha512": "f198fb47ee44fcdd19472dbd539ce84d508c3138842915e7ee4ebaf25188aff5b9a147262f69c80fda88e358b71f4c2428c80c254f5867750c375022ecf5eb52",
+      "size_bytes": 7873388,
+      "file_size_bytes": 7873388,
+      "size_kb": "7688.86 KB",
+      "sha256": "07398bbad61390e80ad68a9aec91fc8216a2e12d719cd7589c9b0d802ca46491",
+      "sha512": "0d1689084846ca32ed7ebe29884c2165e991cf0e948bd7d13a89e68c3fa8bfb2ec9c1abad31e1c048913aacf62f6fafaac937fd04d099aafe8ef3b8c2ea4888d",
       "category": "Distribution Archive",
-      "created_at": "2026-08-05T16:24:57.662820+00:00"
+      "created_at": "2026-08-05T16:28:06.288858+00:00"
     },
     {
       "filename": "documentation-v1.0.0.zip",
       "relative_path": "documentation-v1.0.0.zip",
-      "size_bytes": 6708125,
-      "file_size_bytes": 6708125,
-      "size_kb": "6550.90 KB",
-      "sha256": "fccd5fc68cd2fcd38acf4e362a6d704339649d3d14ed23a2fcd2eb5a88f6ee4c",
-      "sha512": "442b1bb3c217d3d8ad7835dda25b3b6f386948aa060dc4fb3bea8c97f8246087f22a4b41d7a9e2a2434d1681a6415d81ae5ba0d6411491c4adf73302fd4b9ed2",
+      "size_bytes": 6653985,
+      "file_size_bytes": 6653985,
+      "size_kb": "6498.03 KB",
+      "sha256": "2e887fa196be6cc2ba5b5918a1bb4aaf7b078a0b7107346098f3ffefe211933c",
+      "sha512": "d3e94de87d3741e13c7fc27778834dcb98ab6f61c4f187e2ebb5eb4b9a59ceeeca54cb66b21b7d72ba2cd425555364ac67ddae59df95decc9bbbe63d5eb7a6d3",
       "category": "Distribution Archive",
-      "created_at": "2026-08-05T16:24:57.662854+00:00"
+      "created_at": "2026-08-05T16:28:06.288858+00:00"
     },
     {
       "filename": "paper-v1.0.0.zip",
       "relative_path": "paper-v1.0.0.zip",
-      "size_bytes": 1014829,
-      "file_size_bytes": 1014829,
-      "size_kb": "991.04 KB",
-      "sha256": "b421e8223a43b715339be5f94e9645a93f214305c7a52cf6f28ed2f5865d979c",
-      "sha512": "f4f0cea65e1107db6b5304c29a989bac951954bc1d557b2844499e643db9438adcc48087de551532899ae920237e502783c97e4449f17676118968604db4a024",
+      "size_bytes": 997237,
+      "file_size_bytes": 997237,
+      "size_kb": "973.86 KB",
+      "sha256": "059bd9370c90c4b4ef4a69eb80abc4863e524526cc6c98d84a985c31a79f604a",
+      "sha512": "2f188bcf2beae4cf0434e0feca422e595d9459ce83ae1acc9c769d3437a77e307fb0018d18bbbd9bd557745dda363d2785a884c8f4e514166d9b5ac2cb540ce3",
       "category": "Distribution Archive",
-      "created_at": "2026-08-05T16:24:57.662885+00:00"
+      "created_at": "2026-08-05T16:28:06.288858+00:00"
     },
     {
       "filename": "benchmarks-v1.0.0.zip",
       "relative_path": "benchmarks-v1.0.0.zip",
-      "size_bytes": 1029626,
-      "file_size_bytes": 1029626,
-      "size_kb": "1005.49 KB",
-      "sha256": "505c59a41e1fde180494cfc57eceb78aa92e2b2fe9a7d781073a973489c2aa98",
-      "sha512": "da9c1c0e4821aa541f9d2773fe5956451b81d147a1564ed4f4040d60bcdc1d4a4f7be387d5c165e9a3e41c792ab4883823effb76da46240ed58c78afe70a64e6",
+      "size_bytes": 1012057,
+      "file_size_bytes": 1012057,
+      "size_kb": "988.34 KB",
+      "sha256": "caa8a7ac2bda15d20c3ff852df0e6e7656869252cd8d12fc30b7d00c25eeba96",
+      "sha512": "33931d0fe0726e8bdbd651c4f58d6305800906c7b15a520dd16ec3b523725bd152b1dab735004f9e149328383313685b1c30f5584d28c0ef6b682ead17aa40f1",
       "category": "Distribution Archive",
-      "created_at": "2026-08-05T16:24:57.662916+00:00"
+      "created_at": "2026-08-05T16:28:06.288858+00:00"
     },
     {
       "filename": "complete-release-v1.0.0.zip",
       "relative_path": "complete-release-v1.0.0.zip",
-      "size_bytes": 9057755,
-      "file_size_bytes": 9057755,
-      "size_kb": "8845.46 KB",
-      "sha256": "ab16b6b75eecade00c995d753dfb4cd310a970f8da6ee75e96bd2b5dab54468b",
-      "sha512": "3edb1290052e0919496689a60aa279eb3b99598d6fea8f0a84d3486465f6c4615377da8042347ec4ce3026a68de39eb5cfb42034d803bd9511a456a0bc106742",
+      "size_bytes": 8968381,
+      "file_size_bytes": 8968381,
+      "size_kb": "8758.18 KB",
+      "sha256": "e40ba0ffaca08b829ea15224eee4ac09e9a3b0426981e8a0e831dd5229a2d55b",
+      "sha512": "9ad985197070e3625748fde940b14c9d0743a836ed812c38b78b4ec9316c7e622dd55de35dd66eb83f8441edbef1950ec76e2b7b97fbd887530b7c80e5b5e77a",
       "category": "Distribution Archive",
-      "created_at": "2026-08-05T16:24:57.662945+00:00"
+      "created_at": "2026-08-05T16:28:06.288858+00:00"
     }
   ]
 }

@@ -146,13 +146,16 @@ def encryptPage():
         try:
             # Encrypt using KDR-CA-AEAD Authenticated Cipher
             pkg = encrypt_payload(patientData, password)
-            cipherText = pkg.to_json()
+            full_package_json = pkg.to_json()
 
             saveRecord(
                 patientId,
                 name,
-                cipherText
+                full_package_json
             )
+
+            # Extract ONLY the binary ciphertext string for the UI display
+            cipherText = pkg.to_dict()["ciphertext"]
 
             message = "Patient record encrypted and saved successfully with KDR-CA-AEAD."
 
