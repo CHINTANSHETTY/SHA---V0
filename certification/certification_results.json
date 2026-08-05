@@ -1,13 +1,13 @@
 {
   "status": "CERTIFIED",
-  "timestamp_utc": "2026-08-04T08:10:56.822281+00:00",
-  "elapsed_seconds": 0.266,
+  "timestamp_utc": "2026-08-05T15:29:53.333288+00:00",
+  "elapsed_seconds": 0.687,
   "version": "1.0.0",
-  "repository_fingerprint_sha256": "fcd777a3ccfd97b43e57a2c1a436892fcf6d4dfde339fbe028a96e1a669de2cd",
+  "repository_fingerprint_sha256": "a05e12e3a129f75f354b05ce966cffff8c7eebd5239ccf8c04789f056d6c1ac6",
   "build_metadata": {
-    "git_commit": "06949124949e06d9ddc28c438032808a7d81710b",
+    "git_commit": "b96e93d415cdf576e0df9abf68b5188fc988850e",
     "git_branch": "main",
-    "python_version": "3.13.5",
+    "python_version": "3.12.5",
     "os_platform": "Windows-11-10.0.26200-SP0"
   },
   "findings_severity": {

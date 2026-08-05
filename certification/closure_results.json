@@ -1,13 +1,13 @@
 {
   "status": "SUCCESS",
-  "closure_timestamp_utc": "2026-08-04T08:16:55.215422+00:00",
-  "elapsed_duration_seconds": 0.447,
+  "closure_timestamp_utc": "2026-08-05T15:29:40.313275+00:00",
+  "elapsed_duration_seconds": 0.823,
   "version": "1.0.0",
-  "immutable_release_fingerprint_sha256": "5f9849df6b95441845af3a68ec8835970d2945f3eb5fb70235a758a822a585c3",
+  "immutable_release_fingerprint_sha256": "78cf0ac0eaa6d7ebb8c978db25541a773c8f0f26336be226553032e2db525e78",
   "execution_metadata": {
-    "git_commit": "06949124949e06d9ddc28c438032808a7d81710b",
+    "git_commit": "b96e93d415cdf576e0df9abf68b5188fc988850e",
     "git_branch": "main",
-    "python_version": "3.13.5",
+    "python_version": "3.12.5",
     "os_platform": "Windows-11-10.0.26200-SP0"
   },
   "findings_severity": {
