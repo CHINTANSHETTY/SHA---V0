@@ -28,13 +28,13 @@ The results confirm that KDR-CA-AEAD exhibits **linear O(N) execution scaling**,
 
 | Cryptographic Operation | Iterations | Mean Latency | Median Latency | Min / Max Latency | Standard Deviation | Throughput (MB/s) |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **HKDF Key Derivation** | 10 | 0.0448 ms | 0.0445 ms | 0.0436 - 0.0494 ms | 0.0017 ms | 25.86 MB/s |
-| **Encryption (Payload)** | 10 | 3.5617 ms | 3.4895 ms | 3.1241 - 4.1783 ms | 0.3523 ms | 0.33 MB/s |
-| **Decryption (Payload)** | 10 | 3.8183 ms | 3.5761 ms | 3.2741 - 5.3866 ms | 0.719 ms | 0.3 MB/s |
-| **Authentication Tag Verification** | 10 | 0.0055 ms | 0.0037 ms | 0.0036 - 0.0155 ms | 0.0038 ms | 217.68 MB/s |
-| **Nonce Generation (CSPRNG)** | 10 | 0.0009 ms | 0.0003 ms | 0.0002 - 0.0067 ms | 0.002 ms | 12.05 MB/s |
-| **Salt Generation (CSPRNG)** | 10 | 0.0004 ms | 0.0003 ms | 0.0002 - 0.001 ms | 0.0002 ms | 37.22 MB/s |
-| **Full Encrypt-Decrypt Cycle** | 10 | 6.6924 ms | 6.6915 ms | 6.3455 - 7.0203 ms | 0.2675 ms | 0.17 MB/s |
+| **HKDF Key Derivation** | 10 | 0.0403 ms | 0.0392 ms | 0.0252 - 0.0613 ms | 0.014 ms | 28.76 MB/s |
+| **Encryption (Payload)** | 10 | 4.4778 ms | 4.3336 ms | 3.2665 - 5.849 ms | 0.9825 ms | 0.26 MB/s |
+| **Decryption (Payload)** | 10 | 4.3156 ms | 4.1283 ms | 3.2793 - 5.8255 ms | 0.7266 ms | 0.27 MB/s |
+| **Authentication Tag Verification** | 10 | 0.0061 ms | 0.004 ms | 0.0036 - 0.0175 ms | 0.0045 ms | 193.54 MB/s |
+| **Nonce Generation (CSPRNG)** | 10 | 0.001 ms | 0.0003 ms | 0.0002 - 0.0065 ms | 0.002 ms | 11.22 MB/s |
+| **Salt Generation (CSPRNG)** | 10 | 0.0004 ms | 0.0003 ms | 0.0002 - 0.0007 ms | 0.0002 ms | 43.6 MB/s |
+| **Full Encrypt-Decrypt Cycle** | 10 | 8.1849 ms | 7.5894 ms | 7.0636 - 11.6982 ms | 1.4916 ms | 0.14 MB/s |
 
 ---
 
@@ -42,10 +42,10 @@ The results confirm that KDR-CA-AEAD exhibits **linear O(N) execution scaling**,
 
 | Payload Buffer Size | Encryption Time | Encrypt Throughput | Decryption Time | Decrypt Throughput | Estimated Memory |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **1 KB** (1024 B) | 4.6884 ms | 0.21 MB/s | 4.7339 ms | 0.21 MB/s | 3.0 KB |
-| **10 KB** (10240 B) | 28.0663 ms | 0.35 MB/s | 30.4411 ms | 0.32 MB/s | 30.0 KB |
-| **100 KB** (102400 B) | 306.0332 ms | 0.32 MB/s | 304.2116 ms | 0.32 MB/s | 300.0 KB |
-| **1 MB** (1048576 B) | 3115.4104 ms | 0.32 MB/s | 3208.9249 ms | 0.31 MB/s | 3072.0 KB |
+| **1 KB** (1024 B) | 3.0897 ms | 0.32 MB/s | 3.1916 ms | 0.31 MB/s | 3.0 KB |
+| **10 KB** (10240 B) | 33.0004 ms | 0.3 MB/s | 32.8866 ms | 0.3 MB/s | 30.0 KB |
+| **100 KB** (102400 B) | 338.5227 ms | 0.29 MB/s | 293.6199 ms | 0.33 MB/s | 300.0 KB |
+| **1 MB** (1048576 B) | 3239.0476 ms | 0.31 MB/s | 3258.9226 ms | 0.31 MB/s | 3072.0 KB |
 
 ---
 
