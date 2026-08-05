@@ -184,15 +184,13 @@ background:#15803d;
 
 </div>
 
-<label>Encrypted Record</label>
-
-<div class="data">
-
-{{ record[3] }}
-
 </div>
 
+{% if error %}
+<div style="margin-bottom:20px; padding:12px; background:#fee2e2; color:#991b1b; border-radius:8px; font-weight:bold;">
+{{ error }}
 </div>
+{% endif %}
 
 <form action="/decrypt/{{ record[0] }}" method="POST">
 

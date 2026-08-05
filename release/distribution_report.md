@@ -2,10 +2,10 @@
 
 **Framework:** Keyed Dynamically-Reconfigured Cellular Automata with Authenticated Encryption  
 **Version:** v1.0.0  
-**Build Date:** 2026-08-05T16:28:01.288258+00:00  
+**Build Date:** 2026-08-05T17:04:26.314088+00:00  
 **Build Platform:** Windows 11 (64bit)  
 **Python Version:** 3.12.5  
-**Git Commit:** `6a6064d00ee92477f874e218613e3cf7b79baecb` (Branch: `HEAD`)  
+**Git Commit:** `5167693390e13685156539416ea5611d6b4fde0d` (Branch: `main`)  
 **Total Release Size:** 31.97 MB (6 Archives)  
 **Overall Validation Status:** **PASSED & PUBLICATION READY**  
 
@@ -16,7 +16,7 @@
 | Archive File | Size (KB) | SHA-256 Fingerprint | Deep Content Audit |
 | :--- | :--- | :--- | :--- |
 | `kdr-ca-aead-v1.0.0.zip` | 7832.62 KB | `d6631b22072b5386...` | PASS |
-| `kdr-ca-aead-v1.0.0.tar.gz` | 7688.86 KB | `07398bbad61390e8...` | PASS |
+| `kdr-ca-aead-v1.0.0.tar.gz` | 7688.86 KB | `3c536cca68c66d1b...` | PASS |
 | `documentation-v1.0.0.zip` | 6498.03 KB | `2e887fa196be6cc2...` | PASS |
 | `paper-v1.0.0.zip` | 973.86 KB | `059bd9370c90c4b4...` | PASS |
 | `benchmarks-v1.0.0.zip` | 988.34 KB | `caa8a7ac2bda15d2...` | PASS |
