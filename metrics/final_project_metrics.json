@@ -1,19 +1,19 @@
 {
   "project_name": "KDR-CA-AEAD",
   "release_version": "1.0.0",
-  "final_scan_timestamp": "2026-08-04T08:16:55.211042+00:00",
+  "final_scan_timestamp": "2026-08-05T15:29:40.308671+00:00",
   "summary_counts": {
-    "total_directories": 88,
-    "total_files": 637,
-    "total_repository_size_mb": 44.49,
-    "python_modules": 241,
-    "test_files": 91,
-    "markdown_documents": 163,
-    "figure_assets": 138,
-    "table_assets": 17,
-    "source_lines_of_code": 31818,
-    "documentation_lines_of_code": 11577,
-    "doc_to_code_ratio": 0.676
+    "total_directories": 150,
+    "total_files": 1102,
+    "total_repository_size_mb": 58.11,
+    "python_modules": 285,
+    "test_files": 108,
+    "markdown_documents": 394,
+    "figure_assets": 276,
+    "table_assets": 39,
+    "source_lines_of_code": 40135,
+    "documentation_lines_of_code": 28465,
+    "doc_to_code_ratio": 1.382
   },
   "security_evaluation": {
     "sac_plaintext_avalanche_pct": 50.12,

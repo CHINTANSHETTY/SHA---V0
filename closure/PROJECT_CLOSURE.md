@@ -2,7 +2,7 @@
 
 **Framework:** Keyed Dynamically-Reconfigured Cellular Automata with Authenticated Encryption  
 **Version:** v1.0.0  
-**Closure Date:** 2026-08-04  
+**Closure Date:** 2026-08-05  
 **Project Status:** **FORMALLY CLOSED, CERTIFIED & PERMANENTLY ARCHIVED**  
 
 ---

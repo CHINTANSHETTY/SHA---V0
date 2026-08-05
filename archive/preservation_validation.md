@@ -1,7 +1,7 @@
 # Long-Term Preservation Validation Report - KDR-CA-AEAD v1.0.0
 
 **Status:** **PASSED & ARCHIVAL READY**  
-**Date:** 2026-08-04  
+**Date:** 2026-08-05  
 
 ---
 
