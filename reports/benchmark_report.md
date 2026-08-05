@@ -18,7 +18,7 @@ The results confirm that KDR-CA-AEAD exhibits **linear O(N) execution scaling**,
 ## 2. Test Environment Specifications
 
 - **Operating System:** `Windows-11-10.0.26200-SP0`
-- **Python Version:** `3.12.5`
+- **Python Version:** `3.14.4`
 - **Processor:** `AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD`
 - **Benchmark Iterations:** Core ops: 30 runs; Payload scaling: 5 runs per buffer.
 
@@ -28,13 +28,13 @@ The results confirm that KDR-CA-AEAD exhibits **linear O(N) execution scaling**,
 
 | Cryptographic Operation | Iterations | Mean Latency | Median Latency | Min / Max Latency | Standard Deviation | Throughput (MB/s) |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **HKDF Key Derivation** | 10 | 0.1015 ms | 0.0958 ms | 0.089 - 0.1578 ms | 0.0202 ms | 11.42 MB/s |
-| **Encryption (Payload)** | 10 | 6.8264 ms | 6.2678 ms | 5.5146 - 10.7953 ms | 1.6398 ms | 0.17 MB/s |
-| **Decryption (Payload)** | 10 | 6.4901 ms | 6.0383 ms | 5.765 - 9.6254 ms | 1.1858 ms | 0.18 MB/s |
-| **Authentication Tag Verification** | 10 | 0.0094 ms | 0.0073 ms | 0.0068 - 0.0263 ms | 0.006 ms | 126.08 MB/s |
-| **Nonce Generation (CSPRNG)** | 10 | 0.0014 ms | 0.0005 ms | 0.0004 - 0.0078 ms | 0.0023 ms | 8.0 MB/s |
-| **Salt Generation (CSPRNG)** | 10 | 0.0006 ms | 0.0005 ms | 0.0004 - 0.0011 ms | 0.0002 ms | 23.84 MB/s |
-| **Full Encrypt-Decrypt Cycle** | 10 | 15.9595 ms | 12.3311 ms | 11.4186 - 33.0486 ms | 7.0856 ms | 0.07 MB/s |
+| **HKDF Key Derivation** | 10 | 0.0273 ms | 0.0262 ms | 0.0261 - 0.0318 ms | 0.002 ms | 42.54 MB/s |
+| **Encryption (Payload)** | 10 | 3.3109 ms | 3.2934 ms | 3.1197 - 3.7445 ms | 0.1908 ms | 0.35 MB/s |
+| **Decryption (Payload)** | 10 | 3.4095 ms | 3.2731 ms | 3.1452 - 4.1887 ms | 0.315 ms | 0.34 MB/s |
+| **Authentication Tag Verification** | 10 | 0.0052 ms | 0.004 ms | 0.0038 - 0.0144 ms | 0.0033 ms | 226.41 MB/s |
+| **Nonce Generation (CSPRNG)** | 10 | 0.0012 ms | 0.0003 ms | 0.0002 - 0.0076 ms | 0.0023 ms | 9.62 MB/s |
+| **Salt Generation (CSPRNG)** | 10 | 0.0003 ms | 0.0003 ms | 0.0002 - 0.0007 ms | 0.0002 ms | 43.6 MB/s |
+| **Full Encrypt-Decrypt Cycle** | 10 | 7.1795 ms | 6.977 ms | 6.3734 - 9.4609 ms | 0.8959 ms | 0.16 MB/s |
 
 ---
 
@@ -42,10 +42,10 @@ The results confirm that KDR-CA-AEAD exhibits **linear O(N) execution scaling**,
 
 | Payload Buffer Size | Encryption Time | Encrypt Throughput | Decryption Time | Decrypt Throughput | Estimated Memory |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **1 KB** (1024 B) | 5.2545 ms | 0.19 MB/s | 4.9749 ms | 0.2 MB/s | 3.0 KB |
-| **10 KB** (10240 B) | 50.0406 ms | 0.2 MB/s | 50.8739 ms | 0.19 MB/s | 30.0 KB |
-| **100 KB** (102400 B) | 525.3558 ms | 0.19 MB/s | 513.3593 ms | 0.19 MB/s | 300.0 KB |
-| **1 MB** (1048576 B) | 5516.5648 ms | 0.18 MB/s | 5370.0501 ms | 0.19 MB/s | 3072.0 KB |
+| **1 KB** (1024 B) | 2.9242 ms | 0.33 MB/s | 2.8784 ms | 0.34 MB/s | 3.0 KB |
+| **10 KB** (10240 B) | 29.4288 ms | 0.33 MB/s | 27.5474 ms | 0.35 MB/s | 30.0 KB |
+| **100 KB** (102400 B) | 335.4275 ms | 0.29 MB/s | 302.125 ms | 0.32 MB/s | 300.0 KB |
+| **1 MB** (1048576 B) | 3063.2092 ms | 0.33 MB/s | 3131.588 ms | 0.32 MB/s | 3072.0 KB |
 
 ---
 

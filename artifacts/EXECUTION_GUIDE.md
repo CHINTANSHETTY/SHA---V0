@@ -79,7 +79,7 @@ Execute performance and avalanche analysis:
 python crypto/benchmarking/benchmark_report.py
 
 # Run master reproducibility script
-python run_phase2_5_reproducibility.py
+python scripts/run_phase2_5_reproducibility.py
 ```
 
 ---

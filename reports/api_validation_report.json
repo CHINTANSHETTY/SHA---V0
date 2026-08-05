@@ -1,6 +1,6 @@
 {
   "title": "KDR-CA-AEAD Cryptographic API Validation & Docstring Quality Report",
-  "timestamp_epoch": 1785945615.037,
+  "timestamp_epoch": 1785946274.638,
   "api_validation": {
     "docstring_validation": {
       "modules_evaluated_count": 13,
@@ -643,8 +643,8 @@
     "summary": "API Validation PASSED: Docstring Coverage 100.0% across 59 symbols; 100% code examples executed successfully."
   },
   "documentation_review": {
-    "files_audited_count": 188,
-    "files_passed_count": 188,
+    "files_audited_count": 192,
+    "files_passed_count": 192,
     "broken_links_count": 0,
     "broken_links": [],
     "audited_files": [
@@ -1384,6 +1384,13 @@
         "status": "PASS"
       },
       {
+        "file": "docs\\publication\\CAMERA_READY_CHECKLIST.md",
+        "has_h1_title": true,
+        "has_code_blocks": false,
+        "parameter_consistency": false,
+        "status": "PASS"
+      },
+      {
         "file": "docs\\publication\\figure_table_validation.md",
         "has_h1_title": true,
         "has_code_blocks": false,
@@ -1398,6 +1405,20 @@
         "status": "PASS"
       },
       {
+        "file": "docs\\publication\\IEEE_SUBMISSION_NOTES.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": false,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\publication\\JOURNAL_SUBMISSION_GUIDE.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": true,
+        "status": "PASS"
+      },
+      {
         "file": "docs\\publication\\manuscript_validation.md",
         "has_h1_title": true,
         "has_code_blocks": false,
@@ -1406,6 +1427,13 @@
       },
       {
         "file": "docs\\publication\\publication_certification.md",
+        "has_h1_title": true,
+        "has_code_blocks": false,
+        "parameter_consistency": false,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\publication\\PUBLICATION_CHECKLIST.md",
         "has_h1_title": true,
         "has_code_blocks": false,
         "parameter_consistency": false,
