@@ -1,10 +1,15 @@
 {
+  "project_name": "KDR-CA-AEAD",
+  "version": "1.0.0",
   "release_version": "1.0.0",
   "generated_at": "2026-08-04T16:20:13.641785+00:00",
   "total_archives": 6,
+  "total_files": 6,
   "artifacts": [
     {
       "filename": "kdr-ca-aead-v1.0.0.zip",
+      "relative_path": "kdr-ca-aead-v1.0.0.zip",
+      "file_size_bytes": 7954462,
       "size_bytes": 7954462,
       "size_kb": "7768.03 KB",
       "sha256": "ad3944c003e26c36bda53d5034716f10511d6e34bc3b8c8101a233b2238f017d",
@@ -14,6 +19,8 @@
     },
     {
       "filename": "kdr-ca-aead-v1.0.0.tar.gz",
+      "relative_path": "kdr-ca-aead-v1.0.0.tar.gz",
+      "file_size_bytes": 7706144,
       "size_bytes": 7706144,
       "size_kb": "7525.53 KB",
       "sha256": "8e5a42d0951dbdadc9d920d16f428b9346ad1a13d0ef81c5ceb55ddc19edf22d",
@@ -23,6 +30,8 @@
     },
     {
       "filename": "documentation-v1.0.0.zip",
+      "relative_path": "documentation-v1.0.0.zip",
+      "file_size_bytes": 6595786,
       "size_bytes": 6595786,
       "size_kb": "6441.20 KB",
       "sha256": "073830d4f4a40a2da77e65b8dceeb82319defc3c51d82a2d2783b6f81f99222d",
@@ -32,6 +41,8 @@
     },
     {
       "filename": "paper-v1.0.0.zip",
+      "relative_path": "paper-v1.0.0.zip",
+      "file_size_bytes": 1014831,
       "size_bytes": 1014831,
       "size_kb": "991.05 KB",
       "sha256": "c867226f6d13d04c9e6aba1dddaa803951b2f71bad7441bb32485d4f2e8b65da",
@@ -41,6 +52,8 @@
     },
     {
       "filename": "benchmarks-v1.0.0.zip",
+      "relative_path": "benchmarks-v1.0.0.zip",
+      "file_size_bytes": 1029626,
       "size_bytes": 1029626,
       "size_kb": "1005.49 KB",
       "sha256": "505c59a41e1fde180494cfc57eceb78aa92e2b2fe9a7d781073a973489c2aa98",
@@ -50,6 +63,8 @@
     },
     {
       "filename": "complete-release-v1.0.0.zip",
+      "relative_path": "complete-release-v1.0.0.zip",
+      "file_size_bytes": 8919858,
       "size_bytes": 8919858,
       "size_kb": "8710.80 KB",
       "sha256": "36a827b16c20554966b6822978c827c62472ff6cba8cf51fb2a3bb7a4dc0b0be",
