@@ -1,6 +1,6 @@
 # Long-Term Preservation Certificate - KDR-CA-AEAD v1.0.0
 
-**Certification Date:** 2026-08-05 15:58:45 UTC  
+**Certification Date:** 2026-08-05 16:17:02 UTC  
 
 ---
 

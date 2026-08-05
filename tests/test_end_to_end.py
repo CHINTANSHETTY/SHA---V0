@@ -110,7 +110,7 @@ class TestSerializationCompatibility:
     """Verifies format specification and serialization compatibility for EncryptedPackage."""
 
     def test_encrypted_package_to_from_dict(self) -> None:
-        """Verify EncryptedPackage hex dictionary serialization."""
+        """Verify EncryptedPackage dictionary serialization with binary bitstream ciphertext."""
         pkg = EncryptedPackage(
             version="1.0.0",
             salt=b"salt_16_bytes_ok",
@@ -123,11 +123,17 @@ class TestSerializationCompatibility:
         assert d["version"] == "1.0.0"
         assert d["salt"] == pkg.salt.hex()
         assert d["nonce"] == pkg.nonce.hex()
-        assert d["ciphertext"] == pkg.ciphertext.hex()
+        assert d["ciphertext"] == "".join(f"{b:08b}" for b in pkg.ciphertext)
         assert d["tag"] == pkg.tag.hex()
 
         restored = EncryptedPackage.from_dict(d)
         assert restored == pkg
+
+        # Test backward compatibility with legacy hex formatted ciphertext
+        legacy_d = d.copy()
+        legacy_d["ciphertext"] = pkg.ciphertext.hex()
+        legacy_restored = EncryptedPackage.from_dict(legacy_d)
+        assert legacy_restored == pkg
 
     def test_encrypted_package_to_from_json(self) -> None:
         """Verify EncryptedPackage JSON string serialization."""
