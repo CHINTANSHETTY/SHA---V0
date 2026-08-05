@@ -13,14 +13,19 @@ authors:
     given-names: "Ashwitha"
     role: "Co-Researcher & Publication Lead"
 version: "1.0.0"
-date-released: "2026-08-03"
+date-released: "2026-08-05" # Synchronized with official v1.0.0 Git tag / release
 license: "Apache-2.0"
 repository-code: "https://github.com/CHINTANSHETTY/SHA---V0"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.1000000"
+    description: "Zenodo DOI placeholder for KDR-CA-AEAD v1.0.0"
 keywords:
   - "Cellular Automata"
   - "Authenticated Encryption"
   - "AEAD"
-  - "HKDF"
-  - "HMAC"
+  - "HKDF-SHA256"
+  - "HMAC-SHA256"
   - "NIST SP 800-22"
   - "Strict Avalanche Criterion"
+  - "Lightweight Cryptography"

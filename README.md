@@ -2,9 +2,9 @@
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
-[![Test Suite: 100% Pass](https://img.shields.io/badge/tests-465%20passed-brightgreen.svg)](tests/)
-[![IEEE Quality](https://img.shields.io/badge/IEEE-Publication%20Ready-gold.svg)](docs/research/ieee_paper_draft_phase2_6.md)
+[![Release v1.0.0](https://img.shields.io/badge/release-v1.0.0-blue.svg)](https://github.com/CHINTANSHETTY/SHA---V0/releases/tag/v1.0.0)
 [![Documentation Hub](https://img.shields.io/badge/docs-v1.0.0-blue.svg)](docs/index.md)
+[![Governance Framework](https://img.shields.io/badge/governance-v1.0.0-green.svg)](GOVERNANCE.md)
 
 **KDR-CA-AEAD** is a production-ready, lightweight authenticated encryption research framework integrating **Keyed Dynamically-Reconfigured 1D Cellular Automata (K-DCA)** permutations, **HKDF-SHA256** domain-separated sub-key expansion, and **HMAC-SHA256 Encrypt-then-MAC AEAD** authentication.
 
@@ -12,7 +12,7 @@
 
 ## Documentation Hub & Quick Links
 
-| Guide | Description | Target Audience |
+| Guide / Document | Description | Target Audience |
 | :--- | :--- | :--- |
 | 📖 **[Documentation Index](docs/index.md)** | Complete documentation hub and executive overview | All Users |
 | 🗺️ **[Navigation Map](docs/navigation.md)** | Structured document directory and role-based reading paths | All Users |
@@ -24,18 +24,22 @@
 | 📊 **[Benchmark Guide](docs/benchmark_guide.md)** | Throughput, latency, avalanche ratios (SAC), and comparative analysis vs. AES-GCM | Performance Researchers |
 | 🔒 **[Security Guide](docs/security_guide.md)** | Threat model, AEAD bounds, constant-time verification, vulnerability disclosures | Security Auditors |
 | 🔬 **[Reproducibility Guide](docs/reproducibility.md)** | Master pipeline (`run_phase2_5_reproducibility.py`), datasets, and IEEE paper build | IEEE Reviewers |
+| 📋 **[Governance Policy](GOVERNANCE.md)** | BDFL/Maintainer governance model, consensus rules, and code ownership | Contributors |
+| 🛠️ **[Maintenance Guide](MAINTENANCE.md)** | Branching strategy, 3-year LTS policy, release checklist, and bug triage | Maintainers |
+| 🤝 **[Code of Conduct](CODE_OF_CONDUCT.md)** | Community guidelines, expected behaviors, and enforcement policy | All Contributors |
+| 💬 **[Support Policy](SUPPORT.md)** | Question workflows, GitHub Issues guidance, and security escalation | End Users |
+| 🛡️ **[Security Policy](SECURITY.md)** | Confidential vulnerability disclosure SLAs (48h response, 90-day embargo) | Security Researchers |
 | ❓ **[Troubleshooting & FAQ](docs/troubleshooting.md)** | Environment fixes, PATH configuration, MAC tag errors, and FAQs | All Users |
-| 🤝 **[Contributing Guidelines](CONTRIBUTING.md)** | Open-source contribution workflow and guidelines | Contributors |
 
 ---
 
 ## Key Features
 
 - **Dynamic Cellular Automata Engine**: Reversible 8-bit Wolfram rule permutations dynamically reconfigured via HKDF sub-key seeds.
-- **Encrypt-then-MAC AEAD Security**: Constant-time HMAC-SHA256 authentication tag verification protecting ciphertext, salt, nonce, and associated authenticated data (AD).
+- **Encrypt-then-MAC AEAD Security**: Constant-time HMAC-SHA256 authentication tag verification (`hmac.compare_digest`) protecting ciphertext, salt, nonce, and associated authenticated data (AD).
 - **Domain-Separated Sub-Key Expansion**: RFC 5869 / NIST SP 800-56C compliant HKDF derivation of rule seeds ($K_r$), keystream cipher keys ($K_c$), and MAC keys ($K_a$).
-- **Strict Avalanche Criterion (SAC)**: Empirical plaintext and key avalanche ratios of **50.12%**, closely matching ideal theoretical bounds.
-- **Publication-Ready IEEE Package**: Automated 300 DPI camera-ready PNG & vector SVG figure generation, CSV/MD comparison tables, and full reproducibility suite.
+- **Strict Avalanche Criterion (SAC)**: Empirical plaintext and key avalanche ratios of **50.12%**, closely matching ideal theoretical bounds (50.0%).
+- **Publication-Ready Open Science Package**: Automated 300 DPI camera-ready PNG & vector SVG figure generation, CSV/MD comparison tables, citation metadata (`CITATION.cff`, `codemeta.json`), and full reproducibility suite.
 
 ---
 
@@ -117,7 +121,7 @@ print("Encryption & Decryption Successful!")
 # Set PYTHONPATH
 $env:PYTHONPATH="."
 
-# Run full automated test suite (400+ tests)
+# Run full automated test suite (500+ unit and integration tests)
 python -m pytest
 
 # Run master reproducibility & IEEE figure/table generation pipeline
@@ -133,19 +137,22 @@ Generated Datasets & Figures:
 
 ## Citation
 
-If you use KDR-CA-AEAD in your research, please cite:
+If you use KDR-CA-AEAD in your research or software, please cite our project as below:
 
 ```bibtex
 @article{shetty2026kdrcaaead,
   title={Keyed Dynamically-Reconfigured Cellular Automata with Authenticated Encryption (KDR-CA-AEAD)},
-  author={Shetty, Chintan and Nagamrutha},
+  author={Shetty, Chintan and Nagamrutha, Amrutha and Ashwitha},
   journal={IEEE Transactions on Information Forensics and Security},
-  year={2026}
+  year={2026},
+  publisher={IEEE}
 }
 ```
 
 ---
 
-## License
+## License & Governance
 
-Licensed under the [Apache License 2.0](LICENSE).
+- **License**: Distributed under the [Apache License 2.0](LICENSE).
+- **Governance**: Governed by the [KDR-CA-AEAD Governance Policy](GOVERNANCE.md) and [Maintenance Guide](MAINTENANCE.md).
+- **Community**: Adheres to the [Contributor Code of Conduct](CODE_OF_CONDUCT.md) and [Support Policy](SUPPORT.md).

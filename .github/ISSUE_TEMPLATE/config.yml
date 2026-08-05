@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: GitHub Support & Questions
+    url: https://github.com/CHINTANSHETTY/SHA---V0/issues/new?template=documentation.md
+    about: Ask questions or request documentation clarifications via GitHub Issues.
+  - name: Security Vulnerability Disclosure (Private Email)
+    url: mailto:shettyashwitha26@gmail.com
+    about: Privately disclose sensitive security vulnerabilities or side-channel reports.
