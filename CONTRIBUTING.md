@@ -19,7 +19,15 @@ Before opening a new issue:
 - Include step-by-step reproduction instructions, Python version, OS details, and full error tracebacks.
 
 > [!CAUTION]
-> For security vulnerabilities, do **not** open a public issue. Email details directly to `shettyashwitha26@gmail.com` or `chntnshetty@gmail.com` per our [Security Guide](docs/security_guide.md).
+> For security vulnerabilities, do **not** open a public issue. Email details directly to `shettyashwitha26@gmail.com` or `chntnshetty@gmail.com` per our [Security Policy](SECURITY.md) and [Security Guide](docs/security_guide.md).
+
+---
+
+## Governance & Reference Documents
+
+- 🛡️ **[Security Policy](SECURITY.md)**: Responsible disclosure, reporting SLAs, and vulnerability classification.
+- 📦 **[Supported Versions](SUPPORTED_VERSIONS.md)**: Version support lifecycle, LTS policies, and semantic versioning rules.
+- 🗺️ **[Project Roadmap](ROADMAP.md)**: Strategic research and engineering milestones for future releases.
 
 ### 2. Development & Pull Request Workflow
 

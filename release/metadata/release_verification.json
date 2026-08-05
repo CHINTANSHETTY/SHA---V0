@@ -1,27 +1,36 @@
 {
   "project_name": "KDR-CA-AEAD",
   "version": "1.0.0",
-  "audit_timestamp_utc": "2026-08-05T08:13:08.771915+00:00",
-  "overall_status": "PASS",
-  "certification_passed": true,
+  "audit_timestamp_utc": "2026-08-05T14:31:33.097997+00:00",
+  "overall_status": "FAIL",
+  "certification_passed": false,
   "audits": {
     "release_structure": {
-      "passed": true,
-      "issues": []
+      "passed": false,
+      "issues": [
+        "Missing release subdirectory: release/validation_results",
+        "Missing release subdirectory: release/supplementary"
+      ]
     },
     "security_and_cleanliness": {
       "passed": true,
       "issues": []
     },
     "checksums_and_manifest": {
-      "passed": true,
-      "issues": []
+      "passed": false,
+      "issues": [
+        "Release manifest version mismatch: None"
+      ]
     },
     "metadata_consistency": {
       "passed": true,
       "issues": []
     }
   },
-  "total_issues_found": 0,
-  "issues": []
+  "total_issues_found": 3,
+  "issues": [
+    "Missing release subdirectory: release/validation_results",
+    "Missing release subdirectory: release/supplementary",
+    "Release manifest version mismatch: None"
+  ]
 }
