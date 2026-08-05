@@ -1,6 +1,10 @@
 {
   "title": "KDR-CA-AEAD Cryptographic Security Audit Findings",
+<<<<<<< HEAD
   "timestamp_epoch": 1785946321.064,
+=======
+  "timestamp_epoch": 1785946834.038,
+>>>>>>> 099e31d (docs(phase7): finalize documentation audit and publication validation)
   "overall_security_score": 99.12,
   "overall_audit_status": "PASS",
   "total_findings_evaluated": 6,
