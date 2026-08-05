@@ -1,6 +1,6 @@
 # Release & Distribution Certificate - KDR-CA-AEAD v1.0.0
 
-**Certification Date:** 2026-08-05 15:29:53 UTC  
+**Certification Date:** 2026-08-05 15:58:45 UTC  
 
 ---
 

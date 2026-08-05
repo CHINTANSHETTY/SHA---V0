@@ -1,7 +1,7 @@
 # KDR-CA-AEAD Release v1.0.0 - Official Release Notes
 
 **Release Version:** v1.0.0  
-**Release Date:** 2026-08-04  
+**Release Date:** 2026-08-05  
 **Target:** Production Release, GitHub Releases, Zenodo Archival, IEEE Publication Package  
 **License:** Apache License 2.0  
 

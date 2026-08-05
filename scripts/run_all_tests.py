@@ -24,7 +24,8 @@ def main():
     print("EXECUTING KDR-CA-AEAD UNIFIED AUTOMATED TEST SUITE")
     print("=" * 70)
 
-    cmd = [sys.executable, "-m", "pytest", "-v"]
+    extra_args = sys.argv[1:] if len(sys.argv) > 1 else ["tests/"]
+    cmd = [sys.executable, "-m", "pytest", "-v"] + extra_args
     env = dict(os.environ)
     env["PYTHONPATH"] = PROJECT_ROOT
 

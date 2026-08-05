@@ -1,18 +1,18 @@
 {
   "release_version": "1.0.0",
-  "scan_timestamp": "2026-08-05T15:29:53.158372+00:00",
-  "total_files": 1102,
-  "python_files": 285,
+  "scan_timestamp": "2026-08-05T15:58:45.216764+00:00",
+  "total_files": 870,
+  "python_files": 287,
   "test_files": 108,
-  "markdown_docs": 394,
-  "figure_assets": 156,
-  "table_assets": 26,
-  "python_loc": 40135,
-  "total_loc": 68600,
+  "markdown_docs": 330,
+  "figure_assets": 78,
+  "table_assets": 13,
+  "python_loc": 39329,
+  "total_loc": 61605,
   "health_metrics": {
-    "doc_to_code_ratio": 1.382,
-    "test_to_module_ratio": 0.61,
+    "doc_to_code_ratio": 1.15,
+    "test_to_module_ratio": 0.603,
     "largest_artifact": "release/complete-release-v1.0.0.zip",
-    "largest_artifact_size_mb": 8.507
+    "largest_artifact_size_mb": 8.544
   }
 }

@@ -10,6 +10,7 @@ on:
     branches:
       - main
       - master
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -36,21 +37,14 @@ jobs:
 
       - name: Install Project Dependencies
         run: |
-          python -m pip install --upgrade pip
+          python -m pip install --upgrade pip setuptools wheel
           python -m pip install -r requirements.txt
-          python -m pip install pytest pytest-cov
 
-      - name: Execute Unified Test Suite
+      - name: Execute Unified Test Suite with Coverage
         env:
           PYTHONPATH: .
         run: |
-          python scripts/run_all_tests.py
-
-      - name: Execute Pytest Code Coverage
-        env:
-          PYTHONPATH: .
-        run: |
-          pytest --cov=crypto --cov-report=term-missing
+          python scripts/run_all_tests.py tests/ --cov=crypto --cov-report=term-missing
 
   release-build:
     name: Validate Distribution Packaging
@@ -65,10 +59,11 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+          cache: 'pip'
 
       - name: Install Packaging Dependencies
         run: |
-          python -m pip install --upgrade pip
+          python -m pip install --upgrade pip setuptools wheel
           python -m pip install -r requirements.txt
 
       - name: Build Distribution Archives & Run Checksum Self-Verification

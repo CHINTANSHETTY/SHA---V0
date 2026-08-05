@@ -1,6 +1,6 @@
 {
   "title": "KDR-CA-AEAD Cryptographic API Validation & Docstring Quality Report",
-  "timestamp_epoch": 1785942088.835,
+  "timestamp_epoch": 1785945615.037,
   "api_validation": {
     "docstring_validation": {
       "modules_evaluated_count": 13,
@@ -643,8 +643,8 @@
     "summary": "API Validation PASSED: Docstring Coverage 100.0% across 59 symbols; 100% code examples executed successfully."
   },
   "documentation_review": {
-    "files_audited_count": 163,
-    "files_passed_count": 163,
+    "files_audited_count": 188,
+    "files_passed_count": 188,
     "broken_links_count": 0,
     "broken_links": [],
     "audited_files": [
@@ -660,6 +660,13 @@
         "has_h1_title": true,
         "has_code_blocks": true,
         "parameter_consistency": true,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\API_COOKBOOK.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": false,
         "status": "PASS"
       },
       {
@@ -695,6 +702,13 @@
         "has_h1_title": true,
         "has_code_blocks": true,
         "parameter_consistency": true,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\FAQ.md",
+        "has_h1_title": true,
+        "has_code_blocks": false,
+        "parameter_consistency": false,
         "status": "PASS"
       },
       {
@@ -852,9 +866,37 @@
         "status": "PASS"
       },
       {
+        "file": "docs\\architecture\\ARCHITECTURE_GUIDE.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": true,
+        "status": "PASS"
+      },
+      {
         "file": "docs\\architecture\\system_architecture.md",
         "has_h1_title": true,
         "has_code_blocks": true,
+        "parameter_consistency": false,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\archive\\DIGITAL_PRESERVATION.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": false,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\archive\\METADATA_REVIEW.md",
+        "has_h1_title": true,
+        "has_code_blocks": false,
+        "parameter_consistency": false,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\archive\\PRESERVATION_CHECKLIST.md",
+        "has_h1_title": true,
+        "has_code_blocks": false,
         "parameter_consistency": false,
         "status": "PASS"
       },
@@ -929,6 +971,13 @@
         "status": "PASS"
       },
       {
+        "file": "docs\\governance\\GOVERNANCE.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": false,
+        "status": "PASS"
+      },
+      {
         "file": "docs\\graphs\\graph_manifest.md",
         "has_h1_title": true,
         "has_code_blocks": false,
@@ -940,6 +989,20 @@
         "has_h1_title": true,
         "has_code_blocks": true,
         "parameter_consistency": false,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\maintenance\\LEGACY_SUPPORT.md",
+        "has_h1_title": true,
+        "has_code_blocks": false,
+        "parameter_consistency": false,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\maintenance\\LONG_TERM_MAINTENANCE.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": true,
         "status": "PASS"
       },
       {
@@ -1251,6 +1314,76 @@
         "status": "PASS"
       },
       {
+        "file": "docs\\phase6\\ARTIFACT_PACKAGING_REPORT.md",
+        "has_h1_title": true,
+        "has_code_blocks": false,
+        "parameter_consistency": false,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\phase6\\FINAL_ARCHIVE_VALIDATION.md",
+        "has_h1_title": true,
+        "has_code_blocks": false,
+        "parameter_consistency": true,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\phase6\\FINAL_RELEASE_CERTIFICATION.md",
+        "has_h1_title": true,
+        "has_code_blocks": false,
+        "parameter_consistency": true,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\phase6\\FINAL_RELEASE_CHECKLIST.md",
+        "has_h1_title": true,
+        "has_code_blocks": false,
+        "parameter_consistency": false,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\phase6\\MAINTENANCE_DOCUMENTATION_REPORT.md",
+        "has_h1_title": true,
+        "has_code_blocks": false,
+        "parameter_consistency": false,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\phase6\\OPEN_SCIENCE_REPRODUCIBILITY_REPORT.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": true,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\phase6\\PUBLICATION_READINESS_REPORT.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": false,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\phase6\\RELEASE_INTEGRITY_REPORT.md",
+        "has_h1_title": true,
+        "has_code_blocks": false,
+        "parameter_consistency": false,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\phase6\\REPOSITORY_GOVERNANCE_REPORT.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": false,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\phase6\\REPRODUCIBILITY_AUDIT.md",
+        "has_h1_title": true,
+        "has_code_blocks": false,
+        "parameter_consistency": true,
+        "status": "PASS"
+      },
+      {
         "file": "docs\\publication\\figure_table_validation.md",
         "has_h1_title": true,
         "has_code_blocks": false,
@@ -1303,6 +1436,13 @@
         "file": "docs\\publication\\supplementary_material.md",
         "has_h1_title": true,
         "has_code_blocks": false,
+        "parameter_consistency": false,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\quality\\CONTINUOUS_QUALITY_ASSURANCE.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
         "parameter_consistency": false,
         "status": "PASS"
       },
@@ -1545,6 +1685,27 @@
         "status": "PASS"
       },
       {
+        "file": "docs\\research\\ARTIFACT_EVALUATION.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": false,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\research\\CITATION_GUIDE.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": false,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\research\\FUTURE_WORK.md",
+        "has_h1_title": true,
+        "has_code_blocks": false,
+        "parameter_consistency": true,
+        "status": "PASS"
+      },
+      {
         "file": "docs\\research\\ieee_cryptographic_audit.md",
         "has_h1_title": true,
         "has_code_blocks": true,
@@ -1626,6 +1787,13 @@
         "has_h1_title": true,
         "has_code_blocks": true,
         "parameter_consistency": false,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\research\\RESEARCHER_HANDBOOK.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": true,
         "status": "PASS"
       },
       {
@@ -1784,6 +1952,13 @@
       },
       {
         "file": "docs\\sprints\\sprint_7\\completion_report.md",
+        "has_h1_title": true,
+        "has_code_blocks": true,
+        "parameter_consistency": false,
+        "status": "PASS"
+      },
+      {
+        "file": "docs\\tutorials\\TUTORIAL.md",
         "has_h1_title": true,
         "has_code_blocks": true,
         "parameter_consistency": false,

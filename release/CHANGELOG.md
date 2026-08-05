@@ -4,8 +4,23 @@ All notable changes to the Keyed Dynamically-Reconfigured Cellular Automata with
 
 ---
 
-## [v1.0.0] / [Phase 4.1] - 2026-08-04
+## [v1.0.0] / [Phase 4.3 IEEE Final Release] - 2026-08-04
 ### Added & Refined
+- **Phase 4.1 System Integration**:
+  - Unified exports for `ValidationRunner`, `ValidationReport`, and `StreamingAEAD` in `crypto` and `crypto.validation`.
+  - Added comprehensive integration tests (`tests/test_system_integration.py`, `tests/test_end_to_end.py`, `tests/test_configuration.py`).
+  - Added architecture documentation `docs/phase4/system_integration.md`.
+- **Phase 4.2 Comprehensive Evaluation**:
+  - Added `crypto/evaluation/` subpackage (`FrameworkEvaluator`, `PerformanceConsolidator`, `ReportGenerator`).
+  - Implemented statistical performance consolidation computing Mean, Median, Min, Max, Standard Deviation, Variance, and 95% Confidence Intervals with Student's $t$-distribution.
+  - Implemented comparative benchmarks against **AES-128-GCM**, **ChaCha20-Poly1305**, and **AES-CTR + HMAC-SHA256**.
+  - Implemented reliability stress testing and memory leak verification (`tracemalloc`).
+- **Phase 4.3 IEEE Publication & Final Release Package**:
+  - Automated release packaging via `scripts/build_final_release.py`.
+  - Structured release directory hierarchy in `release/{paper, docs, benchmark_results, validation_results, evaluation_results, supplementary, metadata}`.
+  - Generated granular file `release/release_manifest.json`, SHA-256 (`release/checksums_sha256.txt`), and SHA-512 (`release/checksums_sha512.txt`).
+  - Added release QA test suite (`tests/test_release_package.py`, `tests/test_publication_artifacts.py`).
+  - Created publication release specification `docs/phase4/publication_release.md`.
 - **Standardized Core Documentation Directory (`docs/`)**:
   - `docs/index.md`: Master documentation hub & project entry point.
   - `docs/navigation.md`: Comprehensive role-based reading paths and file index.

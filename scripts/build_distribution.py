@@ -121,6 +121,8 @@ def clean_release_dir():
     if os.path.exists(RELEASE_DIR):
         shutil.rmtree(RELEASE_DIR)
     os.makedirs(RELEASE_DIR, exist_ok=True)
+    for sub in ["paper", "docs", "benchmark_results", "validation_results", "evaluation_results", "supplementary", "metadata"]:
+        os.makedirs(os.path.join(RELEASE_DIR, sub), exist_ok=True)
     log_info(f"[RELEASE] Output Directory Initialized: {RELEASE_DIR}")
 
 
@@ -357,7 +359,9 @@ def generate_and_verify_checksums(archives: List[Dict[str, Any]]) -> Dict[str, A
 
     manifest_entries = [{
         "filename": a['filename'],
+        "relative_path": a['filename'],
         "size_bytes": os.path.getsize(a['filepath']),
+        "file_size_bytes": os.path.getsize(a['filepath']),
         "size_kb": f"{a['size_kb']:.2f} KB",
         "sha256": a['sha256'],
         "sha512": a['sha512'],
@@ -366,9 +370,12 @@ def generate_and_verify_checksums(archives: List[Dict[str, Any]]) -> Dict[str, A
     } for a in archives]
 
     manifest_data = {
+        "project_name": "KDR-CA-AEAD",
+        "version": VERSION_STR,
         "release_version": VERSION_STR,
         "generated_at": datetime.datetime.now(datetime.timezone.utc).isoformat(),
         "total_archives": len(manifest_entries),
+        "total_files": len(manifest_entries),
         "artifacts": manifest_entries
     }
     with open(os.path.join(RELEASE_DIR, "release_manifest.json"), "w", encoding="utf-8") as f:
