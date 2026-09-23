@@ -1,0 +1,17 @@
+{
+  "status": "READY_FOR_INSTITUTIONAL_UPLOAD",
+  "computed_preservation_score_pct": 100.0,
+  "timestamp_utc": "2026-08-04T08:23:00.195156+00:00",
+  "version": "1.0.0",
+  "repository_fingerprint_sha256": "5f9849df6b95441845af3a68ec8835970d2945f3eb5fb70235a758a822a585c3",
+  "metadata_standards_supported": [
+    "DataCite 4.4",
+    "CodeMeta 2.0",
+    "Dublin Core",
+    "RO-Crate 1.1",
+    "DSpace 7.0"
+  ],
+  "archive_bundles_verified": 6,
+  "preservation_level": "Level 4 (Full Bitstream & Content)",
+  "exit_code": 0
+}

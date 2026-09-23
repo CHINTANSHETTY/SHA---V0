@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "timestamp": "2026-08-05T17:04:32.258776+00:00",
+  "total_archives": 6,
+  "results": [
+    {
+      "filename": "kdr-ca-aead-v1.0.0.zip",
+      "severity": "Informational",
+      "valid": true,
+      "missing_items": [],
+      "error": null
+    },
+    {
+      "filename": "kdr-ca-aead-v1.0.0.tar.gz",
+      "severity": "Informational",
+      "valid": true,
+      "missing_items": [],
+      "error": null
+    },
+    {
+      "filename": "documentation-v1.0.0.zip",
+      "severity": "Informational",
+      "valid": true,
+      "missing_items": [],
+      "error": null
+    },
+    {
+      "filename": "paper-v1.0.0.zip",
+      "severity": "Informational",
+      "valid": true,
+      "missing_items": [],
+      "error": null
+    },
+    {
+      "filename": "benchmarks-v1.0.0.zip",
+      "severity": "Informational",
+      "valid": true,
+      "missing_items": [],
+      "error": null
+    },
+    {
+      "filename": "complete-release-v1.0.0.zip",
+      "severity": "Informational",
+      "valid": true,
+      "missing_items": [],
+      "error": null
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+# Benchmark Visualization Configuration Schema (Phase 3.2.3)
+
+figure_settings:
+  dpi: 300
+  font_family:
+    - DejaVu Sans
+    - Arial
+    - Helvetica
+    - sans-serif
+  font_sizes:
+    title: 11
+    axis_label: 9.5
+    tick_label: 8
+    legend: 8
+    annotation: 7.5
+  line_widths:
+    primary: 1.8
+    secondary: 1.2
+    grid: 0.5
+    threshold: 1.0
+
+colors:
+  primary: "#002B49"       # IEEE Dark Navy
+  secondary: "#1F77B4"     # IEEE Blue
+  accent: "#2CA02C"        # Emerald Green
+  warning: "#FF7F0E"       # Warm Amber
+  highlight: "#9467BD"     # Royal Purple
+  bg_light: "#F8FAFC"      # Slate Light
+  border: "#475569"        # Slate Gray Border
+  text: "#0F172A"          # Dark Slate Charcoal
+  ciphers:
+    KDR-CA-AEAD: "#002B49"
+    AES-256-GCM: "#1F77B4"
+    ChaCha20-Poly1305: "#2CA02C"
+    AES-CTR+HMAC: "#FF7F0E"
+
+thresholds:
+  shannon_entropy: 7.90
+  sac_avalanche_ideal: 50.0
+  nist_p_value_alpha: 0.01
+
+data_paths:
+  benchmark_csv: "crypto/analysis/results/benchmark_metrics.csv"
+  master_results_json: "crypto/analysis/results/master_results.json"

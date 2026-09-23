@@ -1,0 +1,75 @@
+{
+  "$schema": "https://raw.githubusercontent.com/datacite/schema/master/schemas/datacite-v4.4.json",
+  "datacite_metadata": {
+    "identifier": {
+      "identifierType": "DOI",
+      "value": "10.5281/zenodo.kdrcaaead.v1.0.0"
+    },
+    "creators": [
+      {
+        "name": "Shetty, Chintan",
+        "affiliation": "Lead Cryptographic Researcher"
+      },
+      {
+        "name": "Nagamrutha, Amrutha",
+        "affiliation": "Security & Evaluation Lead"
+      },
+      {
+        "name": "Ashwitha",
+        "affiliation": "Release Engineering Lead"
+      }
+    ],
+    "titles": [
+      {
+        "title": "Keyed Dynamically-Reconfigured Cellular Automata with Authenticated Encryption (KDR-CA-AEAD)"
+      }
+    ],
+    "publisher": "IEEE / Zenodo Digital Repository",
+    "publicationYear": 2026,
+    "resourceType": {
+      "resourceTypeGeneral": "Software",
+      "value": "Cryptographic Research Framework"
+    },
+    "rightsList": [
+      {
+        "rights": "Apache License 2.0",
+        "rightsURI": "https://www.apache.org/licenses/LICENSE-2.0"
+      }
+    ]
+  },
+  "codemeta_metadata": {
+    "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+    "@type": "SoftwareSourceCode",
+    "name": "KDR-CA-AEAD",
+    "version": "1.0.0",
+    "programmingLanguage": "Python 3",
+    "license": "https://spdx.org/licenses/Apache-2.0"
+  },
+  "dublin_core": {
+    "dc.title": "KDR-CA-AEAD v1.0.0",
+    "dc.creator": "Chintan Shetty, Amrutha Nagamrutha, Ashwitha",
+    "dc.publisher": "IEEE Transactions on Information Forensics and Security",
+    "dc.date": "2026-08-04",
+    "dc.type": "Software / Dataset"
+  },
+  "ro_crate": {
+    "@context": "https://w3id.org/ro/crate/1.1/context",
+    "@graph": [
+      {
+        "@id": "ro-crate-metadata.json",
+        "@type": "CreativeWork",
+        "about": {
+          "@id": "./"
+        }
+      },
+      {
+        "@id": "./",
+        "@type": "Dataset",
+        "name": "KDR-CA-AEAD Archival Package",
+        "license": "Apache-2.0"
+      }
+    ]
+  },
+  "repository_fingerprint_sha256": "5f9849df6b95441845af3a68ec8835970d2945f3eb5fb70235a758a822a585c3",
+  "created_at_utc": "2026-08-04T08:23:00.184538+00:00"
+}

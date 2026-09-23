@@ -1,0 +1,9 @@
+venv/
+__pycache__/
+*.pyc
+*.db
+.vscode/
+.idea/
+.coverage
+.pytest_cache/
+SHA---V0-main/

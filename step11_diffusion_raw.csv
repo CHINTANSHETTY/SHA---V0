@@ -1,0 +1,65 @@
+round,stage,changed_bits,changed_cells,neighborhoods_changed,row_range,col_range
+1,Round 1 (Margolus R1),4,4,1,0-1,0-1
+1,Round 1 (Post-Shift DOWN 1 / RIGHT 1),4,4,4,1-2,1-2
+2,Round 2 (Shifted R2),1,1,1,2-2,2-2
+2,Round 2 (Post-Shift DOWN 1 / RIGHT 1),1,1,1,3-3,3-3
+3,Round 3 (Margolus R1),3,3,1,2-3,2-3
+3,Round 3 (Post-Shift DOWN 1 / RIGHT 1),3,3,3,3-4,3-4
+4,Round 4 (Shifted R2),2,2,2,4-4,3-4
+4,Round 4 (Post-Shift DOWN 1 / RIGHT 1),2,2,1,5-5,4-5
+5,Round 5 (Margolus R1),4,4,1,4-5,4-5
+5,Round 5 (Post-Shift DOWN 1 / RIGHT 1),4,4,4,5-6,5-6
+6,Round 6 (Shifted R2),2,2,2,5-5,5-6
+6,Round 6 (Post-Shift DOWN 1 / RIGHT 1),2,2,1,6-6,6-7
+7,Round 7 (Margolus R1),4,4,1,6-7,6-7
+7,Round 7 (Post-Shift DOWN 1 / RIGHT 1),4,4,4,7-8,7-8
+8,Round 8 (Shifted R2),3,3,3,7-8,7-8
+8,Round 8 (Post-Shift DOWN 1 / RIGHT 1),3,3,1,8-9,8-9
+9,Round 9 (Margolus R1),2,2,1,8-9,8-9
+9,Round 9 (Post-Shift DOWN 1 / RIGHT 1),2,2,2,9-10,9-10
+10,Round 10 (Shifted R2),3,3,3,9-10,9-10
+10,Round 10 (Post-Shift DOWN 1 / RIGHT 1),3,3,1,10-11,10-11
+11,Round 11 (Margolus R1),1,1,1,11-11,10-10
+11,Round 11 (Post-Shift DOWN 1 / RIGHT 1),1,1,1,12-12,11-11
+12,Round 12 (Shifted R2),2,2,2,12-12,11-12
+12,Round 12 (Post-Shift DOWN 1 / RIGHT 1),2,2,1,13-13,12-13
+13,Round 13 (Margolus R1),1,1,1,12-12,12-12
+13,Round 13 (Post-Shift DOWN 1 / RIGHT 1),1,1,1,13-13,13-13
+14,Round 14 (Shifted R2),4,4,4,13-14,13-14
+14,Round 14 (Post-Shift DOWN 1 / RIGHT 1),4,4,1,14-15,14-15
+15,Round 15 (Margolus R1),1,1,1,15-15,15-15
+15,Round 15 (Post-Shift DOWN 1 / RIGHT 1),1,1,1,0-0,0-0
+16,Round 16 (Shifted R2),3,3,3,0-15,0-15
+16,Round 16 (Post-Shift DOWN 1 / RIGHT 1),3,3,1,0-1,0-1
+17,Round 17 (Margolus R1),2,2,1,1-1,0-1
+17,Round 17 (Post-Shift DOWN 1 / RIGHT 1),2,2,2,2-2,1-2
+18,Round 18 (Shifted R2),4,4,4,1-2,1-2
+18,Round 18 (Post-Shift DOWN 1 / RIGHT 1),4,4,1,2-3,2-3
+19,Round 19 (Margolus R1),2,2,1,2-2,2-3
+19,Round 19 (Post-Shift DOWN 1 / RIGHT 1),2,2,2,3-3,3-4
+20,Round 20 (Shifted R2),4,4,4,3-4,3-4
+20,Round 20 (Post-Shift DOWN 1 / RIGHT 1),4,4,1,4-5,4-5
+21,Round 21 (Margolus R1),3,3,1,4-5,4-5
+21,Round 21 (Post-Shift DOWN 1 / RIGHT 1),3,3,3,5-6,5-6
+22,Round 22 (Shifted R2),2,2,2,5-6,5-6
+22,Round 22 (Post-Shift DOWN 1 / RIGHT 1),2,2,1,6-7,6-7
+23,Round 23 (Margolus R1),3,3,1,6-7,6-7
+23,Round 23 (Post-Shift DOWN 1 / RIGHT 1),3,3,3,7-8,7-8
+24,Round 24 (Shifted R2),1,1,1,8-8,7-7
+24,Round 24 (Post-Shift DOWN 1 / RIGHT 1),1,1,1,9-9,8-8
+25,Round 25 (Margolus R1),2,2,1,9-9,8-9
+25,Round 25 (Post-Shift DOWN 1 / RIGHT 1),2,2,2,10-10,9-10
+26,Round 26 (Shifted R2),1,1,1,9-9,9-9
+26,Round 26 (Post-Shift DOWN 1 / RIGHT 1),1,1,1,10-10,10-10
+27,Round 27 (Margolus R1),4,4,1,10-11,10-11
+27,Round 27 (Post-Shift DOWN 1 / RIGHT 1),4,4,4,11-12,11-12
+28,Round 28 (Shifted R2),1,1,1,12-12,12-12
+28,Round 28 (Post-Shift DOWN 1 / RIGHT 1),1,1,1,13-13,13-13
+29,Round 29 (Margolus R1),3,3,1,12-13,12-13
+29,Round 29 (Post-Shift DOWN 1 / RIGHT 1),3,3,3,13-14,13-14
+30,Round 30 (Shifted R2),2,2,2,14-14,13-14
+30,Round 30 (Post-Shift DOWN 1 / RIGHT 1),2,2,1,15-15,14-15
+31,Round 31 (Margolus R1),4,4,1,14-15,14-15
+31,Round 31 (Post-Shift DOWN 1 / RIGHT 1),4,4,4,0-15,0-15
+32,Round 32 (Shifted R2),2,2,2,15-15,0-15
+32,Round 32 (Post-Shift DOWN 1 / RIGHT 1),2,2,1,0-0,0-1

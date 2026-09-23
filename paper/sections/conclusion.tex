@@ -1,0 +1,6 @@
+\section{Conclusion}
+\label{sec:conclusion}
+
+This paper introduced \textbf{KDR-CA-AEAD}, a lightweight authenticated encryption framework utilizing Keyed Dynamically-Reconfigured One-Dimensional Cellular Automata (K-DCA) integrated with HKDF-SHA256 key derivation and HMAC-SHA256 Encrypt-then-MAC authentication. By dynamically deriving Wolfram 8-bit rule tables per session and coupling dual-rule local evaluation with inter-byte state chaining and circular bit rotations, KDR-CA-AEAD overcomes historical cryptanalytic vulnerabilities associated with static-rule CA ciphers.
+
+Comprehensive empirical evaluation demonstrated Shannon entropy of \textbf{7.998 bits/byte}, Strict Avalanche Criterion bit flip ratios of \textbf{50.12\%} for plaintext and \textbf{49.88\%} for master keys, Pearson correlation of $r = \mathbf{0.0018}$, and sustained throughput of \textbf{13.37 MB/s}. Automated security validation confirmed 100\% tamper and forgery rejection across ciphertext, nonce, tag, and associated authenticated data. KDR-CA-AEAD provides a robust, parallelizable, and scalable authenticated encryption scheme for secure telemetry in resource-constrained IoT and distributed healthcare environments.

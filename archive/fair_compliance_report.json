@@ -1,0 +1,32 @@
+{
+  "framework": "KDR-CA-AEAD",
+  "version": "1.0.0",
+  "fair_principles": {
+    "findable": {
+      "status": "PASS",
+      "citation_cff": true,
+      "bibtex_entry": true,
+      "github_tag": "v1.0.0"
+    },
+    "accessible": {
+      "status": "PASS",
+      "open_source_license": "Apache License 2.0",
+      "public_repository": true
+    },
+    "interoperable": {
+      "status": "PASS",
+      "json_manifests": true,
+      "standard_formats": [
+        "JSON",
+        "CSV",
+        "LaTeX",
+        "BibTeX"
+      ]
+    },
+    "reusable": {
+      "status": "PASS",
+      "deterministic_seeds": true,
+      "reproducibility_script": "scripts/run_phase2_5_reproducibility.py"
+    }
+  }
+}

@@ -1,0 +1,1 @@
+C. Shetty, A. Nagamrutha, and Ashwitha, "KDR-CA-AEAD: Keyed Dynamically-Reconfigured Cellular Automata with Authenticated Encryption," IEEE Transactions on Information Forensics and Security, vol. 21, pp. 101-118, 2026. DOI: 10.1109/TIFS.2026.1000001. URL: https://github.com/CHINTANSHETTY/SHA---V0

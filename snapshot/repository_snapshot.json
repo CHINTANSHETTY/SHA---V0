@@ -1,0 +1,518 @@
+{
+  "release_version": "1.0.0",
+  "snapshot_timestamp_utc": "2026-08-05T15:29:40.308671+00:00",
+  "total_directories": 150,
+  "total_files": 1102,
+  "total_size_bytes": 60934220,
+  "total_size_mb": 58.11,
+  "python_files": 285,
+  "test_files": 108,
+  "markdown_files": 394,
+  "figure_files": 276,
+  "table_files": 39,
+  "source_loc": 40135,
+  "doc_loc": 28465,
+  "doc_to_code_ratio": 1.382,
+  "files": [
+    {
+      "path": ".gitignore",
+      "size_bytes": 95,
+      "extension": ""
+    },
+    {
+      "path": "app.py",
+      "size_bytes": 13635,
+      "extension": ".py"
+    },
+    {
+      "path": "ARCHIVE_VALIDATION.md",
+      "size_bytes": 4635,
+      "extension": ".md"
+    },
+    {
+      "path": "blank.txt",
+      "size_bytes": 0,
+      "extension": ".txt"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "size_bytes": 6164,
+      "extension": ".md"
+    },
+    {
+      "path": "citation.bib",
+      "size_bytes": 488,
+      "extension": ".bib"
+    },
+    {
+      "path": "CITATION.cff",
+      "size_bytes": 827,
+      "extension": ".cff"
+    },
+    {
+      "path": "citation.txt",
+      "size_bytes": 300,
+      "extension": ".txt"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "size_bytes": 2569,
+      "extension": ".md"
+    },
+    {
+      "path": "decrypt.py",
+      "size_bytes": 1709,
+      "extension": ".py"
+    },
+    {
+      "path": "DEPENDENCY_PRESERVATION.md",
+      "size_bytes": 2733,
+      "extension": ".md"
+    },
+    {
+      "path": "encrypt.py",
+      "size_bytes": 3580,
+      "extension": ".py"
+    },
+    {
+      "path": "FINAL_RELEASE_CERTIFICATION.md",
+      "size_bytes": 3010,
+      "extension": ".md"
+    },
+    {
+      "path": "FINAL_RELEASE_CHECKLIST.md",
+      "size_bytes": 2905,
+      "extension": ".md"
+    },
+    {
+      "path": "FINAL_RELEASE_VALIDATION.md",
+      "size_bytes": 5280,
+      "extension": ".md"
+    },
+    {
+      "path": "INTEGRITY_VERIFICATION_GUIDE.md",
+      "size_bytes": 3395,
+      "extension": ".md"
+    },
+    {
+      "path": "LICENSE",
+      "size_bytes": 10349,
+      "extension": ""
+    },
+    {
+      "path": "LONG_TERM_REPRODUCIBILITY_SUMMARY.md",
+      "size_bytes": 3493,
+      "extension": ".md"
+    },
+    {
+      "path": "MAINTENANCE_GUIDE.md",
+      "size_bytes": 3691,
+      "extension": ".md"
+    },
+    {
+      "path": "PROJECT_CLOSURE.md",
+      "size_bytes": 5663,
+      "extension": ".md"
+    },
+    {
+      "path": "pytest.ini",
+      "size_bytes": 117,
+      "extension": ".ini"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 6894,
+      "extension": ".md"
+    },
+    {
+      "path": "records.db",
+      "size_bytes": 20480,
+      "extension": ".db"
+    },
+    {
+      "path": "RELEASE_CERTIFICATION.md",
+      "size_bytes": 2689,
+      "extension": ".md"
+    },
+    {
+      "path": "RELEASE_SUMMARY.md",
+      "size_bytes": 3192,
+      "extension": ".md"
+    },
+    {
+      "path": "REPOSITORY_PRESERVATION_REPORT.md",
+      "size_bytes": 4477,
+      "extension": ".md"
+    },
+    {
+      "path": "REPRODUCIBILITY_GUIDE.md",
+      "size_bytes": 4400,
+      "extension": ".md"
+    },
+    {
+      "path": "requirements.txt",
+      "size_bytes": 35,
+      "extension": ".txt"
+    },
+    {
+      "path": "ROADMAP.md",
+      "size_bytes": 3020,
+      "extension": ".md"
+    },
+    {
+      "path": "SECURITY.md",
+      "size_bytes": 2863,
+      "extension": ".md"
+    },
+    {
+      "path": "setup.py",
+      "size_bytes": 141,
+      "extension": ".py"
+    },
+    {
+      "path": "shaModule.py",
+      "size_bytes": 301,
+      "extension": ".py"
+    },
+    {
+      "path": "SUPPORTED_VERSIONS.md",
+      "size_bytes": 2057,
+      "extension": ".md"
+    },
+    {
+      "path": "test.py",
+      "size_bytes": 508,
+      "extension": ".py"
+    },
+    {
+      "path": "testEncryption.py",
+      "size_bytes": 316,
+      "extension": ".py"
+    },
+    {
+      "path": "utils.py",
+      "size_bytes": 759,
+      "extension": ".py"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "size_bytes": 2175,
+      "extension": ".yml"
+    },
+    {
+      "path": "archive/archive_manifest.json",
+      "size_bytes": 4862,
+      "extension": ".json"
+    },
+    {
+      "path": "archive/ARCHIVE_MANIFEST.md",
+      "size_bytes": 2467,
+      "extension": ".md"
+    },
+    {
+      "path": "archive/archive_validation_report.json",
+      "size_bytes": 641,
+      "extension": ".json"
+    },
+    {
+      "path": "archive/ARTIFACT_CONTENTS.md",
+      "size_bytes": 6549,
+      "extension": ".md"
+    },
+    {
+      "path": "archive/artifact_inventory.md",
+      "size_bytes": 1058,
+      "extension": ".md"
+    },
+    {
+      "path": "archive/certification.md",
+      "size_bytes": 1456,
+      "extension": ".md"
+    },
+    {
+      "path": "archive/CHECKSUMS.sha256",
+      "size_bytes": 105424,
+      "extension": ".sha256"
+    },
+    {
+      "path": "archive/citation.bib",
+      "size_bytes": 488,
+      "extension": ".bib"
+    },
+    {
+      "path": "archive/CITATION.cff",
+      "size_bytes": 820,
+      "extension": ".cff"
+    },
+    {
+      "path": "archive/citation.txt",
+      "size_bytes": 300,
+      "extension": ".txt"
+    },
+    {
+      "path": "archive/data_management_plan.md",
+      "size_bytes": 441,
+      "extension": ".md"
+    },
+    {
+      "path": "archive/doi_package.md",
+      "size_bytes": 836,
+      "extension": ".md"
+    },
+    {
+      "path": "archive/fair_compliance_report.json",
+      "size_bytes": 723,
+      "extension": ".json"
+    },
+    {
+      "path": "archive/fair_metadata.json",
+      "size_bytes": 1616,
+      "extension": ".json"
+    },
+    {
+      "path": "archive/preservation_validation.md",
+      "size_bytes": 587,
+      "extension": ".md"
+    },
+    {
+      "path": "archive/README.md",
+      "size_bytes": 737,
+      "extension": ".md"
+    },
+    {
+      "path": "archive/reproducibility_checklist.md",
+      "size_bytes": 881,
+      "extension": ".md"
+    },
+    {
+      "path": "archive/software_heritage.md",
+      "size_bytes": 424,
+      "extension": ".md"
+    },
+    {
+      "path": "archive/checksums/dual_hash_checksums.sha256",
+      "size_bytes": 1442,
+      "extension": ".sha256"
+    },
+    {
+      "path": "archive/citations/citation.bib",
+      "size_bytes": 488,
+      "extension": ".bib"
+    },
+    {
+      "path": "archive/citations/CITATION.cff",
+      "size_bytes": 820,
+      "extension": ".cff"
+    },
+    {
+      "path": "archive/citations/citation.txt",
+      "size_bytes": 300,
+      "extension": ".txt"
+    },
+    {
+      "path": "archive/manifests/archive_manifest.json",
+      "size_bytes": 5495,
+      "extension": ".json"
+    },
+    {
+      "path": "archive/manifests/ARCHIVE_MANIFEST.md",
+      "size_bytes": 2824,
+      "extension": ".md"
+    },
+    {
+      "path": "archive/metadata/environment_snapshot.json",
+      "size_bytes": 691,
+      "extension": ".json"
+    },
+    {
+      "path": "archive/metadata/fair_metadata.json",
+      "size_bytes": 1698,
+      "extension": ".json"
+    },
+    {
+      "path": "archive/reports/artifact_inventory.md",
+      "size_bytes": 1058,
+      "extension": ".md"
+    },
+    {
+      "path": "archive/reports/data_management_plan.md",
+      "size_bytes": 441,
+      "extension": ".md"
+    },
+    {
+      "path": "archive/reports/doi_package.md",
+      "size_bytes": 642,
+      "extension": ".md"
+    },
+    {
+      "path": "archive/reports/reproducibility_checklist.md",
+      "size_bytes": 881,
+      "extension": ".md"
+    },
+    {
+      "path": "archive/reports/software_heritage.md",
+      "size_bytes": 555,
+      "extension": ".md"
+    },
+    {
+      "path": "audit/ARCHIVE_VALIDATION.md",
+      "size_bytes": 622,
+      "extension": ".md"
+    },
+    {
+      "path": "audit/AUDIT_CHECKLIST.md",
+      "size_bytes": 1461,
+      "extension": ".md"
+    },
+    {
+      "path": "audit/audit_results.json",
+      "size_bytes": 3326,
+      "extension": ".json"
+    },
+    {
+      "path": "audit/audit_statistics.json",
+      "size_bytes": 239,
+      "extension": ".json"
+    },
+    {
+      "path": "audit/AUDIT_SUMMARY.md",
+      "size_bytes": 627,
+      "extension": ".md"
+    },
+    {
+      "path": "audit/INDEPENDENT_AUDIT.md",
+      "size_bytes": 1474,
+      "extension": ".md"
+    },
+    {
+      "path": "audit/PUBLICATION_VALIDATION.md",
+      "size_bytes": 418,
+      "extension": ".md"
+    },
+    {
+      "path": "audit/REPRODUCIBILITY_AUDIT.md",
+      "size_bytes": 629,
+      "extension": ".md"
+    },
+    {
+      "path": "benchmarks/avalanche_test.py",
+      "size_bytes": 2469,
+      "extension": ".py"
+    },
+    {
+      "path": "benchmarks/candidate_study.py",
+      "size_bytes": 12771,
+      "extension": ".py"
+    },
+    {
+      "path": "benchmarks/comparative_benchmark.py",
+      "size_bytes": 6186,
+      "extension": ".py"
+    },
+    {
+      "path": "benchmarks/cryptographic_validation.py",
+      "size_bytes": 10631,
+      "extension": ".py"
+    },
+    {
+      "path": "benchmarks/generate_figures.py",
+      "size_bytes": 1923,
+      "extension": ".py"
+    },
+    {
+      "path": "benchmarks/performance.py",
+      "size_bytes": 1748,
+      "extension": ".py"
+    },
+    {
+      "path": "benchmarks/__init__.py",
+      "size_bytes": 113,
+      "extension": ".py"
+    },
+    {
+      "path": "certification/certification_results.json",
+      "size_bytes": 696,
+      "extension": ".json"
+    },
+    {
+      "path": "certification/closure_results.json",
+      "size_bytes": 1010,
+      "extension": ".json"
+    },
+    {
+      "path": "certification/FINAL_CERTIFICATION.md",
+      "size_bytes": 1464,
+      "extension": ".md"
+    },
+    {
+      "path": "certification/PERMANENT_ARCHIVE_CERTIFICATE.md",
+      "size_bytes": 1500,
+      "extension": ".md"
+    },
+    {
+      "path": "certification/preservation_certificate.md",
+      "size_bytes": 649,
+      "extension": ".md"
+    },
+    {
+      "path": "certification/quality_certificate.md",
+      "size_bytes": 503,
+      "extension": ".md"
+    },
+    {
+      "path": "certification/release_certificate.md",
+      "size_bytes": 525,
+      "extension": ".md"
+    },
+    {
+      "path": "certification/repository_certification.md",
+      "size_bytes": 1692,
+      "extension": ".md"
+    },
+    {
+      "path": "certification/REPRODUCIBILITY_CERTIFICATE.md",
+      "size_bytes": 1405,
+      "extension": ".md"
+    },
+    {
+      "path": "closure/FINAL_DELIVERABLES.md",
+      "size_bytes": 1294,
+      "extension": ".md"
+    },
+    {
+      "path": "closure/FINAL_EXECUTIVE_SUMMARY.md",
+      "size_bytes": 691,
+      "extension": ".md"
+    },
+    {
+      "path": "closure/LESSONS_LEARNED.md",
+      "size_bytes": 587,
+      "extension": ".md"
+    },
+    {
+      "path": "closure/PROJECT_CLOSURE.md",
+      "size_bytes": 1762,
+      "extension": ".md"
+    },
+    {
+      "path": "closure/PROJECT_TIMELINE.md",
+      "size_bytes": 1042,
+      "extension": ".md"
+    },
+    {
+      "path": "community/CONTRIBUTOR_ONBOARDING.md",
+      "size_bytes": 413,
+      "extension": ".md"
+    },
+    {
+      "path": "community/DEVELOPMENT_SETUP.md",
+      "size_bytes": 346,
+      "extension": ".md"
+    },
+    {
+      "path": "community/FAQ.md",
+      "size_bytes": 595,
+      "extension": ".md"
+    }
+  ]
+}

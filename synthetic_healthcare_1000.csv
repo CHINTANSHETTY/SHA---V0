@@ -1,0 +1,1001 @@
+PatientID,Age,Gender,BloodPressure,HeartRate,Diagnosis,Medication,Glucose,Temperature,DoctorID,Date
+P01000,62,Male,132/83,73,Pneumonia,Atorvastatin 20mg,96,97.3,D092,2026-01-17
+P01001,44,Other,102/91,100,Type 2 Diabetes,Amlodipine 5mg,186,98.6,D038,2026-01-26
+P01002,89,Female,138/60,104,Arrhythmia,Sumatriptan 50mg,150,99.9,D059,2026-09-11
+P01003,90,Female,114/76,64,COVID-19,Sumatriptan 50mg,135,98.7,D017,2026-05-05
+P01004,40,Other,152/92,86,Migraine,Metformin 500mg,122,98.0,D088,2026-10-09
+P01005,48,Other,146/70,63,Arrhythmia,Metformin 500mg,174,99.5,D078,2026-08-09
+P01006,59,Male,132/93,76,Osteoarthritis,Metoprolol 25mg,167,97.3,D093,2026-10-27
+P01007,78,Male,128/87,95,Pneumonia,Metformin 500mg,141,99.5,D015,2026-09-23
+P01008,27,Other,96/67,75,COVID-19,Amlodipine 5mg,129,99.2,D061,2026-01-09
+P01009,41,Female,127/73,88,Influenza A,Sumatriptan 50mg,75,101.0,D024,2026-02-21
+P01010,69,Female,108/69,104,Asthma,Amoxicillin 500mg,157,99.9,D082,2026-10-23
+P01011,21,Female,131/95,104,Type 2 Diabetes,Ibuprofen 400mg,166,99.0,D088,2026-02-19
+P01012,62,Female,159/92,76,Arrhythmia,Albuterol 90mcg,176,98.7,D082,2026-09-08
+P01013,80,Male,116/78,85,Type 2 Diabetes,Metformin 500mg,180,98.9,D075,2026-02-08
+P01014,40,Other,98/79,71,Pneumonia,Amoxicillin 500mg,145,100.5,D051,2026-02-08
+P01015,29,Other,98/96,85,Migraine,Oseltamivir 75mg,113,97.2,D039,2026-03-03
+P01016,49,Female,103/77,92,Type 2 Diabetes,Atorvastatin 20mg,113,100.4,D012,2026-05-05
+P01017,51,Female,133/69,94,Migraine,Ibuprofen 400mg,195,98.7,D074,2026-08-10
+P01018,79,Male,132/84,66,Asthma,Paxlovid,121,101.5,D078,2026-05-02
+P01019,62,Male,103/64,85,Osteoarthritis,Amoxicillin 500mg,154,100.2,D044,2026-11-25
+P01020,75,Other,97/99,75,Pneumonia,Oseltamivir 75mg,168,99.8,D036,2026-03-15
+P01021,71,Female,116/69,71,Hyperlipidemia,Amoxicillin 500mg,80,98.9,D032,2026-11-14
+P01022,23,Male,125/91,72,COVID-19,Amlodipine 5mg,82,99.3,D095,2026-04-20
+P01023,36,Male,120/79,80,Hypertension,Metoprolol 25mg,116,100.3,D077,2026-11-17
+P01024,85,Male,137/75,93,COVID-19,Paxlovid,78,100.5,D075,2026-01-15
+P01025,79,Male,110/80,68,Influenza A,Metformin 500mg,122,99.4,D065,2026-01-28
+P01026,28,Other,146/61,71,Arrhythmia,Metoprolol 25mg,107,99.4,D047,2026-03-21
+P01027,31,Male,157/95,75,Arrhythmia,Paxlovid,150,97.6,D099,2026-06-04
+P01028,55,Male,148/63,102,Pneumonia,Metoprolol 25mg,126,98.0,D052,2026-02-10
+P01029,49,Other,139/94,102,Arrhythmia,Albuterol 90mcg,79,100.0,D027,2026-08-04
+P01030,89,Other,103/91,63,Hypertension,Amoxicillin 500mg,102,100.1,D063,2026-08-12
+P01031,42,Male,107/86,101,Pneumonia,Sumatriptan 50mg,76,100.3,D021,2026-09-17
+P01032,56,Other,154/71,82,Migraine,Oseltamivir 75mg,193,100.1,D033,2026-07-27
+P01033,81,Female,129/69,90,Osteoarthritis,Amoxicillin 500mg,80,99.8,D094,2026-12-15
+P01034,71,Other,108/93,101,Osteoarthritis,Metformin 500mg,170,101.4,D044,2026-12-21
+P01035,64,Female,140/81,58,Osteoarthritis,Metoprolol 25mg,178,99.7,D088,2026-11-08
+P01036,72,Male,152/92,103,Hyperlipidemia,Ibuprofen 400mg,132,99.2,D054,2026-03-18
+P01037,70,Male,159/70,82,Asthma,Albuterol 90mcg,182,100.1,D024,2026-07-19
+P01038,24,Male,132/68,76,Hypertension,Ibuprofen 400mg,126,99.6,D019,2026-10-23
+P01039,39,Female,130/80,64,Migraine,Metoprolol 25mg,90,97.9,D094,2026-03-08
+P01040,39,Female,135/66,64,Type 2 Diabetes,Amoxicillin 500mg,131,100.5,D040,2026-10-22
+P01041,43,Other,131/91,100,Osteoarthritis,Atorvastatin 20mg,174,99.9,D030,2026-06-11
+P01042,85,Other,116/70,71,Hyperlipidemia,Amoxicillin 500mg,144,98.9,D012,2026-02-24
+P01043,19,Male,158/71,59,Pneumonia,Oseltamivir 75mg,135,101.1,D099,2026-08-17
+P01044,64,Male,132/65,59,Influenza A,Atorvastatin 20mg,170,98.8,D028,2026-05-15
+P01045,47,Other,150/75,90,Pneumonia,Amlodipine 5mg,157,98.6,D090,2026-05-10
+P01046,64,Female,114/84,68,Osteoarthritis,Amlodipine 5mg,97,99.5,D031,2026-06-22
+P01047,30,Male,149/70,86,Hypertension,Amlodipine 5mg,149,99.4,D036,2026-09-05
+P01048,24,Female,115/100,103,Arrhythmia,Ibuprofen 400mg,178,100.6,D052,2026-10-24
+P01049,24,Other,150/72,70,Type 2 Diabetes,Oseltamivir 75mg,118,98.0,D080,2026-07-17
+P01050,63,Female,133/92,96,Migraine,Paxlovid,137,101.1,D065,2026-03-15
+P01051,34,Male,150/70,75,Asthma,Oseltamivir 75mg,170,97.6,D084,2026-08-08
+P01052,83,Male,118/70,66,Migraine,Atorvastatin 20mg,181,98.8,D079,2026-01-01
+P01053,56,Female,131/75,101,Type 2 Diabetes,Paxlovid,163,101.3,D061,2026-10-06
+P01054,92,Other,118/95,64,Influenza A,Oseltamivir 75mg,192,101.4,D037,2026-03-02
+P01055,77,Male,141/64,104,Hypertension,Paxlovid,134,101.4,D022,2026-11-23
+P01056,91,Female,133/62,62,Osteoarthritis,Sumatriptan 50mg,127,98.9,D016,2026-01-01
+P01057,65,Female,113/84,62,Migraine,Ibuprofen 400mg,139,98.3,D050,2026-05-20
+P01058,59,Male,108/61,84,Arrhythmia,Ibuprofen 400mg,148,100.3,D067,2026-08-20
+P01059,58,Male,141/65,95,Hypertension,Metformin 500mg,104,100.3,D053,2026-09-16
+P01060,21,Female,107/63,71,COVID-19,Amoxicillin 500mg,168,97.5,D031,2026-04-01
+P01061,69,Other,147/80,78,Osteoarthritis,Albuterol 90mcg,81,101.2,D059,2026-09-16
+P01062,63,Male,129/85,96,Hypertension,Atorvastatin 20mg,173,101.0,D011,2026-03-10
+P01063,87,Female,120/78,72,COVID-19,Ibuprofen 400mg,153,98.0,D040,2026-04-06
+P01064,92,Male,138/97,79,Influenza A,Paxlovid,95,97.3,D095,2026-11-14
+P01065,23,Female,122/62,85,Pneumonia,Atorvastatin 20mg,128,98.9,D057,2026-02-26
+P01066,76,Female,113/68,85,COVID-19,Atorvastatin 20mg,124,100.8,D060,2026-12-18
+P01067,85,Other,146/69,91,Osteoarthritis,Amoxicillin 500mg,176,97.8,D013,2026-05-08
+P01068,59,Female,111/69,83,COVID-19,Oseltamivir 75mg,128,99.2,D072,2026-02-09
+P01069,64,Male,158/73,78,Type 2 Diabetes,Amlodipine 5mg,114,97.9,D010,2026-10-07
+P01070,25,Other,152/82,92,Hypertension,Metformin 500mg,142,99.2,D088,2026-04-19
+P01071,38,Male,126/61,99,Hypertension,Atorvastatin 20mg,112,100.5,D099,2026-11-04
+P01072,64,Male,139/92,95,Type 2 Diabetes,Albuterol 90mcg,94,98.9,D047,2026-04-13
+P01073,46,Female,125/69,77,COVID-19,Sumatriptan 50mg,111,98.1,D051,2026-03-08
+P01074,32,Male,102/75,77,Pneumonia,Ibuprofen 400mg,88,97.6,D079,2026-09-13
+P01075,57,Other,103/74,86,Migraine,Sumatriptan 50mg,104,98.3,D053,2026-06-03
+P01076,28,Male,156/80,96,Arrhythmia,Metoprolol 25mg,127,97.5,D087,2026-06-16
+P01077,42,Other,146/68,69,Type 2 Diabetes,Atorvastatin 20mg,151,99.4,D023,2026-05-22
+P01078,92,Female,141/86,92,Influenza A,Sumatriptan 50mg,86,97.6,D095,2026-09-05
+P01079,32,Female,108/65,91,Asthma,Sumatriptan 50mg,81,100.7,D013,2026-04-20
+P01080,19,Other,126/96,100,Arrhythmia,Ibuprofen 400mg,109,99.1,D039,2026-10-06
+P01081,33,Other,99/84,100,Arrhythmia,Paxlovid,150,97.8,D086,2026-03-28
+P01082,35,Female,144/67,83,Influenza A,Metformin 500mg,141,98.5,D031,2026-10-01
+P01083,43,Other,152/75,64,Type 2 Diabetes,Ibuprofen 400mg,179,100.6,D071,2026-09-20
+P01084,72,Male,155/75,78,Osteoarthritis,Metformin 500mg,186,100.9,D042,2026-09-09
+P01085,60,Male,156/99,101,Hyperlipidemia,Albuterol 90mcg,84,97.7,D090,2026-01-03
+P01086,50,Other,139/60,99,COVID-19,Paxlovid,192,99.0,D049,2026-11-12
+P01087,64,Male,152/82,96,Type 2 Diabetes,Metoprolol 25mg,122,98.5,D085,2026-01-05
+P01088,40,Other,154/68,74,Asthma,Albuterol 90mcg,140,101.2,D011,2026-09-28
+P01089,78,Other,124/61,74,Asthma,Ibuprofen 400mg,106,99.8,D056,2026-08-20
+P01090,38,Other,103/73,79,Hyperlipidemia,Amlodipine 5mg,155,101.4,D050,2026-08-23
+P01091,24,Other,133/69,79,Pneumonia,Metoprolol 25mg,167,99.4,D031,2026-03-15
+P01092,53,Other,151/70,72,COVID-19,Paxlovid,141,101.4,D042,2026-10-14
+P01093,22,Female,126/84,64,Arrhythmia,Albuterol 90mcg,170,97.6,D053,2026-04-13
+P01094,53,Other,140/65,78,Arrhythmia,Amlodipine 5mg,179,98.7,D043,2026-03-10
+P01095,26,Female,145/86,69,Hyperlipidemia,Ibuprofen 400mg,152,97.3,D060,2026-04-07
+P01096,61,Female,134/84,63,Pneumonia,Albuterol 90mcg,190,99.3,D038,2026-06-03
+P01097,86,Other,95/94,99,Asthma,Metoprolol 25mg,78,98.1,D071,2026-12-12
+P01098,29,Female,129/96,80,Arrhythmia,Ibuprofen 400mg,145,100.3,D068,2026-08-25
+P01099,23,Male,143/76,95,Asthma,Albuterol 90mcg,118,100.5,D064,2026-10-23
+P01100,24,Female,96/92,84,Hyperlipidemia,Amoxicillin 500mg,83,98.8,D061,2026-10-17
+P01101,78,Other,103/65,74,Hypertension,Oseltamivir 75mg,161,101.4,D057,2026-02-11
+P01102,61,Female,108/91,98,Hypertension,Amoxicillin 500mg,124,98.8,D035,2026-04-03
+P01103,56,Other,118/81,64,Influenza A,Ibuprofen 400mg,124,97.6,D060,2026-02-25
+P01104,60,Other,121/71,87,Migraine,Oseltamivir 75mg,107,97.2,D055,2026-02-25
+P01105,70,Male,122/100,70,Migraine,Metformin 500mg,111,97.8,D025,2026-05-09
+P01106,65,Other,142/91,58,Osteoarthritis,Paxlovid,82,100.4,D083,2026-08-23
+P01107,62,Male,117/92,76,Osteoarthritis,Ibuprofen 400mg,84,100.4,D065,2026-06-20
+P01108,31,Male,116/93,90,Hyperlipidemia,Oseltamivir 75mg,123,99.4,D070,2026-02-27
+P01109,85,Female,154/62,86,Arrhythmia,Sumatriptan 50mg,103,97.6,D030,2026-03-09
+P01110,24,Female,101/63,94,Arrhythmia,Amlodipine 5mg,133,100.3,D048,2026-03-16
+P01111,83,Other,126/75,79,Asthma,Sumatriptan 50mg,173,99.3,D097,2026-08-22
+P01112,89,Female,114/69,103,Pneumonia,Metoprolol 25mg,91,99.6,D089,2026-03-22
+P01113,18,Male,118/70,75,Type 2 Diabetes,Oseltamivir 75mg,156,100.7,D030,2026-07-26
+P01114,87,Male,136/78,67,Migraine,Amlodipine 5mg,165,97.7,D057,2026-05-22
+P01115,19,Female,129/99,93,Type 2 Diabetes,Albuterol 90mcg,75,98.2,D079,2026-05-27
+P01116,62,Male,145/60,95,Migraine,Atorvastatin 20mg,74,98.2,D079,2026-05-17
+P01117,83,Female,95/67,65,COVID-19,Metoprolol 25mg,93,101.4,D092,2026-02-11
+P01118,44,Male,127/63,79,Pneumonia,Sumatriptan 50mg,187,101.4,D085,2026-04-27
+P01119,78,Male,144/76,96,Hypertension,Atorvastatin 20mg,81,99.5,D074,2026-01-18
+P01120,69,Male,157/60,85,Hyperlipidemia,Ibuprofen 400mg,112,97.9,D047,2026-09-09
+P01121,58,Female,135/81,91,Migraine,Amlodipine 5mg,194,101.4,D046,2026-06-18
+P01122,85,Female,128/64,90,Asthma,Oseltamivir 75mg,120,98.2,D075,2026-01-08
+P01123,52,Male,137/69,95,Arrhythmia,Ibuprofen 400mg,96,97.6,D058,2026-10-06
+P01124,85,Female,160/60,94,Arrhythmia,Amlodipine 5mg,88,99.1,D023,2026-02-28
+P01125,89,Female,150/88,70,Hypertension,Amlodipine 5mg,146,99.3,D023,2026-09-26
+P01126,41,Male,121/69,103,Arrhythmia,Sumatriptan 50mg,90,98.3,D020,2026-05-25
+P01127,27,Male,125/80,78,Arrhythmia,Metformin 500mg,94,100.8,D063,2026-06-05
+P01128,37,Male,96/66,104,Migraine,Amoxicillin 500mg,150,98.1,D054,2026-07-10
+P01129,35,Male,131/66,65,Type 2 Diabetes,Metoprolol 25mg,159,99.2,D012,2026-04-14
+P01130,37,Other,134/83,66,Osteoarthritis,Atorvastatin 20mg,115,99.9,D043,2026-03-20
+P01131,55,Other,113/65,92,COVID-19,Oseltamivir 75mg,88,99.6,D038,2026-08-19
+P01132,90,Other,121/93,76,Asthma,Paxlovid,117,100.3,D033,2026-07-18
+P01133,26,Other,154/80,92,Hypertension,Metoprolol 25mg,126,98.5,D056,2026-03-19
+P01134,56,Other,113/69,102,Asthma,Metoprolol 25mg,193,99.5,D037,2026-01-28
+P01135,39,Female,160/86,81,Hypertension,Atorvastatin 20mg,72,100.3,D082,2026-09-21
+P01136,60,Female,148/92,78,Arrhythmia,Atorvastatin 20mg,184,101.4,D096,2026-09-17
+P01137,90,Other,138/60,93,Osteoarthritis,Oseltamivir 75mg,149,99.0,D030,2026-05-28
+P01138,51,Female,143/60,60,Influenza A,Albuterol 90mcg,113,97.6,D059,2026-10-13
+P01139,61,Male,113/75,66,Osteoarthritis,Metoprolol 25mg,183,100.0,D043,2026-04-26
+P01140,82,Male,104/78,58,Pneumonia,Sumatriptan 50mg,93,101.3,D018,2026-12-07
+P01141,42,Other,128/63,94,Arrhythmia,Oseltamivir 75mg,186,98.5,D024,2026-02-28
+P01142,64,Male,122/95,75,Type 2 Diabetes,Ibuprofen 400mg,162,100.6,D046,2026-12-27
+P01143,61,Other,103/78,75,Migraine,Ibuprofen 400mg,120,99.7,D063,2026-10-28
+P01144,69,Male,138/91,97,Migraine,Ibuprofen 400mg,193,101.1,D095,2026-07-18
+P01145,46,Female,109/88,73,Osteoarthritis,Paxlovid,158,100.0,D095,2026-01-27
+P01146,84,Male,97/63,104,Osteoarthritis,Amlodipine 5mg,113,98.8,D070,2026-06-07
+P01147,81,Female,118/91,78,Hypertension,Sumatriptan 50mg,72,99.3,D070,2026-08-03
+P01148,38,Female,112/89,76,Arrhythmia,Amlodipine 5mg,157,101.4,D031,2026-12-18
+P01149,56,Female,158/82,104,Osteoarthritis,Amoxicillin 500mg,171,98.9,D042,2026-07-14
+P01150,82,Other,121/87,88,Osteoarthritis,Oseltamivir 75mg,93,99.2,D092,2026-03-01
+P01151,57,Female,123/98,100,Hypertension,Oseltamivir 75mg,106,99.5,D066,2026-07-08
+P01152,50,Male,144/67,80,Influenza A,Metformin 500mg,128,100.6,D044,2026-07-15
+P01153,61,Male,142/88,60,Migraine,Metformin 500mg,70,101.1,D066,2026-02-10
+P01154,60,Other,160/70,60,Migraine,Metformin 500mg,170,98.4,D011,2026-05-19
+P01155,18,Other,158/84,93,Osteoarthritis,Amoxicillin 500mg,144,101.1,D056,2026-01-15
+P01156,81,Male,160/99,84,Influenza A,Sumatriptan 50mg,131,101.1,D062,2026-04-25
+P01157,66,Female,119/71,84,Pneumonia,Metformin 500mg,88,98.4,D042,2026-01-09
+P01158,66,Female,150/80,67,Hyperlipidemia,Oseltamivir 75mg,153,97.8,D013,2026-03-24
+P01159,66,Male,133/70,104,Arrhythmia,Paxlovid,144,97.4,D034,2026-11-26
+P01160,53,Other,98/80,86,Pneumonia,Atorvastatin 20mg,189,98.5,D042,2026-06-04
+P01161,79,Male,154/81,97,Hypertension,Atorvastatin 20mg,181,100.4,D057,2026-07-26
+P01162,33,Female,134/86,83,Asthma,Atorvastatin 20mg,123,100.3,D087,2026-07-15
+P01163,80,Other,117/65,93,COVID-19,Paxlovid,130,97.4,D061,2026-04-18
+P01164,50,Female,141/89,75,Osteoarthritis,Metoprolol 25mg,193,98.3,D081,2026-09-27
+P01165,27,Other,152/84,92,Migraine,Sumatriptan 50mg,191,98.1,D029,2026-07-08
+P01166,75,Male,129/63,97,Asthma,Amoxicillin 500mg,150,97.3,D075,2026-07-20
+P01167,49,Female,96/62,101,COVID-19,Amoxicillin 500mg,100,99.9,D022,2026-09-17
+P01168,36,Other,115/94,79,Hyperlipidemia,Metformin 500mg,105,97.2,D010,2026-08-09
+P01169,62,Female,157/65,96,Hyperlipidemia,Sumatriptan 50mg,153,101.3,D041,2026-04-07
+P01170,29,Female,96/83,78,Asthma,Sumatriptan 50mg,190,98.6,D041,2026-01-08
+P01171,47,Female,100/84,105,Hypertension,Sumatriptan 50mg,129,99.4,D065,2026-06-08
+P01172,41,Other,124/68,60,COVID-19,Atorvastatin 20mg,148,100.4,D061,2026-04-04
+P01173,60,Female,137/72,104,Arrhythmia,Sumatriptan 50mg,131,99.6,D070,2026-02-21
+P01174,75,Female,113/90,101,Hyperlipidemia,Ibuprofen 400mg,86,98.7,D046,2026-06-25
+P01175,79,Male,157/62,100,Hyperlipidemia,Sumatriptan 50mg,90,101.2,D063,2026-07-23
+P01176,84,Male,147/69,67,Migraine,Amlodipine 5mg,84,99.4,D051,2026-11-28
+P01177,74,Male,110/69,66,Type 2 Diabetes,Albuterol 90mcg,161,97.9,D053,2026-11-20
+P01178,34,Female,147/63,62,Pneumonia,Ibuprofen 400mg,80,99.7,D029,2026-04-04
+P01179,63,Other,134/84,71,Asthma,Metformin 500mg,74,100.8,D020,2026-07-18
+P01180,77,Male,152/71,80,Influenza A,Paxlovid,194,97.5,D053,2026-05-19
+P01181,37,Male,150/65,63,Arrhythmia,Metoprolol 25mg,105,100.3,D070,2026-11-20
+P01182,55,Other,117/81,76,Type 2 Diabetes,Oseltamivir 75mg,166,98.4,D077,2026-01-07
+P01183,34,Other,151/68,103,Pneumonia,Oseltamivir 75mg,154,99.8,D012,2026-08-14
+P01184,48,Other,158/98,87,COVID-19,Metformin 500mg,129,101.0,D096,2026-06-16
+P01185,88,Male,141/98,86,Pneumonia,Amoxicillin 500mg,167,100.0,D068,2026-06-27
+P01186,37,Male,105/64,90,Pneumonia,Paxlovid,82,98.5,D055,2026-07-20
+P01187,90,Female,100/97,95,Influenza A,Albuterol 90mcg,142,101.0,D074,2026-08-06
+P01188,87,Other,98/67,95,Influenza A,Amlodipine 5mg,146,100.1,D092,2026-06-02
+P01189,55,Other,143/78,93,Type 2 Diabetes,Metoprolol 25mg,180,98.3,D099,2026-08-15
+P01190,19,Other,115/61,65,Osteoarthritis,Amlodipine 5mg,172,98.8,D010,2026-01-24
+P01191,19,Female,130/80,61,COVID-19,Oseltamivir 75mg,189,101.2,D090,2026-07-02
+P01192,50,Female,122/72,78,Asthma,Albuterol 90mcg,142,98.4,D015,2026-09-21
+P01193,62,Male,119/86,87,Hyperlipidemia,Sumatriptan 50mg,152,100.4,D084,2026-09-14
+P01194,91,Female,139/66,98,Migraine,Albuterol 90mcg,99,100.6,D095,2026-12-28
+P01195,21,Male,144/73,66,COVID-19,Oseltamivir 75mg,87,100.0,D087,2026-02-09
+P01196,51,Female,143/62,67,Hyperlipidemia,Metformin 500mg,160,99.5,D059,2026-08-07
+P01197,57,Male,139/84,76,COVID-19,Metformin 500mg,76,101.0,D025,2026-01-24
+P01198,50,Other,126/75,85,Hyperlipidemia,Metformin 500mg,180,100.0,D014,2026-01-20
+P01199,53,Male,110/96,95,Influenza A,Amoxicillin 500mg,92,101.1,D010,2026-05-26
+P01200,74,Other,100/69,74,Osteoarthritis,Amoxicillin 500mg,112,99.5,D095,2026-08-16
+P01201,57,Other,154/65,83,Osteoarthritis,Paxlovid,122,98.4,D018,2026-07-14
+P01202,86,Other,139/72,101,COVID-19,Ibuprofen 400mg,137,99.0,D030,2026-06-01
+P01203,62,Other,116/67,65,Pneumonia,Atorvastatin 20mg,186,100.6,D042,2026-09-10
+P01204,31,Female,160/73,73,COVID-19,Ibuprofen 400mg,164,99.0,D098,2026-11-26
+P01205,29,Male,108/72,95,Arrhythmia,Ibuprofen 400mg,128,100.0,D049,2026-03-02
+P01206,78,Male,144/65,83,Asthma,Oseltamivir 75mg,145,99.7,D037,2026-03-05
+P01207,29,Other,155/78,63,Migraine,Amoxicillin 500mg,117,98.5,D086,2026-03-21
+P01208,66,Female,114/100,95,Osteoarthritis,Amoxicillin 500mg,79,97.8,D063,2026-10-01
+P01209,82,Male,117/77,102,Type 2 Diabetes,Amlodipine 5mg,189,100.2,D068,2026-09-08
+P01210,34,Female,121/71,91,COVID-19,Sumatriptan 50mg,147,99.8,D067,2026-09-19
+P01211,25,Female,98/85,104,Type 2 Diabetes,Metoprolol 25mg,171,101.3,D031,2026-04-27
+P01212,59,Other,135/89,88,Type 2 Diabetes,Albuterol 90mcg,156,99.7,D075,2026-04-13
+P01213,28,Male,156/97,89,Osteoarthritis,Metformin 500mg,149,100.1,D069,2026-11-24
+P01214,23,Other,142/87,76,Osteoarthritis,Paxlovid,174,99.0,D074,2026-09-14
+P01215,74,Male,133/96,101,Osteoarthritis,Amoxicillin 500mg,77,100.2,D037,2026-01-13
+P01216,24,Male,113/82,70,Asthma,Metformin 500mg,178,101.2,D046,2026-01-16
+P01217,67,Male,145/84,68,Hyperlipidemia,Oseltamivir 75mg,78,98.5,D070,2026-07-03
+P01218,71,Other,138/60,68,Pneumonia,Metformin 500mg,182,99.2,D022,2026-03-14
+P01219,31,Other,117/90,80,COVID-19,Oseltamivir 75mg,127,101.3,D015,2026-08-06
+P01220,60,Male,141/63,105,Osteoarthritis,Amlodipine 5mg,100,100.2,D039,2026-02-28
+P01221,82,Female,151/66,58,Arrhythmia,Atorvastatin 20mg,90,101.4,D017,2026-11-10
+P01222,74,Other,132/81,60,Influenza A,Metformin 500mg,147,100.8,D059,2026-05-15
+P01223,32,Male,159/87,90,Pneumonia,Ibuprofen 400mg,178,100.7,D015,2026-08-19
+P01224,86,Male,127/95,65,Migraine,Amoxicillin 500mg,189,97.6,D074,2026-03-24
+P01225,88,Male,160/71,90,Migraine,Metoprolol 25mg,194,100.1,D012,2026-01-03
+P01226,54,Other,137/70,73,COVID-19,Amoxicillin 500mg,128,97.8,D046,2026-02-28
+P01227,56,Other,150/72,83,COVID-19,Amoxicillin 500mg,130,98.4,D046,2026-02-07
+P01228,71,Male,110/62,78,Hypertension,Amlodipine 5mg,170,98.7,D010,2026-06-26
+P01229,32,Male,121/83,85,Type 2 Diabetes,Paxlovid,106,99.1,D068,2026-01-09
+P01230,50,Other,142/85,84,Hyperlipidemia,Amlodipine 5mg,155,100.0,D082,2026-06-15
+P01231,54,Male,103/76,99,Pneumonia,Amoxicillin 500mg,77,98.9,D047,2026-05-03
+P01232,56,Other,113/91,72,Arrhythmia,Oseltamivir 75mg,186,98.1,D025,2026-11-11
+P01233,62,Male,136/95,66,Migraine,Paxlovid,102,99.8,D045,2026-01-08
+P01234,74,Other,134/97,61,Pneumonia,Albuterol 90mcg,85,99.1,D062,2026-02-17
+P01235,44,Male,158/97,101,Hyperlipidemia,Metoprolol 25mg,154,97.3,D037,2026-05-10
+P01236,80,Female,151/91,76,Arrhythmia,Paxlovid,82,97.6,D024,2026-07-06
+P01237,82,Male,114/72,71,Hyperlipidemia,Amoxicillin 500mg,163,98.1,D094,2026-06-14
+P01238,77,Other,99/60,62,Pneumonia,Amlodipine 5mg,153,98.2,D050,2026-04-11
+P01239,73,Female,111/80,100,Hyperlipidemia,Paxlovid,194,99.7,D050,2026-12-05
+P01240,61,Male,132/97,68,Type 2 Diabetes,Atorvastatin 20mg,74,100.1,D048,2026-09-20
+P01241,57,Female,111/95,79,Arrhythmia,Atorvastatin 20mg,137,98.0,D042,2026-07-23
+P01242,82,Female,154/81,96,Pneumonia,Oseltamivir 75mg,132,98.0,D012,2026-04-05
+P01243,40,Female,102/82,96,Migraine,Oseltamivir 75mg,128,97.3,D082,2026-07-20
+P01244,46,Male,134/96,76,COVID-19,Amlodipine 5mg,153,97.9,D051,2026-12-27
+P01245,34,Female,96/86,82,COVID-19,Albuterol 90mcg,98,101.5,D064,2026-03-10
+P01246,23,Female,157/86,69,Type 2 Diabetes,Metformin 500mg,75,100.8,D010,2026-06-18
+P01247,87,Other,95/75,86,Hyperlipidemia,Ibuprofen 400mg,173,99.1,D028,2026-08-19
+P01248,36,Other,98/96,80,Influenza A,Amoxicillin 500mg,115,100.5,D078,2026-07-13
+P01249,65,Male,117/73,73,Influenza A,Amoxicillin 500mg,131,101.1,D041,2026-02-25
+P01250,73,Female,119/61,62,Osteoarthritis,Atorvastatin 20mg,79,101.1,D067,2026-05-18
+P01251,66,Other,111/80,58,Influenza A,Amlodipine 5mg,189,98.9,D015,2026-06-18
+P01252,74,Other,150/66,80,Type 2 Diabetes,Amlodipine 5mg,194,99.1,D090,2026-01-08
+P01253,89,Other,145/68,85,Asthma,Albuterol 90mcg,182,100.0,D051,2026-01-18
+P01254,88,Other,109/79,98,Asthma,Amoxicillin 500mg,72,98.9,D015,2026-12-19
+P01255,26,Female,139/93,58,Influenza A,Paxlovid,95,97.5,D071,2026-06-14
+P01256,65,Other,118/87,97,Migraine,Metformin 500mg,72,100.0,D089,2026-02-09
+P01257,68,Other,96/70,71,Migraine,Metoprolol 25mg,97,97.4,D068,2026-02-10
+P01258,62,Other,105/65,58,Osteoarthritis,Atorvastatin 20mg,78,99.6,D058,2026-10-25
+P01259,26,Male,102/88,69,COVID-19,Oseltamivir 75mg,91,99.2,D032,2026-01-14
+P01260,65,Male,102/76,71,Pneumonia,Albuterol 90mcg,148,100.2,D052,2026-09-23
+P01261,65,Other,132/94,71,Type 2 Diabetes,Paxlovid,125,100.6,D036,2026-12-10
+P01262,76,Female,103/85,82,COVID-19,Paxlovid,124,98.0,D088,2026-08-12
+P01263,21,Female,132/84,66,Pneumonia,Metformin 500mg,121,97.7,D062,2026-11-10
+P01264,18,Female,95/77,91,Hyperlipidemia,Amlodipine 5mg,99,100.0,D044,2026-05-05
+P01265,47,Female,103/90,90,Asthma,Albuterol 90mcg,139,99.3,D041,2026-02-09
+P01266,60,Other,109/68,94,Arrhythmia,Sumatriptan 50mg,167,98.3,D010,2026-10-12
+P01267,88,Male,108/87,75,Influenza A,Amlodipine 5mg,154,100.5,D016,2026-05-11
+P01268,34,Male,132/63,84,COVID-19,Oseltamivir 75mg,102,100.4,D056,2026-01-14
+P01269,46,Female,160/81,101,Type 2 Diabetes,Atorvastatin 20mg,164,100.8,D074,2026-02-03
+P01270,75,Other,130/62,81,Hyperlipidemia,Amlodipine 5mg,157,100.5,D090,2026-09-10
+P01271,57,Other,146/60,87,COVID-19,Ibuprofen 400mg,190,98.2,D014,2026-03-16
+P01272,72,Other,109/74,92,Asthma,Amoxicillin 500mg,99,101.4,D031,2026-12-23
+P01273,34,Male,150/94,82,Type 2 Diabetes,Atorvastatin 20mg,121,98.8,D063,2026-10-06
+P01274,27,Female,159/98,88,Hypertension,Amlodipine 5mg,166,97.5,D019,2026-03-23
+P01275,59,Female,154/89,105,Influenza A,Albuterol 90mcg,135,98.5,D038,2026-12-15
+P01276,53,Other,147/77,74,Hyperlipidemia,Atorvastatin 20mg,83,100.0,D066,2026-08-24
+P01277,83,Male,116/70,81,Pneumonia,Metformin 500mg,95,97.8,D087,2026-07-21
+P01278,29,Other,152/96,60,Asthma,Metoprolol 25mg,182,100.8,D029,2026-04-12
+P01279,62,Female,119/87,87,Influenza A,Albuterol 90mcg,125,98.8,D036,2026-10-16
+P01280,55,Female,118/95,104,Asthma,Amlodipine 5mg,90,99.6,D058,2026-02-20
+P01281,63,Other,103/79,62,Migraine,Atorvastatin 20mg,185,98.7,D042,2026-03-12
+P01282,51,Male,141/70,81,Asthma,Ibuprofen 400mg,75,98.9,D044,2026-11-16
+P01283,38,Other,143/88,75,Arrhythmia,Paxlovid,111,99.7,D053,2026-06-21
+P01284,72,Male,99/61,85,Type 2 Diabetes,Amlodipine 5mg,72,100.5,D091,2026-03-05
+P01285,25,Female,99/94,99,COVID-19,Albuterol 90mcg,110,100.3,D045,2026-11-27
+P01286,59,Male,138/74,59,Migraine,Albuterol 90mcg,195,98.9,D051,2026-01-17
+P01287,43,Other,113/71,95,COVID-19,Amlodipine 5mg,101,100.6,D011,2026-06-26
+P01288,23,Other,102/60,67,Asthma,Metoprolol 25mg,122,98.5,D088,2026-01-13
+P01289,88,Other,109/72,101,Osteoarthritis,Oseltamivir 75mg,189,100.3,D067,2026-11-07
+P01290,75,Other,113/62,100,Hypertension,Amlodipine 5mg,172,98.4,D053,2026-11-15
+P01291,91,Other,99/63,60,Type 2 Diabetes,Amoxicillin 500mg,120,99.5,D011,2026-11-26
+P01292,86,Other,114/81,58,Hyperlipidemia,Sumatriptan 50mg,147,101.5,D092,2026-02-19
+P01293,35,Other,143/67,77,Pneumonia,Metoprolol 25mg,169,100.4,D017,2026-06-13
+P01294,50,Male,114/85,65,Asthma,Metformin 500mg,114,100.7,D080,2026-06-12
+P01295,47,Male,112/96,60,Osteoarthritis,Metoprolol 25mg,138,98.6,D065,2026-06-16
+P01296,33,Female,96/74,81,Osteoarthritis,Oseltamivir 75mg,141,99.0,D064,2026-04-27
+P01297,46,Other,104/65,58,COVID-19,Oseltamivir 75mg,89,101.0,D024,2026-05-09
+P01298,42,Other,103/69,95,Hypertension,Amoxicillin 500mg,131,100.4,D011,2026-05-23
+P01299,42,Female,131/61,97,Hypertension,Albuterol 90mcg,171,100.7,D026,2026-03-13
+P01300,67,Other,117/66,99,Osteoarthritis,Amoxicillin 500mg,145,98.5,D041,2026-05-23
+P01301,62,Male,108/93,96,Asthma,Metoprolol 25mg,101,101.4,D096,2026-04-10
+P01302,82,Male,132/72,74,Type 2 Diabetes,Amoxicillin 500mg,116,98.7,D034,2026-06-01
+P01303,52,Female,125/91,66,Osteoarthritis,Amlodipine 5mg,79,100.2,D016,2026-06-21
+P01304,69,Other,115/60,98,Type 2 Diabetes,Oseltamivir 75mg,175,101.2,D062,2026-06-10
+P01305,21,Other,118/80,103,Type 2 Diabetes,Ibuprofen 400mg,119,98.8,D027,2026-03-04
+P01306,61,Male,150/99,93,Influenza A,Amlodipine 5mg,169,98.4,D065,2026-06-01
+P01307,59,Female,146/94,60,Hypertension,Amoxicillin 500mg,96,99.7,D079,2026-05-19
+P01308,31,Female,112/78,73,Pneumonia,Oseltamivir 75mg,108,100.4,D019,2026-03-27
+P01309,84,Male,128/63,103,Type 2 Diabetes,Metoprolol 25mg,157,101.3,D013,2026-08-05
+P01310,29,Female,133/70,90,Hypertension,Sumatriptan 50mg,148,99.7,D046,2026-04-11
+P01311,36,Male,117/70,65,Hyperlipidemia,Paxlovid,115,100.3,D051,2026-07-18
+P01312,38,Other,101/80,98,Osteoarthritis,Paxlovid,103,100.7,D065,2026-04-22
+P01313,30,Other,117/70,79,COVID-19,Oseltamivir 75mg,136,99.7,D039,2026-11-03
+P01314,57,Other,119/76,80,Influenza A,Amoxicillin 500mg,95,101.0,D089,2026-10-09
+P01315,43,Male,116/100,73,Migraine,Metformin 500mg,128,101.4,D087,2026-05-13
+P01316,84,Other,152/87,93,COVID-19,Ibuprofen 400mg,81,97.8,D036,2026-06-07
+P01317,43,Other,99/64,91,Osteoarthritis,Amlodipine 5mg,137,97.7,D040,2026-04-06
+P01318,67,Female,118/99,88,Influenza A,Amoxicillin 500mg,128,99.5,D073,2026-03-22
+P01319,89,Male,118/70,82,Arrhythmia,Amlodipine 5mg,122,99.9,D056,2026-05-03
+P01320,42,Other,100/79,92,Influenza A,Metformin 500mg,185,100.4,D010,2026-02-27
+P01321,32,Female,151/80,60,Osteoarthritis,Metformin 500mg,78,101.4,D055,2026-12-15
+P01322,67,Male,146/83,102,Hyperlipidemia,Amlodipine 5mg,113,100.7,D073,2026-08-13
+P01323,84,Other,119/88,91,Pneumonia,Amoxicillin 500mg,111,98.8,D043,2026-10-20
+P01324,27,Female,122/64,77,Arrhythmia,Amlodipine 5mg,163,98.6,D092,2026-04-09
+P01325,44,Other,145/68,76,Osteoarthritis,Sumatriptan 50mg,162,100.3,D016,2026-08-19
+P01326,49,Male,124/73,84,Pneumonia,Amlodipine 5mg,101,98.0,D070,2026-08-01
+P01327,20,Other,117/67,85,Hypertension,Oseltamivir 75mg,131,97.9,D010,2026-08-22
+P01328,55,Female,102/62,91,Type 2 Diabetes,Amlodipine 5mg,112,100.6,D079,2026-12-09
+P01329,27,Other,135/77,105,COVID-19,Sumatriptan 50mg,133,100.2,D016,2026-06-13
+P01330,73,Female,153/78,70,Type 2 Diabetes,Metoprolol 25mg,99,99.0,D097,2026-02-25
+P01331,91,Female,160/64,80,COVID-19,Ibuprofen 400mg,77,101.4,D044,2026-02-17
+P01332,78,Other,105/95,64,Influenza A,Metoprolol 25mg,72,100.1,D042,2026-03-26
+P01333,67,Male,156/87,103,Influenza A,Amlodipine 5mg,116,100.0,D053,2026-09-19
+P01334,35,Female,139/96,97,Hypertension,Metformin 500mg,75,97.5,D089,2026-10-08
+P01335,29,Other,134/83,103,Migraine,Metformin 500mg,165,98.9,D031,2026-05-02
+P01336,75,Other,141/79,66,Asthma,Paxlovid,116,97.6,D067,2026-03-26
+P01337,65,Male,130/95,91,Pneumonia,Amlodipine 5mg,121,98.3,D060,2026-05-05
+P01338,59,Other,112/82,75,Migraine,Amlodipine 5mg,180,99.7,D076,2026-01-18
+P01339,83,Female,119/87,105,COVID-19,Metoprolol 25mg,186,101.3,D027,2026-04-13
+P01340,63,Male,114/60,73,Arrhythmia,Metformin 500mg,153,97.8,D015,2026-06-09
+P01341,44,Other,158/93,104,Influenza A,Amoxicillin 500mg,87,97.6,D040,2026-06-27
+P01342,20,Female,142/95,62,Asthma,Oseltamivir 75mg,174,100.0,D026,2026-09-28
+P01343,57,Male,127/90,99,Hyperlipidemia,Sumatriptan 50mg,137,100.5,D071,2026-10-08
+P01344,49,Female,96/64,99,Hypertension,Albuterol 90mcg,189,99.3,D087,2026-01-23
+P01345,18,Other,108/77,93,COVID-19,Atorvastatin 20mg,152,97.3,D068,2026-07-02
+P01346,78,Female,110/81,103,Osteoarthritis,Oseltamivir 75mg,90,101.2,D029,2026-09-20
+P01347,66,Male,160/62,105,Asthma,Metoprolol 25mg,76,97.3,D059,2026-05-18
+P01348,59,Other,157/76,60,COVID-19,Amoxicillin 500mg,100,97.3,D050,2026-09-27
+P01349,79,Other,104/98,99,Migraine,Atorvastatin 20mg,98,100.9,D055,2026-03-12
+P01350,30,Female,127/61,60,Arrhythmia,Atorvastatin 20mg,85,98.2,D039,2026-10-14
+P01351,31,Other,108/65,102,Migraine,Ibuprofen 400mg,90,100.7,D044,2026-06-22
+P01352,28,Other,106/97,102,Arrhythmia,Amoxicillin 500mg,110,101.3,D069,2026-09-08
+P01353,38,Female,158/97,62,Osteoarthritis,Atorvastatin 20mg,115,101.0,D056,2026-02-27
+P01354,29,Female,116/82,105,Pneumonia,Ibuprofen 400mg,98,98.5,D032,2026-09-01
+P01355,47,Male,152/66,85,Hypertension,Amoxicillin 500mg,103,98.6,D051,2026-07-02
+P01356,75,Male,98/68,74,Osteoarthritis,Metformin 500mg,104,97.9,D044,2026-08-27
+P01357,58,Female,112/72,97,Osteoarthritis,Metformin 500mg,191,101.2,D053,2026-08-18
+P01358,75,Other,136/99,61,Hypertension,Sumatriptan 50mg,77,97.9,D081,2026-12-27
+P01359,50,Female,113/82,86,Hyperlipidemia,Sumatriptan 50mg,165,98.1,D062,2026-10-01
+P01360,35,Female,113/78,81,Arrhythmia,Ibuprofen 400mg,153,100.0,D018,2026-04-13
+P01361,26,Male,119/98,91,Type 2 Diabetes,Sumatriptan 50mg,112,101.1,D044,2026-06-08
+P01362,73,Female,121/77,93,Influenza A,Amlodipine 5mg,131,100.1,D020,2026-03-09
+P01363,92,Female,128/88,64,Hyperlipidemia,Paxlovid,173,99.1,D047,2026-02-11
+P01364,84,Female,120/67,95,Osteoarthritis,Sumatriptan 50mg,99,99.0,D036,2026-10-04
+P01365,51,Female,138/97,68,Hyperlipidemia,Oseltamivir 75mg,172,99.7,D085,2026-03-16
+P01366,51,Other,114/90,86,Hyperlipidemia,Ibuprofen 400mg,127,99.8,D079,2026-11-17
+P01367,92,Female,135/84,102,Arrhythmia,Metformin 500mg,149,99.0,D036,2026-10-24
+P01368,48,Female,114/84,83,Type 2 Diabetes,Metoprolol 25mg,107,100.9,D048,2026-03-07
+P01369,69,Male,159/83,84,COVID-19,Albuterol 90mcg,76,101.5,D012,2026-03-04
+P01370,84,Other,157/60,91,Hyperlipidemia,Metoprolol 25mg,174,100.6,D070,2026-05-11
+P01371,56,Male,103/64,65,Migraine,Ibuprofen 400mg,172,99.1,D068,2026-04-18
+P01372,52,Female,141/97,62,Influenza A,Metoprolol 25mg,182,97.7,D020,2026-05-13
+P01373,25,Other,112/83,77,Migraine,Oseltamivir 75mg,166,100.9,D049,2026-10-09
+P01374,29,Other,107/80,79,Type 2 Diabetes,Metoprolol 25mg,166,98.0,D086,2026-10-18
+P01375,88,Male,140/84,62,Hypertension,Atorvastatin 20mg,159,98.5,D061,2026-03-14
+P01376,79,Female,153/64,100,Osteoarthritis,Albuterol 90mcg,150,101.0,D020,2026-03-21
+P01377,55,Other,99/87,99,COVID-19,Albuterol 90mcg,153,99.2,D061,2026-03-15
+P01378,41,Male,126/100,77,Osteoarthritis,Amlodipine 5mg,169,98.3,D017,2026-08-28
+P01379,67,Female,153/86,76,Hyperlipidemia,Sumatriptan 50mg,88,98.1,D056,2026-04-05
+P01380,43,Male,158/79,60,Influenza A,Oseltamivir 75mg,126,101.1,D081,2026-10-11
+P01381,84,Other,123/83,67,Influenza A,Sumatriptan 50mg,192,101.4,D093,2026-08-09
+P01382,39,Other,154/72,62,Asthma,Paxlovid,117,97.4,D052,2026-05-08
+P01383,44,Female,137/69,89,Type 2 Diabetes,Oseltamivir 75mg,155,98.7,D035,2026-02-11
+P01384,56,Female,147/67,86,Influenza A,Atorvastatin 20mg,98,100.3,D049,2026-11-15
+P01385,19,Female,122/82,75,Type 2 Diabetes,Paxlovid,99,99.1,D078,2026-09-09
+P01386,85,Male,105/68,69,Hypertension,Atorvastatin 20mg,119,98.7,D025,2026-11-13
+P01387,27,Male,160/74,104,Type 2 Diabetes,Amoxicillin 500mg,180,98.5,D040,2026-03-19
+P01388,92,Other,152/91,68,Influenza A,Ibuprofen 400mg,173,99.3,D058,2026-11-07
+P01389,81,Female,141/70,69,Arrhythmia,Ibuprofen 400mg,138,99.1,D017,2026-04-26
+P01390,23,Other,132/61,72,Hyperlipidemia,Metformin 500mg,181,100.7,D036,2026-06-04
+P01391,58,Female,126/93,90,Arrhythmia,Paxlovid,101,100.6,D014,2026-02-16
+P01392,39,Male,95/79,68,Influenza A,Oseltamivir 75mg,99,99.4,D038,2026-10-11
+P01393,82,Other,145/74,69,Migraine,Sumatriptan 50mg,183,97.7,D079,2026-11-18
+P01394,42,Female,104/96,67,Hypertension,Paxlovid,106,98.1,D022,2026-06-24
+P01395,49,Female,116/98,65,Hyperlipidemia,Oseltamivir 75mg,191,98.7,D053,2026-06-28
+P01396,34,Male,95/98,103,Influenza A,Metoprolol 25mg,106,101.2,D089,2026-04-10
+P01397,31,Other,135/83,61,Hypertension,Metformin 500mg,154,99.3,D039,2026-10-11
+P01398,39,Other,126/79,95,Hyperlipidemia,Atorvastatin 20mg,96,100.3,D047,2026-04-08
+P01399,26,Female,156/67,71,Hyperlipidemia,Oseltamivir 75mg,163,101.1,D099,2026-02-27
+P01400,92,Female,147/69,87,Type 2 Diabetes,Atorvastatin 20mg,102,97.7,D014,2026-02-11
+P01401,55,Male,122/81,83,Asthma,Albuterol 90mcg,136,97.9,D089,2026-10-26
+P01402,48,Other,102/88,99,Hyperlipidemia,Albuterol 90mcg,110,101.2,D079,2026-03-22
+P01403,85,Male,119/68,83,Type 2 Diabetes,Amoxicillin 500mg,136,99.2,D019,2026-01-10
+P01404,31,Male,102/91,59,Hypertension,Atorvastatin 20mg,81,98.6,D058,2026-04-01
+P01405,80,Other,119/70,83,Influenza A,Metoprolol 25mg,195,97.2,D029,2026-06-16
+P01406,18,Male,136/66,76,Type 2 Diabetes,Paxlovid,100,99.8,D094,2026-04-09
+P01407,34,Other,157/90,90,Type 2 Diabetes,Metformin 500mg,159,100.1,D096,2026-12-20
+P01408,86,Other,106/69,60,Influenza A,Sumatriptan 50mg,178,97.6,D044,2026-12-03
+P01409,33,Female,134/71,66,Hypertension,Atorvastatin 20mg,97,97.8,D064,2026-08-26
+P01410,38,Other,112/72,80,Pneumonia,Metformin 500mg,104,97.7,D092,2026-01-18
+P01411,65,Other,115/60,97,COVID-19,Oseltamivir 75mg,84,101.4,D036,2026-07-25
+P01412,45,Other,107/84,93,Hypertension,Sumatriptan 50mg,181,98.3,D085,2026-08-08
+P01413,22,Other,153/95,71,Hypertension,Oseltamivir 75mg,195,97.7,D015,2026-11-28
+P01414,84,Male,102/80,63,Pneumonia,Metformin 500mg,160,98.9,D039,2026-03-15
+P01415,87,Male,102/91,100,Hypertension,Amlodipine 5mg,76,97.6,D067,2026-07-11
+P01416,47,Other,137/76,100,Arrhythmia,Sumatriptan 50mg,129,98.6,D079,2026-08-21
+P01417,31,Other,113/78,85,Asthma,Metoprolol 25mg,97,99.0,D015,2026-05-15
+P01418,42,Other,106/66,65,Hyperlipidemia,Atorvastatin 20mg,76,101.2,D098,2026-11-23
+P01419,90,Other,156/61,98,Migraine,Ibuprofen 400mg,163,100.4,D047,2026-05-16
+P01420,44,Male,136/77,81,Migraine,Metoprolol 25mg,171,98.4,D021,2026-10-28
+P01421,28,Other,116/66,58,Hypertension,Albuterol 90mcg,108,100.6,D015,2026-05-18
+P01422,82,Other,149/99,58,Hypertension,Paxlovid,157,98.1,D026,2026-03-13
+P01423,56,Other,153/84,91,Asthma,Albuterol 90mcg,167,100.5,D013,2026-03-13
+P01424,46,Other,143/94,104,Asthma,Ibuprofen 400mg,159,99.6,D043,2026-08-14
+P01425,25,Female,97/62,81,Asthma,Sumatriptan 50mg,95,98.8,D018,2026-03-14
+P01426,24,Female,159/72,61,Asthma,Ibuprofen 400mg,149,99.3,D043,2026-02-03
+P01427,46,Other,105/62,66,COVID-19,Amoxicillin 500mg,178,99.3,D071,2026-11-03
+P01428,48,Male,122/74,75,Asthma,Metformin 500mg,178,99.6,D077,2026-04-16
+P01429,76,Other,155/99,90,Migraine,Oseltamivir 75mg,175,98.5,D030,2026-06-08
+P01430,77,Other,123/77,104,Hypertension,Paxlovid,121,98.4,D026,2026-07-22
+P01431,89,Other,142/80,89,Arrhythmia,Amlodipine 5mg,92,98.3,D031,2026-07-01
+P01432,61,Male,145/98,79,Arrhythmia,Amlodipine 5mg,171,101.0,D045,2026-11-20
+P01433,41,Female,122/60,66,Pneumonia,Metoprolol 25mg,188,97.7,D090,2026-03-28
+P01434,37,Other,107/97,71,Migraine,Metoprolol 25mg,126,101.4,D049,2026-07-16
+P01435,43,Other,107/91,79,Asthma,Oseltamivir 75mg,175,99.4,D074,2026-05-28
+P01436,74,Male,144/79,79,Pneumonia,Albuterol 90mcg,135,97.4,D092,2026-05-06
+P01437,35,Female,160/80,65,Hyperlipidemia,Metformin 500mg,115,98.5,D074,2026-12-16
+P01438,56,Other,104/79,83,COVID-19,Sumatriptan 50mg,171,101.5,D087,2026-09-02
+P01439,31,Male,117/91,83,Migraine,Amoxicillin 500mg,95,98.9,D087,2026-03-16
+P01440,68,Other,127/98,74,Osteoarthritis,Oseltamivir 75mg,105,100.6,D039,2026-09-07
+P01441,35,Female,124/91,64,Osteoarthritis,Albuterol 90mcg,123,99.9,D065,2026-05-17
+P01442,53,Male,158/89,64,Hypertension,Ibuprofen 400mg,122,97.4,D011,2026-08-11
+P01443,39,Other,146/62,91,COVID-19,Paxlovid,170,98.3,D066,2026-05-11
+P01444,26,Other,96/70,74,Pneumonia,Oseltamivir 75mg,114,99.9,D039,2026-12-25
+P01445,22,Male,109/74,104,Hypertension,Amlodipine 5mg,134,101.2,D071,2026-02-05
+P01446,87,Male,101/63,85,Osteoarthritis,Sumatriptan 50mg,105,98.0,D048,2026-12-27
+P01447,54,Other,156/85,85,Asthma,Sumatriptan 50mg,77,100.5,D099,2026-05-11
+P01448,27,Female,142/84,68,Hyperlipidemia,Ibuprofen 400mg,170,100.9,D029,2026-07-17
+P01449,41,Other,153/98,81,Hypertension,Ibuprofen 400mg,136,97.2,D093,2026-08-18
+P01450,64,Other,121/61,61,Hypertension,Albuterol 90mcg,164,98.8,D095,2026-12-17
+P01451,44,Male,130/97,82,Hypertension,Metformin 500mg,188,100.4,D079,2026-03-06
+P01452,32,Other,160/72,102,Type 2 Diabetes,Paxlovid,117,100.7,D021,2026-01-07
+P01453,69,Female,151/68,58,Pneumonia,Metoprolol 25mg,180,101.0,D028,2026-05-20
+P01454,59,Female,158/86,76,Arrhythmia,Metformin 500mg,93,100.9,D088,2026-06-08
+P01455,57,Other,150/82,101,Influenza A,Atorvastatin 20mg,122,100.9,D048,2026-09-14
+P01456,82,Male,117/77,93,COVID-19,Amoxicillin 500mg,116,98.1,D062,2026-09-28
+P01457,39,Other,135/74,60,Type 2 Diabetes,Oseltamivir 75mg,170,99.5,D087,2026-01-10
+P01458,65,Male,141/83,96,Asthma,Sumatriptan 50mg,77,99.0,D036,2026-10-06
+P01459,66,Male,104/100,83,Hyperlipidemia,Sumatriptan 50mg,142,99.8,D033,2026-12-27
+P01460,83,Female,160/83,76,Influenza A,Sumatriptan 50mg,176,100.1,D089,2026-07-27
+P01461,81,Female,120/91,75,Hyperlipidemia,Ibuprofen 400mg,162,99.6,D097,2026-06-16
+P01462,45,Female,102/74,96,Migraine,Sumatriptan 50mg,165,101.0,D041,2026-04-11
+P01463,33,Female,127/77,59,Pneumonia,Atorvastatin 20mg,132,98.2,D067,2026-02-13
+P01464,34,Male,113/91,84,Hypertension,Oseltamivir 75mg,125,101.3,D014,2026-04-28
+P01465,49,Female,129/71,71,Migraine,Albuterol 90mcg,183,99.8,D051,2026-08-02
+P01466,68,Other,137/89,58,Asthma,Amlodipine 5mg,148,99.4,D041,2026-03-27
+P01467,63,Male,122/94,86,Type 2 Diabetes,Sumatriptan 50mg,186,97.6,D011,2026-01-09
+P01468,34,Male,143/67,89,COVID-19,Paxlovid,160,99.7,D044,2026-02-20
+P01469,25,Female,138/74,72,COVID-19,Amlodipine 5mg,120,99.1,D037,2026-12-22
+P01470,67,Female,158/78,68,Asthma,Ibuprofen 400mg,80,100.8,D081,2026-04-03
+P01471,18,Other,99/67,66,Hypertension,Metoprolol 25mg,186,100.3,D017,2026-06-15
+P01472,58,Other,107/80,100,Type 2 Diabetes,Amoxicillin 500mg,73,100.7,D020,2026-04-06
+P01473,79,Female,121/62,66,Arrhythmia,Atorvastatin 20mg,160,98.5,D061,2026-08-27
+P01474,56,Female,144/96,91,Migraine,Amoxicillin 500mg,160,99.0,D048,2026-10-15
+P01475,31,Female,153/61,85,Arrhythmia,Oseltamivir 75mg,152,101.4,D096,2026-08-20
+P01476,29,Male,111/82,64,Migraine,Atorvastatin 20mg,89,99.6,D083,2026-10-13
+P01477,89,Other,131/93,86,Migraine,Amoxicillin 500mg,135,97.2,D087,2026-12-01
+P01478,50,Male,119/70,81,Migraine,Metoprolol 25mg,190,99.5,D096,2026-02-26
+P01479,66,Other,97/85,85,Hypertension,Ibuprofen 400mg,167,98.0,D084,2026-11-16
+P01480,22,Male,147/96,72,Osteoarthritis,Metformin 500mg,142,100.6,D041,2026-10-28
+P01481,32,Male,135/74,103,Asthma,Atorvastatin 20mg,155,98.4,D079,2026-12-15
+P01482,25,Other,106/93,92,Osteoarthritis,Oseltamivir 75mg,126,99.7,D028,2026-04-17
+P01483,72,Female,153/63,61,Hyperlipidemia,Atorvastatin 20mg,99,100.3,D092,2026-04-26
+P01484,81,Female,130/90,72,Arrhythmia,Oseltamivir 75mg,104,97.3,D067,2026-02-12
+P01485,65,Other,129/98,88,Hypertension,Paxlovid,75,97.9,D077,2026-04-26
+P01486,73,Female,147/60,99,Asthma,Albuterol 90mcg,176,100.4,D081,2026-05-11
+P01487,62,Male,154/62,58,Influenza A,Oseltamivir 75mg,70,99.7,D050,2026-03-13
+P01488,32,Male,105/94,73,Migraine,Metoprolol 25mg,82,98.0,D050,2026-06-23
+P01489,65,Other,114/72,77,Asthma,Sumatriptan 50mg,165,98.4,D071,2026-02-02
+P01490,31,Other,157/94,73,Influenza A,Metoprolol 25mg,158,98.9,D067,2026-11-10
+P01491,22,Male,119/67,58,Asthma,Oseltamivir 75mg,146,99.8,D044,2026-06-24
+P01492,24,Male,135/77,77,Migraine,Amoxicillin 500mg,94,100.7,D011,2026-11-23
+P01493,61,Female,147/73,70,Hypertension,Amlodipine 5mg,186,98.5,D067,2026-04-23
+P01494,26,Female,108/84,74,Arrhythmia,Metoprolol 25mg,160,98.2,D046,2026-02-21
+P01495,36,Male,105/86,82,COVID-19,Sumatriptan 50mg,143,99.4,D069,2026-07-09
+P01496,33,Other,158/89,71,COVID-19,Amoxicillin 500mg,73,97.5,D020,2026-03-19
+P01497,55,Female,158/89,76,Hyperlipidemia,Sumatriptan 50mg,190,99.9,D070,2026-01-26
+P01498,20,Female,116/93,65,Pneumonia,Sumatriptan 50mg,174,98.3,D017,2026-08-01
+P01499,21,Male,100/86,105,Hypertension,Metformin 500mg,93,98.3,D040,2026-06-06
+P01500,38,Other,126/85,82,COVID-19,Albuterol 90mcg,169,97.8,D021,2026-09-15
+P01501,23,Female,101/69,103,COVID-19,Amoxicillin 500mg,142,98.2,D014,2026-05-03
+P01502,40,Other,144/79,95,COVID-19,Metformin 500mg,79,99.8,D026,2026-03-14
+P01503,69,Female,103/77,100,Asthma,Amoxicillin 500mg,75,101.4,D060,2026-07-20
+P01504,74,Male,97/98,88,COVID-19,Metoprolol 25mg,112,99.1,D079,2026-10-08
+P01505,87,Female,118/74,87,Influenza A,Ibuprofen 400mg,184,98.5,D083,2026-03-21
+P01506,22,Male,118/93,98,Hyperlipidemia,Paxlovid,180,97.8,D071,2026-07-16
+P01507,53,Male,111/62,76,Migraine,Oseltamivir 75mg,97,101.0,D053,2026-03-07
+P01508,59,Other,121/85,70,COVID-19,Ibuprofen 400mg,81,100.1,D098,2026-10-04
+P01509,91,Female,144/78,87,Asthma,Atorvastatin 20mg,90,97.8,D055,2026-11-24
+P01510,67,Female,147/63,81,Influenza A,Paxlovid,99,100.2,D039,2026-06-21
+P01511,72,Female,135/97,95,Osteoarthritis,Albuterol 90mcg,125,99.3,D099,2026-10-28
+P01512,88,Female,109/65,74,Osteoarthritis,Paxlovid,134,99.8,D058,2026-06-27
+P01513,56,Other,142/60,88,Hyperlipidemia,Metoprolol 25mg,97,99.2,D041,2026-04-27
+P01514,28,Other,135/100,66,Pneumonia,Paxlovid,154,100.6,D013,2026-06-11
+P01515,65,Female,126/93,89,Influenza A,Albuterol 90mcg,109,97.4,D052,2026-09-21
+P01516,45,Male,134/86,95,Asthma,Albuterol 90mcg,168,97.5,D029,2026-12-04
+P01517,41,Male,139/98,96,Influenza A,Atorvastatin 20mg,146,99.8,D049,2026-11-26
+P01518,47,Male,100/61,97,Type 2 Diabetes,Ibuprofen 400mg,193,98.7,D023,2026-10-09
+P01519,45,Other,105/86,80,Arrhythmia,Paxlovid,193,99.3,D081,2026-06-14
+P01520,28,Other,100/75,81,Asthma,Atorvastatin 20mg,140,99.0,D078,2026-05-09
+P01521,43,Male,114/82,67,Pneumonia,Amoxicillin 500mg,78,97.7,D011,2026-05-09
+P01522,86,Female,126/92,92,Osteoarthritis,Ibuprofen 400mg,112,100.1,D082,2026-07-19
+P01523,30,Female,116/83,67,Arrhythmia,Metoprolol 25mg,74,100.3,D038,2026-06-04
+P01524,57,Other,160/67,86,Pneumonia,Sumatriptan 50mg,119,101.0,D077,2026-12-15
+P01525,81,Male,141/61,101,Hypertension,Oseltamivir 75mg,173,100.0,D090,2026-02-04
+P01526,26,Male,137/94,69,Osteoarthritis,Atorvastatin 20mg,101,97.3,D084,2026-11-18
+P01527,30,Male,121/80,85,Pneumonia,Amoxicillin 500mg,95,100.4,D074,2026-07-09
+P01528,55,Female,122/80,83,Pneumonia,Sumatriptan 50mg,83,100.6,D061,2026-12-07
+P01529,35,Male,99/94,98,Type 2 Diabetes,Atorvastatin 20mg,138,97.9,D077,2026-03-26
+P01530,56,Other,118/87,97,Influenza A,Metoprolol 25mg,123,101.1,D024,2026-11-08
+P01531,84,Male,104/61,101,Migraine,Albuterol 90mcg,137,99.1,D087,2026-02-08
+P01532,53,Male,153/75,61,Pneumonia,Paxlovid,133,98.5,D099,2026-09-20
+P01533,76,Female,146/61,93,Osteoarthritis,Amoxicillin 500mg,120,101.0,D031,2026-04-21
+P01534,65,Male,120/96,84,Arrhythmia,Ibuprofen 400mg,190,97.2,D035,2026-05-03
+P01535,24,Female,159/75,103,Type 2 Diabetes,Albuterol 90mcg,88,99.6,D023,2026-02-14
+P01536,49,Female,96/80,65,Type 2 Diabetes,Albuterol 90mcg,151,98.1,D098,2026-09-20
+P01537,69,Female,146/89,59,Type 2 Diabetes,Ibuprofen 400mg,192,99.5,D055,2026-01-28
+P01538,32,Male,106/62,59,COVID-19,Amoxicillin 500mg,118,97.5,D018,2026-02-06
+P01539,20,Other,129/71,69,Hyperlipidemia,Amoxicillin 500mg,88,98.0,D024,2026-09-25
+P01540,59,Male,139/70,90,Hyperlipidemia,Metoprolol 25mg,179,101.2,D063,2026-12-23
+P01541,21,Other,159/84,60,Migraine,Oseltamivir 75mg,76,99.6,D010,2026-07-04
+P01542,63,Male,148/94,62,Hyperlipidemia,Amlodipine 5mg,163,97.8,D027,2026-05-02
+P01543,48,Other,121/93,81,Hypertension,Metoprolol 25mg,89,99.0,D044,2026-05-01
+P01544,27,Male,150/83,68,Osteoarthritis,Sumatriptan 50mg,153,99.9,D017,2026-03-16
+P01545,37,Female,123/99,81,Type 2 Diabetes,Metformin 500mg,185,97.9,D047,2026-12-05
+P01546,89,Male,159/73,74,Arrhythmia,Metoprolol 25mg,189,99.2,D038,2026-04-19
+P01547,51,Male,159/95,75,Influenza A,Albuterol 90mcg,133,97.9,D098,2026-10-11
+P01548,35,Male,154/85,89,Hypertension,Ibuprofen 400mg,146,100.6,D045,2026-08-27
+P01549,51,Other,154/88,82,Influenza A,Ibuprofen 400mg,109,98.0,D078,2026-05-11
+P01550,47,Male,96/75,93,Migraine,Metoprolol 25mg,154,97.8,D039,2026-11-26
+P01551,74,Female,133/63,75,Asthma,Oseltamivir 75mg,167,98.2,D081,2026-11-06
+P01552,62,Female,115/94,74,Hypertension,Sumatriptan 50mg,134,101.1,D043,2026-06-03
+P01553,18,Male,107/80,73,Hypertension,Sumatriptan 50mg,103,97.5,D096,2026-02-22
+P01554,71,Male,147/76,58,COVID-19,Amoxicillin 500mg,156,98.0,D073,2026-06-02
+P01555,30,Other,117/85,90,COVID-19,Oseltamivir 75mg,117,99.9,D085,2026-03-04
+P01556,23,Other,151/70,65,COVID-19,Ibuprofen 400mg,76,99.5,D031,2026-09-04
+P01557,42,Male,111/88,91,Osteoarthritis,Amoxicillin 500mg,95,99.4,D019,2026-11-16
+P01558,92,Other,105/68,77,Pneumonia,Paxlovid,86,100.8,D075,2026-05-08
+P01559,49,Other,112/92,60,Type 2 Diabetes,Amlodipine 5mg,158,101.5,D012,2026-07-25
+P01560,34,Other,135/66,68,Hyperlipidemia,Atorvastatin 20mg,96,101.2,D079,2026-11-09
+P01561,66,Other,126/91,82,COVID-19,Oseltamivir 75mg,126,99.2,D051,2026-05-12
+P01562,65,Other,110/98,92,Migraine,Paxlovid,186,99.2,D057,2026-03-05
+P01563,61,Male,115/73,66,Hyperlipidemia,Oseltamivir 75mg,180,97.4,D052,2026-07-13
+P01564,26,Other,130/68,60,Influenza A,Sumatriptan 50mg,91,98.7,D033,2026-04-20
+P01565,71,Male,101/60,99,Influenza A,Amoxicillin 500mg,79,98.6,D093,2026-12-18
+P01566,86,Male,158/92,100,Influenza A,Ibuprofen 400mg,145,100.9,D029,2026-06-06
+P01567,82,Other,98/84,74,Type 2 Diabetes,Atorvastatin 20mg,72,100.6,D073,2026-09-04
+P01568,74,Male,155/89,72,Type 2 Diabetes,Amlodipine 5mg,101,98.8,D065,2026-07-23
+P01569,18,Other,114/61,78,Hypertension,Oseltamivir 75mg,172,99.0,D039,2026-08-09
+P01570,28,Male,122/69,84,Influenza A,Atorvastatin 20mg,98,101.0,D025,2026-03-03
+P01571,21,Female,125/80,63,Hypertension,Atorvastatin 20mg,96,100.7,D044,2026-04-12
+P01572,27,Male,131/73,96,Arrhythmia,Oseltamivir 75mg,74,97.7,D062,2026-07-08
+P01573,79,Other,103/74,60,Asthma,Albuterol 90mcg,142,100.6,D090,2026-08-02
+P01574,72,Female,141/62,101,Migraine,Paxlovid,149,98.0,D012,2026-07-02
+P01575,49,Other,99/72,92,Asthma,Albuterol 90mcg,82,100.5,D025,2026-02-10
+P01576,28,Male,154/90,86,Migraine,Sumatriptan 50mg,114,98.7,D045,2026-08-08
+P01577,63,Male,116/62,67,Osteoarthritis,Amoxicillin 500mg,86,99.7,D070,2026-04-21
+P01578,32,Male,148/62,87,Arrhythmia,Oseltamivir 75mg,158,97.6,D093,2026-10-16
+P01579,57,Female,113/61,104,Migraine,Albuterol 90mcg,137,100.9,D088,2026-04-12
+P01580,70,Male,158/96,84,Osteoarthritis,Ibuprofen 400mg,138,101.4,D051,2026-05-21
+P01581,28,Male,103/62,70,Influenza A,Sumatriptan 50mg,154,99.2,D071,2026-05-13
+P01582,27,Other,135/83,104,Hyperlipidemia,Atorvastatin 20mg,118,98.7,D044,2026-03-16
+P01583,83,Other,140/73,81,Hyperlipidemia,Metformin 500mg,174,99.6,D042,2026-08-19
+P01584,29,Female,134/70,70,Osteoarthritis,Amoxicillin 500mg,133,97.3,D022,2026-04-08
+P01585,59,Male,114/95,60,Migraine,Atorvastatin 20mg,70,98.9,D033,2026-08-04
+P01586,66,Male,131/66,59,Asthma,Sumatriptan 50mg,182,100.4,D024,2026-12-11
+P01587,24,Male,118/83,88,Hypertension,Sumatriptan 50mg,80,98.6,D045,2026-10-21
+P01588,89,Other,138/60,96,Influenza A,Albuterol 90mcg,71,97.7,D046,2026-09-18
+P01589,82,Female,156/78,84,Osteoarthritis,Metoprolol 25mg,125,97.8,D065,2026-01-11
+P01590,42,Female,145/93,93,Type 2 Diabetes,Paxlovid,132,97.2,D077,2026-02-02
+P01591,62,Other,95/66,101,Arrhythmia,Sumatriptan 50mg,120,100.1,D012,2026-10-11
+P01592,19,Female,102/67,69,Type 2 Diabetes,Atorvastatin 20mg,138,97.4,D059,2026-08-12
+P01593,25,Female,142/90,81,Pneumonia,Amlodipine 5mg,151,98.9,D064,2026-12-03
+P01594,62,Female,139/90,86,Hypertension,Metoprolol 25mg,148,99.1,D079,2026-10-20
+P01595,39,Female,126/82,92,Arrhythmia,Albuterol 90mcg,107,97.6,D042,2026-07-26
+P01596,89,Female,122/77,97,COVID-19,Albuterol 90mcg,104,98.5,D016,2026-01-25
+P01597,60,Female,159/66,76,Influenza A,Metoprolol 25mg,136,99.0,D052,2026-03-02
+P01598,49,Female,96/83,77,COVID-19,Amlodipine 5mg,135,99.0,D070,2026-01-15
+P01599,63,Other,146/63,68,Hypertension,Albuterol 90mcg,81,99.4,D071,2026-12-10
+P01600,71,Other,146/70,77,Influenza A,Oseltamivir 75mg,153,100.7,D028,2026-01-19
+P01601,60,Female,155/71,103,COVID-19,Albuterol 90mcg,167,97.5,D059,2026-07-11
+P01602,65,Male,104/70,69,Migraine,Paxlovid,164,98.3,D063,2026-12-13
+P01603,88,Other,122/74,59,Hypertension,Atorvastatin 20mg,190,99.7,D073,2026-11-18
+P01604,32,Other,132/60,74,Type 2 Diabetes,Oseltamivir 75mg,150,100.6,D074,2026-06-03
+P01605,27,Female,154/83,65,Type 2 Diabetes,Paxlovid,187,100.5,D064,2026-11-04
+P01606,28,Male,151/87,76,Asthma,Metoprolol 25mg,86,99.4,D050,2026-08-13
+P01607,64,Other,132/62,88,Influenza A,Oseltamivir 75mg,80,99.6,D023,2026-05-09
+P01608,38,Male,146/84,82,Pneumonia,Paxlovid,92,98.2,D031,2026-01-02
+P01609,87,Male,144/100,58,Asthma,Metoprolol 25mg,104,100.1,D018,2026-12-06
+P01610,80,Male,122/93,92,Influenza A,Albuterol 90mcg,95,101.4,D057,2026-10-15
+P01611,59,Female,118/87,84,Hypertension,Oseltamivir 75mg,174,97.2,D041,2026-04-10
+P01612,20,Female,141/78,103,Hyperlipidemia,Albuterol 90mcg,112,98.9,D010,2026-03-07
+P01613,25,Other,143/100,87,Hypertension,Paxlovid,141,101.0,D014,2026-03-05
+P01614,76,Male,97/75,78,Hypertension,Metoprolol 25mg,142,101.2,D049,2026-08-19
+P01615,33,Female,96/60,79,Hypertension,Metformin 500mg,144,100.7,D087,2026-06-28
+P01616,85,Male,133/61,89,Hyperlipidemia,Metoprolol 25mg,140,101.4,D053,2026-07-15
+P01617,26,Other,155/77,62,Migraine,Atorvastatin 20mg,93,101.4,D050,2026-12-20
+P01618,30,Male,143/70,79,Type 2 Diabetes,Albuterol 90mcg,109,101.3,D031,2026-05-28
+P01619,29,Other,133/61,76,Type 2 Diabetes,Ibuprofen 400mg,164,101.5,D062,2026-06-06
+P01620,82,Male,108/65,89,Influenza A,Sumatriptan 50mg,189,98.0,D010,2026-07-08
+P01621,48,Female,118/60,96,COVID-19,Atorvastatin 20mg,141,97.8,D080,2026-04-18
+P01622,39,Female,127/94,91,Hypertension,Sumatriptan 50mg,72,97.3,D011,2026-07-28
+P01623,79,Other,153/90,101,Hypertension,Ibuprofen 400mg,105,99.7,D021,2026-02-22
+P01624,80,Other,145/81,91,Asthma,Ibuprofen 400mg,189,99.6,D090,2026-02-02
+P01625,19,Female,124/75,84,Osteoarthritis,Amoxicillin 500mg,116,101.5,D027,2026-04-25
+P01626,88,Male,97/73,66,Pneumonia,Albuterol 90mcg,129,99.0,D085,2026-10-01
+P01627,61,Male,107/72,62,Hyperlipidemia,Amlodipine 5mg,168,100.9,D084,2026-12-19
+P01628,51,Female,157/91,93,Hyperlipidemia,Amlodipine 5mg,189,99.6,D042,2026-02-18
+P01629,37,Male,144/78,75,Pneumonia,Albuterol 90mcg,73,99.4,D050,2026-09-02
+P01630,88,Other,141/89,60,Pneumonia,Amlodipine 5mg,104,98.5,D081,2026-03-04
+P01631,34,Male,138/84,73,Hyperlipidemia,Oseltamivir 75mg,108,100.3,D046,2026-04-09
+P01632,88,Female,103/73,100,Influenza A,Albuterol 90mcg,124,98.1,D063,2026-11-08
+P01633,79,Male,111/80,63,Pneumonia,Metformin 500mg,92,97.7,D010,2026-06-20
+P01634,80,Other,133/78,91,COVID-19,Metoprolol 25mg,91,101.1,D036,2026-10-24
+P01635,48,Other,143/100,65,Hypertension,Oseltamivir 75mg,123,100.8,D078,2026-07-09
+P01636,67,Female,96/71,83,Pneumonia,Paxlovid,113,97.5,D050,2026-08-04
+P01637,46,Other,129/89,67,Pneumonia,Amlodipine 5mg,133,97.5,D091,2026-11-03
+P01638,19,Other,117/86,102,Hypertension,Amoxicillin 500mg,102,101.2,D038,2026-06-11
+P01639,79,Female,157/71,59,Asthma,Paxlovid,148,98.9,D048,2026-04-11
+P01640,87,Female,150/73,75,Arrhythmia,Amlodipine 5mg,79,100.6,D059,2026-07-08
+P01641,21,Female,158/78,100,Asthma,Atorvastatin 20mg,151,99.8,D031,2026-06-23
+P01642,32,Female,131/98,88,Type 2 Diabetes,Amoxicillin 500mg,112,100.1,D054,2026-10-22
+P01643,68,Male,117/76,61,Type 2 Diabetes,Paxlovid,110,100.9,D021,2026-08-19
+P01644,79,Female,121/80,89,Influenza A,Ibuprofen 400mg,175,100.0,D047,2026-06-16
+P01645,35,Male,132/60,102,COVID-19,Oseltamivir 75mg,114,98.6,D088,2026-01-11
+P01646,40,Other,101/63,100,Asthma,Sumatriptan 50mg,103,100.9,D086,2026-02-04
+P01647,18,Female,156/91,104,Hyperlipidemia,Albuterol 90mcg,91,98.2,D064,2026-11-05
+P01648,45,Male,130/95,105,Type 2 Diabetes,Amoxicillin 500mg,142,99.9,D012,2026-11-03
+P01649,29,Other,155/78,71,COVID-19,Metoprolol 25mg,99,100.4,D078,2026-02-22
+P01650,69,Female,123/68,90,Migraine,Oseltamivir 75mg,175,97.5,D051,2026-07-21
+P01651,77,Other,134/97,70,COVID-19,Amoxicillin 500mg,173,99.0,D051,2026-03-04
+P01652,50,Other,145/92,89,Hypertension,Atorvastatin 20mg,171,98.5,D039,2026-11-28
+P01653,25,Other,151/84,101,Arrhythmia,Oseltamivir 75mg,194,101.2,D030,2026-07-11
+P01654,36,Female,153/73,65,Asthma,Paxlovid,98,100.9,D044,2026-12-05
+P01655,54,Female,125/80,62,COVID-19,Atorvastatin 20mg,94,99.1,D069,2026-04-16
+P01656,52,Other,129/87,58,Hypertension,Oseltamivir 75mg,134,99.5,D091,2026-09-27
+P01657,32,Female,137/87,98,Type 2 Diabetes,Atorvastatin 20mg,170,99.7,D095,2026-10-26
+P01658,85,Male,138/82,69,Pneumonia,Albuterol 90mcg,153,101.0,D027,2026-04-27
+P01659,82,Other,112/69,62,Osteoarthritis,Oseltamivir 75mg,115,97.4,D054,2026-02-03
+P01660,60,Male,141/98,87,Influenza A,Metoprolol 25mg,140,100.1,D039,2026-11-04
+P01661,79,Male,132/82,77,Arrhythmia,Amlodipine 5mg,188,101.3,D064,2026-02-19
+P01662,36,Other,123/78,73,Type 2 Diabetes,Paxlovid,170,97.3,D030,2026-09-26
+P01663,30,Male,147/69,86,Pneumonia,Atorvastatin 20mg,192,100.9,D020,2026-05-23
+P01664,25,Female,158/81,75,COVID-19,Amlodipine 5mg,95,98.6,D056,2026-04-07
+P01665,64,Female,159/61,73,Hypertension,Amoxicillin 500mg,92,98.0,D044,2026-04-28
+P01666,82,Other,95/73,80,Influenza A,Ibuprofen 400mg,194,99.4,D068,2026-08-17
+P01667,37,Male,126/80,60,Hyperlipidemia,Oseltamivir 75mg,101,98.9,D061,2026-07-16
+P01668,58,Female,145/88,87,Hypertension,Metoprolol 25mg,184,97.7,D099,2026-09-14
+P01669,57,Other,154/68,99,Type 2 Diabetes,Oseltamivir 75mg,122,100.2,D087,2026-09-10
+P01670,48,Female,145/65,86,Type 2 Diabetes,Paxlovid,174,99.6,D043,2026-04-20
+P01671,90,Male,147/76,104,Type 2 Diabetes,Ibuprofen 400mg,99,98.3,D042,2026-02-15
+P01672,53,Male,137/84,82,Hypertension,Albuterol 90mcg,173,98.4,D020,2026-05-09
+P01673,82,Female,133/90,104,Influenza A,Paxlovid,137,97.5,D065,2026-04-11
+P01674,86,Female,110/63,80,Hyperlipidemia,Albuterol 90mcg,71,97.6,D086,2026-03-01
+P01675,66,Female,140/79,85,Osteoarthritis,Metoprolol 25mg,99,99.6,D028,2026-08-19
+P01676,28,Male,96/70,81,Hypertension,Paxlovid,128,100.5,D017,2026-04-27
+P01677,61,Other,151/62,103,Influenza A,Albuterol 90mcg,133,100.1,D020,2026-03-10
+P01678,50,Male,143/62,105,Influenza A,Metformin 500mg,107,99.7,D096,2026-11-28
+P01679,68,Other,141/70,63,Migraine,Sumatriptan 50mg,160,98.7,D089,2026-04-06
+P01680,63,Female,120/87,79,Migraine,Amoxicillin 500mg,164,99.9,D092,2026-12-10
+P01681,88,Female,118/94,100,Hypertension,Sumatriptan 50mg,157,97.9,D094,2026-11-12
+P01682,54,Other,131/62,91,Migraine,Sumatriptan 50mg,105,99.5,D078,2026-03-16
+P01683,59,Female,135/86,82,Osteoarthritis,Sumatriptan 50mg,93,100.0,D069,2026-05-16
+P01684,91,Male,102/81,90,Hyperlipidemia,Amoxicillin 500mg,171,98.1,D071,2026-03-09
+P01685,66,Other,126/65,82,Arrhythmia,Metoprolol 25mg,112,97.4,D049,2026-01-19
+P01686,72,Male,105/94,98,Arrhythmia,Oseltamivir 75mg,164,99.6,D077,2026-02-23
+P01687,76,Other,132/70,76,Hyperlipidemia,Paxlovid,170,100.8,D040,2026-07-27
+P01688,63,Male,156/99,60,Type 2 Diabetes,Ibuprofen 400mg,177,101.2,D055,2026-01-12
+P01689,35,Male,157/87,94,Arrhythmia,Oseltamivir 75mg,91,98.0,D017,2026-03-10
+P01690,18,Male,141/91,65,Osteoarthritis,Amlodipine 5mg,142,98.2,D041,2026-08-01
+P01691,76,Female,146/89,67,Osteoarthritis,Ibuprofen 400mg,165,100.4,D040,2026-03-27
+P01692,60,Male,137/79,80,Type 2 Diabetes,Paxlovid,107,101.2,D064,2026-12-19
+P01693,70,Male,154/63,96,Pneumonia,Sumatriptan 50mg,161,98.9,D053,2026-03-12
+P01694,59,Female,115/69,78,COVID-19,Amlodipine 5mg,135,100.7,D036,2026-01-24
+P01695,49,Other,137/71,78,Migraine,Amlodipine 5mg,138,98.4,D026,2026-10-07
+P01696,63,Male,135/62,64,Hypertension,Amlodipine 5mg,188,99.3,D060,2026-05-08
+P01697,74,Female,133/61,96,Arrhythmia,Sumatriptan 50mg,89,98.8,D091,2026-09-22
+P01698,21,Other,140/94,78,Migraine,Oseltamivir 75mg,180,98.2,D025,2026-12-25
+P01699,86,Other,102/70,89,Type 2 Diabetes,Amoxicillin 500mg,116,101.2,D072,2026-03-20
+P01700,41,Male,97/71,104,Asthma,Albuterol 90mcg,152,98.6,D066,2026-03-12
+P01701,44,Male,154/91,68,COVID-19,Metoprolol 25mg,77,97.3,D044,2026-02-08
+P01702,46,Female,132/69,95,Asthma,Albuterol 90mcg,162,100.7,D048,2026-08-07
+P01703,26,Other,97/71,103,Influenza A,Amlodipine 5mg,160,97.7,D065,2026-04-23
+P01704,39,Male,138/94,73,Influenza A,Metformin 500mg,93,99.0,D030,2026-03-16
+P01705,64,Female,156/80,62,Pneumonia,Metformin 500mg,100,98.0,D087,2026-12-09
+P01706,74,Other,158/69,104,Asthma,Albuterol 90mcg,89,100.8,D025,2026-10-28
+P01707,33,Female,141/65,64,Type 2 Diabetes,Metoprolol 25mg,145,97.9,D056,2026-01-25
+P01708,18,Other,128/71,98,Hypertension,Atorvastatin 20mg,152,98.2,D029,2026-02-14
+P01709,26,Female,102/72,76,Osteoarthritis,Ibuprofen 400mg,76,97.8,D095,2026-02-11
+P01710,49,Female,134/91,97,Asthma,Sumatriptan 50mg,129,98.5,D026,2026-06-25
+P01711,72,Female,95/83,101,Hyperlipidemia,Metformin 500mg,180,99.9,D030,2026-10-09
+P01712,49,Male,147/85,104,Hypertension,Paxlovid,176,98.8,D032,2026-03-06
+P01713,75,Male,105/74,101,Type 2 Diabetes,Metformin 500mg,173,98.1,D075,2026-04-26
+P01714,27,Male,106/63,98,Pneumonia,Oseltamivir 75mg,81,100.0,D050,2026-04-13
+P01715,39,Other,116/95,74,Migraine,Amoxicillin 500mg,119,98.7,D043,2026-01-16
+P01716,49,Male,118/85,102,Type 2 Diabetes,Sumatriptan 50mg,93,97.5,D022,2026-08-03
+P01717,58,Female,132/78,75,Hyperlipidemia,Metformin 500mg,95,100.6,D023,2026-01-08
+P01718,64,Other,146/88,101,COVID-19,Metoprolol 25mg,100,98.0,D086,2026-11-01
+P01719,64,Other,143/97,82,Osteoarthritis,Amlodipine 5mg,131,99.6,D036,2026-12-28
+P01720,31,Male,116/97,83,Migraine,Amlodipine 5mg,98,97.7,D019,2026-03-07
+P01721,55,Female,160/96,85,Influenza A,Ibuprofen 400mg,161,99.2,D018,2026-11-08
+P01722,28,Female,99/81,105,COVID-19,Ibuprofen 400mg,130,99.5,D046,2026-05-02
+P01723,79,Female,149/78,88,Arrhythmia,Ibuprofen 400mg,188,100.7,D067,2026-04-12
+P01724,77,Male,100/79,96,Osteoarthritis,Atorvastatin 20mg,136,101.1,D032,2026-02-02
+P01725,19,Other,160/99,97,Asthma,Albuterol 90mcg,103,99.8,D052,2026-11-28
+P01726,57,Male,131/73,105,COVID-19,Amlodipine 5mg,74,97.3,D016,2026-03-10
+P01727,26,Female,110/85,59,Type 2 Diabetes,Atorvastatin 20mg,155,99.0,D056,2026-07-05
+P01728,30,Male,124/77,71,Asthma,Amlodipine 5mg,126,100.8,D031,2026-08-25
+P01729,64,Male,148/82,100,Migraine,Metformin 500mg,161,97.7,D062,2026-10-04
+P01730,36,Other,154/68,68,Arrhythmia,Paxlovid,110,100.8,D060,2026-04-22
+P01731,28,Other,99/84,65,Osteoarthritis,Amoxicillin 500mg,97,100.7,D044,2026-03-22
+P01732,90,Male,116/88,64,Influenza A,Amoxicillin 500mg,164,98.3,D058,2026-01-17
+P01733,74,Male,123/73,85,Type 2 Diabetes,Oseltamivir 75mg,70,100.0,D084,2026-10-26
+P01734,83,Male,150/72,100,COVID-19,Amoxicillin 500mg,159,97.2,D096,2026-06-28
+P01735,63,Other,121/62,76,Hypertension,Metformin 500mg,177,100.0,D078,2026-01-06
+P01736,81,Other,108/69,87,Pneumonia,Paxlovid,110,99.9,D036,2026-06-20
+P01737,56,Female,143/67,95,Osteoarthritis,Albuterol 90mcg,162,100.3,D073,2026-03-08
+P01738,80,Male,152/88,77,Osteoarthritis,Metoprolol 25mg,169,101.3,D037,2026-09-04
+P01739,30,Male,113/94,101,Arrhythmia,Albuterol 90mcg,157,97.7,D085,2026-02-25
+P01740,66,Female,146/87,62,Pneumonia,Metoprolol 25mg,159,99.7,D098,2026-10-26
+P01741,23,Other,109/61,65,Asthma,Sumatriptan 50mg,97,98.2,D013,2026-11-04
+P01742,29,Male,126/76,84,Pneumonia,Metoprolol 25mg,110,97.3,D033,2026-11-12
+P01743,35,Male,143/80,70,Asthma,Metformin 500mg,112,99.9,D075,2026-10-01
+P01744,81,Other,121/75,101,Hypertension,Metoprolol 25mg,70,100.9,D075,2026-08-28
+P01745,80,Male,158/68,71,Osteoarthritis,Paxlovid,88,99.1,D052,2026-09-04
+P01746,25,Other,112/74,58,Migraine,Metformin 500mg,117,99.6,D027,2026-06-22
+P01747,18,Other,155/83,94,Migraine,Sumatriptan 50mg,147,101.4,D064,2026-08-07
+P01748,53,Other,120/96,89,Pneumonia,Amlodipine 5mg,77,97.7,D023,2026-11-23
+P01749,21,Female,110/63,68,Asthma,Oseltamivir 75mg,172,98.6,D093,2026-09-11
+P01750,45,Other,113/79,82,Hyperlipidemia,Oseltamivir 75mg,151,98.1,D041,2026-06-15
+P01751,21,Female,119/83,102,Influenza A,Metformin 500mg,114,97.8,D073,2026-01-27
+P01752,82,Female,133/63,85,Hypertension,Amlodipine 5mg,141,99.0,D051,2026-10-13
+P01753,36,Female,112/74,62,Hypertension,Sumatriptan 50mg,80,100.0,D040,2026-06-07
+P01754,19,Male,111/70,63,COVID-19,Sumatriptan 50mg,119,98.3,D068,2026-07-08
+P01755,50,Male,129/93,66,Influenza A,Atorvastatin 20mg,76,99.1,D064,2026-05-16
+P01756,30,Female,155/84,99,Osteoarthritis,Albuterol 90mcg,131,99.1,D047,2026-11-09
+P01757,37,Female,139/77,67,Osteoarthritis,Metformin 500mg,123,100.7,D063,2026-09-17
+P01758,29,Other,104/100,59,Hyperlipidemia,Atorvastatin 20mg,93,97.9,D064,2026-08-01
+P01759,21,Female,152/86,73,Influenza A,Paxlovid,104,99.1,D043,2026-03-01
+P01760,31,Female,109/94,90,Type 2 Diabetes,Atorvastatin 20mg,117,99.2,D023,2026-10-25
+P01761,19,Female,138/70,99,Influenza A,Oseltamivir 75mg,192,99.8,D047,2026-09-10
+P01762,76,Other,133/78,94,Pneumonia,Atorvastatin 20mg,184,101.4,D065,2026-04-04
+P01763,24,Female,98/92,105,Osteoarthritis,Amoxicillin 500mg,80,98.5,D087,2026-07-18
+P01764,40,Male,133/92,83,Hyperlipidemia,Amlodipine 5mg,138,99.8,D021,2026-06-14
+P01765,81,Other,116/99,62,COVID-19,Amlodipine 5mg,161,99.9,D025,2026-07-28
+P01766,54,Female,97/88,61,Osteoarthritis,Metformin 500mg,136,98.4,D078,2026-08-01
+P01767,42,Male,143/76,100,Influenza A,Paxlovid,110,100.0,D041,2026-09-22
+P01768,57,Other,100/99,92,Asthma,Metformin 500mg,101,97.7,D043,2026-10-03
+P01769,89,Female,116/79,94,Arrhythmia,Amlodipine 5mg,115,97.7,D058,2026-11-16
+P01770,24,Male,136/67,99,Migraine,Oseltamivir 75mg,193,98.9,D051,2026-01-12
+P01771,29,Female,129/61,65,Migraine,Sumatriptan 50mg,155,100.5,D040,2026-11-26
+P01772,41,Male,104/91,79,Arrhythmia,Amoxicillin 500mg,128,101.2,D072,2026-09-25
+P01773,84,Male,129/74,99,Arrhythmia,Amoxicillin 500mg,180,99.2,D034,2026-09-10
+P01774,81,Male,123/100,83,COVID-19,Amlodipine 5mg,131,101.2,D037,2026-04-08
+P01775,52,Male,130/89,96,Hyperlipidemia,Metoprolol 25mg,91,98.3,D028,2026-08-20
+P01776,22,Female,95/98,72,Hypertension,Amlodipine 5mg,104,101.1,D042,2026-02-27
+P01777,71,Male,111/61,83,Type 2 Diabetes,Metoprolol 25mg,186,100.9,D036,2026-06-03
+P01778,63,Male,113/94,88,Arrhythmia,Albuterol 90mcg,128,97.5,D086,2026-10-21
+P01779,52,Other,111/82,87,Migraine,Metoprolol 25mg,173,100.2,D039,2026-06-13
+P01780,78,Male,95/77,88,Migraine,Albuterol 90mcg,154,98.6,D039,2026-08-15
+P01781,78,Other,107/63,80,Hypertension,Amoxicillin 500mg,157,98.1,D033,2026-10-15
+P01782,29,Female,149/70,91,Hyperlipidemia,Amlodipine 5mg,157,100.2,D094,2026-04-16
+P01783,85,Male,128/73,60,Arrhythmia,Atorvastatin 20mg,155,100.0,D033,2026-05-25
+P01784,52,Male,99/94,68,Hyperlipidemia,Oseltamivir 75mg,130,98.1,D017,2026-01-26
+P01785,69,Other,132/85,77,Hyperlipidemia,Albuterol 90mcg,128,101.3,D072,2026-04-12
+P01786,71,Female,102/94,98,Pneumonia,Oseltamivir 75mg,178,98.9,D084,2026-04-09
+P01787,55,Female,124/79,68,Asthma,Ibuprofen 400mg,147,101.2,D052,2026-11-14
+P01788,67,Female,138/94,96,COVID-19,Atorvastatin 20mg,138,98.3,D075,2026-03-08
+P01789,48,Female,132/67,99,Type 2 Diabetes,Amlodipine 5mg,188,99.6,D090,2026-11-13
+P01790,72,Male,137/88,85,Osteoarthritis,Albuterol 90mcg,123,99.3,D043,2026-06-23
+P01791,90,Male,130/86,67,Asthma,Amlodipine 5mg,145,99.1,D041,2026-11-10
+P01792,39,Male,159/89,92,Influenza A,Sumatriptan 50mg,75,100.4,D034,2026-12-15
+P01793,71,Female,159/85,73,Arrhythmia,Paxlovid,118,98.2,D026,2026-02-16
+P01794,42,Female,104/60,97,Influenza A,Ibuprofen 400mg,76,99.8,D063,2026-09-16
+P01795,52,Male,108/99,97,Arrhythmia,Amoxicillin 500mg,82,100.3,D077,2026-10-10
+P01796,63,Male,115/90,90,Hypertension,Atorvastatin 20mg,190,98.7,D080,2026-08-11
+P01797,74,Male,153/60,103,Type 2 Diabetes,Amoxicillin 500mg,148,98.7,D024,2026-10-20
+P01798,29,Other,109/72,67,Pneumonia,Amoxicillin 500mg,143,97.7,D077,2026-08-11
+P01799,48,Other,139/65,75,Type 2 Diabetes,Atorvastatin 20mg,95,98.1,D088,2026-10-26
+P01800,82,Male,106/82,60,COVID-19,Sumatriptan 50mg,94,101.0,D015,2026-05-20
+P01801,61,Female,138/78,63,Osteoarthritis,Ibuprofen 400mg,176,101.1,D047,2026-12-18
+P01802,58,Female,106/62,89,Hyperlipidemia,Albuterol 90mcg,153,100.0,D021,2026-07-08
+P01803,62,Female,105/92,89,Influenza A,Ibuprofen 400mg,173,101.1,D024,2026-08-26
+P01804,63,Other,122/90,73,Osteoarthritis,Amoxicillin 500mg,139,98.6,D059,2026-11-07
+P01805,37,Male,160/76,95,Asthma,Atorvastatin 20mg,129,97.9,D014,2026-02-03
+P01806,27,Female,144/72,60,COVID-19,Paxlovid,126,99.6,D053,2026-03-20
+P01807,54,Female,97/99,89,Type 2 Diabetes,Sumatriptan 50mg,107,99.3,D021,2026-06-05
+P01808,92,Other,153/77,59,Arrhythmia,Paxlovid,79,99.0,D022,2026-06-22
+P01809,56,Female,95/91,87,Type 2 Diabetes,Oseltamivir 75mg,106,99.5,D050,2026-06-22
+P01810,81,Male,108/81,103,Osteoarthritis,Amlodipine 5mg,128,98.3,D048,2026-03-02
+P01811,37,Other,146/67,93,Arrhythmia,Amoxicillin 500mg,189,98.5,D041,2026-12-03
+P01812,31,Female,127/87,62,Osteoarthritis,Amlodipine 5mg,122,98.4,D012,2026-01-26
+P01813,24,Other,156/65,63,Osteoarthritis,Metoprolol 25mg,194,100.2,D029,2026-08-22
+P01814,48,Male,123/67,94,COVID-19,Amlodipine 5mg,78,97.2,D035,2026-07-13
+P01815,58,Female,100/79,64,Pneumonia,Albuterol 90mcg,187,99.8,D094,2026-12-26
+P01816,31,Male,103/77,103,Migraine,Ibuprofen 400mg,169,98.6,D098,2026-04-05
+P01817,25,Other,146/64,65,Migraine,Oseltamivir 75mg,128,99.7,D055,2026-01-21
+P01818,69,Female,113/69,104,Hypertension,Metoprolol 25mg,150,100.4,D055,2026-09-07
+P01819,67,Female,95/98,94,Migraine,Oseltamivir 75mg,155,97.9,D047,2026-02-09
+P01820,76,Male,154/83,94,Osteoarthritis,Metoprolol 25mg,81,98.0,D060,2026-12-15
+P01821,37,Other,122/90,58,Pneumonia,Metformin 500mg,94,101.0,D010,2026-02-14
+P01822,63,Female,130/74,88,Hypertension,Amlodipine 5mg,155,98.2,D088,2026-03-11
+P01823,68,Female,146/66,65,Type 2 Diabetes,Albuterol 90mcg,148,101.3,D038,2026-03-25
+P01824,22,Other,133/87,94,Arrhythmia,Amoxicillin 500mg,111,101.2,D091,2026-09-23
+P01825,68,Other,105/75,88,Hyperlipidemia,Atorvastatin 20mg,146,98.0,D046,2026-04-24
+P01826,48,Male,131/74,60,Type 2 Diabetes,Ibuprofen 400mg,115,98.2,D052,2026-07-20
+P01827,55,Male,153/79,72,Migraine,Atorvastatin 20mg,77,98.1,D091,2026-07-25
+P01828,54,Male,132/84,67,Migraine,Ibuprofen 400mg,98,98.1,D069,2026-12-13
+P01829,80,Female,131/89,90,Hypertension,Atorvastatin 20mg,141,99.4,D038,2026-11-08
+P01830,39,Other,137/71,76,Arrhythmia,Paxlovid,124,100.5,D048,2026-08-13
+P01831,27,Other,114/60,77,Influenza A,Sumatriptan 50mg,114,97.5,D077,2026-01-12
+P01832,34,Female,131/67,96,Pneumonia,Albuterol 90mcg,118,99.9,D088,2026-05-14
+P01833,60,Male,132/92,71,Arrhythmia,Sumatriptan 50mg,93,97.9,D024,2026-06-16
+P01834,88,Other,121/65,94,COVID-19,Ibuprofen 400mg,182,101.0,D047,2026-11-10
+P01835,83,Male,158/84,81,Type 2 Diabetes,Albuterol 90mcg,187,101.4,D064,2026-12-15
+P01836,55,Male,152/71,97,Osteoarthritis,Amoxicillin 500mg,173,98.2,D068,2026-09-11
+P01837,42,Other,130/67,65,Hypertension,Atorvastatin 20mg,113,100.3,D044,2026-07-08
+P01838,83,Other,98/78,96,COVID-19,Albuterol 90mcg,127,100.8,D083,2026-06-04
+P01839,21,Female,127/90,99,Influenza A,Amlodipine 5mg,73,97.5,D049,2026-01-01
+P01840,61,Other,153/61,68,Migraine,Oseltamivir 75mg,75,98.9,D022,2026-05-25
+P01841,23,Female,103/69,69,Osteoarthritis,Ibuprofen 400mg,106,99.3,D095,2026-07-08
+P01842,72,Other,140/81,91,Osteoarthritis,Albuterol 90mcg,162,100.0,D063,2026-09-20
+P01843,84,Male,145/85,95,Hyperlipidemia,Sumatriptan 50mg,169,97.6,D056,2026-03-07
+P01844,90,Female,142/77,78,Asthma,Metformin 500mg,160,99.2,D089,2026-10-24
+P01845,68,Other,124/76,82,Osteoarthritis,Atorvastatin 20mg,120,97.6,D028,2026-05-09
+P01846,88,Male,106/62,92,Pneumonia,Sumatriptan 50mg,107,100.3,D068,2026-10-18
+P01847,51,Male,117/74,102,Migraine,Atorvastatin 20mg,90,97.9,D091,2026-11-08
+P01848,36,Female,154/91,69,Type 2 Diabetes,Sumatriptan 50mg,166,99.3,D085,2026-01-09
+P01849,31,Female,152/65,99,Pneumonia,Sumatriptan 50mg,155,100.1,D038,2026-11-16
+P01850,75,Male,126/94,83,Migraine,Metoprolol 25mg,174,98.0,D079,2026-02-18
+P01851,22,Female,131/67,77,Influenza A,Amoxicillin 500mg,90,100.9,D021,2026-11-24
+P01852,91,Other,122/82,72,COVID-19,Metoprolol 25mg,84,98.9,D041,2026-06-28
+P01853,40,Other,99/78,60,Asthma,Oseltamivir 75mg,123,99.6,D011,2026-05-22
+P01854,26,Female,141/72,58,Arrhythmia,Ibuprofen 400mg,88,99.3,D044,2026-06-21
+P01855,67,Male,147/76,62,Type 2 Diabetes,Paxlovid,180,99.0,D079,2026-05-11
+P01856,79,Female,141/71,91,Influenza A,Paxlovid,110,99.8,D037,2026-12-05
+P01857,88,Male,101/65,62,COVID-19,Paxlovid,86,99.8,D012,2026-08-05
+P01858,92,Other,135/90,68,Hypertension,Sumatriptan 50mg,183,100.0,D060,2026-01-20
+P01859,70,Female,126/69,67,Pneumonia,Metformin 500mg,190,98.8,D063,2026-12-22
+P01860,82,Female,138/75,78,Migraine,Ibuprofen 400mg,146,100.7,D026,2026-03-13
+P01861,21,Male,158/83,100,Osteoarthritis,Metformin 500mg,109,99.2,D020,2026-04-14
+P01862,45,Other,96/72,80,Pneumonia,Sumatriptan 50mg,173,101.5,D033,2026-10-16
+P01863,21,Female,157/66,101,Migraine,Oseltamivir 75mg,102,98.1,D074,2026-07-23
+P01864,69,Other,139/79,59,Asthma,Ibuprofen 400mg,99,98.4,D097,2026-12-28
+P01865,91,Other,120/66,79,Osteoarthritis,Albuterol 90mcg,130,97.8,D034,2026-08-20
+P01866,40,Male,115/92,70,Influenza A,Amlodipine 5mg,76,98.0,D075,2026-09-28
+P01867,72,Other,153/95,65,Hyperlipidemia,Metformin 500mg,132,100.8,D094,2026-11-25
+P01868,47,Male,130/82,84,COVID-19,Ibuprofen 400mg,134,97.5,D019,2026-04-18
+P01869,36,Male,123/74,75,Asthma,Sumatriptan 50mg,94,101.4,D089,2026-06-20
+P01870,47,Female,109/97,81,Asthma,Paxlovid,157,97.6,D079,2026-12-21
+P01871,67,Other,117/96,69,Osteoarthritis,Paxlovid,73,101.2,D048,2026-08-08
+P01872,59,Female,144/87,91,Pneumonia,Metoprolol 25mg,182,97.3,D015,2026-01-08
+P01873,43,Female,159/92,83,Pneumonia,Metoprolol 25mg,155,99.9,D063,2026-03-19
+P01874,35,Other,116/72,91,Hyperlipidemia,Paxlovid,148,98.1,D069,2026-01-25
+P01875,43,Other,95/92,85,Pneumonia,Albuterol 90mcg,117,98.4,D014,2026-12-03
+P01876,66,Male,143/71,89,Hyperlipidemia,Albuterol 90mcg,76,97.7,D080,2026-11-28
+P01877,25,Other,156/92,75,Pneumonia,Atorvastatin 20mg,73,98.2,D016,2026-09-28
+P01878,84,Female,98/80,81,Asthma,Metformin 500mg,168,98.9,D099,2026-11-13
+P01879,62,Male,137/70,87,Arrhythmia,Metoprolol 25mg,151,99.3,D026,2026-10-08
+P01880,38,Other,147/67,99,Influenza A,Atorvastatin 20mg,76,99.3,D037,2026-07-13
+P01881,33,Female,153/63,79,Hyperlipidemia,Albuterol 90mcg,153,100.7,D096,2026-05-14
+P01882,20,Female,154/94,82,Asthma,Sumatriptan 50mg,134,100.2,D089,2026-08-12
+P01883,42,Other,120/74,70,Pneumonia,Ibuprofen 400mg,162,99.4,D013,2026-12-08
+P01884,71,Other,128/78,105,Asthma,Amlodipine 5mg,182,100.5,D099,2026-08-07
+P01885,18,Other,129/88,88,Migraine,Paxlovid,110,98.8,D091,2026-01-26
+P01886,57,Other,154/72,71,Type 2 Diabetes,Albuterol 90mcg,131,100.8,D099,2026-03-18
+P01887,22,Female,121/97,81,COVID-19,Atorvastatin 20mg,192,97.6,D048,2026-08-15
+P01888,92,Other,150/61,93,Pneumonia,Metoprolol 25mg,88,100.9,D075,2026-04-08
+P01889,74,Male,119/86,68,Arrhythmia,Amlodipine 5mg,105,99.7,D039,2026-09-23
+P01890,63,Female,138/95,75,Influenza A,Sumatriptan 50mg,154,98.3,D028,2026-09-27
+P01891,35,Other,106/76,72,Influenza A,Metoprolol 25mg,88,98.4,D061,2026-11-15
+P01892,44,Male,104/62,97,Asthma,Amoxicillin 500mg,163,97.4,D025,2026-10-19
+P01893,22,Female,149/77,91,Pneumonia,Amlodipine 5mg,106,101.4,D054,2026-12-04
+P01894,47,Female,124/66,76,Hyperlipidemia,Sumatriptan 50mg,172,99.9,D018,2026-09-10
+P01895,34,Female,160/93,98,Migraine,Oseltamivir 75mg,192,97.6,D068,2026-10-03
+P01896,50,Other,135/78,83,Pneumonia,Sumatriptan 50mg,107,98.0,D042,2026-03-12
+P01897,62,Male,98/93,103,Type 2 Diabetes,Metformin 500mg,140,99.7,D044,2026-12-12
+P01898,84,Female,136/67,79,Influenza A,Amoxicillin 500mg,132,98.8,D068,2026-07-19
+P01899,90,Other,131/60,82,Type 2 Diabetes,Paxlovid,116,98.0,D013,2026-02-24
+P01900,91,Female,107/80,76,Pneumonia,Albuterol 90mcg,105,101.1,D060,2026-06-10
+P01901,31,Female,120/96,95,COVID-19,Atorvastatin 20mg,79,98.7,D032,2026-07-27
+P01902,68,Female,115/67,84,Migraine,Amoxicillin 500mg,142,100.9,D045,2026-05-18
+P01903,73,Female,116/99,73,Pneumonia,Amlodipine 5mg,87,100.3,D035,2026-05-03
+P01904,80,Male,132/92,104,Hypertension,Amoxicillin 500mg,86,99.1,D031,2026-07-15
+P01905,42,Female,116/99,67,Hypertension,Amlodipine 5mg,139,99.1,D014,2026-01-24
+P01906,72,Female,101/85,99,Osteoarthritis,Amoxicillin 500mg,166,97.5,D080,2026-08-28
+P01907,25,Female,127/74,74,Arrhythmia,Amoxicillin 500mg,186,97.5,D070,2026-05-22
+P01908,29,Female,152/78,103,Hypertension,Ibuprofen 400mg,151,101.0,D042,2026-03-08
+P01909,79,Female,137/75,91,Osteoarthritis,Metformin 500mg,181,98.2,D082,2026-05-16
+P01910,22,Female,136/72,87,Arrhythmia,Amlodipine 5mg,171,98.1,D036,2026-03-09
+P01911,72,Male,100/83,79,Osteoarthritis,Oseltamivir 75mg,88,98.8,D039,2026-07-06
+P01912,30,Female,120/98,59,Hypertension,Amlodipine 5mg,79,100.3,D080,2026-07-18
+P01913,38,Other,132/95,103,Hypertension,Metformin 500mg,131,99.5,D057,2026-09-21
+P01914,21,Male,156/74,103,Arrhythmia,Ibuprofen 400mg,123,98.3,D062,2026-12-01
+P01915,49,Male,146/73,70,Arrhythmia,Oseltamivir 75mg,140,101.3,D063,2026-08-01
+P01916,84,Male,148/77,85,Type 2 Diabetes,Sumatriptan 50mg,162,98.0,D047,2026-09-13
+P01917,61,Male,145/83,82,Pneumonia,Paxlovid,86,100.9,D031,2026-04-01
+P01918,74,Male,102/84,66,Type 2 Diabetes,Amlodipine 5mg,164,97.8,D067,2026-10-16
+P01919,88,Female,148/75,62,Migraine,Oseltamivir 75mg,72,97.8,D039,2026-09-24
+P01920,56,Female,139/78,96,Hyperlipidemia,Amlodipine 5mg,85,100.6,D086,2026-12-03
+P01921,78,Male,137/85,97,Migraine,Sumatriptan 50mg,116,100.1,D024,2026-05-28
+P01922,92,Other,119/96,101,Migraine,Amlodipine 5mg,176,98.1,D026,2026-02-25
+P01923,86,Other,110/72,62,Type 2 Diabetes,Albuterol 90mcg,173,98.5,D028,2026-04-19
+P01924,28,Male,105/95,61,Asthma,Metoprolol 25mg,137,97.3,D036,2026-09-20
+P01925,35,Other,116/66,79,Influenza A,Amlodipine 5mg,132,98.4,D041,2026-10-24
+P01926,92,Male,128/80,87,Osteoarthritis,Atorvastatin 20mg,192,100.5,D038,2026-07-12
+P01927,27,Male,110/98,78,Osteoarthritis,Sumatriptan 50mg,140,97.7,D044,2026-05-01
+P01928,20,Other,125/82,98,COVID-19,Amlodipine 5mg,193,97.7,D052,2026-07-12
+P01929,77,Other,152/86,100,Type 2 Diabetes,Albuterol 90mcg,143,99.9,D057,2026-10-08
+P01930,25,Male,116/70,78,Pneumonia,Amlodipine 5mg,95,99.7,D038,2026-01-17
+P01931,61,Female,157/100,87,Arrhythmia,Amlodipine 5mg,141,98.8,D071,2026-03-26
+P01932,20,Other,97/95,81,Arrhythmia,Sumatriptan 50mg,166,98.0,D073,2026-05-01
+P01933,44,Female,106/63,82,Influenza A,Atorvastatin 20mg,95,99.6,D036,2026-09-07
+P01934,18,Male,153/89,95,Arrhythmia,Amoxicillin 500mg,112,99.2,D067,2026-04-09
+P01935,91,Male,104/60,65,Hypertension,Amlodipine 5mg,155,98.3,D037,2026-11-07
+P01936,21,Female,116/74,91,COVID-19,Ibuprofen 400mg,193,98.3,D029,2026-04-24
+P01937,88,Male,155/83,59,Migraine,Paxlovid,123,101.0,D081,2026-01-07
+P01938,44,Male,160/72,94,Type 2 Diabetes,Oseltamivir 75mg,195,100.3,D039,2026-01-25
+P01939,41,Other,142/81,96,COVID-19,Amoxicillin 500mg,185,101.3,D020,2026-07-05
+P01940,74,Female,100/66,74,Influenza A,Ibuprofen 400mg,176,101.3,D068,2026-12-10
+P01941,21,Other,120/72,88,Migraine,Amlodipine 5mg,105,98.0,D069,2026-12-28
+P01942,61,Other,144/80,58,Influenza A,Albuterol 90mcg,91,97.3,D011,2026-07-13
+P01943,32,Female,109/96,78,Asthma,Amlodipine 5mg,88,98.1,D013,2026-05-27
+P01944,80,Male,116/92,87,COVID-19,Amlodipine 5mg,147,97.3,D073,2026-03-18
+P01945,48,Male,121/100,74,Arrhythmia,Sumatriptan 50mg,131,99.5,D060,2026-11-24
+P01946,77,Male,145/67,97,Type 2 Diabetes,Paxlovid,149,99.3,D093,2026-11-08
+P01947,52,Other,152/62,79,Arrhythmia,Oseltamivir 75mg,107,98.1,D090,2026-07-20
+P01948,44,Female,95/77,64,Type 2 Diabetes,Atorvastatin 20mg,72,101.1,D010,2026-04-21
+P01949,21,Female,124/76,88,Pneumonia,Oseltamivir 75mg,135,100.1,D069,2026-11-19
+P01950,67,Female,143/69,101,Type 2 Diabetes,Amlodipine 5mg,100,99.3,D063,2026-03-21
+P01951,70,Female,106/77,104,Pneumonia,Atorvastatin 20mg,129,101.5,D096,2026-06-15
+P01952,68,Female,139/63,95,Osteoarthritis,Paxlovid,138,98.8,D046,2026-10-19
+P01953,23,Other,151/96,58,Arrhythmia,Oseltamivir 75mg,100,101.1,D011,2026-02-17
+P01954,31,Other,142/77,97,Hyperlipidemia,Atorvastatin 20mg,153,97.2,D054,2026-10-05
+P01955,59,Male,150/99,90,Type 2 Diabetes,Atorvastatin 20mg,186,97.8,D045,2026-08-05
+P01956,82,Other,157/65,90,Arrhythmia,Ibuprofen 400mg,80,101.0,D066,2026-05-06
+P01957,39,Other,154/78,103,Pneumonia,Albuterol 90mcg,119,100.3,D033,2026-03-17
+P01958,80,Other,140/66,73,Hyperlipidemia,Sumatriptan 50mg,93,99.9,D057,2026-03-07
+P01959,40,Female,155/96,104,Arrhythmia,Amlodipine 5mg,102,98.4,D046,2026-09-11
+P01960,27,Other,142/74,100,Asthma,Oseltamivir 75mg,179,100.6,D046,2026-07-01
+P01961,38,Female,123/77,69,Arrhythmia,Amoxicillin 500mg,108,99.6,D059,2026-09-24
+P01962,18,Male,106/92,63,Type 2 Diabetes,Metoprolol 25mg,192,98.9,D047,2026-11-05
+P01963,72,Male,120/87,77,Hyperlipidemia,Albuterol 90mcg,178,99.4,D077,2026-08-01
+P01964,47,Female,115/69,101,Asthma,Paxlovid,95,100.6,D042,2026-08-10
+P01965,68,Female,157/86,69,Hypertension,Metformin 500mg,136,99.7,D068,2026-07-19
+P01966,91,Male,150/92,73,Hypertension,Metformin 500mg,89,97.6,D034,2026-08-03
+P01967,43,Female,111/75,64,Type 2 Diabetes,Amlodipine 5mg,149,97.3,D012,2026-04-05
+P01968,84,Other,157/81,62,Arrhythmia,Metoprolol 25mg,117,100.8,D093,2026-06-07
+P01969,25,Female,148/61,63,Hyperlipidemia,Amlodipine 5mg,127,99.9,D040,2026-08-28
+P01970,37,Male,96/61,80,Osteoarthritis,Paxlovid,170,98.8,D041,2026-05-08
+P01971,35,Male,100/86,103,Influenza A,Metformin 500mg,84,99.7,D074,2026-02-15
+P01972,18,Female,142/84,76,COVID-19,Metoprolol 25mg,120,98.6,D057,2026-04-06
+P01973,49,Male,146/74,63,Influenza A,Albuterol 90mcg,145,100.8,D081,2026-07-08
+P01974,24,Female,159/89,95,Asthma,Sumatriptan 50mg,115,98.9,D036,2026-10-05
+P01975,34,Other,141/64,93,Type 2 Diabetes,Amlodipine 5mg,162,101.5,D067,2026-04-06
+P01976,85,Male,127/64,63,Hypertension,Ibuprofen 400mg,136,97.7,D063,2026-03-25
+P01977,48,Male,106/77,60,Migraine,Metformin 500mg,70,97.8,D086,2026-04-27
+P01978,45,Other,151/90,100,COVID-19,Metoprolol 25mg,182,100.2,D064,2026-11-16
+P01979,36,Other,118/67,71,Arrhythmia,Metoprolol 25mg,104,98.9,D068,2026-09-18
+P01980,80,Other,112/86,69,Migraine,Metformin 500mg,193,97.3,D064,2026-12-14
+P01981,72,Male,160/73,72,Pneumonia,Atorvastatin 20mg,82,97.6,D072,2026-02-28
+P01982,58,Other,148/64,88,Hypertension,Metformin 500mg,194,100.3,D088,2026-03-11
+P01983,85,Other,134/62,65,Influenza A,Amlodipine 5mg,119,98.3,D025,2026-07-19
+P01984,21,Other,114/84,88,Migraine,Paxlovid,167,98.7,D061,2026-09-07
+P01985,40,Male,116/81,104,Influenza A,Amoxicillin 500mg,185,98.5,D093,2026-07-04
+P01986,62,Female,121/88,97,COVID-19,Atorvastatin 20mg,95,97.3,D018,2026-10-14
+P01987,27,Other,98/60,66,Arrhythmia,Sumatriptan 50mg,154,98.2,D084,2026-12-02
+P01988,71,Other,133/66,97,Osteoarthritis,Metformin 500mg,180,100.5,D074,2026-03-25
+P01989,27,Male,119/84,97,Hyperlipidemia,Metformin 500mg,144,97.5,D083,2026-06-03
+P01990,18,Male,147/77,68,Type 2 Diabetes,Sumatriptan 50mg,74,99.9,D014,2026-06-01
+P01991,84,Female,159/98,88,Hyperlipidemia,Albuterol 90mcg,165,97.9,D041,2026-01-23
+P01992,26,Other,100/61,90,Migraine,Paxlovid,123,98.8,D072,2026-01-26
+P01993,79,Female,111/92,61,COVID-19,Metoprolol 25mg,173,98.8,D092,2026-11-14
+P01994,34,Female,143/96,105,Type 2 Diabetes,Metoprolol 25mg,106,99.0,D016,2026-06-08
+P01995,31,Other,139/86,84,Type 2 Diabetes,Oseltamivir 75mg,177,101.4,D056,2026-03-18
+P01996,70,Male,132/85,100,Arrhythmia,Metformin 500mg,131,99.8,D074,2026-02-12
+P01997,22,Female,108/75,90,Hypertension,Ibuprofen 400mg,195,99.0,D036,2026-11-15
+P01998,78,Other,123/97,83,Osteoarthritis,Paxlovid,175,101.3,D034,2026-02-04
+P01999,66,Other,114/79,58,Influenza A,Atorvastatin 20mg,125,99.6,D098,2026-08-14

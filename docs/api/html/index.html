@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KDR-CA-AEAD Cryptographic API Reference</title>
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background: #F8FAFC; color: #0F172A; }
+        header { background: #002B49; color: white; padding: 20px 40px; }
+        header h1 { margin: 0; font-size: 24px; }
+        nav { background: #1F77B4; padding: 10px 40px; }
+        nav a { color: white; text-decoration: none; margin-right: 20px; font-weight: bold; }
+        .container { padding: 40px; max-width: 1100px; margin: 0 auto; }
+        .card { background: white; border: 1px solid #CBD5E1; border-radius: 6px; padding: 20px; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .card h2 { color: #002B49; margin-top: 0; border-bottom: 2px solid #1F77B4; padding-bottom: 8px; }
+        pre { background: #F1F5F9; border: 1px solid #CBD5E1; padding: 12px; border-radius: 4px; overflow-x: auto; font-family: 'Courier New', monospace; font-size: 13px; }
+        .badge { background: #2CA02C; color: white; padding: 3px 8px; border-radius: 12px; font-size: 12px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>KDR-CA-AEAD Cryptographic Package — API Reference Manual</h1>
+        <p>Keyed Dynamically-Reconfigured Cellular Automata with Authenticated Encryption</p>
+    </header>
+    <nav>
+        <a href="index.html">Overview & API Surface</a>
+        <a href="developer_guide.html">Developer Guide</a>
+        <a href="examples.html">Code Examples</a>
+    </nav>
+    <div class="container">
+        <div class="card">
+            <h2>Unified Public API Surface (crypto) <span class="badge">100% COVERED</span></h2>
+            <p>The top-level <code>crypto</code> package exports all high-level authenticated encryption APIs, key schedules, dynamic CA permutation engines, and security analysis suites.</p>
+        </div>
+
+        <div class="card">
+            <h2>Module: <code>crypto</code></h2>
+            <p>KDR-CA-AEAD Cryptographic Package - Unified Public API Surface.
+
+Phase 2.5 System Integration & Final Validation.</p>
+        </div>
+        <div class="card">
+            <h2>Module: <code>crypto.ca.engine</code></h2>
+            <p>Deterministic One-Dimensional Elementary Cellular Automata Evolution Engine.
+
+This module implements deterministic 1D Cellular Automata evolution supporting
+arbitrary binary state lengths, configurable boundary conditions ("periodic" and "null"),
+and multi-generation step evolution.
+
+Boundary Conditions:
+    - Periodic ("periodic"):
+        Wraps around both ends of the cell array.
+        Left neighbor of cell 0 is cell N-1.
+        Right neighbor of cell N-1 is cell 0.
+        For a 1-cell array, left, center, and right neighbors are all cell 0.
+
+    - Null ("null"):
+        Boundary conditions outside the cell array are treated as 0 (zero-padded).
+        Left neighbor of cell 0 is 0.
+        Right neighbor of cell N-1 is 0.
+
+Determinism & Security:
+    Evolution is strictly deterministic. Given identical inputs (state, rule, generations,
+    and boundary), the evolution output is guaranteed to be identical. No randomness is used.
+
+Time Complexity:
+    - evolve_step: O(N) where N is the length of the binary state array.
+    - evolve: O(N * generations) where N is state length.</p>
+        <h3>Public Functions</h3><ul><li><b><code>evolve(state: Union[List[int], Tuple[int, ...], str], rule: Any, generations: Any = 1, boundary: Any = 'periodic') -> List[int]</code></b>: Perform deterministic one-dimensional cellular automata evolution across multiple generations.</li><li><b><code>evolve_step(state: Union[List[int], Tuple[int, ...], str], lookup: Union[mappingproxy, Dict[Tuple[int, int, int], int]], boundary: str = 'periodic') -> List[int]</code></b>: Perform a single generation evolution step for a 1D Cellular Automaton state.</li><li><b><code>validate_boundary(boundary: Any) -> str</code></b>: Validate and normalize a boundary condition string.</li><li><b><code>validate_generations(generations: Any) -> int</code></b>: Validate that generations count is a positive integer (>= 1).</li><li><b><code>validate_state(state: Any) -> List[int]</code></b>: Validate and normalize a binary state input.</li></ul></div>
+        <div class="card">
+            <h2>Module: <code>crypto.ca.mapping</code></h2>
+            <p>Dynamic Rule Mapping and Configuration Subsystem for KDR-CA-AEAD.
+
+This module manages Cellular Automata rule selection, indexing lookups, bijective
+rule transformations, sequence rotation/cycling, configuration load/export,
+and JSON serialization.
+
+Determinism & Security:
+    - All mapping and sequence operations are strictly deterministic and pure.
+    - Configuration schema versioning ("version": 1) is enforced on serialization.
+    - Bijective mappings enforce unique target rules to ensure deterministic inversions.
+
+Time Complexity:
+    - validate_rule_sequence: O(N) where N is sequence length.
+    - build_rule_lookup: O(N).
+    - get_rule: O(1).
+    - map_rules & invert_rule_mapping: O(N).
+    - serialize_rule_sequence & deserialize_rule_sequence: O(N).</p>
+        <h3>Public Functions</h3><ul><li><b><code>build_rule_lookup(rules: Sequence[int]) -> Dict[int, int]</code></b>: Build a deterministic lookup dictionary mapping index integers to rule values.</li><li><b><code>compare_rule_sequences(a: Any, b: Any) -> bool</code></b>: Compare two rule sequences for exact equality.</li><li><b><code>cycle_rule(sequence: Sequence[int], index: Any) -> int</code></b>: Retrieve the rule at index mod len(sequence) for modular cyclic access.</li><li><b><code>deserialize_rule_sequence(data: Any) -> Dict[str, Any]</code></b>: Deserialize a JSON string into a validated rule configuration dictionary.</li><li><b><code>export_rule_configuration(rules: Sequence[int], default_rule: Optional[int] = None, active_rule: Optional[int] = None, metadata: Optional[Dict[str, Any]] = None) -> Dict[str, Any]</code></b>: Export rule configuration parameters into a standardized dictionary format.</li><li><b><code>generate_rule_sequence(start_rule: Any, count: Any, step: Any = 1) -> List[int]</code></b>: Generate a deterministic sequence of rules starting at start_rule.</li><li><b><code>get_rule(index: Any, lookup: Any) -> int</code></b>: Retrieve a rule integer from a lookup dictionary by index.</li><li><b><code>invert_rule_mapping(mapping: Any) -> Dict[int, int]</code></b>: Invert a rule mapping dictionary (target -> source).</li><li><b><code>load_rule_configuration(config: Any) -> Dict[str, Any]</code></b>: Load and validate a rule configuration dictionary.</li><li><b><code>map_rules(source: Sequence[int], target: Sequence[int], bijective: bool = False) -> Dict[int, int]</code></b>: Generate a deterministic rule mapping dictionary from source rules to target rules.</li><li><b><code>merge_rule_sequences(a: Sequence[int], b: Sequence[int], unique_only: bool = False) -> List[int]</code></b>: Merge two rule sequences into a single sequence.</li><li><b><code>rotate_rule_sequence(sequence: Sequence[int], shift: Any) -> List[int]</code></b>: Rotate a rule sequence to the left by shift positions.</li><li><b><code>rule_exists(rule: Any, sequence: Sequence[int]) -> bool</code></b>: Check whether a specific rule exists within a rule sequence.</li><li><b><code>rule_index(rule: Any, sequence: Sequence[int]) -> int</code></b>: Return the first 0-based index of a rule in a sequence.</li><li><b><code>serialize_rule_sequence(rules: Sequence[int], default_rule: Optional[int] = None, active_rule: Optional[int] = None, metadata: Optional[Dict[str, Any]] = None, indent: Optional[int] = None) -> str</code></b>: Serialize a rule sequence configuration into a deterministic JSON string.</li><li><b><code>unique_rules(sequence: Sequence[int]) -> List[int]</code></b>: Return ordered unique rules from a sequence preserving first insertion order.</li><li><b><code>validate_rule_sequence(rules: Any, allow_duplicates: bool = True) -> List[int]</code></b>: Validate a sequence of integer Cellular Automata rules (0-255).</li></ul></div>
+        <div class="card">
+            <h2>Module: <code>crypto.ca.rules</code></h2>
+            <p>Elementary Cellular Automata (ECA) Rule Engine Representation and Utilities.
+
+This module implements support for all 256 Wolfram Elementary Cellular Automata rules
+(Rules 0 to 255). It provides rule validation, deterministic 8-bit lookup table conversion,
+immutable cached lookup tables, and neighborhood evaluation utilities.
+
+Wolfram Rule Representation:
+    An Elementary Cellular Automaton consists of a 1D grid of binary cells.
+    The next state of a cell depends on its current state and its left and right neighbors.
+    There are 2^3 = 8 possible 3-cell neighborhood configurations (111 down to 000).
+
+    Neighborhood to Bit Mapping:
+        Neighborhood  (L, C, R)  Binary Value  Bit Position in Rule
+        ----------------------------------------------------------
+            111       (1, 1, 1)       7               Bit 7
+            110       (1, 1, 0)       6               Bit 6
+            101       (1, 0, 1)       5               Bit 5
+            100       (1, 0, 0)       4               Bit 4
+            011       (0, 1, 1)       3               Bit 3
+            010       (0, 1, 0)       2               Bit 2
+            001       (0, 0, 1)       1               Bit 1
+            000       (0, 0, 0)       0               Bit 0
+
+Time Complexity:
+    - parse_rule: O(1) time complexity (memoized up to 256 entries).
+    - validate_rule: O(1) time complexity.
+    - get_neighborhood_output: O(1) time complexity.</p>
+        <h3>Public Functions</h3><ul><li><b><code>get_neighborhood_output(rule: Any, left: Any, center: Any, right: Any) -> int</code></b>: Evaluate a single 3-cell neighborhood for a given Wolfram rule.</li><li><b><code>parse_rule(rule: Any) -> mappingproxy</code></b>: Parse and convert an integer rule into an immutable binary lookup table.</li><li><b><code>rule_to_binary(rule: Any) -> str</code></b>: Convert an integer rule (0-255) into its 8-bit binary string representation.</li><li><b><code>validate_rule(rule: Any) -> int</code></b>: Validate that the given rule is an integer within the range [0, 255].</li></ul></div>
+        <div class="card">
+            <h2>Module: <code>crypto.ca.utils</code></h2>
+            <p>Cellular Automata Utility Module.
+
+This module provides deterministic helper functions for binary state conversions,
+state initialization, random state generation, state validation, distance and population
+metrics, matrix manipulations, and state slicing operations used across the
+KDR-CA-AEAD cryptographic engine.
+
+Determinism & Security:
+    - Random state generation uses an isolated `random.Random(seed)` instance to ensure
+      100% reproducible states without modifying Python's global `random` state.
+    - All conversion and metric functions behave deterministically.
+
+Time Complexity:
+    - State Conversions & Slicing: O(N) where N is the length of the binary state.
+    - Metrics (Population count, Hamming distance, XOR, Inversion): O(N).
+    - Matrix conversions: O(M * N) where M is generations and N is state width.
+    - Integer conversions: O(width).</p>
+        <h3>Public Functions</h3><ul><li><b><code>chunk_state(state: Union[Sequence[int], str], size: Any) -> List[List[int]]</code></b>: Split a binary state into fixed-size chunk sub-states.</li><li><b><code>compare_states(a: Any, b: Any) -> bool</code></b>: Compare two binary states for equality.</li><li><b><code>copy_state(state: Union[Sequence[int], str]) -> List[int]</code></b>: Return a deep copy of a binary state array.</li><li><b><code>flatten_states(states: Any) -> List[int]</code></b>: Flatten a sequence of nested binary states into a single 1D state array.</li><li><b><code>hamming_distance(state1: Union[Sequence[int], str], state2: Union[Sequence[int], str]) -> int</code></b>: Calculate the Hamming distance (number of differing positions) between two equal-length states.</li><li><b><code>int_to_state(value: Any, width: Any) -> List[int]</code></b>: Convert a non-negative integer into a big-endian binary state array of specified width.</li><li><b><code>invert_state(state: Union[Sequence[int], str]) -> List[int]</code></b>: Bitwise invert a binary state (0 -> 1, 1 -> 0).</li><li><b><code>matrix_to_states(matrix: Any) -> List[List[int]]</code></b>: Validate and convert a 2D matrix representation back into a list of state rows.</li><li><b><code>one_state(length: Any) -> List[int]</code></b>: Generate an all-one binary state array of specified length.</li><li><b><code>pad_state(state: Union[Sequence[int], str], length: Any, value: Any = 0) -> List[int]</code></b>: Pad a binary state to target length using specified bit value.</li><li><b><code>population_count(state: Union[Sequence[int], str]) -> int</code></b>: Count the number of set bits (ones) in a binary state.</li><li><b><code>random_state(length: Any, seed: Optional[Any] = None) -> List[int]</code></b>: Generate a pseudo-random binary state array.</li><li><b><code>state_from_string(bits: str) -> List[int]</code></b>: Convert a binary string (e.g. "010101") into a List[int] state.</li><li><b><code>state_to_int(state: Union[Sequence[int], str]) -> int</code></b>: Convert a big-endian binary state array back into an integer.</li><li><b><code>state_to_string(state: Union[Sequence[int], str]) -> str</code></b>: Convert a binary state sequence into a string representation (e.g. [1,0,1] -> "101").</li><li><b><code>states_to_matrix(states: Any) -> List[List[int]]</code></b>: Convert a sequence of generation states into a 2D matrix (List[List[int]]).</li><li><b><code>trim_state(state: Union[Sequence[int], str], length: Any) -> List[int]</code></b>: Trim a binary state to a shorter target length.</li><li><b><code>validate_bit(bit: Any) -> int</code></b>: Validate that a value is a binary bit integer (0 or 1).</li><li><b><code>validate_state_length(length: Any) -> int</code></b>: Validate that a state length parameter is an integer >= 1.</li><li><b><code>validate_width(width: Any) -> int</code></b>: Validate that a bit width parameter is an integer >= 1.</li><li><b><code>xor_states(a: Union[Sequence[int], str], b: Union[Sequence[int], str]) -> List[int]</code></b>: Perform bitwise XOR between two equal-length binary states.</li><li><b><code>zero_state(length: Any) -> List[int]</code></b>: Generate an all-zero binary state array of specified length.</li></ul></div>
+        <div class="card">
+            <h2>Module: <code>crypto.engine.encrypt</code></h2>
+            <p>Module:
+    encrypt.py
+
+Project:
+    KDR-CA-AEAD
+
+Purpose:
+    High-level authenticated encryption subsystem. Integrates KeySchedule sub-key expansion,
+    Dynamic Cellular Automata non-linear state permutation, HMAC-SHA256 CTR-PRNG stream cipher,
+    and HMAC-SHA256 AEAD tag computation.
+
+Author:
+    Chintan (Project Lead, Cryptography Lead, Research Lead)
+
+Version:
+    1.0.0 (Frozen Architecture Integration)
+
+IEEE Mapping:
+    Section IV-D – AEAD Encryption Subsystem Architecture
+
+Security Classification:
+    Authenticated Encryption Core Engine</p>
+        <h3>Public Functions</h3><ul><li><b><code>encrypt_bytes(data: 'BytesLike', master_key: 'BytesLike', salt: 'BytesLike | None' = None, nonce: 'BytesLike | None' = None, associated_data: 'BytesLike' = b'') -> 'EncryptedPackage'</code></b>: Encrypts raw binary data bytes using KDR-CA-AEAD authenticated cipher.</li><li><b><code>encrypt_payload(plaintext: 'str', password: 'str', salt: 'bytes | None' = None, nonce: 'bytes | None' = None) -> 'EncryptedPackage'</code></b>: Encrypts string plaintext payload using KDR-CA-AEAD authenticated cipher.</li></ul></div>
+        <div class="card">
+            <h2>Module: <code>crypto.engine.decrypt</code></h2>
+            <p>Module:
+    decrypt.py
+
+Project:
+    KDR-CA-AEAD
+
+Purpose:
+    High-level authenticated decryption & integrity verification subsystem.
+    Verifies Encrypt-then-MAC authentication tag, expands CTR keystream, decrypts XOR stream,
+    and applies inverse Keyed Dynamic Cellular Automata transformation.
+
+Author:
+    Chintan (Project Lead, Cryptography Lead, Research Lead)
+
+Version:
+    1.0.0 (Frozen Architecture Integration)
+
+IEEE Mapping:
+    Section IV-E – AEAD Decryption & Integrity Subsystem Architecture
+
+Security Classification:
+    Authenticated Decryption Core Engine</p>
+        <h3>Public Functions</h3><ul><li><b><code>decrypt_bytes(package: 'EncryptedPackage', master_key: 'BytesLike', associated_data: 'BytesLike' = b'') -> 'bytes'</code></b>: Decrypts and authenticates an EncryptedPackage returning raw payload bytes.</li><li><b><code>decrypt_payload(package: 'EncryptedPackage', password: 'str') -> 'str'</code></b>: Decrypts and authenticates a KDR-CA-AEAD package returning string payload.</li></ul></div>
+        <div class="card">
+            <h2>Module: <code>crypto.engine.dynamic_ca</code></h2>
+            <p>Module:
+    dynamic_ca.py
+
+Project:
+    KDR-CA-AEAD
+
+Purpose:
+    Implements the Keyed Dynamically-Reconfigured Cellular Automata (K-DCA) state engine.
+    Applies reversible non-linear local rule transitions, dual-rule coupling, inter-byte state
+    chaining, and keyed circular bit rotations.
+
+Author:
+    Chintan (Project Lead, Cryptography Lead, Research Lead)
+
+Version:
+    1.0.0 (Frozen Architecture Candidate A-Chain)
+
+IEEE Mapping:
+    Section IV-C – Keyed Dynamic CA State Engine Architecture
+
+Dependencies:
+    typing
+    crypto.engine.key_schedule (KeyMaterial)
+
+Security Classification:
+    Core Non-Linear Permutation-Substitution Primitive</p>
+        <h3>Public Classes</h3><ul><li><b>DynamicCAEngine</b>: Keyed Dynamically-Reconfigured Cellular Automata Engine Class Instance.</li></ul><h3>Public Functions</h3><ul><li><b><code>apply_keyed_ca_forward(data: 'BytesLike', rule_table: 'Sequence[int]', delta: 'int' = 13) -> 'bytes'</code></b>: Applies Keyed Dynamic Cellular Automata Candidate A-Chain forward transformation.</li><li><b><code>apply_keyed_ca_inverse(data: 'BytesLike', rule_table: 'Sequence[int]', delta: 'int' = 13) -> 'bytes'</code></b>: Applies Keyed Dynamic Cellular Automata Candidate A-Chain inverse transformation.</li></ul></div>
+        <div class="card">
+            <h2>Module: <code>crypto.engine.key_schedule</code></h2>
+            <p>Module:
+    key_schedule.py
+
+Project:
+    KDR-CA-AEAD
+
+Purpose:
+    Implements domain-separated dynamic sub-key expansion for Cellular Automata rules,
+    cipher keystream, and HMAC authentication tags.
+
+Author:
+    Chintan
+
+Version:
+    1.0.0
+
+IEEE Mapping:
+    Section IV-B – Dynamic Sub-Key Expansion Subsystem
+
+Standards:
+    NIST SP 800-56C Rev. 2 – Key-Derivation Methods & Domain Separation
+    RFC 5869 – HKDF
+
+Dependencies:
+    dataclasses
+    typing
+    crypto.constants
+    crypto.primitives.hkdf
+    crypto.models.exceptions
+
+Security Classification:
+    Critical Key Management Component</p>
+        <h3>Public Classes</h3><ul><li><b>KeyMaterial</b>: Immutable data container for derived sub-key material.</li><li><b>KeySchedule</b>: Manages dynamic expansion and domain separation of sub-keys (K_r, K_c, K_a).</li></ul></div>
+        <div class="card">
+            <h2>Module: <code>crypto.primitives.hkdf</code></h2>
+            <p>Module:
+    hkdf.py
+
+Project:
+    KDR-CA-AEAD
+
+Purpose:
+    Implements RFC 5869 compliant HKDF using HMAC-SHA256 for secure key derivation.
+
+Author:
+    Chintan
+
+Version:
+    1.0.0
+
+IEEE Mapping:
+    Section IV-A – Key Derivation Subsystem
+
+Standards:
+    RFC 5869 – HMAC-based Extract-and-Expand Key Derivation Function (HKDF)
+    NIST SP 800-56C Rev. 2 – Recommendation for Key-Derivation Methods
+
+Dependencies:
+    hashlib
+    hmac
+    crypto.constants
+    crypto.models.exceptions
+
+Security Classification:
+    Critical Cryptographic Primitive</p>
+        <h3>Public Functions</h3><ul><li><b><code>hkdf(ikm: 'BytesLike', length: 'int', salt: 'BytesLike | None' = None, info: 'BytesLike' = b'') -> 'bytes'</code></b>: Convenience function performing complete HKDF (Extract-then-Expand).</li><li><b><code>hkdf_expand(prk: 'BytesLike', info: 'BytesLike | None', length: 'int') -> 'bytes'</code></b>: Expands pseudorandom key (PRK) to output keying material (OKM).</li><li><b><code>hkdf_extract(salt: 'BytesLike | None', ikm: 'BytesLike') -> 'bytes'</code></b>: Extracts a pseudorandom key (PRK) from Input Keying Material (IKM).</li></ul></div>
+        <div class="card">
+            <h2>Module: <code>crypto.primitives.hmac</code></h2>
+            <p>HMAC-SHA256 Authenticated Messaging Primitive.
+Standard: FIPS 198-1 / RFC 2104 using SHA-256.
+
+IEEE Mapping: Section IV-B (Authentication Subsystem)</p>
+        <h3>Public Functions</h3><ul><li><b><code>generate_hmac(key: bytes, data: bytes) -> bytes</code></b>: Generates a 32-byte HMAC-SHA256 authentication tag.</li><li><b><code>verify_hmac(key: bytes, data: bytes, expected_tag: bytes) -> bool</code></b>: Verifies HMAC-SHA256 tag in constant time.</li></ul></div>
+        <div class="card">
+            <h2>Module: <code>crypto.primitives.random</code></h2>
+            <p>Cryptographically Secure Pseudorandom Number Generator (CSPRNG).
+Uses Python os.urandom / secrets for generating salts, nonces, and keys.
+
+IEEE Mapping: Section IV-C (Entropy Subsystem)</p>
+        <h3>Public Functions</h3><ul><li><b><code>generate_nonce(length: int = 12) -> bytes</code></b>: Generates a cryptographically secure random Nonce byte sequence.</li><li><b><code>generate_salt(length: int = 16) -> bytes</code></b>: Generates a cryptographically secure random Salt byte sequence.</li></ul></div>
+        <div class="card">
+            <h2>Module: <code>crypto.models.package</code></h2>
+            <p>Encrypted Payload Dataclass & Serializer.
+
+IEEE Mapping: Section IV-E (Payload Representation)</p>
+        <h3>Public Classes</h3><ul><li><b>EncryptedPackage</b>: Represents a serialized KDR-CA-AEAD encrypted payload package.</li></ul></div>
+        <div class="card">
+            <h2>Module: <code>crypto.models.exceptions</code></h2>
+            <p>Custom Cryptographic Exceptions Hierarchy.
+
+IEEE Mapping: Section IV-D (Fault & Error Handling)</p>
+        <h3>Public Classes</h3><ul><li><b>AuthenticationError</b>: Raised when HMAC authentication tag verification fails.</li><li><b>CorruptedPayloadError</b>: Raised when payload schema or byte alignment is invalid.</li><li><b>CryptoError</b>: Base exception for all cryptographic errors.</li><li><b>KeyDerivationError</b>: Raised when key derivation inputs or operations fail.</li></ul></div>
+        <div class="card">
+            <h2>Module: <code>crypto.analysis.security_analysis</code></h2>
+            <p>Module:
+    security_analysis.py
+
+Project:
+    KDR-CA-AEAD Cryptographic Research Engine
+
+Purpose:
+    Master Security Analysis & Cryptographic Validation Orchestration Subsystem (Phase 2.3 - Nagamrutha).
+    Executes full randomness, statistical, avalanche, attack resistance, and performance trade-off suites,
+    generates graph artifacts, and writes the IEEE paper Security Analysis Chapter.
+
+Author:
+    Nagamrutha (Security Analysis & Cryptographic Validation Lead)
+
+IEEE Mapping:
+    Section V & VI – Security Evaluation, Experimental Validation & Cryptanalysis Report</p>
+        <h3>Public Functions</h3><ul><li><b><code>generate_security_report_markdown(rand_res: 'Dict[str, Any]', pt_av: 'Dict[str, Any]', key_av: 'Dict[str, Any]', key_sens: 'Dict[str, Any]', corr_res: 'Dict[str, Any]', unif_res: 'Dict[str, Any]', comp_res: 'Dict[str, Any]', brute_res: 'Dict[str, Any]', diff_res: 'Dict[str, Any]', linear_res: 'Dict[str, Any]', rel_key_res: 'Dict[str, Any]', replay_res: 'Dict[str, Any]', tradeoff_res: 'Dict[str, Any]') -> 'str'</code></b>: Generates complete IEEE-ready Security Analysis Chapter formatted in Markdown.</li><li><b><code>run_full_security_analysis(results_dir: 'str' = 'results') -> 'Dict[str, Any]'</code></b>: Executes the full Phase 2.3 security evaluation workflow.</li></ul></div>
+        <div class="card">
+            <h2>Module: <code>crypto.analysis.benchmark_runner</code></h2>
+            <p>Module:
+    benchmark_runner.py
+
+Project:
+    KDR-CA-AEAD Cryptographic Research Engine
+
+Purpose:
+    Benchmark Suite Runner for Phase 2.4 Performance Benchmarking.
+    Executes automated performance benchmarks across 8 payload sizes (128 B to 10 MB)
+    for KDR-CA-AEAD, AES-256-GCM, and ChaCha20-Poly1305.
+
+Author:
+    Nagamrutha (Security Analysis & Cryptographic Validation Lead)
+
+IEEE Mapping:
+    Section VI-C – Comparative Performance & Execution Benchmarks</p>
+        <h3>Public Functions</h3><ul><li><b><code>generate_benchmark_report_markdown(master_results: 'Dict[str, Any]') -> 'str'</code></b>: Generates complete IEEE Benchmark Report Chapter formatted in Markdown.</li><li><b><code>run_benchmark_pipeline(results_dir: 'str' = 'results') -> 'Dict[str, Any]'</code></b>: Executes the complete Phase 2.4 benchmarking pipeline.</li><li><b><code>run_full_benchmark_suite(payload_sizes: 'List[int] | None' = None, runs: 'int' = 15) -> 'Dict[str, Any]'</code></b>: Executes full Phase 2.4 comparative performance benchmark suite.</li></ul></div>
+        <div class="card">
+            <h2>Module: <code>crypto.analysis.final_validation</code></h2>
+            <p>Module:
+    final_validation.py
+
+Project:
+    KDR-CA-AEAD Cryptographic Research Engine
+
+Purpose:
+    Master End-to-End Pipeline Validation, Data Consolidation, and IEEE Reproducibility Package Subsystem
+    (Phase 2.5 - Nagamrutha/Amrutha).
+    Executes unified security and benchmarking validation, consolidates empirical datasets,
+    generates 300 DPI camera-ready IEEE figures, exports master CSV tables, writes
+    final_evaluation_report.md, reproducibility.md, and experiment_configuration.json.
+
+Author:
+    Nagamrutha (Security Analysis & Cryptographic Validation Lead)
+
+IEEE Mapping:
+    Section VII – Final Experimental Validation, Reproducibility & Publication Artifacts</p>
+        <h3>Public Functions</h3><ul><li><b><code>generate_consolidated_tables(master_results: 'Dict[str, Any]', tables_dir: 'str') -> 'Dict[str, str]'</code></b>: Consolidates security and performance results into unified IEEE CSV tables.</li><li><b><code>generate_experiment_configuration(output_path: 'str') -> 'str'</code></b>: Creates experiment_configuration.json describing parameters and hardware.</li><li><b><code>generate_final_evaluation_report(master_results: 'Dict[str, Any]', output_path: 'str') -> 'str'</code></b>: Generates results/final_evaluation_report.md containing full IEEE Paper Chapter.</li><li><b><code>generate_publication_figures(master_results: 'Dict[str, Any]', figures_dir: 'str') -> 'Dict[str, str]'</code></b>: Generates 300 DPI IEEE camera-ready figures.</li><li><b><code>generate_reproducibility_markdown(output_path: 'str') -> 'str'</code></b>: Generates reproducibility.md with exact steps to replicate all experiments.</li><li><b><code>run_final_validation_pipeline(results_dir: 'str' = 'results') -> 'Dict[str, Any]'</code></b>: Executes the master Phase 2.5 final experimental validation & reproducibility pipeline.</li><li><b><code>verify_end_to_end_pipeline(master_key: 'bytes' = b'Nagamrutha_Master_Verification32') -> 'Dict[str, Any]'</code></b>: Verifies end-to-end encryption, AEAD tag authentication, decryption, and forgery rejection.</li></ul></div>
+    </div>
+</body>
+</html>

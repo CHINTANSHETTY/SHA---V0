@@ -1,0 +1,46 @@
+{
+  "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+  "@type": "SoftwareSourceCode",
+  "identifier": "KDR-CA-AEAD",
+  "name": "KDR-CA-AEAD: Keyed Dynamically-Reconfigured Cellular Automata with Authenticated Encryption",
+  "description": "A production-ready, lightweight authenticated encryption research framework integrating Keyed Dynamically-Reconfigured 1D Cellular Automata (K-DCA) permutations, HKDF-SHA256 sub-key expansion, and HMAC-SHA256 Encrypt-then-MAC AEAD authentication.",
+  "version": "1.0.0",
+  "datePublished": "2026-08-05",
+  "license": "https://spdx.org/licenses/Apache-2.0.html",
+  "codeRepository": "https://github.com/CHINTANSHETTY/SHA---V0",
+  "programmingLanguage": [
+    "Python"
+  ],
+  "author": [
+    {
+      "@type": "Person",
+      "givenName": "Chintan",
+      "familyName": "Shetty",
+      "email": "chntnshetty@gmail.com",
+      "role": "Lead Researcher & Cryptography Architect"
+    },
+    {
+      "@type": "Person",
+      "givenName": "Amrutha",
+      "familyName": "Nagamrutha",
+      "role": "Co-Researcher"
+    },
+    {
+      "@type": "Person",
+      "givenName": "Ashwitha",
+      "familyName": "Ashwitha",
+      "email": "shettyashwitha26@gmail.com",
+      "role": "Co-Researcher & Publication Lead"
+    }
+  ],
+  "keywords": [
+    "Cellular Automata",
+    "Authenticated Encryption",
+    "AEAD",
+    "HKDF-SHA256",
+    "HMAC-SHA256",
+    "NIST SP 800-22",
+    "Strict Avalanche Criterion"
+  ],
+  "runtimePlatform": "Python 3.10+"
+}

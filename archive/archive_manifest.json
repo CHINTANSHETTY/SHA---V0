@@ -1,0 +1,94 @@
+{
+  "archived_artifacts": [
+    {
+      "file": "paper/final.pdf",
+      "size_bytes": 12158,
+      "sha256": "c2799290323ea3ecaf4544313d55b0cc1569832c066abe6ea72fd223348396ff",
+      "sha512": "6586e52c10681175a9081dc2770a1be2f5ffec4072da27f3bc6667d628259dc462a6e7c147d86b0e3a384e2e300c3067dae841e74e69b15cd11fcd557f6073ff"
+    },
+    {
+      "file": "paper/ieee_paper.tex",
+      "size_bytes": 1335,
+      "sha256": "cde57547cbdbe8dbceb3750aab5b235bbea1fd1cf2aa1d050e0d6795c3107afd",
+      "sha512": "4e0625b7b234dc409e61b4eb543c80b4beca84d1365c787a3f0f0f31e203d583d84c8028560a42a88513938b20dae9d7543e9860e264cc32c9073a6804058c32"
+    },
+    {
+      "file": "paper/references.bib",
+      "size_bytes": 6056,
+      "sha256": "5bfbad48566ed14a11ad8fcc6a163f296b4555b5824bf4f285413c29ad7001cc",
+      "sha512": "ce78cd479afbe0733e4b7c37cfc5db08f03a76f034e7a9b0605272249f260285c24938447de73483f0766a3929166cc8b273f4411db161a714701283dd381496"
+    },
+    {
+      "file": "release/kdr-ca-aead-v1.0.0.zip",
+      "size_bytes": 15012,
+      "sha256": "a84fb22e99a83aa0db3cbe63b25f06593a76648fe95466d78c1d1bef85f4e2c9",
+      "sha512": "6e20afa17f53635de146131625eed89cbf6f82308094add4cfbea42b0666887201463955e5e92d4ffd3b757b1e4ed3ed2520b29ceaa8d154ff993c69384c5aef"
+    },
+    {
+      "file": "release/environment_snapshot.json",
+      "size_bytes": 691,
+      "sha256": "bff3cd80661b4522da371ecbd3b29a4cbe88ab4ca14cb4a8ab5777c331f3f11b",
+      "sha512": "f9bceb3285f8aa1063c49f7da97c06e3ac42e737498787a068095f493a4f1a4d850c072efec4acdb7b70e9c210fedda6ec4c7198a530fde2605e842be325ea35"
+    },
+    {
+      "file": "docs/graphs/benchmark_statistical_summary.csv",
+      "size_bytes": 1135,
+      "sha256": "6559043f9cf4b413003edfb93fec99bb8b39bc891a34f57914ffc40982e8d1fe",
+      "sha512": "0a1068dde8de63a3825af639263fe43780d2fb0cd1582e72d43ed95f728a5570b6aa87e9beb518afdfe5c8970f943a28c36e742ab8e4b83d3bfa47fc1febdcc3"
+    },
+    {
+      "file": "docs/api/coverage_report.json",
+      "size_bytes": 231,
+      "sha256": "f9b391db3b416be0a325938f2ad1a9cc3bfa28ce5365793db11ea1d5144a4faf",
+      "sha512": "182f2085c8554168cd7782cf5f243128f7f47844b7370ad8f18054902d46aa713bfe3928abc8eb1bb9a05a04db9dedf4c41b66470cfc24154be8a298f73d060a"
+    },
+    {
+      "file": "docs/api/pdf/kdr_ca_aead_developer_reference.pdf",
+      "size_bytes": 2930,
+      "sha256": "9531a956abe1f183b38943c151c7faf20090c125858388f4e7a1c1657c66af54",
+      "sha512": "57cb8d6e360c46f629fef3312336788cd520475289f8470badd606dfe5edf98837ce90c87e2833e710adf30f2ab5b0388746fbfa6e5cb3d141c3486a360582ee"
+    },
+    {
+      "file": "docs/manual/manual_validation_report.json",
+      "size_bytes": 747,
+      "sha256": "1db7f215bfd4d5a87c178b4601fdeebefdd583a67ac97e8a28775edc7cfc48ff",
+      "sha512": "8c2bd69dfa33892dd114fd3b115e53d059af590bd2375ca85d7110500dae996ec9f44cd9e3e1f3061665e555adacd9fe9b9f80e501fa3e76cd17c2f502a12d9d"
+    },
+    {
+      "file": "docs/manual/user_manual.pdf",
+      "size_bytes": 2394,
+      "sha256": "2732bebef69cf45df04bd4426a384d606e705c41bde7703181807fed34dd9340",
+      "sha512": "89fa54331136984533df168c737a05278b96f7adc121fa99e0d067a80aaa885ed2afbbb8fd787eab270084ab1b00e8e689ed55d768708563e88f7f5ce047cbec"
+    },
+    {
+      "file": "docs/release/final_validation_report.json",
+      "size_bytes": 519,
+      "sha256": "599e2356d1871ee7f5bcdf1d31025e74c08b0e3e33f432c56578255b709554a8",
+      "sha512": "899c69a1a60e452807824829f38f1fe22eb0998072a2eca8646b48cf856851a56a4e6413e8641af089aeb1bafe117aaf3c54919ceb1d39d292600ebba2fa46cd"
+    },
+    {
+      "file": "docs/release/publication_readiness.md",
+      "size_bytes": 1457,
+      "sha256": "0790962696b25c1141f9104e1de3c45ab170609f107ebc141f50547e610c504a",
+      "sha512": "d1ba3bb948a9ad450c0c28433c436a581ee7378a4a856e0a4564995e5fa20b0b0f91370d6574dea640a267227e63d71268748fac3f32cd2409610ed1c3c1e0d7"
+    },
+    {
+      "file": "CITATION.cff",
+      "size_bytes": 794,
+      "sha256": "f840879b47cc1741997420c381c6a5e0eaf74b32ea07207b62ce4b6e347297ef",
+      "sha512": "2f25506e9fdb7bd0092f95d712f191d25e1216dac36071af4976bd5ab240c08fa3c9b530a26bdd1b53b62d81653324323cf09ea7c652bda3e2f6b47f45068e97"
+    },
+    {
+      "file": "citation.bib",
+      "size_bytes": 477,
+      "sha256": "c89dcc91cc92072db51ae9b37d3b5d64e0b23cab5b918ab09f1258fa1b9deb08",
+      "sha512": "5d7f32ac9184aa18034bec5952f87ae1d75c19282890a22ff6b23e66851aaa2564190db88d2f9a7cb0cf50d2ef900e6ce1e823a7a9a4ea7fba0bfaff55152e0d"
+    },
+    {
+      "file": "citation.txt",
+      "size_bytes": 299,
+      "sha256": "93736c6f3993575a5d20346262bf97b3dcb72bac49d7be062ab5f4258b2dc135",
+      "sha512": "00e0360f24552de9c3d4b3974f7fb094a9cb4462bfa645217bb175aec6e482aeb69d877c111b3c016bfa261f3a141667b2d5974331024203522b3ce2459fb2ca"
+    }
+  ]
+}

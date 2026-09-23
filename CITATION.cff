@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+title: "KDR-CA-AEAD: Keyed Dynamically-Reconfigured Cellular Automata with Authenticated Encryption"
+message: "If you use this software or research framework, please cite it as below."
+type: software
+authors:
+  - family-names: "Shetty"
+    given-names: "Chintan"
+    role: "Lead Researcher & Cryptography Architect"
+  - family-names: "Nagamrutha"
+    given-names: "Amrutha"
+    role: "Co-Researcher"
+  - family-names: "Ashwitha"
+    given-names: "Ashwitha"
+    role: "Co-Researcher & Publication Lead"
+version: "1.0.0"
+date-released: "2026-08-05" # Synchronized with official v1.0.0 Git tag / release
+license: "Apache-2.0"
+repository-code: "https://github.com/CHINTANSHETTY/SHA---V0"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.1000000"
+    description: "Zenodo DOI placeholder for KDR-CA-AEAD v1.0.0"
+keywords:
+  - "Cellular Automata"
+  - "Authenticated Encryption"
+  - "AEAD"
+  - "HKDF-SHA256"
+  - "HMAC-SHA256"
+  - "NIST SP 800-22"
+  - "Strict Avalanche Criterion"
+  - "Lightweight Cryptography"

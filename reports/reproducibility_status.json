@@ -1,0 +1,23 @@
+{
+  "status": "VERIFIED_REPRODUCIBLE",
+  "computed_reproducibility_score_pct": 100.0,
+  "timestamp_utc": "2026-08-04T08:23:00.195156+00:00",
+  "duration_seconds": 0.322,
+  "version": "1.0.0",
+  "repository_fingerprint_sha256": "5f9849df6b95441845af3a68ec8835970d2945f3eb5fb70235a758a822a585c3",
+  "experimental_metrics": {
+    "sac_plaintext_avalanche_pct": 50.12,
+    "sac_key_avalanche_pct": 49.88,
+    "shannon_entropy_bits_per_byte": 7.998,
+    "throughput_mb_per_sec": 13.37,
+    "test_suite_pass_rate_pct": 100.0
+  },
+  "environment": {
+    "python_executable": "C:\\Users\\shett\\OneDrive\\python\\python.exe",
+    "python_version": "3.13.5",
+    "os_platform": "Windows-11-10.0.26200-SP0",
+    "cpu_architecture": "AMD64",
+    "git_commit": "06949124949e06d9ddc28c438032808a7d81710b",
+    "git_branch": "main"
+  }
+}

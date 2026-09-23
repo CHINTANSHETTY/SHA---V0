@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Edit Patient Record</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            background: #eef2f7;
+            padding: 30px 15px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 850px;
+            margin: auto;
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        h1 {
+            text-align: center;
+            color: #3765e8;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-top: 20px;
+            margin-bottom: 8px;
+            font-size: 17px;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #ccc;
+            border-radius: 9px;
+            font-size: 16px;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #3765e8;
+        }
+
+        textarea {
+            min-height: 110px;
+            resize: vertical;
+        }
+
+        .patientId {
+            background: #e5e7eb;
+            cursor: not-allowed;
+        }
+
+        .saveButton {
+            width: 100%;
+            padding: 15px;
+            margin-top: 30px;
+            background: #16a34a;
+            color: white;
+            border: none;
+            border-radius: 9px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .saveButton:hover {
+            background: #15803d;
+        }
+
+        .back {
+            display: block;
+            text-align: center;
+            margin-top: 22px;
+            color: #3765e8;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .notice {
+            background: #eff6ff;
+            color: #1e40af;
+            padding: 14px;
+            border-radius: 9px;
+            margin-bottom: 25px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Edit Patient Record</h1>
+
+    <p class="subtitle">
+        Update the patient's information and save the encrypted record.
+    </p>
+
+    <div class="notice">
+        🔐 This record has been unlocked successfully.
+        Changes will be encrypted again before being stored.
+    </div>
+
+    <form
+        action="/update/{{ recordId }}"
+        method="POST"
+    >
+
+        <label>Patient ID</label>
+
+        <input
+            class="patientId"
+            type="text"
+            name="patientId"
+            value="{{ patientId }}"
+            readonly
+        >
+
+
+        <label>Patient Name</label>
+
+        <input
+            type="text"
+            name="name"
+            value="{{ name }}"
+            required
+        >
+
+
+        <label>Age</label>
+
+        <input
+            type="number"
+            name="age"
+            value="{{ age }}"
+            min="1"
+            max="150"
+            required
+        >
+
+
+        <label>Gender</label>
+
+        <select name="gender" required>
+
+            <option value="">Select Gender</option>
+
+            <option
+                value="Male"
+                {% if gender == "Male" %}selected{% endif %}
+            >
+                Male
+            </option>
+
+            <option
+                value="Female"
+                {% if gender == "Female" %}selected{% endif %}
+            >
+                Female
+            </option>
+
+            <option
+                value="Other"
+                {% if gender == "Other" %}selected{% endif %}
+            >
+                Other
+            </option>
+
+        </select>
+
+
+        <label>Disease</label>
+
+        <input
+            type="text"
+            name="disease"
+            value="{{ disease }}"
+            required
+        >
+
+
+        <label>Diagnosis</label>
+
+        <textarea
+            name="diagnosis"
+            required
+        >{{ diagnosis }}</textarea>
+
+
+        <label>Prescription</label>
+
+        <textarea
+            name="prescription"
+            required
+        >{{ prescription }}</textarea>
+
+
+        <button
+            type="submit"
+            class="saveButton"
+        >
+            Save Changes & Re-encrypt
+        </button>
+
+    </form>
+
+
+    <a href="/records" class="back">
+        ← Cancel and Return to Patient Records
+    </a>
+
+</div>
+
+</body>
+
+</html>

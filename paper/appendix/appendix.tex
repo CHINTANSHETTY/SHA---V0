@@ -1,0 +1,23 @@
+\section*{Appendix: Mathematical Proofs \& Algorithmic Specifications}
+\label{sec:appendix}
+
+\subsection{A. Reversibility Proof for 1D Elementary Cellular Automata}
+Let $S^t \in \{0, 1\}^N$ represent the binary state vector of a 1D Elementary Cellular Automaton at time step $t$. Under dynamic rule reconfiguration governed by $R_1, R_2 \in [0, 255]$, the forward state evolution $f: \{0,1\}^N \to \{0,1\}^N$ is defined byte-wise as:
+\begin{equation}
+y_i = \text{ROTR}_8 \left( (P_i \oplus \text{prev}) + S_{\text{ECA}} \pmod{256}, \, (R_1 \pmod 7) + 1 \right) \oplus R_2
+\end{equation}
+Because bitwise XOR ($\oplus$), modular addition modulo 256, and circular bit rotations ($\text{ROTR}_8$) are strictly invertible bijections on $\mathbb{Z}_{256}$, the inverse mapping $f^{-1}$ exists uniquely:
+\begin{equation}
+P_i = \left[ \text{ROTL}_8 (y_i \oplus R_2, \, (R_1 \pmod 7) + 1) - S_{\text{ECA}} \pmod{256} \right] \oplus \text{prev}
+\end{equation}
+This guarantees zero information loss during encryption and decryption cycles.
+
+\subsection{B. Domain Separation Proof for HKDF Sub-Keys}
+By RFC 5869 / NIST SP 800-56C requirements, sub-keys $K_r, K_c, K_a$ are expanded using unique domain labels:
+\begin{align}
+PRK &= \text{HMAC-SHA256}(\text{salt}, K) \\
+K_r &= \text{HMAC-SHA256}(PRK, \text{"ca-rules|"} \parallel \text{nonce} \parallel 0x01) \\
+K_c &= \text{HMAC-SHA256}(PRK, \text{"cipher-key|"} \parallel \text{nonce} \parallel 0x01) \\
+K_a &= \text{HMAC-SHA256}(PRK, \text{"mac-key|"} \parallel \text{nonce} \parallel 0x01)
+\end{align}
+Assuming SHA-256 is a random oracle, $K_r, K_c, K_a$ are computationally indistinguishable from independent uniform random strings of length 256 bits.
