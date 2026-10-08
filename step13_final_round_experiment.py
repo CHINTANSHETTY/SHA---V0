@@ -178,12 +178,23 @@ def test_candidate_C_healthcare_pipeline(rounds: int) -> bool:
             return False
 
     records = generate_synthetic_dataset(100, seed=20260923)
-    for rec in records:
-        rec_str = record_to_string(rec)
-        c_str = candidate_C_encrypt_text(rec_str, password, rounds)
-        rec_str = candidate_C_decrypt_text(c_str, password, rounds)
-        if rec_str != rec_str:
-            return False
+    passed_count = 0
+    failed_count = 0
+
+    for idx, rec in enumerate(records):
+        orig_rec_str = record_to_string(rec)
+        c_str = candidate_C_encrypt_text(orig_rec_str, password, rounds)
+        dec_rec_str = candidate_C_decrypt_text(c_str, password, rounds)
+        if dec_rec_str == orig_rec_str:
+            passed_count += 1
+        else:
+            failed_count += 1
+            print(f"[HEALTHCARE PIPELINE FAILURE] Round {rounds}, Record Index {idx}:")
+            print(f"  Original:  {orig_rec_str}")
+            print(f"  Recovered: {dec_rec_str}")
+
+    if failed_count > 0:
+        return False
 
     return True
 

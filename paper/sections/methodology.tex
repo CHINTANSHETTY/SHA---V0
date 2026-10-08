@@ -1,86 +1,177 @@
 \section{Mathematical Model \& Cryptographic Primitives}
 \label{sec:methodology}
 
-\subsection{HKDF Sub-Key Derivation Pipeline}
-\label{subsec:hkdf_pipeline}
-The key schedule subsystem derives three domain-separated sub-keys from a master key $K$, a 16-byte random salt $S$, and a 12-byte nonce $N$:
-\begin{align}
-\text{PRK} &= \text{HMAC-SHA256}(S, K) \label{eq:hkdf_extract} \\
-K_r &= \text{HKDF-Expand}(\text{PRK}, \text{"KDR-CA-AEAD-v1-ca-rules|"} \,\|\, N, 32) \label{eq:hkdf_kr} \\
-K_c &= \text{HKDF-Expand}(\text{PRK}, \text{"KDR-CA-AEAD-v1-cipher-key|"} \,\|\, N, 32) \label{eq:hkdf_kc} \\
-K_a &= \text{HKDF-Expand}(\text{PRK}, \text{"KDR-CA-AEAD-v1-mac-key|"} \,\|\, N, 32) \label{eq:hkdf_ka}
-\end{align}
-
-Here, $K_r \in \{0,1\}^{256}$ is formatted into a 32-element tuple of uint8 integers $R = (r_0, r_1, \dots, r_{31})$, where each $r_j \in [0, 255]$. The 32 rules directly correspond to the 256 bits of key material derived from HKDF-SHA256.
-
-\subsection{1D Elementary Cellular Automaton Evaluation}
-\label{subsec:eca_eval}
-For each byte position index $i \in [0, M-1]$ in the payload stream of length $M$:
-\begin{align}
-R_1 &= R[i \bmod 32] \label{eq:r1_select} \\
-R_2 &= R[(i + \delta) \bmod 32] \label{eq:r2_select}
-\end{align}
-where $\delta = 13$ is the prime offset index ensuring non-aligned dual-rule coupling.
-
-The local ECA byte evaluation $S_{\text{ECA}}(i, R_1, R_2)$ computes bit-level Wolfram neighborhood transitions. For each bit position $b \in [0, 7]$ within the byte:
+\subsection{SHA-512 Key Derivation ($K_{256}$)}
+\label{subsec:sha512_k256}
+The key derivation mechanism computes a 256-bit binary key string ($K_{256}$) directly from a user password string $P$. First, the password is encoded as UTF-8 bytes and hashed using SHA-512 to produce a 64-byte (512-bit) raw digest $D$:
 \begin{equation}
-\text{state}_{\text{init}} = (i \oplus R_1) \bmod 256
+D = \text{SHA-512}(\text{UTF8}(P)) \in \{0, 1\}^{512}
+\label{eq:sha512_digest}
 \end{equation}
-The left, center, and right neighborhood bits of $\text{state}_{\text{init}}$ at bit position $b$ under periodic boundary conditions are:
-\begin{align}
-\text{left} &= (\text{state}_{\text{init}} \gg ((b+1) \bmod 8)) \ \& \ 1 \\
-\text{self} &= (\text{state}_{\text{init}} \gg b) \ \& \ 1 \\
-\text{right} &= (\text{state}_{\text{init}} \gg ((b-1) \bmod 8)) \ \& \ 1
-\end{align}
-Neighborhood index:
+The key $K_{256}$ is defined as the first 32 bytes (256 bits) of the SHA-512 digest:
 \begin{equation}
-\eta = (\text{left} \ll 2) \ |\  (\text{self} \ll 1) \ |\  \text{right} \in [0, 7]
+K_{256} = D[0 \dots 255] \in \{0, 1\}^{256}
+\label{eq:k256_extract}
 \end{equation}
-The output bit $b_{\text{out}}$ is selected from secondary rule $R_2$:
+$K_{256}$ is formatted into a 256-character binary string of \texttt{'0'} and \texttt{'1'} characters, which is used directly for bitwise XOR block mixing.
+
+\subsection{Payload Framing, Header Encoding, and Zero-Padding}
+\label{subsec:framing_padding}
+To support exact loss-less recovery of arbitrary UTF-8 text strings, the input plaintext text $T$ is converted into an 8-bit binary string $B = \text{UTF8}(T)$. Let $L = |B|$ denote the exact binary bit length of the payload.
+
+A 32-bit big-endian binary length header $\text{Header}_{32}(L)$ encoding $L$ is prepended to the binary payload:
 \begin{equation}
-b_{\text{out}} = (R_2 \gg \eta) \ \& \ 1
+F = \text{Header}_{32}(L) \,\|\, B
+\label{eq:framed_binary}
 \end{equation}
-Reassembling all 8 output bits yields $S_{\text{ECA}} = \left( \sum_{b=0}^7 b_{\text{out}} \cdot 2^b \right) \oplus R_1$.
+If the framed binary string $F$ is not a multiple of 256 bits, zero-padding bits ($0^p$) are appended to reach the next 256-bit block boundary:
+\begin{equation}
+\text{PaddedBinary} = F \,\|\, 0^p, \quad \text{where } p = (256 - (|F| \bmod 256)) \bmod 256
+\label{eq:zero_padding}
+\end{equation}
+The padded binary string is partitioned into $n$ sequential 256-bit blocks $P_1, P_2, \dots, P_n$.
 
-\subsection{Candidate A-Chain State Permutation}
-\label{subsec:candidate_a_chain}
-Given input plaintext byte $P_i$ and previous feedback state $\text{prev\_state}$ (initialized to $\text{IV}_0 = \text{0xC5}$):
+\subsection{16x16 Binary Matrix Representation}
+\label{subsec:matrix_mapping}
+Each 256-bit binary block $P_i$ is mapped row-major into a $16 \times 16$ binary integer matrix $M \in \{0, 1\}^{16 \times 16}$:
+\begin{equation}
+M[r, c] = \text{int}(P_i[16r + c]), \quad \text{for } r, c \in \{0, 1, \dots, 15\}
+\label{eq:block_to_matrix}
+\end{equation}
+Conversely, the inverse mapping reconstructs the 256-bit string by concatenating rows $r = 0 \dots 15$ in row-major order:
+\begin{equation}
+P_i = \text{matrix\_to\_block}(M) = \bigoplus_{r=0}^{15} \bigoplus_{c=0}^{15} \text{str}(M[r, c])
+\label{eq:matrix_to_block}
+\end{equation}
 
+\subsection{Bijective 2x2 Margolus Local Rules}
+\label{subsec:margolus_rules}
+State transitions inside each $2 \times 2$ neighborhood matrix $\begin{pmatrix} b_0 & b_1 \\ b_2 & b_3 \end{pmatrix}$ are governed by 4-bit local lookup tables. The 4-bit neighborhood state integer $s \in [0, 15]$ is packed as:
+\begin{equation}
+s = (b_0 \ll 3) \mid (b_1 \ll 2) \mid (b_2 \ll 1) \mid b_3
+\label{eq:state_pack}
+\end{equation}
+Forward substitution $s \to F(s)$ is evaluated using \texttt{FORWARD\_RULE}:
+\begin{equation}
+\text{FORWARD\_RULE} = [14, 4, 11, 2, 3, 8, 0, 9, 1, 10, 7, 15, 6, 12, 5, 13]
+\label{eq:forward_rule}
+\end{equation}
+Inverse substitution $F(s) \to s$ is evaluated using \texttt{INVERSE\_RULE}:
+\begin{equation}
+\text{INVERSE\_RULE} = [6, 8, 3, 4, 1, 14, 12, 10, 5, 7, 9, 2, 13, 15, 0, 11]
+\label{eq:inverse_rule}
+\end{equation}
+Because $\text{INVERSE\_RULE}[\text{FORWARD\_RULE}[s]] = s$ and $\text{FORWARD\_RULE}[\text{INVERSE\_RULE}[s]] = s$ for all $s \in \{0, \dots, 15\}$, the local transformation is strictly bijective and reversible.
+
+\subsection{Standard and Shifted Margolus Partitions}
+\label{subsec:partitions}
 \begin{enumerate}
-    \item \textbf{Inter-Byte State Chaining & Modulo Addition}:
+    \item \textbf{Standard Partition}: Divides the $16 \times 16$ grid into 64 non-overlapping $2 \times 2$ neighborhoods anchored at top-left coordinates $(r, c)$ where $r, c \in \{0, 2, 4, 6, 8, 10, 12, 14\}$.
+    \item \textbf{Shifted Partition}: Shifts top-left anchors by 1 cell horizontally and vertically to $r, c \in \{1, 3, 5, 7, 9, 11, 13, 15\}$. Periodic modulo-16 addressing wraps boundary cells around the grid:
+    \begin{align}
+    \text{Top-Left} &= M[r \bmod 16, c \bmod 16] \\
+    \text{Top-Right} &= M[r \bmod 16, (c+1) \bmod 16] \\
+    \text{Bottom-Left} &= M[(r+1) \bmod 16, c \bmod 16] \\
+    \text{Bottom-Right} &= M[(r+1) \bmod 16, (c+1) \bmod 16]
+    \end{align}
+\end{enumerate}
+
+\subsection{Multi-Round Pipeline and 2D Circular Matrix Shifts}
+\label{subsec:round_pipeline}
+For a specified round count $R$ (proposed configuration $R = 10$, evaluated across $R \in \{2, 4, 6, 8, 10\}$):
+
+\textbf{Forward Pass} ($r = 1 \dots R$):
+\begin{enumerate}
+    \item If $r$ is odd, apply standard Margolus forward transformation.
+    \item If $r$ is even, apply shifted Margolus forward transformation.
+    \item After round $r$, apply a 2D circular matrix shift DOWN by 2 rows and RIGHT by 2 columns:
     \begin{equation}
-    y_1 = ((P_i \oplus \text{prev\_state}) + S_{\text{ECA}}) \bmod 256
-    \label{eq:chain_mod}
-    \end{equation}
-    
-    \item \textbf{Keyed Circular Right Rotation}:
-    \begin{equation}
-    \alpha = (R_1 \bmod 7) + 1 \in [1, 7]
-    \end{equation}
-    \begin{equation}
-    y_2 = \text{ROTR}_8(y_1, \alpha) = ((y_1 \gg \alpha) \ |\  (y_1 \ll (8 - \alpha))) \ \& \ \text{0xFF}
-    \label{eq:keyed_rotr}
-    \end{equation}
-    
-    \item \textbf{Secondary Rule Mixing & Feedback Update}:
-    \begin{equation}
-    T_i = y_2 \oplus R_2
-    \label{eq:sec_rule_mix}
-    \end{equation}
-    \begin{equation}
-    \text{prev\_state} \leftarrow T_i
+    M'[(r_{\text{row}} + 2) \bmod 16, (c_{\text{col}} + 2) \bmod 16] = M[r_{\text{row}}, c_{\text{col}}]
+    \label{eq:shift_down_right}
     \end{equation}
 \end{enumerate}
 
-\subsection{Reversible Inverse Permutation Pipeline}
-\label{subsec:inverse_permutation}
-Decryption applies the exact inverse transformations in reverse order:
-\begin{align}
-y_2 &= T_i \oplus R_2 \label{eq:inv_rule_mix} \\
-y_1 &= \text{ROTL}_8(y_2, \alpha) = ((y_2 \ll \alpha) \ |\  (y_2 \gg (8 - \alpha))) \ \& \ \text{0xFF} \label{eq:inv_rotr} \\
-\text{mixed\_byte} &= (y_1 - S_{\text{ECA}}) \bmod 256 \label{eq:inv_mod} \\
-P_i &= \text{mixed\_byte} \oplus \text{prev\_state} \label{eq:inv_chain} \\
-\text{prev\_state} &\leftarrow T_i \label{eq:inv_feedback_update}
-\end{align}
+\textbf{Inverse Pass} ($r = R \dots 1$ in reverse order):
+\begin{enumerate}
+    \item Apply inverse 2D circular matrix shift UP by 2 rows and LEFT by 2 columns:
+    \begin{equation}
+    M'[(r_{\text{row}} - 2) \bmod 16, (c_{\text{col}} - 2) \bmod 16] = M[r_{\text{row}}, c_{\text{col}}]
+    \label{eq:shift_up_left}
+    \end{equation}
+    \item If $r$ is odd, apply standard Margolus inverse transformation.
+    \item If $r$ is even, apply shifted Margolus inverse transformation.
+\end{enumerate}
 
-Because every step is bijective over $\mathbb{Z}_{256}$, exact round-trip reconstruction $P_i = \text{Inverse}(\text{Forward}(P_i))$ is mathematically guaranteed.
+\subsection{XOR Key Mixing}
+\label{subsec:xor_mixing}
+After applying $R$ rounds of CA transformation to matrix $M$ and reassembling 256-bit block $X_i = \text{matrix\_to\_block}(M)$, the block is XORed bitwise with $K_{256}$:
+\begin{equation}
+C_i = X_i \oplus K_{256}
+\label{eq:xor_encrypt}
+\end{equation}
+During decryption, because $K_{256} \oplus K_{256} = 0$, XOR mixing is reversed first:
+\begin{equation}
+X_i = C_i \oplus K_{256}
+\label{eq:xor_decrypt}
+\end{equation}
+before applying the inverse multi-round CA transformation.
+
+\subsection{End-to-End Encryption and Decryption Algorithms}
+\label{subsec:algorithms}
+
+Algorithms \ref{alg:research_encrypt} and \ref{alg:research_decrypt} present the complete, deterministic encryption and decryption algorithms.
+
+\begin{algorithm}[htbp]
+\caption{SHA-512 256-Bit Block CA Encryption Pipeline}
+\label{alg:research_encrypt}
+\begin{algorithmic}[1]
+\REQUIRE Plaintext text string $T$, Password string $P$, Round count $R=10$
+\ENSURE Binary ciphertext string $C$
+\STATE $K_{256} \leftarrow \text{derive\_k256}(P)$
+\STATE $B \leftarrow \text{text\_to\_binary}(T)$
+\STATE $F \leftarrow \text{add\_length\_header}(B)$
+\STATE $\text{Padded} \leftarrow \text{pad\_to\_256}(F)$
+\STATE $(P_1, P_2, \dots, P_n) \leftarrow \text{split\_into\_blocks}(\text{Padded}, 256)$
+\STATE $C_{\text{blocks}} \leftarrow []$
+\FOR{each block $P_i$ in $(P_1, \dots, P_n)$}
+    \STATE $M_0 \leftarrow \text{block\_to\_matrix}(P_i)$
+    \STATE $M_R \leftarrow \text{transform\_block\_forward}(M_0, R)$
+    \STATE $X_i \leftarrow \text{matrix\_to\_block}(M_R)$
+    \STATE $C_i \leftarrow \text{xor\_binary\_strings}(X_i, K_{256})$
+    \STATE Append $C_i$ to $C_{\text{blocks}}$
+\ENDFOR
+\RETURN Concatenation of $C_{\text{blocks}}$
+\end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}[htbp]
+\caption{SHA-512 256-Bit Block CA Decryption Pipeline}
+\label{alg:research_decrypt}
+\begin{algorithmic}[1]
+\REQUIRE Binary ciphertext string $C$, Password string $P$, Round count $R=10$
+\ENSURE Restored original plaintext string $T$
+\STATE $K_{256} \leftarrow \text{derive\_k256}(P)$
+\STATE $(C_1, C_2, \dots, C_n) \leftarrow \text{split\_into\_blocks}(C, 256)$
+\STATE $P_{\text{blocks}} \leftarrow []$
+\FOR{each block $C_i$ in $(C_1, \dots, C_n)$}
+    \STATE $X_i \leftarrow \text{xor\_binary\_strings}(C_i, K_{256})$
+    \STATE $M_R \leftarrow \text{block\_to\_matrix}(X_i)$
+    \STATE $M_0 \leftarrow \text{transform\_block\_inverse}(M_R, R)$
+    \STATE $P_i \leftarrow \text{matrix\_to\_block}(M_0)$
+    \STATE Append $P_i$ to $P_{\text{blocks}}$
+\ENDFOR
+\STATE $\text{Padded} \leftarrow \text{Concatenation of } P_{\text{blocks}}$
+\STATE $B \leftarrow \text{extract\_with\_length\_header}(\text{Padded})$
+\RETURN $\text{binary\_to\_text}(B)$
+\end{algorithmic}
+\end{algorithm}
+
+\subsection{Computational Complexity}
+\label{subsec:complexity}
+For a message of $n$ blocks ($256n$ bits) evaluated over $R$ CA rounds:
+\begin{itemize}
+    \item Matrix conversion and block splitting require $\mathcal{O}(n)$ bit operations.
+    \item Each CA round processes 64 non-overlapping $2 \times 2$ blocks over a $16 \times 16$ matrix ($\mathcal{O}(1)$ operations per block of fixed size 256 bits).
+    \item For $R$ rounds, the CA transformation overhead per block is $64 \cdot R$ table lookups.
+    \item Total encryption and decryption complexity scales strictly linearly as $\mathcal{O}(n \cdot R)$ in overall payload size $n$ and round count $R$.
+\end{itemize}

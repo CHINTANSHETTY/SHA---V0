@@ -1,107 +1,183 @@
-\section{Proposed KDR-CA-AEAD Architecture}
+\section{Cryptosystem Architecture}
 \label{sec:architecture}
 
-\subsection{Overall System Architecture}
-\label{subsec:system_arch}
-The overall system architecture of KDR-CA-AEAD consists of five modular subsystems: (1) Key Derivation Engine, (2) Dynamic Rule Scheduler, (3) Candidate A-Chain State Engine, (4) CTR-PRNG Keystream Generator, and (5) Encrypt-then-MAC AEAD Integrity Engine, as illustrated in Fig. \ref{fig:system_arch}.
+\subsection{System Overview}
+\label{subsec:system_overview}
+The proposed cryptosystem is a reversible 256-bit block encryption scheme constructed from 2D cellular automata (CA) operations and bitwise key mixing. As depicted in the overall processing flow, the architecture accepts an arbitrary UTF-8 text string $T$ representing healthcare records and a password string $P$. The system operates strictly deterministically over fixed 256-bit binary data blocks without relying on external nonces or auxiliary authentication tags. 
 
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=\columnwidth]{../docs/figures/system_architecture.png}
-\caption{Overall KDR-CA-AEAD 5-Layer Subsystem Architecture.}
-\label{fig:system_arch}
-\end{figure}
+The architecture comprises six primary stages:
+\begin{enumerate}
+    \item \textbf{Key Generation}: Password hashing via SHA-512 to produce a static 256-bit encryption key $K_{256}$.
+    \item \textbf{Payload Framing}: Prepending a 32-bit big-endian length header and zero-padding to 256-bit block boundaries.
+    \item \textbf{Matrix Mapping}: Bijective row-major mapping between 256-bit binary blocks and $16 \times 16$ binary matrices.
+    \item \textbf{Reversible CA Engine}: Alternating standard and shifted 2D Margolus $2 \times 2$ block transformations governed by a 4-bit bijective local rule.
+    \item \textbf{Inter-Round Circular Shift}: Bijective 2D spatial rotation of matrix elements between consecutive CA rounds.
+    \item \textbf{XOR Key Mixing}: Bitwise XOR combination of the transformed 256-bit matrix block with $K_{256}$.
+\end{enumerate}
+
+\subsection{Key Generation Engine}
+\label{subsec:key_gen}
+Key generation maps a variable-length user password $P$ to a 256-bit key $K_{256}$. The password string is encoded as UTF-8 bytes and processed by SHA-512, generating a 512-bit (64-byte) raw digest $D$:
+\begin{equation}
+D = \text{SHA-512}(\text{UTF8}(P)) \in \{0, 1\}^{512}
+\end{equation}
+The 256-bit key $K_{256}$ is formed by taking the first 32 bytes (256 bits) of $D$:
+\begin{equation}
+K_{256} = D[0 \dots 255] \in \{0, 1\}^{256}
+\end{equation}
+The key $K_{256}$ remains constant across all blocks for a given session and is applied via bitwise XOR mixing following the final CA transformation round.
+
+\subsection{Healthcare Payload Framing \& Padding}
+\label{subsec:payload_framing}
+To ensure exact, loss-less recovery of arbitrary healthcare records, the system processes raw text inputs through a deterministic framing protocol:
+\begin{enumerate}
+    \item \textbf{Binary Conversion}: Plaintext text $T$ is converted to UTF-8 binary bytes $B$ of total length $L = |B|$ bits.
+    \item \textbf{32-bit Length Header}: The integer length $L$ is encoded as a 32-bit big-endian binary string $\text{Header}_{32}(L)$ and prepended to $B$, producing framed binary string $F = \text{Header}_{32}(L) \,\|\, B$.
+    \item \textbf{Zero-Padding}: If $|F|$ is not a multiple of 256, zero bits ($0^p$) are appended to complete the final 256-bit block:
+    \begin{equation}
+    p = (256 - (|F| \bmod 256)) \bmod 256
+    \end{equation}
+    \item \textbf{Block Partitioning}: Padded binary data is partitioned into $n$ contiguous 256-bit blocks $P_1, P_2, \dots, P_n$.
+\end{enumerate}
+During decryption, the 32-bit length header allows exact extraction of the original $L$ payload bits, cleanly stripping all appended zero-padding bits.
+
+\subsection{256-bit Block and Matrix Representation}
+\label{subsec:block_matrix}
+Each 256-bit block $P_i$ is mapped row-major into a $16 \times 16$ binary matrix $M \in \{0, 1\}^{16 \times 16}$:
+\begin{equation}
+M[r, c] = \text{int}(P_i[16r + c]), \quad r, c \in \{0, 1, \dots, 15\}
+\end{equation}
+The matrix representation exposes 2D spatial relationships among bits, enabling block cellular automata neighborhood transformations. After CA processing, the matrix $M$ is converted back to a 256-bit binary string by concatenating rows in row-major order.
+
+\subsection{Reversible Margolus CA Engine}
+\label{subsec:margolus_engine}
+The non-linear diffusion core employs a 2D Block Cellular Automata scheme under the Margolus neighborhood convention. The $16 \times 16$ matrix is partitioned into 64 non-overlapping $2 \times 2$ sub-matrices. Each $2 \times 2$ block $\begin{pmatrix} b_0 & b_1 \\ b_2 & b_3 \end{pmatrix}$ encodes a 4-bit integer state $s \in \{0, \dots, 15\}$ via:
+\begin{equation}
+s = (b_0 \ll 3) \mid (b_1 \ll 2) \mid (b_2 \ll 1) \mid b_3
+\end{equation}
+State transitions follow a fixed, bijective 4-bit local lookup table:
+\begin{itemize}
+    \item \textbf{Forward Rule}: $\text{FORWARD\_RULE} = [14, 4, 11, 2, 3, 8, 0, 9, 1, 10, 7, 15, 6, 12, 5, 13]$
+    \item \textbf{Inverse Rule}: $\text{INVERSE\_RULE} = [6, 8, 3, 4, 1, 14, 12, 10, 5, 7, 9, 2, 13, 15, 0, 11]$
+\end{itemize}
+To ensure complete spatial interaction across neighborhood boundaries, two alternating grid partitions are applied:
+\begin{itemize}
+    \item \textbf{Standard Partition} (Odd rounds): Top-left block anchors $(r, c)$ are placed at even indices $r, c \in \{0, 2, 4, 6, 8, 10, 12, 14\}$.
+    \item \textbf{Shifted Partition} (Even rounds): Top-left anchors are shifted to odd indices $r, c \in \{1, 3, 5, 7, 9, 11, 13, 15\}$ with modulo-16 periodic boundary wrapping.
+\end{itemize}
+
+\subsection{Inter-Round Circular Shift}
+\label{subsec:circular_shift}
+Following each CA partition transformation, the entire $16 \times 16$ matrix undergoes a 2D circular translation:
+\begin{itemize}
+    \item \textbf{Forward Shift}: Move elements DOWN by 2 rows and RIGHT by 2 columns:
+    \begin{equation}
+    M_{\text{shifted}}[(r + 2) \bmod 16, (c + 2) \bmod 16] = M[r, c]
+    \end{equation}
+    \item \textbf{Inverse Shift}: Move elements UP by 2 rows and LEFT by 2 columns:
+    \begin{equation}
+    M_{\text{unshifted}}[(r - 2) \bmod 16, (c - 2) \bmod 16] = M[r, c]
+    \end{equation}
+\end{itemize}
+This shift disrupts static grid alignments, spreading local bit modifications across disparate 2x2 neighborhoods in subsequent rounds.
+
+\subsection{Multi-Round Pipeline}
+\label{subsec:multi_round}
+The complete CA transformation executes $R$ sequential rounds. In the proposed architecture, $R = 10$ is selected as the primary production configuration based on the empirical diffusion/performance trade-off, while $R \in \{2, 4, 6, 8, 10\}$ is evaluated experimentally.
+
+In round $r \in \{1, \dots, R\}$:
+\begin{enumerate}
+    \item If $r$ is odd, evaluate the standard Margolus forward transformation.
+    \item If $r$ is even, evaluate the shifted Margolus forward transformation.
+    \item Perform the forward circular matrix shift (Down 2, Right 2).
+\end{enumerate}
+
+During inverse processing ($r = R \dots 1$):
+\begin{enumerate}
+    \item Perform the inverse circular matrix shift (Up 2, Left 2).
+    \item If $r$ is odd, evaluate the standard Margolus inverse transformation.
+    \item If $r$ is even, evaluate the shifted Margolus inverse transformation.
+\end{enumerate}
+
+\subsection{XOR Key Mixing}
+\label{subsec:xor_architecture}
+Key mixing occurs strictly after the multi-round CA matrix transformation during encryption. Reassembled 256-bit block $X_i = \text{matrix\_to\_block}(M_R)$ is bitwise XORed with $K_{256}$:
+\begin{equation}
+C_i = X_i \oplus K_{256}
+\end{equation}
+During decryption, XOR mixing is undone prior to the inverse CA transformation:
+\begin{equation}
+X_i = C_i \oplus K_{256}
+\end{equation}
+Because XOR is self-inverse, this restores $X_i$, which is subsequently passed to the inverse CA transformation engine.
 
 \subsection{Encryption Workflow}
 \label{subsec:encryption_workflow}
-The end-to-end encryption workflow is illustrated in Fig. \ref{fig:encryption_flow} and summarized in Algorithm \ref{alg:encryption}.
-
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=\columnwidth]{../docs/figures/encryption_workflow.png}
-\caption{KDR-CA-AEAD Authenticated Encryption Workflow.}
-\label{fig:encryption_flow}
-\end{figure}
-
-\begin{algorithm}[htbp]
-\caption{KDR-CA-AEAD Authenticated Encryption Pipeline}
-\label{alg:encryption}
-\begin{algorithmic}[1]
-\REQUIRE Plaintext $P$, Master Key $K$, Optional Associated Data $AD$, Salt $S$, Nonce $N$
-\ENSURE EncryptedPackage $(V, S, N, CT, \text{Tag})$
-\IF{$S$ is \textbf{null}}
-    \STATE $S \leftarrow \text{CSPRNG\_Generate}(16)$
-\ENDIF
-\IF{$N$ is \textbf{null}}
-    \STATE $N \leftarrow \text{CSPRNG\_Generate}(12)$
-\ENDIF
-\STATE $(K_r, K_c, K_a, R) \leftarrow \text{HKDF\_SubKey\_Derivation}(K, S, N)$
-\STATE $T \leftarrow \text{Candidate\_A\_Chain\_Forward}(P, R)$
-\STATE $KS \leftarrow \text{HMAC\_SHA256\_CTR\_Keystream}(K_c, N, \text{Length}(T))$
-\STATE $CT \leftarrow T \oplus KS$
-\STATE $\text{Tag} \leftarrow \text{HMAC\_SHA256}(K_a, N \,\|\, S \,\|\, AD \,\|\, CT)$
-\RETURN $\text{EncryptedPackage}(V=\text{"KDR-CA-AEAD-v1"}, S, N, CT, \text{Tag})$
-\end{algorithmic}
-\end{algorithm}
+The end-to-end encryption pipeline operates as follows:
+\begin{enumerate}
+    \item Derive $K_{256}$ from password $P$ using SHA-512.
+    \item Encode plaintext text $T$ into UTF-8 binary string $B$.
+    \item Prepend 32-bit length header $\text{Header}_{32}(|B|)$ to obtain framed payload $F$.
+    \item Zero-pad $F$ to a 256-bit boundary.
+    \item Split padded binary data into 256-bit blocks $P_1, P_2, \dots, P_n$.
+    \item For each block $P_i$:
+    \begin{enumerate}
+        \item Map 256-bit block $P_i$ to $16 \times 16$ binary matrix $M_0$.
+        \item Apply $R = 10$ CA forward rounds (alternating Margolus partitions and circular shifts) to obtain $M_R$.
+        \item Convert matrix $M_R$ to 256-bit binary string $X_i$.
+        \item XOR $X_i$ with $K_{256}$ to produce ciphertext block $C_i = X_i \oplus K_{256}$.
+    \end{enumerate}
+    \item Concatenate all ciphertext blocks $C_1 \,\|\, C_2 \,\|\, \dots \,\|\, C_n$ to yield final ciphertext binary string $C$.
+\end{enumerate}
 
 \subsection{Decryption Workflow}
 \label{subsec:decryption_workflow}
-The end-to-end decryption workflow is illustrated in Fig. \ref{fig:decryption_flow} and summarized in Algorithm \ref{alg:decryption}.
+The end-to-end decryption pipeline operates in exact reverse sequence:
+\begin{enumerate}
+    \item Derive $K_{256}$ from password $P$ using SHA-512.
+    \item Split binary ciphertext string $C$ into 256-bit blocks $C_1, C_2, \dots, C_n$.
+    \item For each ciphertext block $C_i$:
+    \begin{enumerate}
+        \item XOR ciphertext block $C_i$ with $K_{256}$ to restore transformed block $X_i = C_i \oplus K_{256}$.
+        \item Map 256-bit block $X_i$ to $16 \times 16$ binary matrix $M_R$.
+        \item Apply $R = 10$ CA inverse rounds (in reverse order $R \dots 1$, unshifting then applying inverse Margolus partition) to obtain $M_0$.
+        \item Convert matrix $M_0$ back to 256-bit binary block $P_i$.
+    \end{enumerate}
+    \item Concatenate recovered blocks $P_1 \,\|\, P_2 \,\|\, \dots \,\|\, P_n$ to reconstruct padded binary string.
+    \item Read the initial 32-bit big-endian length header to obtain original payload bit length $L$.
+    \item Extract exactly $L$ payload bits following the 32-bit header, discarding zero-padding bits.
+    \item Convert binary string to UTF-8 text $T$, restoring original healthcare record.
+\end{enumerate}
 
-\begin{figure}[htbp]
+\subsection{Architectural Properties \& Structural Audit}
+\label{subsec:properties}
+The verified architecture provides the following structural guarantees:
+\begin{itemize}
+    \item \textbf{Fixed 256-bit Block Alignment}: All internal transformations operate over uniform 256-bit blocks and $16 \times 16$ grid matrices.
+    \item \textbf{Strict Local Bijectivity}: Every local $2 \times 2$ transition is invertible via $\text{INVERSE\_RULE}$, guaranteeing zero information loss.
+    \item \textbf{Round-Scalable Diffusion}: Multi-round inter-partition shifts expand avalanche behavior deterministically with round count $R$.
+    \item \textbf{Exact Lossless Recovery}: The 32-bit payload framing header guarantees perfect reconstruction of arbitrary text records.
+\end{itemize}
+
+\subsection{Legacy Subsystem Figure Audit}
+\label{subsec:figure_audit}
+Table \ref{tab:figure_audit} lists the legacy architectural figures referenced in prior manuscript iterations and records their structural status relative to the revised cryptosystem.
+
+\begin{table}[htbp]
+\caption{Architectural Figure Status and Audit Summary}
+\label{tab:figure_audit}
 \centering
-\includegraphics[width=\columnwidth]{../docs/figures/decryption_workflow.png}
-\caption{KDR-CA-AEAD Authenticated Decryption \& Verification Workflow.}
-\label{fig:decryption_flow}
-\end{figure}
+\begin{tabular}{lll}
+\hline
+\textbf{Figure Label} & \textbf{Legacy Image File} & \textbf{Status / Action} \\
+\hline
+\texttt{fig:system_arch} & \texttt{system_architecture.png} & REQUIRES REPLACEMENT \\
+\texttt{fig:encryption_flow} & \texttt{encryption_workflow.png} & REQUIRES REPLACEMENT \\
+\texttt{fig:decryption_flow} & \texttt{decryption_workflow.png} & REQUIRES REPLACEMENT \\
+\texttt{fig:dynamic_ca_engine} & \texttt{dynamic_ca_engine.png} & REQUIRES REPLACEMENT \\
+\texttt{fig:key_schedule} & \texttt{key_schedule.png} & REQUIRES REPLACEMENT \\
+\texttt{fig:auth_enc_pipeline} & \texttt{authenticated_encryption_pipeline.png} & REQUIRES REPLACEMENT \\
+\hline
+\end{tabular}
+\end{table}
 
-\begin{algorithm}[htbp]
-\caption{KDR-CA-AEAD Authenticated Decryption Pipeline}
-\label{alg:decryption}
-\begin{algorithmic}[1]
-\REQUIRE EncryptedPackage $(V, S, N, CT, \text{Tag})$, Master Key $K$, Optional $AD$
-\ENSURE Plaintext $P$ (or AuthenticationError)
-\STATE $(K_r, K_c, K_a, R) \leftarrow \text{HKDF\_SubKey\_Derivation}(K, S, N)$
-\STATE $\text{ExpectedTag} \leftarrow \text{HMAC\_SHA256}(K_a, N \,\|\, S \,\|\, AD \,\|\, CT)$
-\IF{$\text{ConstantTimeCompare}(\text{Tag}, \text{ExpectedTag}) = \textbf{false}$}
-    \STATE \textbf{raise} $\text{AuthenticationError("AEAD Tag Mismatch!")}$
-\ENDIF
-\STATE $KS \leftarrow \text{HMAC\_SHA256\_CTR\_Keystream}(K_c, N, \text{Length}(CT))$
-\STATE $T \leftarrow CT \oplus KS$
-\STATE $P \leftarrow \text{Candidate\_A\_Chain\_Inverse}(T, R)$
-\RETURN $P$
-\end{algorithmic}
-\end{algorithm}
-
-\subsection{Dynamic Cellular Automata Engine & Key Schedule}
-\label{subsec:dynamic_ca_engine_fig}
-The Candidate A-Chain Dynamic CA non-linear permutation engine is detailed in Fig. \ref{fig:dynamic_ca_engine}. The HKDF-SHA256 key schedule architecture is depicted in Fig. \ref{fig:key_schedule}. The Encrypt-then-MAC authentication pipeline is shown in Fig. \ref{fig:auth_enc_pipeline}.
-
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=\columnwidth]{../docs/figures/dynamic_ca_engine.png}
-\caption{Candidate A-Chain Dynamic Cellular Automata Permutation Engine.}
-\label{fig:dynamic_ca_engine}
-\end{figure}
-
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=\columnwidth]{../docs/figures/key_schedule.png}
-\caption{HKDF-SHA256 Domain-Separated Key Schedule Architecture.}
-\label{fig:key_schedule}
-\end{figure}
-
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=\columnwidth]{../docs/figures/authenticated_encryption_pipeline.png}
-\caption{Encrypt-then-MAC (EtM) Authenticated Encryption Core Pipeline.}
-\label{fig:auth_enc_pipeline}
-\end{figure}
-
-\subsection{Keystream CTR-PRNG Generation}
-\label{subsec:ctr_keystream}
-The keystream generator produces pseudo-random bytes $KS$ of length $M$ using HMAC-SHA256 in counter mode. For block counter index $j \ge 0$:
-\begin{equation}
-\text{block}_j = \text{HMAC-SHA256}(K_c, N \,\|\, \text{to\_bytes}_4(j))
-\end{equation}
-Concatenating blocks $\text{block}_0 \,\|\, \text{block}_1 \,\|\, \dots$ and truncating to $M$ bytes yields the keystream $KS$. Because $K_c$ is derived per-session with CSPRNG nonce $N$, keystream reuse across distinct encryptions is impossible.
